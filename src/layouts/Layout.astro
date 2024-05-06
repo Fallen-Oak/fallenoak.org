@@ -1,0 +1,80 @@
+---
+import Navbar from "../components/Navbar.astro";
+import { ViewTransitions } from "astro:transitions";
+import { getImage } from "astro:assets";
+const { title } = Astro.props;
+
+const { pathname } = Astro.url;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="/favicon.png" />
+    <meta charset="UTF-8" />
+    <meta property="og:title" content="Fallen Oak Equine Rescue" />
+    <meta
+      property="og:description"
+      content="Welcome to Fallen Oak Equine Rescue!"
+    />
+    <meta property="og:image" content="/fallenoak.png" />
+    <meta property="og:image:width" content="1987" />
+    <meta property="og:image:height" content="699" />
+    <meta property="og:url" content="https://fallenoak.org" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Fallen Oak Equine Rescue" />
+    <meta property="og:image:alt" content="Fallen Oak Equine Rescue logo" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Fallen Oak Equine Rescue" />
+    <meta
+      name="twitter:description"
+      content="Welcome to Fallen Oak Equine Rescue!"
+    />
+    <meta name="twitter:image" content="/fallenoak.png" />
+    <meta name="description" content="Welcome to Fallen Oak Equine Rescue!" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <ViewTransitions />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div>
+      <Navbar />
+      <!-- <div class="threshold" style="top: 10%"></div>
+		<div class="threshold" style="bottom: 50%"></div> -->
+      <slot />
+    </div>
+  </body>
+</html>
+
+<style is:global>
+  html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+.threshold {
+	display: none;
+}
+
+</style>

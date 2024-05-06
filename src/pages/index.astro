@@ -1,16 +1,93 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
+import Splash from "../components/Home/Splash.astro";
+import Mission from "../components/Home/Mission.astro";
+import Pinned from "../components/Home/Pinned.astro";
+import Sticky from "../components/Home/Sticky.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Fallen Oaks Equine Rescue | Home">
+  <div class="wrapper overflow-x-hidden">
+    <Splash />
+    <Mission />
+    <Pinned />
+    <!-- <Sticky /> -->
+  </div>
+</Layout>
+
+<style></style>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  import Lenis from "lenis";
+
+  gsap.registerPlugin(ScrollTrigger);
+  const lenis = new Lenis({
+    content: document.querySelector(".wrapper"),
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  });
+
+  const raf = (t) => {
+    lenis.raf(t);
+    lenis.resize();
+    ScrollTrigger.update();
+    requestAnimationFrame(raf);
+  };
+  requestAnimationFrame(raf);
+
+  gsap.set(".panel", { zIndex: (i, target, targets) => targets.length - i });
+
+  const images = gsap.utils.toArray(".panel:not(.purple)");
+
+  images.forEach((image, i) => {
+    var tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "section.black",
+        start: () => "top -" + window.innerHeight * (i + 0.5),
+        end: () => "+=" + window.innerHeight,
+        scrub: true,
+        toggleActions: "play none reverse none",
+        invalidateOnRefresh: true,
+      },
+    });
+
+    tl.to(image, { height: 0 });
+  });
+
+  gsap.set(".panel-text", {
+    zIndex: (i, target, targets) => targets.length - i,
+  });
+
+  const texts = gsap.utils.toArray(".panel-text");
+
+  texts.forEach((text, i) => {
+    var tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "section.black",
+        start: () => "top -" + window.innerHeight * i,
+        end: () => "+=" + window.innerHeight,
+        scrub: true,
+        toggleActions: "play none reverse none",
+        invalidateOnRefresh: true,
+      },
+    });
+
+    tl.to(text, { duration: 0.33, opacity: 1, y: "50%" }).to(
+      text,
+      { duration: 0.33, opacity: 0, y: "0%" },
+      0.66
+    );
+  });
+
+  ScrollTrigger.create({
+    trigger: "section.black",
+    scrub: true,
+    markers: true,
+    pin: true,
+    start: () => "top top",
+    end: () => "+=" + (images.length + 1) * window.innerHeight,
+    invalidateOnRefresh: true,
+  });
+</script>

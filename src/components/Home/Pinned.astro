@@ -1,0 +1,125 @@
+---
+import Button from "../Button.astro";
+---
+
+<section class="w-full mx-auto">
+  <div class="w-4/5 mx-auto">
+    <section
+      class="black flex w-full h-screen items-center justify-around bg-white"
+    >
+      <div class="relative overflow-hidden w-1/2 h-[80vh]">
+        <div
+          class="panel-text translate-y-full absolute opacity-0 z-10 w-full bg-white pr-20"
+        >
+          <div
+            class="text-lg md:text-2xl pb-4 md:pb-4 uppercase tracking-wide font-normal text-center md:text-left"
+          >
+           Next chapters
+          </div>
+          <div
+            class="text-5xl md:text-7xl font-semibold text-center md:text-left uppercase tracking-wide mb-8 md:mb-12"
+          >
+            Adoptables
+          </div>
+          <p class="text-lg md:text-2xl text-left md:mx-0 mx-4">
+            Discover the joy of giving a loving home to one of our horses. In this section, you will find profiles of all our horses waiting for adoption. Each profile provides detailed information about the horse’s personality, needs, and history to help you find the perfect match.
+          </p>
+          
+          <div class="my-8">
+            <Button />
+          </div>
+        </div>
+        <div
+          class="panel-text translate-y-full absolute opacity-0 z-10 w-full bg-white pr-20"
+        >
+          <div
+            class="text-lg md:text-2xl pb-4 md:pb-4 uppercase tracking-wide font-normal text-center md:text-left"
+          >
+            Safe landings
+          </div>
+          <div
+            class="text-5xl md:text-7xl font-semibold text-center md:text-left uppercase tracking-wide mb-8 md:mb-12"
+          >
+            Permanent Residents
+          </div>
+          <p class="text-lg md:text-2xl text-left md:mx-0 mx-4">
+            Meet the cherished permanent residents of our sanctuary. These horses, due to age, health, or special circumstances, will spend the rest of their lives in the loving care of our rescue.
+          </p>
+          
+          <div class="my-8">
+            <Button />
+          </div>
+        </div>
+        <div
+          class="panel-text translate-y-full absolute opacity-0 z-10 w-full bg-white pr-20"
+        >
+          <div
+            class="text-lg md:text-2xl pb-4 md:pb-4 uppercase tracking-wide font-normal text-center md:text-left"
+          >
+            Lorem ipsum
+          </div>
+          <div
+            class="text-5xl md:text-7xl font-semibold text-center md:text-left uppercase tracking-wide mb-8 md:mb-12"
+          >
+            Sponsorships
+          </div>
+          <p class="text-lg md:text-2xl text-left md:mx-0 mx-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+          
+          <div class="my-8">
+            <Button />
+          </div>
+        </div>
+      </div>
+
+      <div class="relative overflow-hidden w-1/2 h-[80vh]">
+        <div class="panel blue h-screen bg-gray-400"></div>
+        <div class="panel red bg-gray-400"></div>
+        <div class="panel purple bg-gray-400"></div>
+      </div>
+    </section>
+  </div>
+
+  <section class="h-screen bg-[#00026d]"></section>
+</section>
+
+<style>
+  .panel {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../assets/horse2.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .panel._2 {
+    z-index: 1;
+  }
+
+  .panel.red {
+    z-index: auto;
+    background-image: url("../../assets/P1010455.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .panel.purple {
+    z-index: auto;
+    background-image: url("../../assets/P1010284.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+</style>

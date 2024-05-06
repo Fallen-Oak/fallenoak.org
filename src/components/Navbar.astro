@@ -1,0 +1,39 @@
+---
+const { pathname } = Astro.url;
+---
+<div
+  class="fixed flex w-full justify-center shadow-md z-[100] bg-white"
+>
+  <nav
+    class="text-sm gap-x-8 uppercase font-medium text-center flex h-12 items-center"
+  >
+    <a
+      class={`hover:underline underline-offset-4 ${pathname === "/" ? "underline" : null}`}
+      href="/">Home</a
+    >
+    <!-- <a
+      class={`hover:underline underline-offset-4 ${pathname === "/about" ? "underline" : null}`}
+      href="/about">About</a
+    > -->
+    <a
+      class={`hover:underline underline-offset-4 ${pathname.includes("/about") ? "underline" : null}`}
+      href="/about">About us</a
+    >
+    <a
+      class={`hover:underline underline-offset-4 ${pathname.includes("/contact") ? "underline" : null}`}
+      href="/contact">Contact us</a
+    >
+    <a
+      class={`hover:underline underline-offset-4 ${pathname.includes("/news") ? "underline" : null}`}
+      href="/news">News and Events</a
+    >
+    <a
+      class={`hover:underline underline-offset-4 ${pathname.includes("/adopt") ? "underline" : null}`}
+      href="/adoptables">Adoptables</a
+    >
+    <a
+      class={`hover:underline underline-offset-4 ${pathname.includes("/credits") ? "underline" : null}`}
+      href="/credits">Credits</a
+    >
+  </nav>
+</div>
