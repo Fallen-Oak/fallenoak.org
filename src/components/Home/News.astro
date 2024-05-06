@@ -8,7 +8,7 @@ import Button from "../Button.astro";
 ---
 
 <section
-  class="relative flex flex-col items-center justify-center"
+  class="relative flex flex-col items-center justify-center pb-16"
   style="background-image: linear-gradient(to top, #fefce8 0%, #fefce8 30%);"
 >
 <div class="text-7xl uppercase font-bold my-8 tracking-wide">News & Events</div>
@@ -40,14 +40,6 @@ import Button from "../Button.astro";
     </div>
     <p class="text-gray-800">Mauris et lorem at elit tristique dignissim et ullamcorper elit. In sed feugiat mi. Etiam ut lacinia dui.</p>
   </div>
-  <div class="hover:opacity-75 hover:scale-[1.05] hover:-rotate-1 duration-300 cursor-pointer max-w-xs p-6 rounded-md bg-gray-50 text-gray-900" 
-  style="filter: drop-shadow(0 2px 2px #000)">
-    <Image src={img4} alt="" height="300" class="object-cover object-center w-full rounded-md h-72 bg-gray-500" />
-    <div class="mt-6 mb-2">
-      <span class="block text-xs font-bold tracking-widest uppercase text-[#937666]">Quisque</span>
-      <h2 class="text-xl font-semibold tracking-wide">Nam maximus purus</h2>
-    </div>
-    <p class="text-gray-800">Mauris et lorem at elit tristique dignissim et ullamcorper elit. In sed feugiat mi. Etiam ut lacinia dui.</p>
-  </div>
 </div>
+<Button />
 </section>

@@ -2,7 +2,7 @@
 const { pathname } = Astro.url;
 ---
 <div
-
+  id="nav"
 style="filter: drop-shadow(0 1px 1px #000)"
   class="fixed flex w-full justify-center z-[100] bg-[#937666] text-black"
 >
@@ -31,7 +31,7 @@ style="filter: drop-shadow(0 1px 1px #000)"
     >
     <a
       class={`hover:underline underline-offset-4 ${pathname.includes("/contact") ? "underline" : null}`}
-      href="/contact">Contact us</a
+      href="/donate">Donate</a
     >
     <!-- <a
       class={`hover:underline underline-offset-4 ${pathname.includes("/credits") ? "underline" : null}`}
