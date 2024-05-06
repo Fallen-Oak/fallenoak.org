@@ -2,14 +2,14 @@
 import Button from "../Button.astro";
 ---
 
-<section class="w-full mx-auto">
+<section class="w-full mx-auto" style="background-image: linear-gradient(to top, #fefce8 0%, #fefce8 100%);">
   <div class="w-4/5 mx-auto">
     <section
-      class="black flex w-full h-screen items-center justify-around bg-white"
+      class="black flex h-screen items-center justify-around"
     >
       <div class="relative overflow-hidden w-1/2 h-[80vh]">
         <div
-          class="panel-text translate-y-full absolute opacity-0 z-10 w-full bg-white pr-20"
+          class=" pr-16 panel-text translate-y-full absolute opacity-0 z-10 w-full pr-20"
         >
           <div
             class="text-lg md:text-2xl pb-4 md:pb-4 uppercase tracking-wide font-normal text-center md:text-left"
@@ -30,7 +30,7 @@ import Button from "../Button.astro";
           </div>
         </div>
         <div
-          class="panel-text translate-y-full absolute opacity-0 z-10 w-full bg-white pr-20"
+          class=" pr-16 panel-text translate-y-full absolute opacity-0 z-10 w-fullpr-20"
         >
           <div
             class="text-lg md:text-2xl pb-4 md:pb-4 uppercase tracking-wide font-normal text-center md:text-left"
@@ -51,7 +51,7 @@ import Button from "../Button.astro";
           </div>
         </div>
         <div
-          class="panel-text translate-y-full absolute opacity-0 z-10 w-full bg-white pr-20"
+          class=" pr-16 panel-text translate-y-full absolute opacity-0 z-10 w-full pr-20"
         >
           <div
             class="text-lg md:text-2xl pb-4 md:pb-4 uppercase tracking-wide font-normal text-center md:text-left"
@@ -74,17 +74,42 @@ import Button from "../Button.astro";
             <Button />
           </div>
         </div>
+        <div
+          class=" pr-16 panel-text translate-y-full absolute opacity-0 z-10 w-full pr-20"
+        >
+          <div
+            class="text-lg md:text-2xl pb-4 md:pb-4 uppercase tracking-wide font-normal text-center md:text-left"
+          >
+            Lorem ipsum
+          </div>
+          <div
+            class="text-5xl md:text-7xl font-semibold text-center md:text-left uppercase tracking-wide mb-8 md:mb-12"
+          >
+            Sponsored
+          </div>
+          <p class="text-lg md:text-2xl text-left md:mx-0 mx-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+          
+          <div class="my-8">
+            <Button />
+          </div>
+        </div>
       </div>
 
       <div class="relative overflow-hidden w-1/2 h-[80vh]">
         <div class="panel blue h-screen bg-gray-400"></div>
         <div class="panel red bg-gray-400"></div>
+        <div class="panel orange bg-gray-400"></div>
         <div class="panel purple bg-gray-400"></div>
       </div>
     </section>
   </div>
 
-  <section class="h-screen bg-[#00026d]"></section>
+  <!-- <section class="h-screen bg-[#00026d]"></section> -->
 </section>
 
 <style>
@@ -110,6 +135,14 @@ import Button from "../Button.astro";
   .panel.red {
     z-index: auto;
     background-image: url("../../assets/P1010455.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .panel.orange {
+    z-index: auto;
+    background-image: url("../../assets/P1010579.jpg");
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;

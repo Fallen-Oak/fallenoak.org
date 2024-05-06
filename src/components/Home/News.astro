@@ -1,0 +1,49 @@
+---
+import img1 from "../../assets/FOER_OC_Gorebox.png";
+import img2 from "../../assets/fallen_oak_auction.png";
+import img3 from "../../assets/FallenOaksOC.png";
+import img4 from "../../assets/Sign_Auction_Soon.png";
+import { Image } from "astro:assets";
+import Button from "../Button.astro";
+---
+
+<section
+  class="relative flex flex-col items-center justify-center"
+  style="background-image: linear-gradient(to top, #fefce8 0%, #fefce8 30%);"
+>
+<div class="text-7xl uppercase font-bold my-8 tracking-wide">News & Events</div>
+<div class="grid grid-cols-3 gap-8 pb-16">
+  <div class="max-w-xs p-6 rounded-md shadow-md bg-gray-50 text-gray-900">
+    <Image src={img1} alt="" height="300"  class="object-cover object-center w-full rounded-md h-72 bg-gray-500" />
+    <div class="mt-6 mb-2">
+      <span class="block text-xs font-bold tracking-widest uppercase text-[#937666]">Quisque</span>
+      <h2 class="text-xl font-semibold tracking-wide">Nam maximus purus</h2>
+    </div>
+    <p class="text-gray-800">Mauris et lorem at elit tristique dignissim et ullamcorper elit. In sed feugiat mi. Etiam ut lacinia dui.</p>
+  </div>
+  <div class="max-w-xs p-6 rounded-md shadow-md bg-gray-50 text-gray-900">
+    <Image src={img2} alt="" height="300" class="object-cover object-center w-full rounded-md h-72 bg-gray-500" />
+    <div class="mt-6 mb-2">
+      <span class="block text-xs font-bold tracking-widest uppercase text-[#937666]">Quisque</span>
+      <h2 class="text-xl font-semibold tracking-wide">Nam maximus purus</h2>
+    </div>
+    <p class="text-gray-800">Mauris et lorem at elit tristique dignissim et ullamcorper elit. In sed feugiat mi. Etiam ut lacinia dui.</p>
+  </div>
+  <div class="max-w-xs p-6 rounded-md shadow-md bg-gray-50 text-gray-900">
+    <Image src={img3} alt="" height="300" class="object-cover object-center w-full rounded-md h-72 bg-gray-500" />
+    <div class="mt-6 mb-2">
+      <span class="block text-xs font-bold tracking-widest uppercase text-[#937666]">Quisque</span>
+      <h2 class="text-xl font-semibold tracking-wide">Nam maximus purus</h2>
+    </div>
+    <p class="text-gray-800">Mauris et lorem at elit tristique dignissim et ullamcorper elit. In sed feugiat mi. Etiam ut lacinia dui.</p>
+  </div>
+  <div class="max-w-xs p-6 rounded-md shadow-md bg-gray-50 text-gray-900">
+    <Image src={img4} alt="" height="300" class="object-cover object-center w-full rounded-md h-72 bg-gray-500" />
+    <div class="mt-6 mb-2">
+      <span class="block text-xs font-bold tracking-widest uppercase text-[#937666]">Quisque</span>
+      <h2 class="text-xl font-semibold tracking-wide">Nam maximus purus</h2>
+    </div>
+    <p class="text-gray-800">Mauris et lorem at elit tristique dignissim et ullamcorper elit. In sed feugiat mi. Etiam ut lacinia dui.</p>
+  </div>
+</div>
+</section>

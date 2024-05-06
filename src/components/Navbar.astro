@@ -2,10 +2,12 @@
 const { pathname } = Astro.url;
 ---
 <div
-  class="fixed flex w-full justify-center shadow-md z-[100] bg-white"
+
+style="filter: drop-shadow(0 1px 1px #000)"
+  class="fixed flex w-full justify-center z-[100] bg-[#937666] text-black"
 >
   <nav
-    class="text-sm gap-x-8 uppercase font-medium text-center flex h-12 items-center"
+    class="text-sm gap-x-8 uppercase font-semibold tracking-wide text-center flex h-12 items-center"
   >
     <a
       class={`hover:underline underline-offset-4 ${pathname === "/" ? "underline" : null}`}
@@ -20,20 +22,20 @@ const { pathname } = Astro.url;
       href="/about">About us</a
     >
     <a
-      class={`hover:underline underline-offset-4 ${pathname.includes("/contact") ? "underline" : null}`}
-      href="/contact">Contact us</a
-    >
-    <a
       class={`hover:underline underline-offset-4 ${pathname.includes("/news") ? "underline" : null}`}
-      href="/news">News and Events</a
+      href="/news">News & Events</a
     >
     <a
       class={`hover:underline underline-offset-4 ${pathname.includes("/adopt") ? "underline" : null}`}
       href="/adoptables">Adoptables</a
     >
     <a
+      class={`hover:underline underline-offset-4 ${pathname.includes("/contact") ? "underline" : null}`}
+      href="/contact">Contact us</a
+    >
+    <!-- <a
       class={`hover:underline underline-offset-4 ${pathname.includes("/credits") ? "underline" : null}`}
       href="/credits">Credits</a
-    >
+    > -->
   </nav>
 </div>
