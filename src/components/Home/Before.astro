@@ -5,13 +5,18 @@ import { Image } from "astro:assets";
 import ButtonSmall from "../ButtonSmall.astro";
 ---
 
-<section class=" bg-yellow-50 pb-80 w-full">
+<section class="bg-yellow-50 pb-80 w-full">
   <div class="comparisonSection h-160 w-288 mx-auto">
     <div class="comparisonImage beforeImage">
-      <Image src={img1} alt="before" style="filter: grayscale(50%) ; " class="rounded-lg "/>
+      <Image
+        src={img1}
+        alt="before"
+        style="filter: grayscale(50%) ; "
+        class="rounded-lg"
+      />
     </div>
     <div class="comparisonImage afterImage">
-      <Image src={img2} alt="before" class="rounded-lg "/>
+      <Image src={img2} alt="before" class="rounded-lg" />
     </div>
     <div class="text-center text-6xl tracking-wide mt-4 font-bold uppercase">
       Before & after
@@ -23,28 +28,27 @@ import ButtonSmall from "../ButtonSmall.astro";
 </section>
 
 <style>
-.comparisonSection {
-  position: relative;
-  /* padding-bottom: 56.25%;  */
-}
-.comparisonImage {
-  width: 100%;
-  height: 100%;
-}
-.afterImage {
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  transform: translate(100%, 0px);
-}
-.afterImage img {
-  transform: translate(-100%, 0px);
-}
-.comparisonImage img {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-}
-
+  .comparisonSection {
+    position: relative;
+    /* padding-bottom: 56.25%;  */
+  }
+  .comparisonImage {
+    width: 100%;
+    height: 100%;
+  }
+  .afterImage {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    transform: translate(100%, 0px);
+  }
+  .afterImage img {
+    transform: translate(-100%, 0px);
+  }
+  .comparisonImage img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+  }
 </style>

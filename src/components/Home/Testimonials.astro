@@ -1,0 +1,89 @@
+---
+import img1 from "../../assets/dash.png";
+import { Image } from "astro:assets";
+import Button from "../Button.astro";
+import Testimonial from "./Testimonial.astro";
+---
+
+<section
+  class="relative"
+  style="background-image: linear-gradient(to top, #fefce8 0%, #fefce8 30%);"
+>
+  <div class="horizontal overflow-y-hidden">
+    <div class="pin-wrap">
+      <div class="animation-wrap to-right">
+        <div class="item">
+          <Testimonial>
+        </div>
+        <div class="item">
+          <Testimonial>
+        </div>
+        <div class="item">
+          <Testimonial>
+        </div>
+        <div class="item">
+          <Testimonial>
+        </div>
+        <div class="item">
+          <Testimonial>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .horizontal {
+    overflow-x: hidden;
+  }
+
+  .horizontal .pin-wrap {
+    @apply flex relative h-screen;
+  }
+  .horizontal .animation-wrap {
+    @apply flex relative h-screen;
+  }
+
+  .horizontal .item {
+    @apply relative flex p-8 flex-none w-120 h-screen items-center leading-7 select-none border-r border-black border-opacity-5 bg-transparent
+  }
+
+  .horizontal .item:before {
+    position: absolute;
+    font-size: 24px;
+    opacity: 0.13;
+    font-weight: bold;
+    z-index: -1;
+    -webkit-transform: translate(-30px, -50px);
+    transform: translate(-30px, -50px);
+    line-height: 1;
+  }
+
+  /* .horizontal .animation-wrap.to-right {
+    counter-reset: item;
+    float: left;
+  }
+
+  .horizontal .animation-wrap.to-left {
+    counter-reset: item 11;
+    float: right;
+  } */
+
+  /* .horizontal .animation-wrap.to-right .item:before {
+    counter-increment: item;
+    content: counter(item);
+  }
+
+  .horizontal .animation-wrap.to-left .item:before {
+    counter-increment: item -1;
+    content: counter(item);
+  } */
+
+  .horizontal .animation-wrap .item:nth-child(2n + 2) {
+    align-items: flex-start;
+  }
+
+  .horizontal .animation-wrap .item:nth-child(4n + 4) {
+    align-items: flex-end;
+  }
+</style>
