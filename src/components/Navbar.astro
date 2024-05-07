@@ -1,16 +1,20 @@
 ---
 const { pathname } = Astro.url;
+import { Image } from "astro:assets";
+import img1 from "../assets/logo.png";
 ---
 <div
-  id="nav"
 style="filter: drop-shadow(0 1px 1px #000)"
-  class="fixed flex w-full justify-center z-[100] bg-[#937666] text-black"
+  class="fixed flex w-full px-12 justify-between z-[100] bg-[#937666] text-black"
 >
+  <a href="/" class="flex items-center justify-center">
+    <Image src={img1} alt=""  height="48" class="px-2 duration-300 hover:opacity-50"/>
+  </a>
   <nav
     class="text-sm gap-x-8 uppercase font-semibold tracking-wide text-center flex h-12 items-center"
   >
     <a
-      class={`hover:underline underline-offset-4 ${pathname === "/" ? "underline" : null}`}
+      class={`hover:underline underline-offset-4`}
       href="/">Home</a
     >
     <!-- <a
@@ -19,7 +23,7 @@ style="filter: drop-shadow(0 1px 1px #000)"
     > -->
     <a
       class={`hover:underline underline-offset-4 ${pathname.includes("/about") ? "underline" : null}`}
-      href="/about">About us</a
+      href="/about">About</a
     >
     <a
       class={`hover:underline underline-offset-4 ${pathname.includes("/news") ? "underline" : null}`}
