@@ -5,7 +5,7 @@ const { id } = Astro.props;
 const { pathname } = Astro.url;
 ---
 
-<div class="grid grid-cols-1 gap-8 px-8 py-16 mx-auto md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 bg-black text-white z-50">
+<div class="gap-8 px-8 py-16 mx-auto flex px-16 justify-between bg-black text-white z-50">
 	<div class="flex flex-col gap-y-2 justify-between">
 			<h2 class="text-4xl font-bold leading-tight lg:text-5xl ">Connect with us!</h2>
 			<div class="text-white">Have questions or comments?</div>
@@ -35,5 +35,10 @@ const { pathname } = Astro.url;
         <span>fallenoakequinerescue2020@yahoo.com</span>
       </p>
     </div>
+  </div>
+  
+  <div class="flex flex-col gap-y-2">
+    <h2 class="text-4xl font-bold leading-tight lg:text-5xl ">Follow us</h2>
+    <div class="text-white">Have questions or comments?</div>
   </div>
 </div>

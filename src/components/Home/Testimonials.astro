@@ -27,6 +27,21 @@ import Testimonial from "./Testimonial.astro";
         <div class="item">
           <Testimonial>
         </div>
+        <div class="item">
+          <Testimonial>
+        </div>
+        <div class="item">
+          <Testimonial>
+        </div>
+        <div class="item">
+          <Testimonial>
+        </div>
+        <div class="item">
+          <Testimonial>
+        </div>
+        <div class="item">
+          <Testimonial>
+        </div>
       </div>
     </div>
   </div>
@@ -45,7 +60,9 @@ import Testimonial from "./Testimonial.astro";
   }
 
   .horizontal .item {
-    @apply relative flex p-8 flex-none w-120 h-screen items-center leading-7 select-none border-r border-black border-opacity-5 bg-transparent
+    height: calc(100vh - 200px);
+    @apply relative flex p-8 mt-24 flex-none w-80 items-center leading-7 select-none bg-transparent;
+    /*  border-r border-black border-opacity-5 */
   }
 
   .horizontal .item:before {

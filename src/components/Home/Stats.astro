@@ -5,7 +5,7 @@ import Button from "../Button.astro";
 ---
 
 <section
-  class="relative flex flex-col items-center justify-center py-16"
+  class="relative flex flex-col items-center justify-center py-16 z-0"
   style="background-image: linear-gradient(to top, #fefce8 0%, #fefce8 30%);"
 >
   <div
@@ -37,10 +37,48 @@ import Button from "../Button.astro";
     </div>
 
     <Image
+    id="dashie"
       src={img1}
       alt=""
-      style="filter: drop-shadow(0 5px 5px #000)"
+      style="filter: drop-shadow(0 5px 5px #000); z-index: -1;"
       class="left-24 top-[-14.6rem] absolute w-48 max-w-lg mx-auto z-0"
     />
   </div>
 </section>
+
+<style>
+/*   
+@keyframes slideUp {
+  0% {
+    z-index: -10;
+    transform: translateY(100%);
+  }
+  90% {
+    transform: translateY(-1%);
+    z-index: -10;
+  }
+  100% {
+    transform: translateY(0%);
+    z-index: 10;
+  }
+}
+
+  .animate-up {
+    animation: slideUp 1.0s ease forwards;
+  } */
+</style>
+
+<script>
+  // const observer = new IntersectionObserver((entries) => {
+  //   // Loop over the entries
+  //   entries.forEach((entry) => {
+  //     // If the element is visible
+  //     if (entry.isIntersecting) {
+  //       // Add the animation class
+  //       entry.target.classList.add("animate-up");
+  //     }
+  //   });
+  // });
+
+  // observer.observe(document.getElementById("dashie"));
+</script>

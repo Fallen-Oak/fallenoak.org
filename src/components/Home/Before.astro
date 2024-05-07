@@ -5,25 +5,25 @@ import { Image } from "astro:assets";
 import ButtonSmall from "../ButtonSmall.astro";
 ---
 
-<section class="bg-yellow-50 pb-80 w-full">
+<section class="bg-yellow-50 w-full">
   <div class="comparisonSection h-160 w-288 mx-auto">
     <div class="comparisonImage beforeImage">
       <Image
         src={img1}
         alt="before"
-        style="filter: grayscale(50%) ; "
+        style="filter: grayscale(50%);"
         class="rounded-lg"
       />
     </div>
-    <div class="comparisonImage afterImage">
+    <div class="comparisonImage afterImage border-r-2 border-white ml-[2px]">
       <Image src={img2} alt="before" class="rounded-lg" />
     </div>
-    <div class="text-center text-6xl tracking-wide mt-4 font-bold uppercase">
+    <!-- <div class="text-center text-6xl tracking-wide mt-4 font-bold uppercase">
       Before & after
     </div>
     <div class="text-center mt-4">
       <ButtonSmall />
-    </div>
+    </div> -->
   </div>
 </section>
 
