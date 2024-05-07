@@ -2,11 +2,16 @@
 import img1 from "../../assets/FOrescueartnopony.png";
 import img2 from "../../assets/FOshelterannouncementimage.png";
 import { Image } from "astro:assets";
+import Button from "../Button.astro";
 import ButtonSmall from "../ButtonSmall.astro";
 ---
 
-<section class="bg-yellow-50 w-full">
-  <div class="comparisonSection h-160 w-288 mx-auto">
+<section class="bg-yellow-50 w-full flex items-center justify-center tracking-wide text-7xl font-semibold uppercase h-[20vh]">
+  Make a difference
+</section>
+
+<section class="bg-yellow-50 w-full pb-24">
+  <div class="comparisonSection h-160 w-288 mx-auto text-center">
     <div class="comparisonImage beforeImage">
       <Image
         src={img1}
@@ -19,13 +24,14 @@ import ButtonSmall from "../ButtonSmall.astro";
       <Image src={img2} alt="before" class="rounded-lg" />
     </div>
     <!-- <div class="text-center text-6xl tracking-wide mt-4 font-bold uppercase">
-      Before & after
-    </div>
-    <div class="text-center mt-4">
-      <ButtonSmall />
+      Donations
     </div> -->
+    <div class="mt-4">
+      <Button />
+    </div>
   </div>
 </section>
+
 
 <style>
   .comparisonSection {
