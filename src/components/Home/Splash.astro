@@ -1,5 +1,6 @@
 ---
 import Button from "../Button.astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <section
@@ -11,22 +12,66 @@ import Button from "../Button.astro";
   </div> -->
   <div class="w-11/12 z-50 text-[#121619]">
     <div class="w-2/5 flex flex-col gap-y-8">
-      <div class="text-8xl uppercase font-semibold tracking-normal">
+      <div class="text-8xl uppercase font-semibold tracking-normal" id="title">
         <div class="whitespace-nowrap">Fallen Oak</div>
         <div class="whitespace-nowrap">Equine Rescue</div>
       </div>
-      <div class="text-2xl">
-        Fallen Oak Equine Rescue and Rehabilitation is a non-profit
-        equine rescue located in Belleview, FL, devoted to providing a
-        rehabilitative sanctuary for horses that have been abandoned, abused, or
-        are otherwise in need of a safe and loving environment. At Fallen Oak, our mission is to restore the
-        health and spirit of each horse that comes through our gates.
-      </div>
+      <div class="flex flex-col gap-y-8" id="desc">
+        <div class="text-2xl">
+          Fallen Oak Equine Rescue and Rehabilitation is a non-profit equine
+          rescue located in Belleview, FL, devoted to providing a rehabilitative
+          sanctuary for horses that have been abandoned, abused, or are
+          otherwise in need of a safe and loving environment. At Fallen Oak, our
+          mission is to restore the health and spirit of each horse that comes
+          through our gates.
+        </div>
 
-      <div class="max-w-84">
-        <Button href="/about" text="Learn more"/>
+        <div class="max-w-84">
+          <Button href="/about" text="Learn more" />
+        </div>
+      </div>
+      <div id="scroll-down-parent" class="opacity-0 flex justify-start">
+        <Icon
+          id="scroll-down-indicator"
+          class="w-8 h-8 text-black"
+          name="ph:caret-down-bold"
+        />
       </div>
     </div>
-    <div class="w-1/2"></div>
   </div>
 </section>
+
+<script>
+  import { animate, inView, stagger } from "motion";
+  const keyframes = {
+    y: ["20%", "0%"],
+    opacity: [0.0, 1],
+  };
+  const title = document.getElementById("title");
+  animate(title, keyframes, {
+    duration: 0.6,
+    delay: stagger(0.5, { start: 0.3 }),
+  });
+  const desc = document.getElementById("desc");
+  animate(desc, keyframes, {
+    duration: 0.6,
+    delay: stagger(0.5, { start: 0.5 }),
+  });
+
+  const scrollIndicatorParent = document.getElementById(
+    "scroll-down-parent"
+  );
+  animate(
+    scrollIndicatorParent,
+    { opacity: [0, 1] },
+    { duration: 1, delay: 1.5}
+  );
+  const scrollIndicator = document.getElementById(
+    "scroll-down-indicator"
+  );
+  animate(
+    scrollIndicator,
+    { y: [0, 10, 0] },
+    { duration: 1.5, repeat: Infinity, easing: ["ease-out", "ease-in"] }
+  );
+</script>

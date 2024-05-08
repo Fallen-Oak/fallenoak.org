@@ -83,3 +83,39 @@ import testimonials from "../../data/testimonials.json";
     align-items: flex-end;
   }
 </style>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  const horizontalSections = gsap.utils.toArray("div.horizontal");
+
+  horizontalSections.forEach(function (sec, i) {
+    const thisPinWrap = sec.querySelector(".pin-wrap");
+    const thisAnimWrap = thisPinWrap.querySelector(".animation-wrap");
+
+    const getToValue = () => -(thisAnimWrap.scrollWidth - window.innerWidth);
+
+    gsap.fromTo(
+      thisAnimWrap,
+      {
+        x: () =>
+          thisAnimWrap.classList.contains("to-right") ? 0 : getToValue(),
+      },
+      {
+        x: () =>
+          thisAnimWrap.classList.contains("to-right") ? getToValue() : 0,
+        ease: "none",
+        scrollTrigger: {
+          trigger: sec,
+          start: "top top",
+          end: () => "+=" + (thisAnimWrap.scrollWidth - window.innerWidth),
+          pin: thisPinWrap,
+          invalidateOnRefresh: true,
+          //anticipatePin: 1,
+          scrub: true,
+          //markers: true,
+        },
+      }
+    );
+  });
+</script>

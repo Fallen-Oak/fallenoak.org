@@ -1,36 +1,49 @@
 ---
 import Button from "../Button.astro";
+import { Icon } from "astro-icon/components";
 ---
 
-<section class="w-full mx-auto" style="background-image: linear-gradient(to top, #fefce8 0%, #fefce8 100%);">
+<section
+  class="w-full mx-auto"
+  style="background-image: linear-gradient(to top, #fefce8 0%, #fefce8 100%);"
+>
   <div class="w-4/5 mx-auto">
-    <section
-      class="black flex h-screen items-center justify-around"
-    >
+    <section class="black flex h-screen items-center justify-around">
       <div class="relative overflow-hidden w-1/2 h-[80vh]">
         <div
-          class=" pr-16 panel-text translate-y-full absolute opacity-0 z-10 w-full"
+          class="pr-16 panel-text translate-y-full absolute opacity-0 z-10 w-full"
         >
           <div
             class="text-lg md:text-2xl pb-4 md:pb-4 uppercase tracking-wide font-normal text-center md:text-left"
           >
-           Next chapters
+            Next chapters
           </div>
           <div
-            class="text-5xl md:text-7xl font-semibold text-center md:text-left uppercase tracking-wide mb-8 md:mb-12"
+            class="text-5xl md:text-7xl font-semibold text-center md:text-left uppercase tracking-wide mb-8 md:mb-8"
           >
             Adoptables
           </div>
           <p class="text-lg md:text-2xl text-left md:mx-0 mx-4">
-            Discover the joy of giving a loving home to one of our horses. In this section, you will find profiles of all our horses waiting for adoption. Each profile provides detailed information about the horse’s personality, needs, and history to help you find the perfect match.
+            Discover the joy of giving a loving home to one of our horses. In
+            this section, you will find profiles of all our horses waiting for
+            adoption. Each profile provides detailed information about the
+            horse's personality, needs, and history to help you find the perfect
+            match.
           </p>
-          
-          <div class="my-8">
-            <Button href="/adoptable" text="Learn more"/>
+
+          <div class="mt-8">
+            <Button href="/adoptable" text="Learn more" />
           </div>
+          <!-- <div id="scroll-down-parent1" class="opacity-0 flex justify-start">
+            <Icon
+              id="scroll-down-indicator1"
+              class="w-8 h-8 text-black"
+              name="ph:caret-down-bold"
+            />
+          </div> -->
         </div>
         <div
-          class=" pr-16 panel-text translate-y-full absolute opacity-0 z-10 w-full"
+          class="pr-16 panel-text translate-y-full absolute opacity-0 z-10 w-full"
         >
           <div
             class="text-lg md:text-2xl pb-4 md:pb-4 uppercase tracking-wide font-normal text-center md:text-left"
@@ -38,20 +51,29 @@ import Button from "../Button.astro";
             Safe landings
           </div>
           <div
-            class="text-5xl md:text-7xl font-semibold text-center md:text-left uppercase tracking-wide mb-8 md:mb-12"
+            class="text-5xl md:text-7xl font-semibold text-center md:text-left uppercase tracking-wide mb-8 md:mb-8"
           >
             Permanent Residents
           </div>
           <p class="text-lg md:text-2xl text-left md:mx-0 mx-4">
-            Meet the cherished permanent residents of our sanctuary. These horses, due to age, health, or special circumstances, will spend the rest of their lives in the loving care of our rescue.
+            Meet the cherished permanent residents of our sanctuary. These
+            horses, due to age, health, or special circumstances, will spend the
+            rest of their lives in the loving care of our rescue.
           </p>
-          
-          <div class="my-8">
-            <Button href="/horses" text="Learn more"/>
+
+          <div class="mt-8">
+            <Button href="/horses" text="Learn more" />
           </div>
+          <!-- <div id="scroll-down-parent2" class="opacity-0 flex justify-start">
+            <Icon
+              id="scroll-down-indicator2"
+              class="w-8 h-8 text-black"
+              name="ph:caret-down-bold"
+            />
+          </div> -->
         </div>
         <div
-          class=" pr-16 panel-text translate-y-full absolute opacity-0 z-10 w-full"
+          class="pr-16 panel-text translate-y-full absolute opacity-0 z-10 w-full"
         >
           <div
             class="text-lg md:text-2xl pb-4 md:pb-4 uppercase tracking-wide font-normal text-center md:text-left"
@@ -59,7 +81,7 @@ import Button from "../Button.astro";
             Lorem ipsum
           </div>
           <div
-            class="text-5xl md:text-7xl font-semibold text-center md:text-left uppercase tracking-wide mb-8 md:mb-12"
+            class="text-5xl md:text-7xl font-semibold text-center md:text-left uppercase tracking-wide mb-8 md:mb-8"
           >
             Sponsorships
           </div>
@@ -69,13 +91,20 @@ import Button from "../Button.astro";
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           </p>
-          
-          <div class="my-8">
-            <Button href="/sponsors" text="Learn more"/>
+
+          <div class="mt-8">
+            <Button href="/sponsors" text="Learn more" />
           </div>
+          <!-- <div id="scroll-down-parent3" class="opacity-0 flex justify-start">
+            <Icon
+              id="scroll-down-indicator3"
+              class="w-8 h-8 text-black"
+              name="ph:caret-down-bold"
+            />
+          </div> -->
         </div>
         <div
-          class=" pr-16 panel-text translate-y-full absolute opacity-0 z-10 w-full"
+          class="pr-16 panel-text translate-y-full absolute opacity-0 z-10 w-full"
         >
           <div
             class="text-lg md:text-2xl pb-4 md:pb-4 uppercase tracking-wide font-normal text-center md:text-left"
@@ -83,7 +112,7 @@ import Button from "../Button.astro";
             Lorem ipsum
           </div>
           <div
-            class="text-5xl md:text-7xl font-semibold text-center md:text-left uppercase tracking-wide mb-8 md:mb-12"
+            class="text-5xl md:text-7xl font-semibold text-center md:text-left uppercase tracking-wide mb-8 md:mb-8"
           >
             Sponsored
           </div>
@@ -93,10 +122,17 @@ import Button from "../Button.astro";
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           </p>
-          
-          <div class="my-8">
-            <Button href="/sponsors" text="Learn more"/>
+
+          <div class="mt-8">
+            <Button href="/sponsors" text="Learn more" />
           </div>
+          <!-- <div id="scroll-down-parent4" class="opacity-0 flex justify-start">
+            <Icon
+              id="scroll-down-indicator4"
+              class="w-8 h-8 text-black"
+              name="ph:caret-down-bold"
+            />
+          </div> -->
         </div>
       </div>
 
@@ -156,3 +192,101 @@ import Button from "../Button.astro";
     background-repeat: no-repeat;
   }
 </style>
+
+<script>
+  import { animate, inView, stagger } from "motion";
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.set(".panel", {
+    zIndex: (i, target, targets) => targets.length - i,
+  });
+
+  const images = gsap.utils.toArray(".panel:not(.purple)");
+
+  images.forEach((image, i) => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "section.black",
+        start: () => "top -" + window.innerHeight * (i + 0.5),
+        end: () => "+=" + window.innerHeight,
+        scrub: true,
+        toggleActions: "play none reverse none",
+        invalidateOnRefresh: true,
+      },
+    });
+
+    tl.to(image, { height: 0 });
+  });
+
+  gsap.set(".panel-text", {
+    zIndex: (i, target, targets) => targets.length - i,
+  });
+
+  const texts = gsap.utils.toArray(".panel-text");
+
+  texts.forEach((text, i) => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "section.black",
+        start: () => "top -" + window.innerHeight * i,
+        end: () => "+=" + window.innerHeight,
+        scrub: true,
+        toggleActions: "play none reverse none",
+        invalidateOnRefresh: true,
+      },
+    });
+
+    tl.to(text, { duration: 0.33, opacity: 1, y: "50%" }).to(
+      text,
+      { duration: 0.33, opacity: 0, y: "0%" },
+      0.66
+    );
+  });
+
+  ScrollTrigger.create({
+    trigger: "section.black",
+    scrub: true,
+    markers: false,
+    pin: true,
+    start: () => "top top",
+    end: () => "+=" + (images.length + 1) * window.innerHeight,
+    invalidateOnRefresh: true,
+  });
+
+  // inView("#scroll-down-parent1", ({ target }) => {
+  //   animate(target, { opacity: [0, 1] }, { duration: 1, delay: 0.5 });
+  // });
+  // animate(
+  //   document.getElementById("scroll-down-indicator1"),
+  //   { y: [0, 10, 0] },
+  //   { duration: 1.5, repeat: Infinity, easing: ["ease-out", "ease-in"] }
+  // );
+
+  // inView("#scroll-down-parent2", ({ target }) => {
+  //   animate(target, { opacity: [0, 1] }, { duration: 1, delay: 0.5 });
+  // });
+  // animate(
+  //   document.getElementById("scroll-down-indicator2"),
+  //   { y: [0, 10, 0] },
+  //   { duration: 1.5, repeat: Infinity, easing: ["ease-out", "ease-in"] }
+  // );
+
+  // inView("#scroll-down-parent3", ({ target }) => {
+  //   animate(target, { opacity: [0, 1] }, { duration: 1, delay: 0.5 });
+  // });
+  // animate(
+  //   document.getElementById("scroll-down-indicator3"),
+  //   { y: [0, 10, 0] },
+  //   { duration: 1.5, repeat: Infinity, easing: ["ease-out", "ease-in"] }
+  // );
+
+  // inView("#scroll-down-parent4", ({ target }) => {
+  //   animate(target, { opacity: [0, 1] }, { duration: 1, delay: 0.5 });
+  // });
+  // animate(
+  //   document.getElementById("scroll-down-indicator4"),
+  //   { y: [0, 10, 0] },
+  //   { duration: 1.5, repeat: Infinity, easing: ["ease-out", "ease-in"] }
+  // );
+</script>

@@ -6,7 +6,9 @@ import Button from "../Button.astro";
 import ButtonSmall from "../ButtonSmall.astro";
 ---
 
-<section class="bg-yellow-50 w-full flex items-center justify-center tracking-wide text-7xl font-semibold uppercase h-[20vh]">
+<section
+  class="bg-yellow-50 w-full flex items-center justify-center tracking-wide text-7xl font-semibold uppercase h-[20vh]"
+>
   Make a difference
 </section>
 
@@ -27,11 +29,10 @@ import ButtonSmall from "../ButtonSmall.astro";
       Donations
     </div> -->
     <div class="mt-4">
-      <Button href="/donate" text="Learn more"/>
+      <Button href="/donate" text="Learn more" />
     </div>
   </div>
 </section>
-
 
 <style>
   .comparisonSection {
@@ -58,3 +59,35 @@ import ButtonSmall from "../ButtonSmall.astro";
     top: 0;
   }
 </style>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.utils.toArray(".comparisonSection").forEach((section) => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: section,
+        start: "center center",
+        // makes the height of the scrolling (while pinning) match the width, thus the speed remains constant (vertical/horizontal)
+        end: () => "+=" + section.offsetWidth,
+        scrub: true,
+        pin: true,
+        anticipatePin: 1,
+      },
+      defaults: { ease: "none" },
+    });
+    // animate the container one way...
+    tl.fromTo(
+      section.querySelector(".afterImage"),
+      { xPercent: -100, x: 0 },
+      { xPercent: 0 }
+    )
+      // ...and the image the opposite way (at the same time)
+      .fromTo(
+        section.querySelector(".afterImage img"),
+        { xPercent: 100, x: 0 },
+        { xPercent: 0 },
+        0
+      );
+  });
+</script>
