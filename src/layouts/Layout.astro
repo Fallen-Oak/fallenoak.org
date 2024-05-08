@@ -1,6 +1,6 @@
 ---
 import Navbar from "../components/Navbar.astro";
-import { ViewTransitions } from "astro:transitions";
+// import { ViewTransitions } from "astro:transitions";
 import { getImage } from "astro:assets";
 const { title } = Astro.props;
 
@@ -35,7 +35,7 @@ const { pathname } = Astro.url;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <ViewTransitions />
+    <!-- <ViewTransitions /> -->
 
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700"
@@ -76,7 +76,6 @@ const { pathname } = Astro.url;
       import { ScrollTrigger } from "gsap/ScrollTrigger";
       import Lenis from "lenis";
 
-      document.addEventListener("astro:page-load", () => {
         gsap.registerPlugin(ScrollTrigger);
         const lenis = new Lenis({
           content: document.querySelector(".wrapper"),
@@ -211,7 +210,6 @@ const { pathname } = Astro.url;
             }
           );
         });
-      });
     </script>
   </body>
 </html>

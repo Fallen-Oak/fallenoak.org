@@ -3,6 +3,8 @@ import img1 from "../../assets/dash.png";
 import { Image } from "astro:assets";
 import Button from "../Button.astro";
 import Testimonial from "./Testimonial.astro";
+
+import testimonials from "../../data/testimonials.json";
 ---
 
 <section
@@ -12,36 +14,13 @@ import Testimonial from "./Testimonial.astro";
   <div class="horizontal overflow-y-hidden">
     <div class="pin-wrap">
       <div class="animation-wrap to-right">
-        <div class="item">
-          <Testimonial>
-        </div>
-        <div class="item">
-          <Testimonial>
-        </div>
-        <div class="item">
-          <Testimonial>
-        </div>
-        <div class="item">
-          <Testimonial>
-        </div>
-        <div class="item">
-          <Testimonial>
-        </div>
-        <div class="item">
-          <Testimonial>
-        </div>
-        <div class="item">
-          <Testimonial>
-        </div>
-        <div class="item">
-          <Testimonial>
-        </div>
-        <div class="item">
-          <Testimonial>
-        </div>
-        <div class="item">
-          <Testimonial>
-        </div>
+        {
+          testimonials.map((t) => (
+            <div class="item">
+              <Testimonial {...t} />
+            </div>
+          ))
+        }
       </div>
     </div>
   </div>

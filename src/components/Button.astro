@@ -1,5 +1,9 @@
-<button class="button button--mimas border-2 border-black"
-  ><span>Learn More</span></button
+---
+const { href, text } = Astro.props;
+---
+
+<a href={href} class="button button--mimas border-2 border-black"
+  ><span>{text}</span></a
 >
 <style>
   .button {
