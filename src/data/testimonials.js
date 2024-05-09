@@ -1,10 +1,16 @@
-[
+export default [
   {
     "text": "Such dedicated, kind, compassionate people who help so many horses in need. They are responsive to answering questions and go above and beyond for the animals. They have spent so much time sharing experiences and knowledge as I still learn horse care. The love for what this group does is evident and shows in the care of the horses they help.",
     "name": "Jessie Miller",
     "title": "January 27, 2020",
     "small": true,
     "img": "73193376_2883036711707082_2110167267030335488_n.jpg"
+  },
+  {
+    "text": "Kim is a blessing. I highly recommend adopting one of her rescue horses/ animals. She is truly an angel.",
+    "name": "K. Tatum",
+    "title": "May 2, 2024",
+    "img": "tatum.png"
   },
   {
     "text": "They do wonderful things Kristin and Kim are wonderful people",
@@ -30,12 +36,12 @@
     "title": "October 7, 2018",
     "img": "50767783_2188043717918679_5775739176322334720_n.jpg"
   },
-  {
-    "text": "This rescue is amazing and great at what they do.",
-    "name": "Taylor Diaz",
-    "title": "August 28, 2018",
-    "img": "128387607_3292621187533725_9168257849435981928_n.jpg"
-  },
+  // {
+  //   "text": "This rescue is amazing and great at what they do.",
+  //   "name": "Taylor Diaz",
+  //   "title": "August 28, 2018",
+  //   "img": "128387607_3292621187533725_9168257849435981928_n.jpg"
+  // },
   {
     "text": "They have treated me with respect and kindness and willingness to work with my schedule to visit and they do a great wonderful job of rescue. 😍😍😍😍",
     "name": "Mina Cooper",
