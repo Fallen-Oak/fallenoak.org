@@ -33,8 +33,9 @@ import { Icon } from "astro-icon/components";
       <div id="scroll-down-parent" class="opacity-0 flex justify-start">
         <Icon
           id="scroll-down-indicator"
-          class="w-8 h-8 text-black"
+          class="w-12 h-12 p-2 text-black cursor-pointer hover:text-yellow-50 hover:bg-[#937666] duration-300 rounded"
           name="ph:caret-down-bold"
+          onclick="window.lenis.scrollTo('#about')"
         />
       </div>
     </div>
