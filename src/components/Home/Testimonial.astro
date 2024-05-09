@@ -6,7 +6,7 @@ const { text, name, title, small=null, idx, img=null } = Astro.props;
 const bgs = ["bg-red-100", "bg-orange-100", "bg-yellow-100", "bg-green-100", "bg-cyan-100", "bg-blue-100", "bg-indigo-100", "bg-purple-100", "bg-pink-100"];
 const bg = bgs[idx % bgs.length];
 ---
-<div class={`${bg} flex flex-col max-w-sm rounded-xl ${idx % 2 ? 'hover:rotate-1' : 'hover:-rotate-1'} duration-300 hover:scale-[1.05] cursor-pointer`}  style="filter: drop-shadow(0 2px 2px #000)">
+<div class={`${bg} flex flex-col max-w-sm rounded-xl ${idx % 2 ? 'lg:hover:rotate-1' : 'lg:hover:-rotate-1'} duration-300 lg:hover:scale-[1.05] cursor-pointer`}  style="filter: drop-shadow(0 2px 2px #000)">
   <div class="px-4 pb-12 pt-10  bg-transparent">
     <p class={`${small ? 'text-sm' : 'text-base'} relative py-1 italic text-black`}>
       "{ text }"
