@@ -12,15 +12,22 @@ import testimonials from "../../data/testimonials.json";
   style="background-image: linear-gradient(to top, #fefce8 0%, #fefce8 30%);"
 >
   <div class="horizontal overflow-y-hidden">
+    
     <div class="pin-wrap">
-      <div class="animation-wrap to-right">
+      <div class="text-7xl text-center uppercase absolute top-24 left-1/2 -translate-x-1/2 font-semibold whitespace-nowrap">Our supporters</div>
+      <div class="animation-wrap to-right pr-8 pl-4 mt-36">
         {
-          testimonials.map((t) => (
+          testimonials.map((t, idx) => (
             <div class="item">
-              <Testimonial {...t} />
+              <Testimonial {...t} idx={idx}/>
             </div>
           ))
         }
+        <div class="item">
+          <a href="https://www.facebook.com/FallenOakEquineRescue/reviews" target="_blank" class="hover:scale-[1.1] hover:rotate-3 duration-300 flex items-center justify-center text-2xl font-medium flex-col w-full h-full">
+            ...and many more!
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -39,8 +46,8 @@ import testimonials from "../../data/testimonials.json";
   }
 
   .horizontal .item {
-    height: calc(100vh - 200px);
-    @apply relative flex p-8 mt-24 flex-none w-80 items-center leading-7 select-none bg-transparent;
+    height: calc(100vh - 300px);
+    @apply relative flex px-4 py-8 mt-24 flex-none w-96 items-center leading-7 select-none bg-transparent;
     /*  border-r border-black border-opacity-5 */
   }
 

@@ -1,16 +1,19 @@
 ---
 import img1 from "../../assets/15.png";
 import { Image } from "astro:assets";
-const { text, name, title } = Astro.props;
+const { text, name, title, small=null, idx, img=null } = Astro.props;
+
+const bgs = ["bg-red-100", "bg-orange-100", "bg-yellow-100", "bg-green-100", "bg-cyan-100", "bg-blue-100", "bg-indigo-100", "bg-purple-100", "bg-pink-100"];
+const bg = bgs[idx % bgs.length];
 ---
-<div class="flex flex-col max-w-sm bg-white border-2 shadow-2xl border-black rounded-xl" >
+<div class={`${bg} flex flex-col max-w-sm rounded-xl ${idx % 2 ? 'hover:rotate-1' : 'hover:-rotate-1'} duration-300 hover:scale-[1.05] cursor-pointer`}  style="filter: drop-shadow(0 2px 2px #000)">
   <div class="px-4 pb-12 pt-10  bg-transparent">
-    <p class="relative py-1 text-base italic text-black">
-      { text }
+    <p class={`${small ? 'text-sm' : 'text-base'} relative py-1 italic text-black`}>
+      "{ text }"
     </p>
   </div>
   <div class="flex flex-col items-center justify-center p-8 rounded-b-lg  text-black">
-    <Image src={img1} alt="" class="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full border border-black " />
+    <img src={`/reviews/${img}`} alt="" class="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full border border-black " />
     <p class="text-lg font-semibold leading-tight">{ name }</p>
     <p class="text-sm uppercase">{ title }</p>
   </div>
