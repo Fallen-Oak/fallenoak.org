@@ -11,10 +11,9 @@ import testimonials from "../../data/testimonials.js";
   class="relative bg-yellow-50"
   style="background-image: linear-gradient(to top, #fefce8 0%, #fefce8 30%);"
 >
-  <div class="horizontal overflow-y-hidden">
-    
+  <div class="horizontal overflow-y-hidden hidden lg:block ">
     <div class="pin-wrap">
-      <div class="text-7xl text-center uppercase absolute top-24 left-1/2 -translate-x-1/2 font-semibold whitespace-nowrap">Our supporters</div>
+      <div class="text-4xl lg:text-7xl text-center uppercase absolute top-24 left-1/2 -translate-x-1/2 font-semibold whitespace-nowrap">Our supporters</div>
       <div class="animation-wrap to-right pr-8 pl-4 mt-36">
         {
           testimonials.map((t, idx) => (
@@ -29,6 +28,19 @@ import testimonials from "../../data/testimonials.js";
           </a>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="lg:hidden w-full pb-48">
+    <div class="text-4xl lg:text-7xl text-center uppercase  font-semibold mb-8">Our supporters</div>
+    <div class="flex flex-col justify-center items-center gap-y-4">
+
+      {
+        testimonials.slice(0, 4).map((t, idx) => (
+          <div>
+            <Testimonial {...t} idx={idx}/>
+          </div>
+        ))
+      }
     </div>
   </div>
 </section>

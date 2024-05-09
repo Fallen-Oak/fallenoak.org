@@ -84,6 +84,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
 
 gsap.registerPlugin(ScrollTrigger);
+
+const mm = gsap.matchMedia();
+window.mm = mm;
+
 const lenis = new Lenis({
   content: document.querySelector(".wrapper"),
   duration: 1.2,

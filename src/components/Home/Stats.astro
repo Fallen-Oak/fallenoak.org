@@ -5,11 +5,11 @@ import Button from "../Button.astro";
 ---
 
 <section
-  class="relative flex flex-col items-center justify-center py-16 z-0"
+  class="relative flex flex-col items-center justify-center lg:px-0 px-4 py-16 lg:py-16 z-0"
   style="background-image: linear-gradient(to top, #fefce8 0%, #fefce8 30%);"
 >
   <div
-    class="relative rounded-xl shadow-2xl border-8 border-black p-8 bg-blue-50 mx-auto grid justify-center grid-cols-2 text-center lg:grid-cols-3 gap-16"
+    class="relative rounded-xl shadow-2xl border-4 lg:border-8 border-black p-8 bg-blue-50 mx-auto grid justify-center grid-cols-2 text-center lg:grid-cols-3 gap-16"
   >
     <div class="flex flex-col justify-start">
       <p class="text-4xl font-bold leading-none lg:text-8xl">24+</p>
@@ -41,7 +41,7 @@ import Button from "../Button.astro";
       src={img1}
       alt=""
       style="filter: drop-shadow(0 5px 5px #000);"
-      class="left-24 top-[-12.3rem] absolute w-48 max-w-lg mx-auto z-0"
+      class="left-24 top-[-12rem] lg:top-[-12.3rem] absolute w-48 max-w-lg mx-auto z-0"
     />
   </div>
 </section>

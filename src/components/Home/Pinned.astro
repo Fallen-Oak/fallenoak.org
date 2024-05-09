@@ -1,12 +1,17 @@
 ---
 import Button from "../Button.astro";
+import { Image } from "astro:assets";
+import img1 from "../../assets/horse2.jpg";
+import img2 from "../../assets/P1010455.jpg";
+import img3 from "../../assets/P1010579.jpg";
+import img4 from "../../assets/P1010284.jpg";
 ---
 
 <section
   class="w-full mx-auto"
   style="background-image: linear-gradient(to top, #fefce8 0%, #fefce8 100%);"
 >
-  <div class="w-4/5 mx-auto">
+  <div class="hidden lg:block w-full lg:w-4/5 mx-auto">
     <section class="black flex h-screen items-center justify-around">
       <div class="relative overflow-hidden w-1/2 h-[80vh]">
         <div
@@ -143,6 +148,123 @@ import Button from "../Button.astro";
       </div>
     </section>
   </div>
+  <div class="block lg:hidden w-full">
+    <div class="h-full pb-24">
+      <div
+        class="text-lg md:text-2xl pb-2 md:pb-4 uppercase tracking-wide font-normal text-center md:text-left"
+      >
+        Next chapters
+      </div>
+      <div
+        class="text-5xl md:text-7xl font-semibold text-center md:text-left uppercase tracking-wide mb-4 md:mb-8"
+      >
+        Adoptables
+      </div>
+      <p class="text-lg md:text-2xl text-left md:mx-0 mx-4">
+        Discover the joy of giving a loving home to one of our horses. In this
+        section, you will find profiles of all our horses waiting for adoption.
+        Each profile provides detailed information about the horse's
+        personality, needs, and history to help you find the perfect match.
+      </p>
+
+      <Image
+        src={img1}
+        alt=""
+        style="filter: drop-shadow(0 5px 5px #000)"
+        class="lg:ml-24 w-48 mt-6 max-w-lg mx-auto z-0 rounded-lg -rotate-3 bg-neutral-400 border-white border-8"
+      />
+
+      <div class="text-center mt-12">
+        <Button href="/adoptable" text="Learn more" />
+      </div>
+    </div>
+    <div class="h-full pb-24">
+      <div
+        class="text-lg md:text-2xl pb-2 md:pb-4 uppercase tracking-wide font-normal text-center md:text-left"
+      >
+        Safe landings
+      </div>
+      <div
+        class="text-5xl md:text-7xl font-semibold text-center md:text-left uppercase tracking-wide mb-4 md:mb-8"
+      >
+        Permanent Residents
+      </div>
+      <p class="text-lg md:text-2xl text-left md:mx-0 mx-4">
+        Meet the cherished permanent residents of our sanctuary. These
+            horses, due to age, health, or special circumstances, will spend the
+            rest of their lives in the loving care of our rescue.
+      </p>
+
+      <Image
+        src={img2}
+        alt=""
+        style="filter: drop-shadow(0 5px 5px #000)"
+        class="lg:ml-24 w-48 mt-6 max-w-lg mx-auto z-0 rounded-lg -rotate-3 bg-neutral-400 border-white border-8"
+      />
+
+      <div class="text-center mt-12">
+        <Button href="/horses" text="Learn more" />
+      </div>
+    </div>
+    <div class="h-full pb-24">
+      <div
+        class="text-lg md:text-2xl pb-2 md:pb-4 uppercase tracking-wide font-normal text-center md:text-left"
+      >
+      Lorem ipsum
+      </div>
+      <div
+        class="text-5xl md:text-7xl font-semibold text-center md:text-left uppercase tracking-wide mb-4 md:mb-8"
+      >
+      Sponsorships
+      </div>
+      <p class="text-lg md:text-2xl text-left md:mx-0 mx-4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+      </p>
+
+      <Image
+        src={img3}
+        alt=""
+        style="filter: drop-shadow(0 5px 5px #000)"
+        class="lg:ml-24 w-48 mt-6 max-w-lg mx-auto z-0 rounded-lg -rotate-3 bg-neutral-400 border-white border-8"
+      />
+
+      <div class="text-center mt-12">
+        <Button href="/sponsors" text="Learn more" />
+      </div>
+    </div>
+    <div class="h-full pb-24">
+      <div
+        class="text-lg md:text-2xl pb-2 md:pb-4 uppercase tracking-wide font-normal text-center md:text-left"
+      >
+      Lorem ipsum
+      </div>
+      <div
+        class="text-5xl md:text-7xl font-semibold text-center md:text-left uppercase tracking-wide mb-4 md:mb-8"
+      >
+      Sponsored
+      </div>
+      <p class="text-lg md:text-2xl text-left md:mx-0 mx-4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+      </p>
+
+      <Image
+        src={img4}
+        alt=""
+        style="filter: drop-shadow(0 5px 5px #000)"
+        class="lg:ml-24 w-48 mt-6 max-w-lg mx-auto z-0 rounded-lg -rotate-3 bg-neutral-400 border-white border-8"
+      />
+
+      <div class="text-center mt-12">
+        <Button href="/sponsors" text="Learn more" />
+      </div>
+    </div>
+  </div>
 
   <!-- <section class="h-screen bg-[#00026d]"></section> -->
 </section>
@@ -196,63 +318,64 @@ import Button from "../Button.astro";
   import { animate, inView, stagger } from "motion";
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-  gsap.set(".panel", {
-    zIndex: (i, target, targets) => targets.length - i,
-  });
-
-  const images = gsap.utils.toArray(".panel:not(.purple)");
-
-  images.forEach((image, i) => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: "section.black",
-        start: () => "top -" + window.innerHeight * (i + 0.5),
-        end: () => "+=" + window.innerHeight,
-        scrub: true,
-        toggleActions: "play none reverse none",
-        invalidateOnRefresh: true,
-      },
+  // console.log(window.mm);
+  window.mm.add("(min-width: 800px)", () => {
+    gsap.set(".panel", {
+      zIndex: (i, target, targets) => targets.length - i,
     });
 
-    tl.to(image, { height: 0 });
-  });
+    const images = gsap.utils.toArray(".panel:not(.purple)");
 
-  gsap.set(".panel-text", {
-    zIndex: (i, target, targets) => targets.length - i,
-  });
+    images.forEach((image, i) => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: "section.black",
+          start: () => "top -" + window.innerHeight * (i + 0.5),
+          end: () => "+=" + window.innerHeight,
+          scrub: true,
+          toggleActions: "play none reverse none",
+          invalidateOnRefresh: true,
+        },
+      });
 
-  const texts = gsap.utils.toArray(".panel-text");
-
-  texts.forEach((text, i) => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: "section.black",
-        start: () => "top -" + window.innerHeight * i,
-        end: () => "+=" + window.innerHeight,
-        scrub: true,
-        toggleActions: "play none reverse none",
-        invalidateOnRefresh: true,
-      },
+      tl.to(image, { height: 0 });
     });
 
-    tl.to(text, { duration: 0.33, opacity: 1, y: "50%" }).to(
-      text,
-      { duration: 0.33, opacity: 0, y: "0%" },
-      0.66
-    );
-  });
+    gsap.set(".panel-text", {
+      zIndex: (i, target, targets) => targets.length - i,
+    });
 
-  ScrollTrigger.create({
-    trigger: "section.black",
-    scrub: true,
-    markers: false,
-    pin: true,
-    start: () => "top top",
-    end: () => "+=" + (images.length + 1) * window.innerHeight,
-    invalidateOnRefresh: true,
-  });
+    const texts = gsap.utils.toArray(".panel-text");
 
+    texts.forEach((text, i) => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: "section.black",
+          start: () => "top -" + window.innerHeight * i,
+          end: () => "+=" + window.innerHeight,
+          scrub: true,
+          toggleActions: "play none reverse none",
+          invalidateOnRefresh: true,
+        },
+      });
+
+      tl.to(text, { duration: 0.33, opacity: 1, y: "50%" }).to(
+        text,
+        { duration: 0.33, opacity: 0, y: "0%" },
+        0.66
+      );
+    });
+
+    ScrollTrigger.create({
+      trigger: "section.black",
+      scrub: true,
+      markers: false,
+      pin: true,
+      start: () => "top top",
+      end: () => "+=" + (images.length + 1) * window.innerHeight,
+      invalidateOnRefresh: true,
+    });
+  });
   // inView("#scroll-down-parent1", ({ target }) => {
   //   animate(target, { opacity: [0, 1] }, { duration: 1, delay: 0.5 });
   // });

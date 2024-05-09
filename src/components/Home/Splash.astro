@@ -4,20 +4,20 @@ import { Icon } from "astro-icon/components";
 ---
 
 <section
-  class="w-screen h-screen relative flex items-center justify-center"
+  class="w-screen h-screen lg:h-screen relative flex items-center justify-center"
   style="background-image: linear-gradient(to top, #fefce8 5%, transparent 20%), linear-gradient(to right, #fefce8 40%, transparent 70%), url('/P1010228.jpg'); background-position: center; background-repeat: no-repeat; background-size: 100% 100%, cover;"
 >
   <!-- <div class="gray">
 
   </div> -->
-  <div class="w-11/12 z-50 text-[#121619]">
-    <div class="w-2/5 flex flex-col gap-y-8">
-      <div class="text-8xl uppercase font-semibold tracking-normal" id="title">
+  <div class="w-full lg:w-11/12 z-50 text-[#121619] px-2 lg:px-0">
+    <div class="w-full md:w-2/5 flex flex-col gap-y-8">
+      <div class="text-5xl lg:text-left text-center lg:text-8xl uppercase font-semibold tracking-normal" id="title">
         <div class="whitespace-nowrap">Fallen Oak</div>
         <div class="whitespace-nowrap">Equine Rescue</div>
       </div>
       <div class="flex flex-col gap-y-8" id="desc">
-        <div class="text-2xl">
+        <div class="text-base lg:text-2xl">
           Fallen Oak Equine Rescue and Rehabilitation is a non-profit equine
           rescue located in Belleview, FL, devoted to providing a rehabilitative
           sanctuary for horses that have been abandoned, abused, or are
@@ -26,11 +26,11 @@ import { Icon } from "astro-icon/components";
           through our gates.
         </div>
 
-        <div class="max-w-84">
+        <div class="w-full md:text-left text-center">
           <Button href="/about" text="Learn more" />
         </div>
       </div>
-      <div id="scroll-down-parent" class="opacity-0 flex justify-start">
+      <div id="scroll-down-parent" class="hidden opacity-0 lg:flex justify-start">
         <Icon
           id="scroll-down-indicator"
           class="w-12 h-12 p-2 text-black cursor-pointer hover:text-yellow-50 hover:bg-[#937666] duration-300 rounded"

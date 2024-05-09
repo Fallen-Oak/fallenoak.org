@@ -3,21 +3,20 @@ import { Icon } from "astro-icon/components";
 ---
 
 <div
-  class="h-40 mx-auto flex px-16 items-center justify-center bg-black text-white z-50"
+  class="h-auto lg:h-40 mx-auto flex px-0 lg:px-16 items-center justify-center bg-black text-white z-50"
 >
-  <div class="w-3/4 flex items-center h-32 justify-center">
-    <div class="w-1/3 h-28 border-r-2 border-neutral-400 flex flex-col justify-center gap-y-2 text-sm px-4">
-
-        <p>
-          Fallen Oak Equine Rescue and Rehabilitation, Inc., is a 501c(3)
-          non-profit equine rescue devoted to providing a rehabilitative
-          sanctuary for horses.
-        </p>
-        <p>
-          © 2024 Fallen Oak
-        </p>
+  <div class="w-full lg:px-0 px-4 lg:w-3/4 flex lg:flex-row flex-col items-center lg:h-32 justify-center">
+    <div class="w-full py-8 lg:py-0  lg:w-1/3 lg:h-28 border-b-2 lg:border-b-0 lg:border-r-2 border-neutral-400 flex flex-col justify-center gap-y-2 text-sm px-4">
+      <p>
+        Fallen Oak Equine Rescue and Rehabilitation, Inc., is a 501c(3)
+        non-profit equine rescue devoted to providing a rehabilitative
+        sanctuary for horses.
+      </p>
+      <p>
+        © 2024 Fallen Oak
+      </p>
     </div>
-    <div class="w-1/3 h-28 border-r-2 border-neutral-400 flex flex-col justify-center gap-y-4 text-sm px-4">
+    <div class="w-full py-8 lg:py-0 lg:w-1/3 lg:h-28 border-b-2 lg:border-b-0 lg:border-r-2 border-neutral-400 flex flex-col justify-center gap-y-4 text-sm px-4">
       <div class="flex flex-col gap-y-1">
         <div class="flex items-center gap-x-2">
           <Icon name="mdi:address-marker" />
@@ -37,8 +36,8 @@ import { Icon } from "astro-icon/components";
         </div>
       </div>
     </div>
-    <div class="w-1/3 h-28 flex flex-col justify-center gap-y-4 text-sm px-4">
-      <div class="flex items-center justify-center gap-x-4 text-4xl">
+    <div class="w-full py-8 lg:py-0 lg:w-1/3 lg:h-28 flex flex-col justify-center gap-y-4 text-sm px-4">
+      <div class="flex items-center justify-center gap-x-8 lg:gap-x-4 text-4xl">
         <a
           href="https://www.facebook.com/FallenOakEquineRescue"
           target="_blank"
