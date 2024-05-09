@@ -8,13 +8,13 @@ const bg = bgs[idx % bgs.length];
 ---
 <div class={`${bg} flex flex-col max-w-sm rounded-xl ${idx % 2 ? 'lg:hover:rotate-1' : 'lg:hover:-rotate-1'} duration-300 lg:hover:scale-[1.05] cursor-pointer`}  style="filter: drop-shadow(0 2px 2px #000)">
   <div class="px-4 pb-12 pt-10  bg-transparent">
-    <p class={`${small ? 'text-sm' : 'text-base'} relative py-1 italic text-black`}>
+    <p class={`${small ? 'text-sm' : 'text-sm lg:text-base'} relative py-1 italic text-black`}>
       "{ text }"
     </p>
   </div>
   <div class="flex flex-col items-center justify-center p-8 rounded-b-lg  text-black">
     <img src={`/reviews/${img}`} alt="" class="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full border border-black " />
-    <p class="text-lg font-semibold leading-tight">{ name }</p>
-    <p class="text-sm uppercase">{ title }</p>
+    <p class="text-base lg:text-lg font-semibold leading-tight">{ name }</p>
+    <p class="text-xs lg:text-sm uppercase">{ title }</p>
   </div>
 </div>

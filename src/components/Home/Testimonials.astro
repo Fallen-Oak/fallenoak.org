@@ -3,6 +3,7 @@ import img1 from "../../assets/dash.png";
 import { Image } from "astro:assets";
 import Button from "../Button.astro";
 import Testimonial from "./Testimonial.astro";
+import { Icon } from "astro-icon/components";
 
 import testimonials from "../../data/testimonials.js";
 ---
@@ -23,14 +24,18 @@ import testimonials from "../../data/testimonials.js";
           ))
         }
         <div class="item">
-          <a href="https://www.facebook.com/FallenOakEquineRescue/reviews" target="_blank" class="hover:scale-[1.1] hover:rotate-3 duration-300 flex items-center justify-center text-center text-2xl font-medium flex-col w-full h-full">
-            ...and many more!
+          <a href="https://www.facebook.com/FallenOakEquineRescue/reviews" target="_blank" class="group hover:scale-[1.1] hover:rotate-3 duration-300 flex items-center justify-center text-center text-2xl font-medium flex-col w-full h-full">
+            <div>
+              ...and many more!
+            </div>
+            <Icon name="mdi:facebook" class="group-hover:text-[#4267b2] duration-300 text-4xl" /></a
+        >
           </a>
         </div>
       </div>
     </div>
   </div>
-  <div class="lg:hidden w-full pb-48">
+  <div class="lg:hidden w-full pb-48 px-16">
     <div class="text-4xl lg:text-7xl text-center uppercase  font-semibold mb-8">Our supporters</div>
     <div class="flex flex-col justify-center items-center gap-y-4">
 
