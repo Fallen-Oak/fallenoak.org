@@ -1,45 +1,260 @@
 ---
 const { pathname } = Astro.url;
 import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
 import img1 from "../assets/logo.png";
 ---
-<div
-style="filter: drop-shadow(0 1px 1px #000)"
-  class="fixed flex w-full px-12 justify-between z-[100] bg-[#937666] text-black"
->
-  <a href="/" class="flex items-center justify-center">
-    <Image src={img1} alt=""  height="48" class="px-2 duration-300 hover:opacity-50"/>
-  </a>
-  <nav
-    class="text-sm gap-x-8 uppercase font-semibold tracking-wide text-center flex h-12 items-center"
+
+<header class="z-[100] h-12 w-full -mb-10 sm:mb-0 relative sm:fixed uppercase"  >
+  <h2 class="sr-only" id="fast-websites-seo-optimized">
+    Fast websites SEO optimized
+  </h2><div 
+  style="filter: drop-shadow(0 1px 1px #000)" class="bg-[#937666] bg-opacity-100 backdrop-blur absolute inset-0">
+  </div><div
+    class="relative mx-auto flex h-full flex-row items-center justify-between gap-4 px-6 xl:container"
   >
-    <a
-      class={`hover:underline underline-offset-4`}
-      href="/">Home</a
+    <div class="flex h-full flex-nowrap items-center gap-20 2xl:gap-32">
+      <!-- <a
+        href="/en"
+        title="Straffe Sites"
+        class="text-heading border-heading whitespace-nowrap border-[3px] py-1 px-3 text-lg font-bold uppercase tracking-widest sm:text-xl"
+        translate="no"
+      >
+        Straffe S!tes
+      </a> -->
+      <a href="/" class="flex items-center justify-center">
+        <Image src={img1} alt=""  height="40" class="px-2 duration-300 hover:opacity-50"/>
+      </a>
+      <nav class="hidden tracking-wide xl:flex" aria-label="Navigation">
+        <h2 class="sr-only" id="navigation">Navigation</h2><menu
+          class="text-heading flex space-x-10 tracking-wider"
+          ><li class="group relative">
+            <a
+              href="/"
+              class="flex cursor-pointer items-center gap-4 whitespace-nowrap py-4 text-sm font-semibold"
+              ><span>About us</span>
+              <span
+                ><svg
+                  class="w-3 h-3 transition duration-300 transform group-hover:rotate-180"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 12 8"
+                  ><path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    fill="currentColor"
+                    d="M10.9997 1.16994C10.8123 0.983692 10.5589 0.87915 10.2947 0.87915C10.0305 0.87915 9.77707 0.983692 9.5897 1.16994L5.9997 4.70994L2.4597 1.16994C2.27234 0.983692 2.01889 0.87915 1.7547 0.87915C1.49052 0.87915 1.23707 0.983692 1.0497 1.16994C0.955976 1.26291 0.881582 1.37351 0.830813 1.49537C0.780044 1.61723 0.753906 1.74793 0.753906 1.87994C0.753906 2.01195 0.780044 2.14266 0.830813 2.26452C0.881582 2.38638 0.955976 2.49698 1.0497 2.58994L5.2897 6.82994C5.38267 6.92367 5.49327 6.99806 5.61513 7.04883C5.73699 7.0996 5.86769 7.12574 5.9997 7.12574C6.13172 7.12574 6.26242 7.0996 6.38428 7.04883C6.50614 6.99806 6.61674 6.92367 6.7097 6.82994L10.9997 2.58994C11.0934 2.49698 11.1678 2.38638 11.2186 2.26452C11.2694 2.14266 11.2955 2.01195 11.2955 1.87994C11.2955 1.74793 11.2694 1.61723 11.2186 1.49537C11.1678 1.37351 11.0934 1.26291 10.9997 1.16994Z"
+                  ></path></svg
+                ></span
+              ></a
+            ><menu style="filter: drop-shadow(0 1px 1px #000)" 
+              class=" invisible absolute z-20 flex transform flex-col gap-4 rounded bg-[#937666] px-1 py-2 text-heading opacity-0 shadow-xl transition duration-500 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100"
+              ><li class="hover:bg-gray-20 cursor-pointer rounded">
+                <a
+                  href="/about#mission"
+                  class="inline-flex whitespace-nowrap px-4 py-2 text-sm font-semibold hover:text-heading"
+                  >Our mission</a>
+              </li><li class="hover:bg-gray-20 cursor-pointer rounded">
+                <a
+                  href="/about#history"
+                  class="inline-flex whitespace-nowrap px-4 py-2 text-sm font-semibold hover:text-heading"
+                  >Our history</a>
+              </li><li class="hover:bg-gray-20 cursor-pointer rounded">
+                <a
+                  href="/about#mascot"
+                  class="inline-flex whitespace-nowrap px-4 py-2 text-sm font-semibold hover:text-heading"
+                  >Our mascot</a>
+              </li>
+              <li class="hover:bg-gray-20 cursor-pointer rounded">
+                <a
+                  href="/contact"
+                  class="inline-flex whitespace-nowrap px-4 py-2 text-sm font-semibold hover:text-heading"
+                  >Contact us</a>
+              </li></menu>
+          </li><li class="group relative">
+            <a
+              href="/"
+              class="flex cursor-pointer items-center gap-4 whitespace-nowrap py-4 text-sm font-semibold"
+              ><span>Our Horses</span>
+              <span
+                ><svg
+                  class="w-3 h-3 transition duration-300 transform group-hover:rotate-180"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 12 8"
+                  ><path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    fill="currentColor"
+                    d="M10.9997 1.16994C10.8123 0.983692 10.5589 0.87915 10.2947 0.87915C10.0305 0.87915 9.77707 0.983692 9.5897 1.16994L5.9997 4.70994L2.4597 1.16994C2.27234 0.983692 2.01889 0.87915 1.7547 0.87915C1.49052 0.87915 1.23707 0.983692 1.0497 1.16994C0.955976 1.26291 0.881582 1.37351 0.830813 1.49537C0.780044 1.61723 0.753906 1.74793 0.753906 1.87994C0.753906 2.01195 0.780044 2.14266 0.830813 2.26452C0.881582 2.38638 0.955976 2.49698 1.0497 2.58994L5.2897 6.82994C5.38267 6.92367 5.49327 6.99806 5.61513 7.04883C5.73699 7.0996 5.86769 7.12574 5.9997 7.12574C6.13172 7.12574 6.26242 7.0996 6.38428 7.04883C6.50614 6.99806 6.61674 6.92367 6.7097 6.82994L10.9997 2.58994C11.0934 2.49698 11.1678 2.38638 11.2186 2.26452C11.2694 2.14266 11.2955 2.01195 11.2955 1.87994C11.2955 1.74793 11.2694 1.61723 11.2186 1.49537C11.1678 1.37351 11.0934 1.26291 10.9997 1.16994Z"
+                  ></path></svg
+                ></span
+              ></a
+            ><menu style="filter: drop-shadow(0 1px 1px #000)" 
+              class="invisible absolute z-20 flex transform flex-col gap-4 rounded bg-[#937666] px-1 py-2 text-heading opacity-0 shadow-xl transition duration-500 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100"
+              ><li class="hover:bg-gray-20 cursor-pointer rounded">
+                <a
+                  href="/horses#adoptable"
+                  class="inline-flex whitespace-nowrap px-4 py-2 text-sm font-semibold hover:text-heading"
+                  >Adoptable horses</a>
+              </li><li class="hover:bg-gray-20 cursor-pointer rounded">
+                <a
+                  href="/horses#adopted"
+                  class="inline-flex whitespace-nowrap px-4 py-2 text-sm font-semibold hover:text-heading"
+                  >Adopted horses</a>
+              </li><li class="hover:bg-gray-20 cursor-pointer rounded">
+                <a
+                  href="/horses#permanent-residents"
+                  class="inline-flex whitespace-nowrap px-4 py-2 text-sm font-semibold hover:text-heading"
+                  >Permanent residents</a>
+              </li></menu>
+          </li><li class="group relative">
+            <a
+              href="/"
+              class="flex cursor-pointer items-center gap-4 whitespace-nowrap py-4 text-sm font-semibold"
+              ><span>News & Events</span>
+              <span
+                ><svg
+                  class="w-3 h-3 transition duration-300 transform group-hover:rotate-180"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 12 8"
+                  ><path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    fill="currentColor"
+                    d="M10.9997 1.16994C10.8123 0.983692 10.5589 0.87915 10.2947 0.87915C10.0305 0.87915 9.77707 0.983692 9.5897 1.16994L5.9997 4.70994L2.4597 1.16994C2.27234 0.983692 2.01889 0.87915 1.7547 0.87915C1.49052 0.87915 1.23707 0.983692 1.0497 1.16994C0.955976 1.26291 0.881582 1.37351 0.830813 1.49537C0.780044 1.61723 0.753906 1.74793 0.753906 1.87994C0.753906 2.01195 0.780044 2.14266 0.830813 2.26452C0.881582 2.38638 0.955976 2.49698 1.0497 2.58994L5.2897 6.82994C5.38267 6.92367 5.49327 6.99806 5.61513 7.04883C5.73699 7.0996 5.86769 7.12574 5.9997 7.12574C6.13172 7.12574 6.26242 7.0996 6.38428 7.04883C6.50614 6.99806 6.61674 6.92367 6.7097 6.82994L10.9997 2.58994C11.0934 2.49698 11.1678 2.38638 11.2186 2.26452C11.2694 2.14266 11.2955 2.01195 11.2955 1.87994C11.2955 1.74793 11.2694 1.61723 11.2186 1.49537C11.1678 1.37351 11.0934 1.26291 10.9997 1.16994Z"
+                  ></path></svg
+                ></span
+              ></a
+            ><menu style="filter: drop-shadow(0 1px 1px #000)" 
+              class=" invisible absolute z-20 flex transform flex-col gap-4 rounded bg-[#937666] px-1 py-2 text-heading opacity-0 shadow-xl transition duration-500 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100"
+              ><li class="hover:bg-gray-20 cursor-pointer rounded">
+                <a
+                  href="/news"
+                  class="inline-flex whitespace-nowrap px-4 py-2 text-sm font-semibold hover:text-heading"
+                  >News</a>
+              </li><li class="hover:bg-gray-20 cursor-pointer rounded">
+                <a
+                  href="/events"
+                  class="inline-flex whitespace-nowrap px-4 py-2 text-sm font-semibold hover:text-heading"
+                  >Upcoming Events</a>
+              </li></menu>
+          </li><li>
+            <a
+              href="/sponsors"
+              class="inline-flex whitespace-nowrap text-sm py-4 font-semibold"
+              >Sponsorships</a>
+          </li><li>
+            <a
+              href="/credits"
+              class="inline-flex whitespace-nowrap text-sm py-4 font-semibold"
+              >Credits</a>
+          </li></menu>
+      </nav>
+    </div><div
+      class="hidden items-center gap-4 font-semibold text-heading xl:flex"
     >
-    <!-- <a
-      class={`hover:underline underline-offset-4 ${pathname === "/about" ? "underline" : null}`}
-      href="/about">About</a
-    > -->
-    <a
-      class={`hover:underline underline-offset-4 ${pathname.includes("/about") ? "underline" : null}`}
-      href="/about">About</a
-    >
-    <a
-      class={`hover:underline underline-offset-4 ${pathname.includes("/adopt") ? "underline" : null}`}
-      href="/adopt">Adoptables</a
-    >
-    <a
-      class={`hover:underline underline-offset-4 ${pathname.includes("/news") ? "underline" : null}`}
-      href="/news">News & Events</a
-    >
-    <a
-      class={`hover:underline underline-offset-4 ${pathname.includes("/contact") ? "underline" : null}`}
-      href="/donate">Donate</a
-    >
-    <!-- <a
-      class={`hover:underline underline-offset-4 ${pathname.includes("/credits") ? "underline" : null}`}
-      href="/credits">Credits</a
-    > -->
-  </nav>
-</div>
+      <a href="/donate" class="flex bg-cyan-500 hover:bg-cyan-400  duration-300 rounded px-2 py-1 items-center gap-2 hover:text-heading text-sm"
+        >
+        <!-- <svg
+          class="h-4"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+          ><path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            fill="currentColor"
+            d="M0 288l55.6 23.8L192 370.3V376v64 56l48 16 73.3-89.7 88.9 38.1L448 480l6.6-49.4L504.1 59.5 512 0 459.6 29.4 52.7 258.4 0 288zM408.8 411L268.4 350.8 444.9 140.2 408.8 411zM222.3 331.1L108.3 282.2 401.5 117.2 222.3 331.1z"
+          ></path></svg
+        > -->
+        <Icon name="mdi:donate" />
+        <span>Donate</span></a
+      >
+    </div><aside class="flex h-full w-1/2 flex-1 justify-end xl:hidden">
+      <h2 class="sr-only" id="mobile-navigation">Mobile navigation</h2><div
+        class="flex items-center"
+      >
+        <label
+          class="relative z-[9999] cursor-pointer px-3 py-6"
+          for="ss-mobile-menu"
+          ><input class="peer hidden" type="checkbox" id="ss-mobile-menu" /><div
+            class="bg-heading before:bg-heading after:bg-heading block h-[1px] content-[''] relative w-7 bg-transparent peer-checked:bg-transparent z-[10000] before:peer-checked:transform before:peer-checked:rotate-45 before:peer-checked:top-0 before:peer-checked:w-full after:peer-checked:transform after:peer-checked:-rotate-45 after:peer-checked:bottom-0 after:peer-checked:w-full before:block before:h-full before:w-full before:absolute before:content-[''] before:transition-all before:ease-out before:duration-200 before:top-[-0.35rem] before:z-[10000] after:block after:h-full after:w-full after:right-0 after:absolute after:content-[''] after:transition-all after:ease-out after:duration-200 after:bottom-[-0.35rem]"
+          >
+          </div><div
+            class="fixed inset-0 z-[9999] hidden h-full w-full bg-heading/50 backdrop-blur-sm peer-checked:block"
+          >
+            &nbsp;
+          </div><div
+            class="fixed top-0 right-0 z-[9999] h-full w-full translate-x-full overflow-y-auto overscroll-y-none transition duration-500 peer-checked:translate-x-0 peer-checked:shadow-heading"
+          >
+            <div
+            style="filter: drop-shadow(0 2px 2px #000)"
+              class="float-right min-h-full w-[85%] bg-yellow-50 px-6 pt-12 shadow-2xl"
+            >
+              <menu class="mt-8 mb-8 flex flex-col space-y-4 text-heading"
+                ><li>
+                  <a href="/" class="whitespace-nowrap pb-1 font-semibold"
+                    >About us</a
+                  ><menu class="space-y-4 py-4 px-6 font-semibold"
+                    ><li>
+                      <a href="/about#mission" class="whitespace-nowrap pb-1"
+                        >Our mission</a>
+                    </li><li>
+                      <a
+                        href="/about#history"
+                        class="whitespace-nowrap pb-1">Our history</a>
+                    </li>
+                    <li>
+                      <a
+                        href="/about#mascot"
+                        class="whitespace-nowrap pb-1">Our mascot</a>
+                    </li>
+                    <li>
+                      <a
+                        href=""
+                        onclick="window.lenis.scrollTo('#footer')"
+                        class="whitespace-nowrap pb-1">Contact us</a>
+                    </li></menu>
+                </li><li>
+                  <a href="/" class="whitespace-nowrap pb-1 font-semibold"
+                    >Our horses</a
+                  ><menu class="space-y-4 py-4 px-6 font-semibold"
+                    ><li>
+                      <a href="/horses#adoptable" class="whitespace-nowrap pb-1"
+                        >Adoptable horses</a>
+                    </li><li>
+                      <a
+                        href="/horses#adopted"
+                        class="whitespace-nowrap pb-1">Adopted horses</a>
+                    </li><li>
+                      <a
+                        href="/horses#permanent-residents"
+                        class="whitespace-nowrap pb-1"
+                        >Permanent residents</a>
+                    </li></menu>
+                </li><li>
+                  <a href="/" class="whitespace-nowrap pb-1 font-semibold"
+                    >News & Events</a
+                  ><menu class="space-y-4 py-4 px-6 font-semibold"
+                    ><li>
+                      <a href="/news" class="whitespace-nowrap pb-1"
+                        >News</a>
+                    </li><li>
+                      <a
+                        href="/events"
+                        class="whitespace-nowrap pb-1">Events</a>
+                    </li></menu>
+                </li><li>
+                  <a
+                    href="/sponsors"
+                    class="whitespace-nowrap pb-1 font-semibold">Sponsorships</a>
+                </li><li>
+                  <a
+                    href="/credits"
+                    class="whitespace-nowrap pb-1 font-semibold"
+                    >Credits</a>
+                </li></menu>
+            </div>
+          </div></label>
+      </div>
+    </aside>
+  </div>
+</header>
