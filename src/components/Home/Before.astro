@@ -18,7 +18,9 @@ import ButtonSmall from "../ButtonSmall.astro";
     <div class="text-4xl lg:text-7xl">Make a difference</div>
   </section>
 
-  <section class="bg-yellow-50 w-full pb-24 px-2 lg:px-0 lg:h-auto h-[100vh]">
+  <section
+    class="bg-yellow-50 w-full pb-24 px-2 lg:px-0 lg:h-auto h-screen hidden lg:block"
+  >
     <div
       class="comparisonSection w-full h-64 lg:h-160 lg:w-288 mx-auto text-center"
     >
@@ -39,6 +41,14 @@ import ButtonSmall from "../ButtonSmall.astro";
       <div class="mt-4">
         <Button href="/donate" text="Learn more" />
       </div>
+    </div>
+  </section>
+  <section
+    class="bg-yellow-50 w-full pb-24 px-2 lg:px-0 lg:h-auto h-auto lg:hidden flex flex-col items-center justify-center"
+  >
+    <div><Image src={img2} alt="before" class="rounded-lg" /></div>
+    <div class="mt-4">
+      <Button href="/donate" text="Learn more" />
     </div>
   </section>
 </div>
