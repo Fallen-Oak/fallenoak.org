@@ -175,7 +175,7 @@ import img1 from "../assets/logo.png";
         class="flex items-center"
       >
         <label
-          class="relative z-[9999] cursor-pointer px-3 py-6"
+          class="relative cursor-pointer px-3 py-6"
           for="ss-mobile-menu"
           ><input class="peer hidden" type="checkbox" id="ss-mobile-menu" />
           <div
@@ -264,13 +264,13 @@ import img1 from "../assets/logo.png";
 
 <style>
   label {
-    @apply focus:bg-blue-50 z-[10000] rounded;
+    @apply active:bg-yellow-50 rounded;
   }
   .bg-heading::before {
-    background-color: #000000;
+    @apply bg-black;
   }
   .bg-heading::after {
-    background-color: #000000;
+    @apply bg-black;
   }
 
   label {
