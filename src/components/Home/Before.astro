@@ -6,40 +6,41 @@ import Button from "../Button.astro";
 import ButtonSmall from "../ButtonSmall.astro";
 ---
 
-<div class="lg:h-auto h-screen">
-
+<div class="h-auto">
   <section
-  class="bg-yellow-50 w-full flex flex-col items-center justify-center tracking-wide font-semibold uppercase h-[20vh]"
->
-  <!-- <div
+    class="bg-yellow-50 w-full flex flex-col items-center justify-center tracking-wide font-semibold uppercase h-[20vh]"
+  >
+    <!-- <div
             class="text-lg md:text-2xl pb-4 md:pb-4 uppercase tracking-wide font-normal text-center md:text-left"
           >
             Donate to Fallen Oak
           </div> -->
-  <div class="text-4xl lg:text-7xl">Make a difference</div>
-</section>
+    <div class="text-4xl lg:text-7xl">Make a difference</div>
+  </section>
 
-<section class="bg-yellow-50 w-full pb-24 px-2 lg:px-0 lg:h-auto h-auto">
-  <div class="comparisonSection w-full h-64 lg:h-160 lg:w-288 mx-auto text-center">
-    <div class="comparisonImage beforeImage">
-      <Image
-        src={img1}
-        alt="before"
-        style="filter: grayscale(50%);"
-        class="rounded-lg"
-      />
-    </div>
-    <div class="comparisonImage afterImage border-r-2 border-white ml-[2px]">
-      <Image src={img2} alt="before" class="rounded-lg" />
-    </div>
-    <!-- <div class="text-center text-6xl tracking-wide mt-4 font-bold uppercase">
+  <section class="bg-yellow-50 w-full pb-24 px-2 lg:px-0 lg:h-auto h-screen">
+    <div
+      class="comparisonSection w-full h-64 lg:h-160 lg:w-288 mx-auto text-center"
+    >
+      <div class="comparisonImage beforeImage">
+        <Image
+          src={img1}
+          alt="before"
+          style="filter: grayscale(50%);"
+          class="rounded-lg"
+        />
+      </div>
+      <div class="comparisonImage afterImage border-r-2 border-white ml-[2px]">
+        <Image src={img2} alt="before" class="rounded-lg" />
+      </div>
+      <!-- <div class="text-center text-6xl tracking-wide mt-4 font-bold uppercase">
       Donations
     </div> -->
-    <div class="mt-4">
-      <Button href="/donate" text="Learn more" />
+      <div class="mt-4">
+        <Button href="/donate" text="Learn more" />
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 </div>
 
 <style>
