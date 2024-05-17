@@ -5,7 +5,7 @@ import { Icon } from "astro-icon/components";
 import img1 from "../assets/logo.png";
 ---
 
-<header class="z-40 h-12 w-full -mb-10 sm:mb-0 relative sm:fixed uppercase"  >
+<header class="z-40 h-20 xl:h-12 w-full -mb-10 sm:mb-0 relative sm:fixed uppercase"  >
   <h2 class="sr-only" id="fast-websites-seo-optimized">
     Fast websites SEO optimized
   </h2><div 
@@ -23,7 +23,7 @@ import img1 from "../assets/logo.png";
         Straffe S!tes
       </a> -->
       <a href="/" class="flex items-center justify-center">
-        <Image src={img1} alt=""  height="40" class="px-2 duration-300 hover:opacity-50"/>
+        <Image src={img1} alt=""  height="200" class="w-auto h-16 xl:h-8 px-2 duration-300 hover:opacity-50"/>
       </a>
       <nav class="hidden tracking-wide xl:flex" aria-label="Navigation">
         <h2 class="sr-only" id="navigation">Navigation</h2><menu
@@ -185,11 +185,11 @@ import img1 from "../assets/logo.png";
           >
             &nbsp;
           </div><div
-            class="fixed top-0 right-0 z-[9999] h-full w-full translate-x-full overflow-y-auto overscroll-y-none transition duration-300 peer-checked:translate-x-0 peer-checked:shadow-heading"
+            class="fixed top-0 right-0 z-[9999] h-full w-full translate-x-full overflow-y-auto overscroll-y-none transition duration-500 peer-checked:translate-x-0 peer-checked:shadow-heading"
           >
             <div
             style="filter: drop-shadow(0 2px 2px #000)"
-              class="flex items-center text-base float-right min-h-[101vh] w-72 bg-yellow-50 px-6 pt-0 shadow-2xl"
+              class="flex items-center text-base float-right min-h-[101vh] w-[80%] bg-yellow-50 px-6 pt-0 shadow-2xl"
             >
               <menu class="mt-8 mb-8 flex flex-col space-y-4 text-heading"
                 ><li>
@@ -260,3 +260,12 @@ import img1 from "../assets/logo.png";
     </aside>
   </div>
 </header>
+
+<style>
+  .bg-heading::before {
+    background-color: #000000;
+  }
+  .bg-heading::after {
+    background-color: #000000;
+  }
+</style>
