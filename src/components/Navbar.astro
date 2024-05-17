@@ -23,7 +23,7 @@ import img1 from "../assets/logo.png";
         Straffe S!tes
       </a> -->
       <a href="/" class="flex items-center justify-center">
-        <Image src={img1} alt=""  height="200" class="w-auto h-16 xl:h-8 px-2 duration-300 hover:opacity-50"/>
+        <Image src={img1} alt=""  height="200" class="w-auto h-16 py-2 xl:py-0 xl:h-8 px-2 duration-300 hover:opacity-50"/>
       </a>
       <nav class="hidden tracking-wide xl:flex" aria-label="Navigation">
         <h2 class="sr-only" id="navigation">Navigation</h2><menu
@@ -177,7 +177,8 @@ import img1 from "../assets/logo.png";
         <label
           class="relative z-[9999] cursor-pointer px-3 py-6"
           for="ss-mobile-menu"
-          ><input class="peer hidden" type="checkbox" id="ss-mobile-menu" /><div
+          ><input class="peer hidden" type="checkbox" id="ss-mobile-menu" />
+          <div
             class="bg-heading before:bg-heading after:bg-heading block h-[1px] content-[''] relative w-7 bg-transparent peer-checked:bg-transparent z-[10000] before:peer-checked:transform before:peer-checked:rotate-45 before:peer-checked:top-0 before:peer-checked:w-full after:peer-checked:transform after:peer-checked:-rotate-45 after:peer-checked:bottom-0 after:peer-checked:w-full before:block before:h-full before:w-full before:absolute before:content-[''] before:transition-all before:ease-out before:duration-200 before:top-[-0.35rem] before:z-[10000] after:block after:h-full after:w-full after:right-0 after:absolute after:content-[''] after:transition-all after:ease-out after:duration-200 after:bottom-[-0.35rem]"
           >
           </div><div
@@ -262,10 +263,16 @@ import img1 from "../assets/logo.png";
 </header>
 
 <style>
+  label {
+    @apply hover:bg-blue-50 z-[10000] rounded;
+  }
   .bg-heading::before {
     background-color: #000000;
   }
   .bg-heading::after {
     background-color: #000000;
+  }
+
+  label {
   }
 </style>
