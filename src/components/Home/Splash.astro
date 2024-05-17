@@ -52,34 +52,34 @@ import img1 from "../../assets/P1010228.jpg";
 </section>
 
 <script>
-  // import { animate, inView, stagger } from "motion";
-  // const keyframes = {
-  //   y: ["20%", "0%"],
-  //   opacity: [0.0, 1],
-  // };
-  // const title = document.getElementById("title");
-  // animate(title, keyframes, {
-  //   duration: 0.6,
-  //   delay: stagger(0.5, { start: 0.3 }),
-  // });
-  // const desc = document.getElementById("desc");
-  // animate(desc, keyframes, {
-  //   duration: 0.6,
-  //   delay: stagger(0.5, { start: 0.5 }),
-  // });
+  import { animate, inView, stagger } from "motion";
+  const keyframes = {
+    y: ["20%", "0%"],
+    opacity: [0.0, 1],
+  };
+  const title = document.getElementById("title");
+  animate(title, keyframes, {
+    duration: 0.6,
+    delay: stagger(0.5, { start: 0.3 }),
+  });
+  const desc = document.getElementById("desc");
+  animate(desc, keyframes, {
+    duration: 0.6,
+    delay: stagger(0.5, { start: 0.5 }),
+  });
 
-  // const scrollIndicatorParent = document.getElementById("scroll-down-parent");
-  // animate(
-  //   scrollIndicatorParent,
-  //   { opacity: [0, 1] },
-  //   { duration: 1, delay: 1.5 }
-  // );
-  // const scrollIndicator = document.getElementById("scroll-down-indicator");
-  // animate(
-  //   scrollIndicator,
-  //   { y: [0, 10, 0] },
-  //   { duration: 1.5, repeat: Infinity, easing: ["ease-out", "ease-in"] }
-  // );
+  const scrollIndicatorParent = document.getElementById("scroll-down-parent");
+  animate(
+    scrollIndicatorParent,
+    { opacity: [0, 1] },
+    { duration: 1, delay: 1.5 }
+  );
+  const scrollIndicator = document.getElementById("scroll-down-indicator");
+  animate(
+    scrollIndicator,
+    { y: [0, 10, 0] },
+    { duration: 1.5, repeat: Infinity, easing: ["ease-out", "ease-in"] }
+  );
 </script>
 
 <style>
