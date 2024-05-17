@@ -6,7 +6,9 @@ import Button from "../Button.astro";
 import ButtonSmall from "../ButtonSmall.astro";
 ---
 
-<section
+<div class="lg:h-auto h-screen">
+
+  <section
   class="bg-yellow-50 w-full flex flex-col items-center justify-center tracking-wide font-semibold uppercase h-[20vh]"
 >
   <!-- <div
@@ -18,7 +20,7 @@ import ButtonSmall from "../ButtonSmall.astro";
 </section>
 
 <section class="bg-yellow-50 w-full pb-24 px-2 lg:px-0 lg:h-auto h-auto">
-  <div class="comparisonSection w-full h-auto lg:h-160 lg:w-288 mx-auto text-center">
+  <div class="comparisonSection w-full h-64 lg:h-160 lg:w-288 mx-auto text-center">
     <div class="comparisonImage beforeImage">
       <Image
         src={img1}
@@ -38,6 +40,7 @@ import ButtonSmall from "../ButtonSmall.astro";
     </div>
   </div>
 </section>
+</div>
 
 <style>
   .comparisonSection {
