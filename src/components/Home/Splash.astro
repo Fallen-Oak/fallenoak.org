@@ -1,12 +1,13 @@
 ---
 import Button from "../Button.astro";
-import { Icon } from "astro-icon/components";
+import ScrollDown from "../ScrollDown.astro";
 import { Image } from "astro:assets";
 import img1 from "../../assets/P1010228.jpg";
+import { Icon } from "astro-icon/components";
 ---
 
 <section
-  class=" text-[#121619] desktop-gradients w-screen min-h-screen h-[120vh] lg:h-screen relative lg:flex lg:items-center lg:justify-center bg-cover bg-center"
+  class="text-[#121619] desktop-gradients w-screen min-h-screen h-[120vh] lg:h-screen relative lg:flex lg:items-center lg:justify-center bg-cover bg-center"
 >
   <div class="w-full lg:w-11/12 lg:h-auto h-full">
     <div class="w-full md:w-2/5 lg:h-auto h-full">
@@ -21,7 +22,7 @@ import img1 from "../../assets/P1010228.jpg";
           <div class="whitespace-nowrap">Fallen Oak</div>
           <div class="whitespace-nowrap">Equine Rescue</div>
         </div>
-        <div class="px-4 lg:px-0 flex flex-col gap-y-8 pb-16" id="desc">
+        <div class="px-4 lg:px-0 flex flex-col gap-y-8 pb-8" id="desc">
           <div class="text-base lg:text-2xl">
             Fallen Oak Equine Rescue and Rehabilitation is a non-profit equine
             rescue located in Belleview, FL, devoted to providing a
@@ -37,7 +38,7 @@ import img1 from "../../assets/P1010228.jpg";
         </div>
         <div
           id="scroll-down-parent"
-          class="hidden opacity-0 lg:flex justify-start"
+          class="hidden opacity-100 lg:flex justify-start"
         >
           <Icon
             id="scroll-down-indicator"

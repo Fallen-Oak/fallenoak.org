@@ -10,6 +10,7 @@ const img1Src = img1.src;
 const img2Src = img2.src;
 const img3Src = img3.src;
 const img4Src = img4.src;
+import { Icon } from "astro-icon/components";
 ---
 
 <section
@@ -20,6 +21,7 @@ const img4Src = img4.src;
     <section class="black flex h-screen items-center justify-around">
       <div class="relative overflow-hidden w-1/2 h-[80vh]">
         <div
+          id="adoptables"
           class="pr-16 panel-text translate-y-full absolute opacity-0 z-10 w-full"
         >
           <div
@@ -43,15 +45,20 @@ const img4Src = img4.src;
           <div class="mt-8">
             <Button href="/adoptable" text="Learn more" />
           </div>
-          <!-- <div id="scroll-down-parent1" class="opacity-0 flex justify-start">
+          <div
+            id="scroll-down-parent-adoptables"
+            class="mt-8 hidden opacity-100 lg:flex justify-start"
+          >
             <Icon
-              id="scroll-down-indicator1"
-              class="w-8 h-8 text-black"
+              id="scroll-down-indicator-adoptables"
+              class="w-12 h-12 p-2 text-black cursor-pointer hover:text-yellow-50 hover:bg-[#937666] duration-300 rounded"
               name="ph:caret-down-bold"
+              onclick="window.lenis.scrollTo('#scroll-down-parent-permanent')"
             />
-          </div> -->
+          </div>
         </div>
         <div
+          id="permanent-residents"
           class="pr-16 panel-text translate-y-full absolute opacity-0 z-10 w-full"
         >
           <div
@@ -62,7 +69,7 @@ const img4Src = img4.src;
           <div
             class="text-5xl md:text-7xl font-semibold text-center md:text-left uppercase tracking-wide mb-8 md:mb-8"
           >
-            Permanent Residents
+            Residents
           </div>
           <p class="text-lg md:text-2xl text-left md:mx-0 mx-4">
             Meet the cherished permanent residents of our sanctuary. These
@@ -73,15 +80,20 @@ const img4Src = img4.src;
           <div class="mt-8">
             <Button href="/horses" text="Learn more" />
           </div>
-          <!-- <div id="scroll-down-parent2" class="opacity-0 flex justify-start">
+          <div
+            id="scroll-down-parent-permanent"
+            class="mt-8 hidden opacity-100 lg:flex justify-start"
+          >
             <Icon
-              id="scroll-down-indicator2"
-              class="w-8 h-8 text-black"
+              id="scroll-down-indicator-permanent"
+              class="w-12 h-12 p-2 text-black cursor-pointer hover:text-yellow-50 hover:bg-[#937666] duration-300 rounded"
               name="ph:caret-down-bold"
+              onclick="window.lenis.scrollTo('#scroll-down-parent-sponsorships')"
             />
-          </div> -->
+          </div>
         </div>
         <div
+          id="sponsorships"
           class="pr-16 panel-text translate-y-full absolute opacity-0 z-10 w-full"
         >
           <div
@@ -104,15 +116,20 @@ const img4Src = img4.src;
           <div class="mt-8">
             <Button href="/sponsors" text="Learn more" />
           </div>
-          <!-- <div id="scroll-down-parent3" class="opacity-0 flex justify-start">
+          <div
+            id="scroll-down-parent-sponsorships"
+            class="mt-8 hidden opacity-100 lg:flex justify-start"
+          >
             <Icon
-              id="scroll-down-indicator3"
-              class="w-8 h-8 text-black"
+              id="scroll-down-indicator-sponsorships"
+              class="w-12 h-12 p-2 text-black cursor-pointer hover:text-yellow-50 hover:bg-[#937666] duration-300 rounded"
               name="ph:caret-down-bold"
+              onclick="window.lenis.scrollTo('#scroll-down-parent-sponsored')"
             />
-          </div> -->
+          </div>
         </div>
         <div
+          id="sponsored"
           class="pr-16 panel-text translate-y-full absolute opacity-0 z-10 w-full"
         >
           <div
@@ -135,13 +152,17 @@ const img4Src = img4.src;
           <div class="mt-8">
             <Button href="/sponsors" text="Learn more" />
           </div>
-          <!-- <div id="scroll-down-parent4" class="opacity-0 flex justify-start">
+          <div
+            id="scroll-down-parent-sponsored"
+            class="mt-8 hidden opacity-100 lg:flex justify-start"
+          >
             <Icon
-              id="scroll-down-indicator4"
-              class="w-8 h-8 text-black"
+              id="scroll-down-indicator-sponsored"
+              class="w-12 h-12 p-2 text-black cursor-pointer hover:text-yellow-50 hover:bg-[#937666] duration-300 rounded"
               name="ph:caret-down-bold"
+              onclick="window.lenis.scrollTo('#difference')"
             />
-          </div> -->
+          </div>
         </div>
       </div>
 
@@ -389,39 +410,79 @@ const img4Src = img4.src;
       invalidateOnRefresh: true,
     });
   });
-  // inView("#scroll-down-parent1", ({ target }) => {
-  //   animate(target, { opacity: [0, 1] }, { duration: 1, delay: 0.5 });
-  // });
-  // animate(
-  //   document.getElementById("scroll-down-indicator1"),
-  //   { y: [0, 10, 0] },
-  //   { duration: 1.5, repeat: Infinity, easing: ["ease-out", "ease-in"] }
-  // );
+  const scrollIndicatorParent = document.getElementById(
+    "scroll-down-parent-adoptables"
+  );
+  const scrollIndicator = document.getElementById(
+    "scroll-down-indicator-adoptables"
+  );
+  inView("#scroll-down-parent-adoptables", (info) => {
+    animate(
+      scrollIndicatorParent,
+      { opacity: [0, 1] },
+      { duration: 1, delay: 1.0 }
+    );
+    animate(
+      scrollIndicator,
+      { y: [0, 10, 0] },
+      { duration: 1.5, repeat: Infinity, easing: ["ease-out", "ease-in"] }
+    );
+  });
 
-  // inView("#scroll-down-parent2", ({ target }) => {
-  //   animate(target, { opacity: [0, 1] }, { duration: 1, delay: 0.5 });
-  // });
-  // animate(
-  //   document.getElementById("scroll-down-indicator2"),
-  //   { y: [0, 10, 0] },
-  //   { duration: 1.5, repeat: Infinity, easing: ["ease-out", "ease-in"] }
-  // );
+  const scrollIndicatorParent2 = document.getElementById(
+    "scroll-down-parent-permanent"
+  );
+  const scrollIndicator2 = document.getElementById(
+    "scroll-down-indicator-permanent"
+  );
+  inView("#scroll-down-parent-permanent", (info) => {
+    animate(
+      scrollIndicatorParent2,
+      { opacity: [0, 1] },
+      { duration: 1, delay: 1.0 }
+    );
+    animate(
+      scrollIndicator2,
+      { y: [0, 10, 0] },
+      { duration: 1.5, repeat: Infinity, easing: ["ease-out", "ease-in"] }
+    );
+  });
 
-  // inView("#scroll-down-parent3", ({ target }) => {
-  //   animate(target, { opacity: [0, 1] }, { duration: 1, delay: 0.5 });
-  // });
-  // animate(
-  //   document.getElementById("scroll-down-indicator3"),
-  //   { y: [0, 10, 0] },
-  //   { duration: 1.5, repeat: Infinity, easing: ["ease-out", "ease-in"] }
-  // );
+  const scrollIndicatorParent3 = document.getElementById(
+    "scroll-down-parent-sponsorships"
+  );
+  const scrollIndicator3 = document.getElementById(
+    "scroll-down-indicator-sponsorships"
+  );
+  inView("#scroll-down-parent-sponsorships", (info) => {
+    animate(
+      scrollIndicatorParent3,
+      { opacity: [0, 1] },
+      { duration: 1, delay: 1.0 }
+    );
+    animate(
+      scrollIndicator3,
+      { y: [0, 10, 0] },
+      { duration: 1.5, repeat: Infinity, easing: ["ease-out", "ease-in"] }
+    );
+  });
 
-  // inView("#scroll-down-parent4", ({ target }) => {
-  //   animate(target, { opacity: [0, 1] }, { duration: 1, delay: 0.5 });
-  // });
-  // animate(
-  //   document.getElementById("scroll-down-indicator4"),
-  //   { y: [0, 10, 0] },
-  //   { duration: 1.5, repeat: Infinity, easing: ["ease-out", "ease-in"] }
-  // );
+  const scrollIndicatorParent4 = document.getElementById(
+    "scroll-down-parent-sponsored"
+  );
+  const scrollIndicator4 = document.getElementById(
+    "scroll-down-indicator-sponsored"
+  );
+  inView("#scroll-down-parent-sponsored", (info) => {
+    animate(
+      scrollIndicatorParent3,
+      { opacity: [0, 1] },
+      { duration: 1, delay: 1.0 }
+    );
+    animate(
+      scrollIndicator3,
+      { y: [0, 10, 0] },
+      { duration: 1.5, repeat: Infinity, easing: ["ease-out", "ease-in"] }
+    );
+  });
 </script>

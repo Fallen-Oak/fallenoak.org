@@ -3,6 +3,7 @@ import img1 from "../../assets/horse16.jpg";
 import img2 from "../../assets/horse.jpg";
 import { Image } from "astro:assets";
 import Button from "../Button.astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <section
@@ -10,19 +11,27 @@ import Button from "../Button.astro";
   class="min-h-screen relative flex flex-col items-center justify-center pt-0 lg:pt-0"
   style="background-image: linear-gradient(to top, #fefce8 0%, #fefce8 30%);"
 >
-  <div class="flex flex-col lg:justify-center items-center my-4 gap-y-12 lg:pb-0 pb-24">
-    <div class="text-5xl lg:text-7xl uppercase font-bold tracking-wide">About Us</div>
+  <div
+    class="flex flex-col lg:justify-center items-center my-4 gap-y-12 lg:pb-0 pb-24"
+  >
+    <div class="text-5xl lg:text-7xl uppercase font-bold tracking-wide">
+      About Us
+    </div>
     <div
       class="lg:max-w-3xl flex lg:flex-row flex-col items-center justify-center lg:gap-x-8 leading-snug"
     >
-      <p class="lg:px-0 px-8 w-full lg:w-2/3 tracking-normal text-lg lg:text-2xl lg:mr-4">
+      <p
+        class="lg:px-0 px-8 w-full lg:w-2/3 tracking-normal text-lg lg:text-2xl lg:mr-4"
+      >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
         commodo consequat.<br />Duis aute irure dolor in reprehenderit in
         voluptate velit esse cillum dolore eu fugiat nulla pariatur.
       </p>
-      <div class="relative flex items-center justify-center mt-12 lg:mt-0 lg:max-h-40 w-full lg:w-1/3">
+      <div
+        class="relative flex items-center justify-center mt-12 lg:mt-0 lg:max-h-40 w-full lg:w-1/3"
+      >
         <Image
           src={img1}
           alt=""
@@ -37,6 +46,39 @@ import Button from "../Button.astro";
         />
       </div>
     </div>
-    <Button href="/about" text="Learn more"/>
+    <Button href="/about" text="Learn more" />
+    <div
+      id="scroll-down-parent-mission"
+      class="hidden opacity-100 lg:flex justify-start"
+    >
+      <Icon
+        id="scroll-down-indicator-mission"
+        class="w-12 h-12 p-2 text-black cursor-pointer hover:text-yellow-50 hover:bg-[#937666] duration-300 rounded"
+        name="ph:caret-down-bold"
+        onclick="window.lenis.scrollTo('#adoptables')"
+      />
+    </div>
   </div>
 </section>
+
+<script>
+  import { animate, inView, stagger } from "motion";
+  const scrollIndicatorParent = document.getElementById(
+    "scroll-down-parent-mission"
+  );
+  const scrollIndicator = document.getElementById(
+    "scroll-down-indicator-mission"
+  );
+  inView("#scroll-down-parent-mission", (info) => {
+    animate(
+      scrollIndicatorParent,
+      { opacity: [0, 1] },
+      { duration: 1, delay: 1.0 }
+    );
+    animate(
+      scrollIndicator,
+      { y: [0, 10, 0] },
+      { duration: 1.5, repeat: Infinity, easing: ["ease-out", "ease-in"] }
+    );
+  });
+</script>
