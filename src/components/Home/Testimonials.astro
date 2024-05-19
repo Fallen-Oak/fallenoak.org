@@ -13,7 +13,7 @@ import testimonials from "../../data/testimonials.js";
   class="relative bg-yellow-50"
   style="background-image: linear-gradient(to top, #fefce8 0%, #fefce8 30%);"
 >
-  <div class="horizontal overflow-y-hidden hidden lg:block">
+  <div class="horizontal overflow-y-hidden hidden lg:block ">
     <div class="pin-wrap flex flex-col mt-24">
       <div
         class="text-4xl lg:text-7xl text-center uppercase font-semibold whitespace-nowrap"
@@ -57,7 +57,7 @@ import testimonials from "../../data/testimonials.js";
     </div>
   </div>
 </section>
-<div class="lg:hidden w-full pb-48 px-16">
+<div class="lg:hidden w-full pb-48 px-16 bg-yellow-50">
   <div class="text-4xl lg:text-7xl text-center uppercase font-semibold mb-8">
     Our supporters
   </div>
@@ -78,10 +78,10 @@ import testimonials from "../../data/testimonials.js";
   }
 
   .horizontal .pin-wrap {
-    @apply flex relative h-screen;
+    @apply flex relative;
   }
   .horizontal .animation-wrap {
-    @apply flex relative h-screen;
+    @apply flex relative;
   }
 
   .horizontal .item {
@@ -175,7 +175,7 @@ import testimonials from "../../data/testimonials.js";
     animate(
       scrollIndicatorParent,
       { opacity: [0, 1] },
-      { duration: 1, delay: 1.0 }
+      { duration: 1, delay: 0.5 }
     );
     animate(
       scrollIndicator,
