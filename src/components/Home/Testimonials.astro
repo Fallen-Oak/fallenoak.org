@@ -9,46 +9,68 @@ import testimonials from "../../data/testimonials.js";
 ---
 
 <section
+  id="supporters"
   class="relative bg-yellow-50"
   style="background-image: linear-gradient(to top, #fefce8 0%, #fefce8 30%);"
 >
-  <div class="horizontal overflow-y-hidden hidden lg:block ">
-    <div class="pin-wrap">
-      <div class="text-4xl lg:text-7xl text-center uppercase absolute top-24 left-1/2 -translate-x-1/2 font-semibold whitespace-nowrap">Our supporters</div>
-      <div class="animation-wrap to-right pr-8 pl-4 mt-36">
+  <div class="horizontal overflow-y-hidden hidden lg:block">
+    <div class="pin-wrap flex flex-col mt-24">
+      <div
+        class="text-4xl lg:text-7xl text-center uppercase font-semibold whitespace-nowrap"
+      >
+        <div>Our supporters</div>
+
+        <div
+          id="scroll-down-parent-supporters"
+          class="mt-2 hidden opacity-100 lg:flex justify-center z-50"
+        >
+          <Icon
+            id="scroll-down-indicator-supporters"
+            class="w-12 h-12 p-2 text-black cursor-pointer hover:text-yellow-50 hover:bg-[#937666] duration-300 rounded"
+            name="ph:caret-down-bold"
+            onclick="window.lenis.scrollTo('#stats')"
+          />
+        </div>
+      </div>
+      <div class="animation-wrap to-right pr-8 pl-4 mt-0">
         {
           testimonials.map((t, idx) => (
             <div class="item">
-              <Testimonial {...t} idx={idx}/>
+              <Testimonial {...t} idx={idx} />
             </div>
           ))
         }
         <div class="item">
-          <a href="https://www.facebook.com/FallenOakEquineRescue/reviews" target="_blank" class="group hover:scale-[1.1] hover:rotate-3 duration-300 flex items-center justify-center text-center text-2xl font-medium flex-col w-full h-full">
-            <div>
-              ...and many more!
-            </div>
-            <Icon name="mdi:facebook" class="group-hover:text-[#4267b2] duration-300 text-4xl" /></a
-        >
-          </a>
+          <a
+            href="https://www.facebook.com/FallenOakEquineRescue/reviews"
+            target="_blank"
+            class="group hover:scale-[1.1] hover:rotate-3 duration-300 flex items-center justify-center text-center text-2xl font-medium flex-col w-full h-full"
+          >
+            <div>...and many more!</div>
+            <Icon
+              name="mdi:facebook"
+              class="group-hover:text-[#4267b2] duration-300 text-4xl"
+            /></a
+          >
         </div>
       </div>
     </div>
   </div>
-  <div class="lg:hidden w-full pb-48 px-16">
-    <div class="text-4xl lg:text-7xl text-center uppercase  font-semibold mb-8">Our supporters</div>
-    <div class="flex flex-col justify-center items-center gap-y-4">
-
-      {
-        testimonials.slice(0, 4).map((t, idx) => (
-          <div>
-            <Testimonial {...t} idx={idx}/>
-          </div>
-        ))
-      }
-    </div>
-  </div>
 </section>
+<div class="lg:hidden w-full pb-48 px-16">
+  <div class="text-4xl lg:text-7xl text-center uppercase font-semibold mb-8">
+    Our supporters
+  </div>
+  <div class="flex flex-col justify-center items-center gap-y-4">
+    {
+      testimonials.slice(0, 4).map((t, idx) => (
+        <div>
+          <Testimonial {...t} idx={idx} />
+        </div>
+      ))
+    }
+  </div>
+</div>
 
 <style>
   .horizontal {
@@ -63,8 +85,8 @@ import testimonials from "../../data/testimonials.js";
   }
 
   .horizontal .item {
-    height: calc(100vh - 300px);
-    @apply relative flex px-4 py-8 mt-24 flex-none w-96 items-center leading-7 select-none bg-transparent;
+    height: calc(100vh - 400px);
+    @apply relative flex px-4 py-8 mt-12 flex-none w-96 items-center leading-7 select-none bg-transparent;
     /*  border-r border-black border-opacity-5 */
   }
 
@@ -110,7 +132,7 @@ import testimonials from "../../data/testimonials.js";
 
 <script>
   import { gsap } from "gsap";
-  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  import { animate, inView } from "motion";
   const horizontalSections = gsap.utils.toArray("div.horizontal");
 
   horizontalSections.forEach(function (sec, i) {
@@ -140,6 +162,25 @@ import testimonials from "../../data/testimonials.js";
           //markers: true,
         },
       }
+    );
+  });
+
+  const scrollIndicatorParent = document.getElementById(
+    "scroll-down-parent-supporters"
+  );
+  const scrollIndicator = document.getElementById(
+    "scroll-down-indicator-supporters"
+  );
+  inView("#scroll-down-parent-supporters", (info) => {
+    animate(
+      scrollIndicatorParent,
+      { opacity: [0, 1] },
+      { duration: 1, delay: 1.0 }
+    );
+    animate(
+      scrollIndicator,
+      { y: [0, 10, 0] },
+      { duration: 1.5, repeat: Infinity, easing: ["ease-out", "ease-in"] }
     );
   });
 </script>

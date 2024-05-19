@@ -3,7 +3,7 @@ import img1 from "../../assets/FOrescueartnopony.png";
 import img2 from "../../assets/FOshelterannouncementimage.png";
 import { Image } from "astro:assets";
 import Button from "../Button.astro";
-import ButtonSmall from "../ButtonSmall.astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <div class="h-auto">
@@ -30,11 +30,19 @@ import ButtonSmall from "../ButtonSmall.astro";
       <div class="comparisonImage afterImage border-r-2 border-white ml-[2px]">
         <Image src={img2} alt="before" class="rounded-lg" />
       </div>
-      <!-- <div class="text-center text-6xl tracking-wide mt-4 font-bold uppercase">
-      Donations
-    </div> -->
       <div class="mt-4">
         <Button href="/donate" text="Learn more" />
+      </div>
+      <div
+        id="scroll-down-parent-difference"
+        class="mt-2 hidden opacity-100 lg:flex justify-center z-50"
+      >
+        <Icon
+          id="scroll-down-indicator-difference"
+          class="w-12 h-12 p-2 text-black cursor-pointer hover:text-yellow-50 hover:bg-[#937666] duration-300 rounded"
+          name="ph:caret-down-bold"
+          onclick="window.lenis.scrollTo('#supporters')"
+        />
       </div>
     </div>
   </section>
@@ -77,6 +85,9 @@ import ButtonSmall from "../ButtonSmall.astro";
 <script>
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
+  
+  import { animate, inView, stagger } from "motion";
+
   gsap.utils.toArray(".comparisonSection").forEach((section) => {
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -104,4 +115,24 @@ import ButtonSmall from "../ButtonSmall.astro";
         0
       );
   });
+
+  const scrollIndicatorParent = document.getElementById(
+    "scroll-down-parent-difference"
+  );
+  const scrollIndicator = document.getElementById(
+    "scroll-down-indicator-difference"
+  );
+  inView("#scroll-down-parent-difference", (info) => {
+    animate(
+      scrollIndicatorParent,
+      { opacity: [0, 1] },
+      { duration: 1, delay: 1.0 }
+    );
+    animate(
+      scrollIndicator,
+      { y: [0, 10, 0] },
+      { duration: 1.5, repeat: Infinity, easing: ["ease-out", "ease-in"] }
+    );
+  });
+
 </script>
