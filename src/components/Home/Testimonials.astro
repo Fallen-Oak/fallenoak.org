@@ -34,7 +34,7 @@ import testimonials from "../../data/testimonials.js";
       </div>
       <div class="animation-wrap to-right pr-8 pl-4 mt-0">
         {
-          testimonials.map((t, idx) => (
+          testimonials.slice(0, 9).map((t, idx) => (
             <div class="item">
               <Testimonial {...t} idx={idx} />
             </div>

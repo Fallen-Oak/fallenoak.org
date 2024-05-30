@@ -12,12 +12,12 @@ export default [
     "title": "May 2, 2024",
     "img": "tatum.png"
   },
-  {
-    "text": "They do wonderful things Kristin and Kim are wonderful people",
-    "name": "Kimberly Miller-Sweeney",
-    "title": "February 10, 2020",
-    "img": "265001_118395811584498_3736968_n.jpg"
-  },
+  // {
+  //   "text": "They do wonderful things Kristin and Kim are wonderful people",
+  //   "name": "Kimberly Miller-Sweeney",
+  //   "title": "February 10, 2020",
+  //   "img": "265001_118395811584498_3736968_n.jpg"
+  // },
   {
     "text": "I admire the dedication to these forgotten horses!",
     "name": "Alice Pope",

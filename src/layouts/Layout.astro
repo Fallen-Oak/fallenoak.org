@@ -42,13 +42,22 @@ const { pathname } = Astro.url;
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700"
       rel="stylesheet"
     />
+    <style>
+      html.is-changing .transition-fade {
+        transition: opacity 0.25s;
+        opacity: 1;
+      }
+      html.is-animating .transition-fade {
+        opacity: 0;
+      }
+    </style>
   </head>
   <body class="min-h-svh">
-    <div>
+    <div class="">
       <Navbar />
       <!-- <div class="threshold" style="top: 10%"></div>
 		<div class="threshold" style="bottom: 50%"></div> -->
-      <div class="wrapper overflow-x-hidden">
+      <div class="wrapper overflow-x-hidden transition-fade">
         <slot />
         <Footer id="footer" />
       </div>
@@ -76,6 +85,21 @@ html.lenis {
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
 }
+
+html, body {
+  @apply bg-yellow-50;
+}
+
+@keyframes fadein {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
 </style>
 
 <script>
@@ -104,4 +128,8 @@ const raf = (t) => {
   requestAnimationFrame(raf);
 };
 requestAnimationFrame(raf);
+
+window.onload = function() {
+    window.scrollTo(0, 0);
+}
 </script>

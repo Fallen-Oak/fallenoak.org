@@ -18,21 +18,19 @@ import { Icon } from "astro-icon/components";
         <div
           class="text-5xl lg:text-left text-center lg:text-8xl uppercase font-semibold tracking-normal"
           id="title"
+          style="opacity: 0; animation: fadein 0.5s ease 0.2s forwards;"
         >
           <div class="whitespace-nowrap">Fallen Oak</div>
           <div class="whitespace-nowrap">Equine Rescue</div>
         </div>
         <div class="px-4 lg:px-0 flex flex-col gap-y-8 pb-8" id="desc">
-          <div class="text-base lg:text-2xl">
-            Fallen Oak Equine Rescue and Rehabilitation is a non-profit equine
-            rescue located in Belleview, FL, devoted to providing a
-            rehabilitative sanctuary for horses that have been abandoned,
-            abused, or are otherwise in need of a safe and loving environment.
-            At Fallen Oak, our mission is to restore the health and spirit of
-            each horse that comes through our gates.
+          <div class="text-base lg:text-2xl" 
+          style="opacity: 0; animation: fadein 0.5s ease 0.4s forwards;">
+            <span class="font-semibold">Fallen Oak Equine Rescue and Rehabilitation, Inc.</span> is located on 7 acres in beautiful Belleview, Florida. We currently operate out of a five-stall barn, a pasture for grazing, and a round pen for training and evaluating rescued horses. We rely on our devoted foster homes to help us transition horses from our facility to their forever home, and to help us when numbers of horses in-need force us to overflow. We could not do what we do without our team of foster parents!
           </div>
 
-          <div class="w-full md:text-left text-center">
+          <div class="w-full md:text-left text-center" 
+          style="opacity: 0; animation: fadein 0.5s ease 0.6s forwards;">
             <Button href="/about" text="Learn more" />
           </div>
         </div>
@@ -58,16 +56,16 @@ import { Icon } from "astro-icon/components";
     y: ["20%", "0%"],
     opacity: [0.0, 1],
   };
-  const title = document.getElementById("title");
-  animate(title, keyframes, {
-    duration: 0.6,
-    delay: stagger(0.5, { start: 0.3 }),
-  });
-  const desc = document.getElementById("desc");
-  animate(desc, keyframes, {
-    duration: 0.6,
-    delay: stagger(0.5, { start: 0.5 }),
-  });
+  // const title = document.getElementById("title");
+  // animate(title, keyframes, {
+  //   duration: 0.6,
+  //   delay: stagger(0.5, { start: 0.3 }),
+  // });
+  // const desc = document.getElementById("desc");
+  // animate(desc, keyframes, {
+  //   duration: 0.6,
+  //   delay: stagger(0.5, { start: 0.5 }),
+  // });
 
   const scrollIndicatorParent = document.getElementById("scroll-down-parent");
   animate(
