@@ -485,4 +485,24 @@ import { Icon } from "astro-icon/components";
       { duration: 1.5, repeat: Infinity, easing: ["ease-out", "ease-in"] }
     );
   });
+
+  document.addEventListener('swup:enable', () => {
+    
+    window.swup.hooks.on("visit:start", () => {
+        // ScrollTrigger.getAll().forEach((t) => t.kill());
+
+    });
+    window.swup.hooks.on("visit:end", () => {
+        ScrollTrigger.refresh();
+    });
+
+    window.swup.hooks.on('page:view', () => {
+    
+      // ScrollTrigger.refresh();
+      console.log(ScrollTrigger.getAll())
+    });
+  });
+
+  
+
 </script>

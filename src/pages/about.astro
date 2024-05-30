@@ -2,6 +2,8 @@
 import img1 from "../assets/horse16.jpg";
 import img2 from "../assets/horse.jpg";
 import img3 from "../assets/P1010419.jpg";
+
+import img5 from "../assets/website_announcement.png";
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer.astro";
@@ -37,70 +39,46 @@ import Footer from "../components/Footer.astro";
       </div>
       <div class="text-xl">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
+          Fallen Oak Equine Rescue and Rehabilitation, Inc. is located on 7 acres in beautiful Belleview, Florida. We currently operate out of a 5 stall barn, pasture for grazing, and a round pen for training and evaluating rescued horses. We rely on our devoted foster homes to help us transition horses from our facility to their forever home, and to help us when numbers of horses in-need force us to overflow. We could not do what we do without our team of foster parents!
         </p>
       </div>
     </div>
-    <hr class="border-neutral-400 border-1 w-1/2 pb-16" />
-    <div class="flex flex-col items-center justify-center pb-16 gap-y-16">
-      <div class="flex items-center justify-center" id="mission">
-        <div class="flex flex-col justify-center w-1/3 gap-y-4">
-          <div class="text-5xl uppercase font-semibold tracking-wide">
+    <hr class="border-neutral-400 border-1 w-2/3 pb-16" />
+    <div class="w-2/3 flex flex-row items-start justify-center pb-16 gap-y-16">
+      <div class="border-r-2 border-neutral-400 gap-y-8 w-1/3 pr-2 flex flex-col items-center justify-between" id="mission">
+          <div class="text-3xl text-center uppercase font-semibold tracking-wide">
             Our mission
           </div>
-          <div>
+          <Image src={img1} alt="" class="h-48 w-48 rounded-lg -rotate-3 bg-neutral-400 border-white border-8" 
+          style="filter: drop-shadow(0 5px 5px #000)" />
+          <div class="text-sm">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
+              Our goal is to rescue, rehabilitate and rehome abused and neglected horses. We provide sanctuary to horses that are unadoptable or require special care.
             </p>
           </div>
-        </div>
-        <Image src={img1} alt="" class="h-48 w-48" />
       </div>
-      <div class="flex items-center justify-center" id="history">
-        <div class="flex flex-col justify-center w-1/3 gap-y-4">
-          <div class="text-5xl uppercase font-semibold tracking-wide">
+      <div class="border-r-2 border-neutral-400 gap-y-8 w-1/3 ml-4 pr-2 flex flex-col items-center justify-between" id="history">
+          <div class="text-3xl text-center uppercase font-semibold tracking-wide">
             Our history
           </div>
-          <div>
+          <Image src={img2} alt="" class="h-48 w-48 rounded-lg rotate-3 bg-neutral-400 border-white border-8" style="filter: drop-shadow(0 5px 5px #000)" />
+          <div  class="text-sm">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
+              Fallen Oak was established in December 2012 in Central Florida. Kim Sweeney is the 3rd president of Fallen Oak as of Feb 1st 2020. Kim has cared for and rehabilitated over 160 horses as of May 2024.
             </p>
           </div>
-        </div>
-        <Image src={img1} alt="" class="h-48 w-48" />
       </div>
-      <div class="flex items-center justify-center" id="mascot">
-        <div class="flex flex-col justify-center w-1/3 gap-y-4">
-          <div class="text-5xl uppercase font-semibold tracking-wide">
+      <div class="gap-y-8 w-1/3 ml-4 pr-2 flex flex-col items-center justify-between" id="mascot">
+
+          <div class="text-3xl text-center  uppercase font-semibold tracking-wide">
             Our mascot
           </div>
-          <div>
+          <Image src={img5} alt="" class="w-72 rounded-lg -rotate-3 bg-neutral-400 border-white border-8" style="filter: drop-shadow(0 5px 5px #000)"/>
+          <div class="text-sm">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
+              Our mascot, <span class="font-semibold">Fallen Oakley</span>, was designed around our first rescue horse Early Bird! Early Bird was a Paint and that is what inspired Fallen Oakleys blue spots. Her cutiemark is an Oak tree with 2 equines underneath, representing the care and hospitality she provides to all the horses under her care.
             </p>
           </div>
-        </div>
-        <Image src={img1} alt="" class="h-48 w-48" />
       </div>
     </div>
   </div>
