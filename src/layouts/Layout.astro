@@ -91,6 +91,42 @@ html, body {
       transform: translateY(0px);
     }
   }
+
+  @keyframes jump {
+    0% {
+      transform: scale(0) rotate(0deg);
+    }
+    50% {
+      transform: scale(1.1) rotate(0deg);
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
+    }
+  }
+
+  @keyframes jump-rotate-1 {
+    0% {
+      transform: scale(0) rotate(-3deg);
+    }
+    50% {
+      transform: scale(1.1) rotate(-3deg);
+    }
+    100% {
+      transform: scale(1) rotate(-3deg);
+    }
+  }
+
+  @keyframes jump-rotate-2 {
+    0% {
+      transform: scale(0) rotate(3deg);
+    }
+    50% {
+      transform: scale(1.1) rotate(3deg);
+    }
+    100% {
+      transform: scale(1) rotate(3deg);
+    }
+  }
 </style>
 
 <script>
