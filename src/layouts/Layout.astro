@@ -145,22 +145,21 @@ window.mm = mm;
 
 
 if (!ScrollTrigger.isTouch) {
-
   const lenis = new Lenis({
-  content: document.querySelector(".wrapper"),
-  duration: 1.2,
-  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-});
+    content: document.querySelector(".wrapper"),
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  });
 
-window.lenis = lenis;
+  window.lenis = lenis;
 
-const raf = (t) => {
-  lenis.raf(t);
-  // lenis.resize();
-  // ScrollTrigger.update();
-   requestAnimationFrame(raf);
-};
-requestAnimationFrame(raf);
+  const raf = (t) => {
+    lenis.raf(t);
+    // lenis.resize();
+    // ScrollTrigger.update();
+    requestAnimationFrame(raf);
+  };
+  requestAnimationFrame(raf);
 }
 
 window.onload = function() {
