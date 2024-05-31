@@ -1,0 +1,133 @@
+---
+import img1 from "../assets/Solo Horse Pics/Ace/Ace_1.jpg";
+import img2 from "../assets/foer_hanging_sign.png";
+import { Image } from "astro:assets";
+
+const colors = [
+  ['#fef2f2', '#fecaca'],
+  ['#fff7ed', '#fed7aa'],
+  // ['#fefce8', '#fef08a'],
+  ['#f0fdf4', '#bbf7d0'],
+  ['#eff6ff', '#bfdbfe'],
+]
+
+const { name, url, rescueDate, breed, changeName, isMale, age, dateOfBirth, cost, description, idx } = Astro.props;
+const [bgColor, color] = colors[idx % colors.length];
+---
+
+<a
+  href={url}
+  target="_blank"
+  class="hover:scale-[1.05] duration-300 cursor-pointer hover:-rotate-1 flex flex-col gap-y-4 justify-center items-center rounded-md  p-4"
+  style={`background-color: ${bgColor}; filter: drop-shadow(0 2px 2px #000)`}
+>
+<Image
+  id="dashie2"
+  src={img2}
+  alt=""
+  class="right-4 top-[-6.9rem] lg:top-[-6.92rem] absolute w-28 max-w-lg mx-auto z-0"
+/>
+  <div class="text-sm whitespace-nowrap">Rescued by <span class="font-medium">Fallen Oak</span> on <span class="desc px-1.5 py-0.5 rounded">{ rescueDate }</span></div>
+  <div class="flex flex-col gap-y-4 lg:flex-row justify-center items-center">
+    <div class="w-64 lg:border-r border-neutral-400 flex flex-col gap-y-2 justify-center items-center">
+      <Image
+        src={img1}
+        alt="Ace"
+        class="object-cover object-center rounded-full border-2 border-black h-36 w-36"
+      />
+
+      <div class="text-4xl lg:text-4xl font-semibold">{ name }</div>
+      <div class="flex flex-col gap-y-0.5 text-sm lg:text-sm justify-center items-center">
+        <div><span class="font-semibold">Breed:</span> <span class="desc px-1 py-[0.0625rem] rounded">{ breed }</span></div>
+        <div><span class="font-semibold">Change name:</span> <span class="desc px-1 py-[0.0625rem] rounded">{ changeName ? 'Yes ✔️' : 'No ❌' }</span></div>
+        <div><span class="font-semibold">Gender:</span> <span class="desc px-1 py-[0.0625rem] rounded">{ isMale ? 'Male' : 'Female' }</span></div>
+        <div><span class="font-semibold">Age:</span> <span class="desc px-1 py-[0.0625rem] rounded">{ age }</span></div>
+      </div>
+    </div>
+    <div class="w-80 flex flex-col gap-y-4 px-4">
+      <div class="text-sm rounded p-4 italic relative speech-bubble desc" >
+        { description }
+      </div>
+      <div
+        class="mt-2 text-center flex flex-col justify-center items-center gap-y-2"
+      >
+        <div
+          class="px-2 py-1 lg:text-sm lg:px-3 lg:py-1 button button--mimas border-2 border-black"
+        >
+          <span>Sponsor</span>
+        </div>
+        <div class="text-base font-medium text-neutral-600"><span class="desc rounded px-1 py-0.5">${cost}</span> / mo</div>
+      </div>
+    </div>
+  </div>
+</a>
+
+<style define:vars={{color}}>
+  .desc {
+    background-color: var(--color)
+  }
+  .button {
+    pointer-events: auto;
+    cursor: pointer;
+    background: #000;
+    /* border: none; */
+    font-size: inherit;
+    position: relative;
+    display: inline-block;
+  }
+
+  .button::before,
+  .button::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .button--mimas {
+    text-transform: uppercase;
+    @apply lg:text-xl text-xl font-bold tracking-wider;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    color: #fff;
+    background: #fefce8;
+  }
+
+  .button--mimas span {
+    position: relative;
+    mix-blend-mode: difference;
+  }
+
+  .button--mimas::before {
+    content: "";
+    background: #000;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.8s cubic-bezier(0.3, 1, 0.8, 1);
+  }
+
+  .button--mimas:hover::before {
+    transform: translate3d(100%, 0, 0);
+  }
+  
+  .speech-bubble {
+	position: relative;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 14%;
+	width: 0;
+	height: 0;
+	border: 28px solid transparent;
+	border-bottom-color: var(--color);
+	border-top: 0;
+	border-right: 0;
+	margin-left: -14px;
+	margin-top: -28px;
+}
+
+</style>
