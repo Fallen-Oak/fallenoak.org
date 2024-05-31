@@ -73,8 +73,8 @@ import { Icon } from "astro-icon/components";
       class="border-neutral-400 border-1 w-full lg:w-2/3 pb-8 lg:pb-16"
       style="opacity: 0; animation: fadein 0.5s ease 1.6s forwards;"
     /> -->
-    <div class="mb-12 flex flex-col gap-y-4 w-full lg:w-1/3">
-      <div
+    <div class="mb-12 flex flex-col gap-y-4 w-full lg:w-full">
+      <!-- <div
         class="flex flex-col gap-y-2 bg-red-50 border-black border border-dashed rounded p-4"
       >
         <div class="text-3xl">
@@ -235,7 +235,521 @@ import { Icon } from "astro-icon/components";
             <li>Fallen Oak polo</li>
           </ul>
         </div>
-      </div>
+      </div> -->
+      <section class="flex justify-center">
+        <div class="container px-4 mx-auto w-full lg:w-2/3">
+          <!-- <div class="max-w-2xl mx-auto mb-16 text-center">
+            <span class="font-bold tracking-wider uppercase text-blue-600">Rewards</span>
+            <h2 class="text-4xl font-bold lg:text-5xl">Choose your best plan</h2>
+          </div> -->
+          <div
+            class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8 items-stretch -mx-4"
+          >
+            <div class="flex mb-8 sm:px-4 lg:mb-0">
+              <div
+                class="flex flex-grow flex-col p-6 space-y-6 rounded shadow sm:p-8 bg-gray-50"
+              >
+                <div class="space-y-2">
+                  <!-- <h4 class="text-2xl font-bold">Pro</h4> -->
+                  <span class="text-6xl font-bold"
+                    >$1
+                    <span class="text-sm tracking-wide">/month</span>
+                  </span>
+                </div>
+                <p class="mt-3 leading-relaxed text-gray-600">
+                  Every dollar counts when it comes to the welfare and comfort
+                  of horsies! As thanks for contributing two fancy coffees a
+                  year, you will receive the following rewards:
+                </p>
+                <ul class="flex-1 mb-6 text-gray-600">
+                  <li class="flex mb-2 space-x-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="flex-shrink-0 w-6 h-6 text-blue-600"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                    <span>One time personal thank you from Kim </span>
+                  </li>
+                  <li class="flex mb-2 space-x-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="flex-shrink-0 w-6 h-6 text-blue-600"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                    <span>Monthly newsletter sent to email address </span>
+                  </li>
+                </ul>
+                <button
+                  type="button"
+                  class="inline-block px-5 py-3 font-semibold tracking-wider text-center rounded bg-blue-600 text-gray-50"
+                  >Get Started</button
+                >
+              </div>
+            </div>
+            <div class="flex mb-8 sm:px-4 lg:mb-0">
+              <div
+                class="flex flex-grow flex-col p-6 space-y-6 rounded shadow sm:p-8 bg-blue-600 text-gray-50"
+              >
+                <div class="space-y-2">
+                  <!-- <h4 class="text-2xl font-bold">Pro</h4> -->
+                  <span class="text-6xl font-bold"
+                    >$5
+                    <span class="text-sm tracking-wide">/month</span>
+                  </span>
+                </div>
+                <p class="leading-relaxed">
+                  At the cost of a nice dinner for two per year, you will
+                  receive the following rewards:
+                </p>
+                <ul class="flex-1 space-y-2">
+                  <li class="flex items-center space-x-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="flex-shrink-0 w-6 h-6"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                    <span>All previously mentioned rewards</span>
+                  </li>
+                  <li class="flex items-center space-x-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="flex-shrink-0 w-6 h-6"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                    <span>
+                      Name on website (under a monthly donors section)
+                    </span>
+                  </li>
+                </ul>
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  class="inline-block w-full px-5 py-3 font-bold tracking-wider text-center rounded bg-gray-100 text-blue-600"
+                  >Get Started</a
+                >
+              </div>
+            </div>
+            <div class="flex mb-8 sm:px-4 lg:mb-0">
+              <div
+                class="flex flex-grow flex-col p-6 space-y-6 rounded shadow sm:p-8 bg-gray-50"
+              >
+                <div class="space-y-2">
+                  <!-- <h4 class="text-2xl font-bold">Team</h4> -->
+                  <span class="text-6xl font-bold"
+                    >$10
+                    <span class="text-sm tracking-wide">/month</span>
+                  </span>
+                </div>
+                <p class="leading-relaxed text-gray-600">
+                  You're pretty generous, friend! For the cost of most streaming
+                  services per month, you get:
+                </p>
+                <ul class="flex-1 space-y-2 text-gray-600">
+                  <li class="flex items-start space-x-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="flex-shrink-0 w-6 h-6 text-blue-600"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                    <span>All previous</span>
+                  </li>
+                  <li class="flex items-start space-x-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="flex-shrink-0 w-6 h-6 text-blue-600"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                    <span> Name on website, but larger </span>
+                  </li>
+                  <li class="flex items-start space-x-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="flex-shrink-0 w-6 h-6 text-blue-600"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                    <span> Christmas cards from the rescue </span>
+                  </li>
+                </ul>
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  class="inline-block w-full px-5 py-3 font-semibold tracking-wider text-center rounded bg-blue-600 text-gray-50"
+                  >Get Started</a
+                >
+              </div>
+            </div>
+            <div class="flex mb-8 sm:px-4 lg:mb-0">
+              <div
+                class="flex flex-grow flex-col p-6 space-y-6 rounded shadow sm:p-8 bg-blue-600 text-gray-50"
+              >
+                <div class="space-y-2">
+                  <!-- <h4 class="text-2xl font-bold">Pro</h4> -->
+                  <span class="text-6xl font-bold"
+                    >$20
+                    <span class="text-sm tracking-wide">/month</span>
+                  </span>
+                </div>
+                <p class="leading-relaxed">
+                  Having the most bang for your buck, the price of a fast food
+                  combo a month will get you:
+                </p>
+                <ul class="flex-1 space-y-2">
+                  <li class="flex items-center space-x-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="flex-shrink-0 w-6 h-6"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                    <span
+                      >All previous (minus the previous mentions of name on
+                      site)</span
+                    >
+                  </li>
+                  <li class="flex items-center space-x-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="flex-shrink-0 w-6 h-6"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                    <span> Name on website, but even bigger! </span>
+                  </li>
+                  <li class="flex items-center space-x-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="flex-shrink-0 w-6 h-6"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                    <span> Signed photo of sponsored horse </span>
+                  </li>
+                </ul>
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  class="inline-block w-full px-5 py-3 font-bold tracking-wider text-center rounded bg-gray-100 text-blue-600"
+                  >Get Started</a
+                >
+              </div>
+            </div>
+            <div class="flex mb-8 sm:px-4 lg:mb-0">
+              <div
+                class="flex flex-grow flex-col p-6 space-y-6 rounded shadow sm:p-8 bg-gray-50"
+              >
+                <div class="space-y-2">
+                  <!-- <h4 class="text-2xl font-bold">Team</h4> -->
+                  <span class="text-6xl font-bold"
+                    >$50
+                    <span class="text-sm tracking-wide">/month</span>
+                  </span>
+                </div>
+                <p class="leading-relaxed text-gray-600">
+                  You've got a whole lotta heart, fellow equestrian! For the
+                  price of a bag of seed, you get:
+                </p>
+                <ul class="flex-1 space-y-2 text-gray-600">
+                  <li class="flex items-start space-x-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="flex-shrink-0 w-6 h-6 text-blue-600"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                    <span>All previous tiers</span>
+                  </li>
+                  <li class="flex items-start space-x-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="flex-shrink-0 w-6 h-6 text-blue-600"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                    <span
+                      >“About you” summary or “about your business”, with links
+                      permitted (w/ photo, if desired) on a donor section of the
+                      website (everything requires our approval before adding).
+                      Kept so long as monthly payments are made
+                    </span>
+                  </li>
+                  <li class="flex items-start space-x-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="flex-shrink-0 w-6 h-6 text-blue-600"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                    <span
+                      >Early access to event announcements and registration &
+                      priority treatment during applicable events
+                    </span>
+                  </li>
+                </ul>
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  class="inline-block w-full px-5 py-3 font-semibold tracking-wider text-center rounded bg-blue-600 text-gray-50"
+                  >Get Started</a
+                >
+              </div>
+            </div>
+            <div class="flex mb-8 sm:px-4 lg:mb-0">
+              <div
+                class="flex flex-grow flex-col p-6 space-y-6 rounded shadow sm:p-8 bg-blue-600 text-gray-50"
+              >
+                <div class="space-y-2">
+                  <!-- <h4 class="text-2xl font-bold">Pro</h4> -->
+                  <span class="text-6xl font-bold"
+                    >$100
+                    <span class="text-sm tracking-wide">/month</span>
+                  </span>
+                </div>
+                <p class="leading-relaxed">
+                  You’re amazing! For such a generous contribution, the horsies
+                  can get a roll of hay and you can get:
+                </p>
+                <ul class="flex-1 space-y-2">
+                  <li class="flex items-center space-x-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="flex-shrink-0 w-6 h-6"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                    <span>All previous perks</span>
+                  </li>
+                  <li class="flex items-center space-x-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="flex-shrink-0 w-6 h-6"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                    <span
+                      >Signed clay hoof-print of your preferred horse sent to
+                      donor
+                    </span>
+                  </li>
+                </ul>
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  class="inline-block w-full px-5 py-3 font-bold tracking-wider text-center rounded bg-gray-100 text-blue-600"
+                  >Get Started</a
+                >
+              </div>
+            </div>
+            <div class="flex mb-8 sm:px-4 lg:mb-0">
+              <div
+                class="flex flex-grow flex-col p-6 space-y-6 rounded shadow sm:p-8 bg-gray-50"
+              >
+                <div class="space-y-2">
+                  <!-- <h4 class="text-2xl font-bold">Pro</h4> -->
+                  <span class="text-6xl font-bold"
+                    >$250
+                    <span class="text-sm tracking-wide">/month</span>
+                  </span>
+                </div>
+                <p class="mt-3 leading-relaxed text-gray-600">
+                  Yeehaw, pardner! The closest you can get to owning a horse
+                  without actually owning one, this tier not only provides the
+                  horses with EIGHT bags of senior-feed grain but also procures
+                  the following rewards:
+                </p>
+                <ul class="flex-1 mb-6 text-gray-600">
+                  <li class="flex mb-2 space-x-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="flex-shrink-0 w-6 h-6 text-blue-600"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                    <span>All previous tiers </span>
+                  </li>
+                  <li class="flex mb-2 space-x-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="flex-shrink-0 w-6 h-6 text-blue-600"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                    <span
+                      >Rename any unsponsored rescue horse (some limitations may
+                      apply). Including long term residents and those up for
+                      adoption. Once per year
+                    </span>
+                  </li>
+                </ul>
+                <button
+                  type="button"
+                  class="inline-block px-5 py-3 font-semibold tracking-wider text-center rounded bg-blue-600 text-gray-50"
+                  >Get Started</button
+                >
+              </div>
+            </div>
+            <div class="flex mb-8 sm:px-4 lg:mb-0">
+              <div
+                class="flex flex-grow flex-col p-6 space-y-6 rounded shadow sm:p-8 bg-blue-600 text-gray-50"
+              >
+                <div class="space-y-2">
+                  <!-- <h4 class="text-2xl font-bold">Pro</h4> -->
+                  <span class="text-6xl font-bold"
+                    >$1000
+                    <span class="text-sm tracking-wide">/month</span>
+                  </span>
+                </div>
+                <p class="leading-relaxed">
+                  Your devotion to horse-rescue and comfort will not go
+                  unnoticed. To recognize the earnest and sincere care and
+                  concern you have, the following benefits will be provided:
+                </p>
+                <ul class="flex-1 space-y-2">
+                  <li class="flex items-center space-x-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="flex-shrink-0 w-6 h-6"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                    <span>All previous perks </span>
+                  </li>
+                  <li class="flex items-center space-x-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="flex-shrink-0 w-6 h-6"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                    <span> Official voting power during meetings </span>
+                  </li>
+                  <li class="flex items-center space-x-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="flex-shrink-0 w-6 h-6"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                    <span> Fallen Oak polo </span>
+                  </li>
+                </ul>
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  class="inline-block w-full px-5 py-3 font-bold tracking-wider text-center rounded bg-gray-100 text-blue-600"
+                  >Get Started</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 </Layout>
