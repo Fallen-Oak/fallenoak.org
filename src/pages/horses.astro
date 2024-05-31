@@ -1,25 +1,19 @@
 ---
-import img1 from "../assets/horse16.jpg";
-import img2 from "../assets/horse.jpg";
-import img3 from "../assets/P1010419.jpg";
-import { Image } from "astro:assets";
+import Horse from "../components/Horse.astro";
 import Layout from "../layouts/Layout.astro";
-import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Fallen Oaks Equine Rescue | About">
   <div
-    class="bg-[#fefce8] min-h-[calc(100vh-10rem)] flex flex-col items-center"
+    class="bg-[#fefce8] min-h-[calc(100vh-10rem)] px-4 lg:px-0  flex flex-col items-center"
   >
     <div
-      class="flex flex-col justify-center items-center w-full lg:w-2/5 pt-32 pb-8 lg:pb-16 gap-y-12 sm:gap-y-24"
+      class="flex flex-col justify-center items-center w-full lg:w-2/5 pt-24 lg:pt-32 pb-8 mb-12 lg:pb-16 gap-y-12 lg:gap-y-24"
     >
-      <div class="text-7xl uppercase font-semibold tracking-wide">Our Horses</div>
+    <div style="transform: scale(0); animation: jump 0.6s cubic-bezier(0.77, 0.01, 0.25, 1) 0.2s forwards;" class="text-5xl lg:text-7xl uppercase font-semibold tracking-wide">Our Horses</div>
     
-      <div class="grid grid-cols-3">
-        
-      </div>
-
-    </div>
-  </div>
+</div>
+<div class="w-full lg:w-1/2 grid grid-cols-2">
+  <Horse />
+</div>
 </Layout>

@@ -1,0 +1,88 @@
+---
+import img1 from "../assets/Solo Horse Pics/Ace/Ace_1.jpg";
+import { Image } from "astro:assets";
+import Button from "../components/Button.astro";
+---
+
+<a href="https://givebutter.com/MYIlgD" target="_blank" class="hover:scale-[1.05] duration-300 cursor-pointer hover:-rotate-1 flex flex-col max-w-72 gap-y-2 justify-center items-center rounded-md bg-purple-50 p-4" 
+style="filter: drop-shadow(0 5px 5px #000)">
+  <div class="text-sm ">
+    Adopted on May 1, 2023  
+  </div>  
+<Image src={img1} alt="Ace" class="object-cover object-center rounded-full border-2 border-black h-36 w-36" />
+  
+<div class="text-4xl font-semibold">Ace</div>
+  <div class="flex flex-col text-sm justify-center items-center">
+    <div>
+      Breed: Rocky Mountain
+    </div>
+    <div>
+      Change Name: ✅
+    </div>
+    <div>
+      Birth date: 2013
+    </div>
+    <div>
+      Age: 11
+    </div>
+  </div>
+  
+  <div class="text-sm">Friendly and lovable like a big puppy-dog, Ace used to be a child's horse until he contracted EPM, which went untreated for too long. That's when he came to us!</div>
+  <div class="mt-2 text-center flex flex-col justify-center items-center gap-y-1">
+
+      <div class="px-2 py-1 lg:text-sm lg:px-3 lg:py-1 button button--mimas border-2 border-black"
+        ><span>Donate</span></div
+      >
+      <div class="text-sm font-medium">
+        $231 / mo
+      </div>
+
+  </div>
+</a>
+
+<style>
+  .button {
+    pointer-events: auto;
+    cursor: pointer;
+    background: #000;
+    /* border: none; */
+    font-size: inherit;
+    position: relative;
+    display: inline-block;
+  }
+
+  .button::before,
+  .button::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .button--mimas {
+    text-transform: uppercase;
+    @apply lg:text-xl text-xl font-bold tracking-wider;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    color: #fff;
+    background: #fefce8;
+  }
+
+  .button--mimas span {
+    position: relative;
+    mix-blend-mode: difference;
+  }
+
+  .button--mimas::before {
+    content: "";
+    background: #000;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.8s cubic-bezier(0.3, 1, 0.8, 1);
+  }
+
+  .button--mimas:hover::before {
+    transform: translate3d(100%, 0, 0);
+  }
+</style>
