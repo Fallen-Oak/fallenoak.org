@@ -2,39 +2,43 @@
 import img1 from "../../assets/foer_hanging_sign.png";
 import { Image } from "astro:assets";
 import Button from "../Button.astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <section
   id="stats"
-  class="relative flex flex-col items-center justify-center lg:px-0 px-4 pb-16 pt-0 lg:pb-16 lg:pt-16 z-0"
+  class="relative flex flex-col items-center justify-center lg:px-0 px-2 pb-16 pt-0 lg:pb-16 lg:pt-16 z-0"
   style="background-image: linear-gradient(to top, #fefce8 0%, #fefce8 30%);"
 >
   <div
-    class="relative rounded-xl shadow-2xl border-4 lg:border-8 border-black p-8 bg-blue-50 mx-auto grid justify-center grid-cols-2 text-center lg:grid-cols-3 gap-16"
+    class="relative rounded-xl shadow-2xl border-4 lg:border-8 border-black p-4 lg:p-8 bg-blue-50 mx-auto grid justify-center grid-cols-2 text-center lg:grid-cols-3 gap-16"
   >
     <div class="flex flex-col justify-start">
-      <p class="text-4xl font-bold leading-none lg:text-8xl">24+</p>
-      <p class="text-sm sm:text-2xl">Years of Rescue</p>
+      <p class="text-5xl font-bold leading-none lg:text-8xl">12+</p>
+      <p class="text-sm sm:text-2xl whitespace-nowrap">Years of Rescue</p>
     </div>
     <div class="flex flex-col justify-start">
-      <p class="text-4xl font-bold leading-none lg:text-8xl">850+</p>
-      <p class="text-sm sm:text-2xl">Rescued Horses</p>
+      <p class="text-5xl font-bold leading-none lg:text-8xl">162</p>
+      <p class="text-sm sm:text-2xl whitespace-nowrap">Rescued Horses</p>
     </div>
     <div class="flex flex-col justify-start">
-      <p class="text-4xl font-bold leading-none lg:text-8xl">30+</p>
-      <p class="text-sm sm:text-2xl">Volunteers</p>
+      <p class="text-5xl font-bold leading-none lg:text-8xl">2</p>
+      <p class="text-sm sm:text-2xl whitespace-nowrap">Volunteers</p>
     </div>
     <div class="flex flex-col justify-start">
-      <p class="text-4xl font-bold leading-none lg:text-8xl">$9,999</p>
-      <p class="text-sm sm:text-2xl">Donated to Horses</p>
+      <p class="text-5xl font-bold leading-none lg:text-8xl">12K+</p>
+      <p class="text-sm sm:text-2xl whitespace-nowrap">Followers on <a href="https://www.facebook.com/FallenOakEquineRescue/" target="_blank" class="underline underline-offset-4 lg:underline-offset-8 hover:text-[#4267b2] duration-100">Facebook</a></p>
     </div>
     <div class="flex flex-col justify-start">
-      <p class="text-4xl font-bold leading-none lg:text-8xl">22</p>
-      <p class="text-sm sm:text-2xl">Permanent Residents</p>
+      <p class="text-5xl font-bold leading-none lg:text-8xl">16</p>
+      <p class="text-sm sm:text-2xl whitespace-nowrap">Permanent Residents</p>
     </div>
     <div class="flex flex-col justify-start">
-      <p class="text-4xl font-bold leading-none lg:text-8xl">99</p>
-      <p class="text-sm sm:text-2xl">Sponsors</p>
+      <p class="text-5xl font-bold leading-none lg:text-8xl flex lg:flex-row flex-col items-center gap-x-2"><Icon
+              name="mdi:star"
+              class="text-yellow-200 duration-300 text-5xl lg:text-8xl hidden lg:block"
+            /><span>4.7<span class="text-xl lg:text-4xl"> / 5.0</span></span></p>
+      <p class="text-sm sm:text-2xl whitespace-nowrap">Average Rating</p>
     </div>
 
     <Image
