@@ -1,10 +1,10 @@
 ---
-import Horse from "../components/Horse.astro";
+import Sponsorable from "../components/Sponsorable.astro";
 
 import { Image } from "astro:assets";
 import img1 from "../assets/FORRsign.png";
 import Layout from "../layouts/Layout.astro";
-import horses from "../data/adoptable.js";
+import horses from "../data/sponsorable.js";
 ---
 
 <Layout title="Fallen Oaks Equine Rescue | About">
@@ -12,11 +12,11 @@ import horses from "../data/adoptable.js";
     class="bg-[#fefce8] min-h-[calc(100vh-10rem)] px-4 lg:px-0 flex flex-col items-center"
   >
     <div
-      class="flex flex-col justify-center items-center w-full lg:w-full pt-24 lg:pt-32 pb-8 mb-12 lg:mb-0 lg:pb-8 gap-y-12 lg:gap-y-20"
+      class="flex flex-col justify-center items-center w-full lg:w-full pt-24 lg:pt-32 pb-8 mb-12 lg:mb-0 lg:pb-8 gap-y-20 lg:gap-y-20"
     >
       <div
         style="transform: scale(0); animation: jump 0.6s cubic-bezier(0.77, 0.01, 0.25, 1) 0.2s forwards;"
-        class="text-5xl lg:text-7xl whitespace-nowrap uppercase font-semibold tracking-wide"
+        class="text-3xl lg:text-7xl whitespace-nowrap uppercase font-semibold tracking-wide"
       >
         Adoptable Horses
       </div>
@@ -32,7 +32,7 @@ import horses from "../data/adoptable.js";
         />
       </div>
       <div
-        class="w-1/2 text-sm lg:text-sm flex flex-col gap-y-2 rounded border border-dashed border-black p-4 bg-amber-100 "
+        class="w-full lg:w-1/2 text-sm lg:text-sm flex flex-col gap-y-2 rounded border border-dashed border-black p-4 bg-amber-100"
         style="opacity: 0; animation: fadein 0.5s ease 0.8s forwards;"
       >
         <p>
@@ -58,9 +58,12 @@ import horses from "../data/adoptable.js";
           horse in need.
         </p>
         <p>
-          For questions or help, email: <a href="mailto:donors@fallenoak.org" class="hover:underline text-blue-400 underline-offset-4  duration-300">donors@fallenoak.org</a>
+          For questions or help, email: <a
+            href="mailto:donors@fallenoak.org"
+            class="hover:underline text-blue-400 underline-offset-4 duration-300"
+            >donors@fallenoak.org</a
+          >
         </p>
-          
       </div>
     </div>
     <!-- <hr
@@ -68,9 +71,11 @@ import horses from "../data/adoptable.js";
       style="opacity: 0; animation: fadein 0.5s ease 1.6s forwards;"
     /> -->
 
-    <div class="grid grid-cols-2 gap-x-16 gap-y-32 mt-24 mb-24" 
-    style="opacity: 0; animation: fadein 0.5s ease 1.2s forwards;">
-      {horses.map((horse, idx) => <Horse {...horse} idx={idx} />)}
+    <div
+      class="grid grid-cols-1 lg:grid-cols-2 gap-y-32 lg:gap-x-16 lg:gap-y-32 mt-8 lg:mt-24 mb-24"
+      style="opacity: 0; animation: fadein 0.5s ease 1.2s forwards;"
+    >
+      {horses.map((horse, idx) => <Sponsorable {...horse} idx={idx} />)}
     </div>
   </div>
 </Layout>
