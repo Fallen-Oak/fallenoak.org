@@ -7,13 +7,13 @@ import Footer from "../components/Footer.astro";
 
 <Layout title="Fallen Oaks Equine Rescue | About">
   <div
-    class="bg-[#fefce8] min-h-[calc(100vh-10rem)] flex flex-col items-center"
+    class="bg-[#fefce8] min-h-[calc(100vh-10rem)] px-4 lg:px-0  flex flex-col items-center"
   >
     <div
-      class="flex flex-col justify-center items-center w-full lg:w-2/5 pt-32 pb-8 lg:pb-16 gap-y-24"
+      class="flex flex-col justify-center items-center w-full lg:w-2/5 pt-32 pb-8 mb-12 lg:pb-16 gap-y-24"
     >
-      <div class="text-7xl uppercase font-semibold tracking-wide">Credits</div>
-      <div class="relative flex items-center justify-center max-h-40 w-1/3">
+      <div style="transform: scale(0); animation: jump 0.6s cubic-bezier(0.77, 0.01, 0.25, 1) 0.2s forwards;" class="text-7xl uppercase font-semibold tracking-wide">Credits</div>
+      <div  style="transform: scale(0); animation: jump 0.6s cubic-bezier(0.77, 0.01, 0.25, 1) 0.4s forwards;" class="relative flex items-center justify-center max-h-40 w-full">
         <Image
           src={img1}
           alt=""
@@ -21,10 +21,67 @@ import Footer from "../components/Footer.astro";
           class="max-h-64 w-auto sm:max-h-auto sm:h-64 lg:max-w-lg mx-auto z-0 rounded-lg -rotate-3 bg-neutral-400 border-white border-8"
         />
       </div>
-      <div class="text-base lg:text-xl">
-        
+    </div>
+    <hr class="border-neutral-400 border-1 w-full lg:w-2/3 pb-8 lg:pb-8" 
+    style="opacity: 0; animation: fadein 0.5s ease 1.0s forwards;"/>
+    <div style="opacity: 0; animation: fadein 0.5s ease 1.2s forwards;" class=" px-4 lg:px-0 text-base lg:text-xl w-full lg:w-1/2 grid grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+      
+      <div>
+        <div class="font-semibold text-xl sm:text-2xl">
+          Kim Sweeney
+        </div>
+        <div>
+          Art assets
+        </div>
+      </div>
+      <div>
+        <div class="font-semibold text-xl sm:text-2xl">
+          Lightsolver
+        </div>
+        <div>
+          Art assets
+        </div>
+      </div>
+      <div>
+        <div class="font-semibold text-xl sm:text-2xl">
+          Britanon
+        </div>
+        <div>
+          Art assets
+        </div>
+      </div>
+      <div>
+        <div class="font-semibold text-xl sm:text-2xl">
+          15
+        </div>
+        <div>
+          Web development
+        </div>
+      </div>
+      <div>
+        <div class="font-semibold text-xl sm:text-2xl">
+          ChaosLlama
+        </div>
+        <div>
+          Art assets
+        </div>
+      </div>
+      <div>
+        <div class="font-semibold text-xl sm:text-2xl">
+          Sigil
+        </div>
+        <div>
+          Art assets
+        </div>
+      </div>
+      <div>
+        <div class="font-semibold text-xl sm:text-2xl">
+          Xppp1
+        </div>
+        <div>
+          Art assets
+        </div>
       </div>
     </div>
-    <hr class="border-neutral-400 border-1 w-1/2 pb-16" />
   </div>
 </Layout>

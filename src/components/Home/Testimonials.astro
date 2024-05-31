@@ -19,7 +19,6 @@ import testimonials from "../../data/testimonials.js";
         class="text-4xl lg:text-7xl text-center uppercase font-semibold whitespace-nowrap"
       >
         <div class="whitespace-nowrap">Our supporters</div>
-
         <div
           id="scroll-down-parent-supporters"
           class="mt-2 hidden opacity-100 lg:flex justify-center z-50"
@@ -57,11 +56,11 @@ import testimonials from "../../data/testimonials.js";
     </div>
   </div>
 </section>
-<div class="lg:hidden w-full pb-48 px-16 bg-yellow-50">
-  <div class="text-4xl lg:text-7xl text-center uppercase font-semibold mb-8">
+<div class="lg:hidden w-full pb-48 px-0 bg-yellow-50">
+  <div class="text-4xl lg:text-7xl whitespace-nowrap text-center uppercase font-semibold mb-8">
     Our supporters
   </div>
-  <div class="flex flex-col justify-center items-center gap-y-4">
+  <div class="px-12 flex flex-col justify-center items-center gap-y-4">
     {
       testimonials.slice(0, 4).map((t, idx) => (
         <div>
