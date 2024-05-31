@@ -1,12 +1,84 @@
 ---
-import img1 from "../assets/horse16.jpg";
+import Sponsorable from "../components/Sponsorable.astro";
+
 import { Image } from "astro:assets";
+import img1 from "../assets/FORRsign.png";
 import Layout from "../layouts/Layout.astro";
-import Footer from "../components/Footer.astro";
+import { Icon } from "astro-icon/components";
+// import horses from "../data/adoptable.js";
 ---
 
-<Layout title="Fallen Oaks Equine Rescue | Donate">
-    <div class="bg-[#fefce8] gap-y-8 min-h-screen">
-    
+<Layout title="Fallen Oaks Equine Rescue | About">
+  <div
+    class="bg-[#fefce8] min-h-[calc(100vh-10rem)] px-4 lg:px-0 flex flex-col items-center"
+  >
+    <div
+    style="transform: scale(0); animation: jump 0.6s cubic-bezier(0.77, 0.01, 0.25, 1) 0.2s forwards;"
+      class="flex flex-col justify-center items-center w-full lg:w-full pt-24 lg:pt-32 pb-8 mb-12 lg:mb-0 lg:pb-8 gap-y-20 lg:gap-y-20"
+    >
+      <div
+        class="text-3xl lg:text-7xl whitespace-nowrap uppercase font-semibold tracking-wide"
+      >
+        Donate
+      </div>
+      <div
+        class="relative flex items-center justify-center max-h-40 w-full"
+      >
+        <Image
+          src={img1}
+          width="400"
+          alt=""
+          style="filter: drop-shadow(0 5px 5px #000)"
+          class="max-h-64 w-auto sm:max-h-auto sm:h-64 lg:max-w-lg mx-auto z-0 rounded-lg -rotate-3 bg-blue-100 border-white border-8"
+        />
+      </div>
+      <div
+        class="w-full lg:w-1/2 text-sm lg:text-sm flex flex-col gap-y-2 rounded border border-dashed border-black p-4 bg-amber-100"
+        style="opacity: 0; animation: fadein 0.5s ease 0.6s forwards;"
+      >
+        <p>
+          Adopting is not only a chance to give a horse a new lease on life but
+          also a chance to befriend someone with a rich history and deep
+          personality.
+        </p>
+        <p>
+          Some of our horses come from rough backgrounds, so we look to ensure
+          that the next chapter that they start with you, is a happy and
+          comfortable one. To up-hold that for adoption we require that
+          potential adoptee's have no barbed wire, have shelter & housing for
+          the horse, and owned a horse in the past. We also require that
+          potential adoptees have owned a horse in the past, provide the adopted
+          horse with a companion horse, and that they be free of any past
+          conviction of animal cruelty or neglect.
+        </p>
+        <p>
+          To submit an application to adopt a horse, download and fill out the
+          form below, then email it to <a
+          href="mailto:kim@fallenoak.org"
+          class="hover:underline text-blue-500 font-medium underline-offset-4 duration-300"
+          >kim@fallenoak.org</a
+        >. Once the application
+          has been reviewed, you will be notified via email if you've received
+          preliminary approval. In the next step, you will need to meet and
+          potentially ride the horse, ensuring they're a good fit for you. And
+          if you and the horse feel good about each other, then you'll have a
+          new friend to bring home.
+        </p>
+        <div class="flex justify-center my-2">
+          <a href="/adopt.pdf" target="_blank" class="duration-300 hover:bg-blue-200 bg-blue-50 rounded font-semibold text-xl px-6 py-2 flex items-center gap-x-2"> 
+           <span>Equine Adoption Application</span> <Icon name="ph:file-pdf-light" class="text-4xl text-red-400" /></a>
+        </div>
+        
+        <p>
+          If you're interested in adopting, consider one of our fantastic horses
+          below:
+        </p>
+
+      </div>
     </div>
+    <!-- <hr
+      class="border-neutral-400 border-1 w-full lg:w-2/3 pb-8 lg:pb-16"
+      style="opacity: 0; animation: fadein 0.5s ease 1.6s forwards;"
+    /> -->
+  </div>
 </Layout>

@@ -135,6 +135,16 @@ html {
       transform: scale(1) rotate(3deg);
     }
   }
+
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0); /* Start and end at the original position */
+    }
+    50% {
+      transform: translateY(10px); /* Move down by 10px at the midpoint */
+    }
+  }
 </style>
 
 <script>

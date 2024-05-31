@@ -2,6 +2,7 @@ export default [
   {
     name: "Ace",
     url: "https://givebutter.com/MYIlgD",
+    img: "Ace_1.jpg",
     rescueDate: "May 1, 2023",
     breed: "Rocky Mountain",
     changeName: true,
@@ -14,6 +15,7 @@ export default [
   {
     name: "Bert",
     url: "https://givebutter.com/dHrL2i",
+    img: "Bert_2.jpg",
     rescueDate: "October 23, 2023",
     breed: "Quarter Horse",
     changeName: true,
@@ -25,6 +27,7 @@ export default [
   },
   {
     name: "Cowboy",
+    img: "Cowboy_1.jpg",
     url: "https://givebutter.com/ogmD41",
     rescueDate: "October 23, 2023",
     breed: "Thoroughbred",
@@ -37,6 +40,7 @@ export default [
   },
   {
     name: "Dakota",
+    img: "P1020952.JPG",
     url: "https://givebutter.com/xp8wnE",
     rescueDate: "April 5, 2024",
     breed: "Rocky Mountain",
@@ -49,6 +53,7 @@ export default [
   },
   {
     name: "Holly",
+    img: "Holly_2.jpg",
     url: "https://givebutter.com/YFmR3j",
     rescueDate: "August 20, 2022",
     breed: "Rocky Mountain",
@@ -61,6 +66,7 @@ export default [
   },
   {
     name: "Lucy",
+    img: "Lucy_1.jpg",
     url: "https://givebutter.com/ry0Ncf",
     rescueDate: "March 15, 2023",
     breed: "Quarter Horse",
@@ -73,6 +79,7 @@ export default [
   },
   {
     name: "Mercy",
+    img: "Mercy.jpg",
     url: "https://givebutter.com/8z7f1U",
     rescueDate: "August 23, 2023",
     breed: "Tennessee Walker",
@@ -85,6 +92,7 @@ export default [
   },
   {
     name: "Montana",
+    img: "Montana3_FB.jpg",
     url: "https://givebutter.com/QqEf6B",
     rescueDate: "2020",
     breed: "Rocky Mountain",
@@ -97,6 +105,7 @@ export default [
   },
   {
     name: "Sailor",
+    img: "Sailor_1.jpg",
     url: "https://givebutter.com/grRkH5",
     rescueDate: "November 22, 2023",
     breed: "Paint Horse",
@@ -109,6 +118,7 @@ export default [
   },
   {
     name: "Starlit Skies",
+    img: "Starlit_Skies_1.jpg",
     url: "https://givebutter.com/gD3NSC",
     rescueDate: "November 7, 2023",
     breed: "Quarter Horse",
@@ -121,6 +131,7 @@ export default [
   },
   {
     name: "Sunny",
+    img: "",
     url: "https://givebutter.com/g1owwb",
     rescueDate: "October 22, 2020",
     breed: "Thoroughbred",
@@ -133,6 +144,7 @@ export default [
   },
   {
     name: "Charlie",
+    img: "",
     url: "https://givebutter.com/EHnquV",
     rescueDate: "May 9, 2024",
     breed: "Quarter Horse",
@@ -145,6 +157,7 @@ export default [
   },
   {
     name: "Jasper",
+    img: "",
     url: "https://givebutter.com/AxwR6r",
     rescueDate: "May 9, 2024",
     breed: "Rocky Mountain",
@@ -157,6 +170,7 @@ export default [
   },
   {
     name: "Bow",
+    img: "Bow_3.jpg",
     url: "https://givebutter.com/AxwR6r",
     rescueDate: "March 2, 2024",
     breed: "Appaloosa",

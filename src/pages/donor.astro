@@ -1,0 +1,70 @@
+---
+import Sponsorable from "../components/Sponsorable.astro";
+
+import { Image } from "astro:assets";
+import img1 from "../assets/FOER_OC_Gorebox.png";
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+// import horses from "../data/adoptable.js";
+---
+
+<Layout title="Fallen Oaks Equine Rescue | About">
+  <div
+    class="bg-[#fefce8] min-h-[calc(100vh-10rem)] px-4 lg:px-0 flex flex-col items-center"
+  >
+    <div
+      style="transform: scale(0); animation: jump 0.6s cubic-bezier(0.77, 0.01, 0.25, 1) 0.2s forwards;"
+      class="flex flex-col justify-center items-center w-full lg:w-full pt-24 lg:pt-32 pb-8 mb-12 lg:mb-0 lg:pb-8 gap-y-20 lg:gap-y-20"
+    >
+      <div
+        class="text-3xl lg:text-7xl whitespace-nowrap uppercase font-semibold tracking-wider"
+      >
+        Donor Rewards
+      </div>
+      <div class="relative flex items-center justify-center max-h-40 w-full">
+        <Image
+          src={img1}
+          width="400"
+          alt=""
+          style="filter: drop-shadow(0 5px 5px #000)"
+          class="max-h-64 w-auto sm:max-h-auto sm:h-64 lg:max-w-lg mx-auto z-0 rounded-lg -rotate-3 bg-blue-100 border-white border-8"
+        />
+      </div>
+      <div
+        class="w-full lg:w-1/2 text-sm lg:text-sm flex flex-col gap-y-2 rounded border border-dashed border-black p-4 bg-amber-100"
+        style="opacity: 0; animation: fadein 0.5s ease 0.6s forwards;"
+      >
+        <p>
+          When one thinks of man’s best friend, they may think of many different
+          animals, but none compare to the horse. Whether serving by our side in
+          combat, enabling transport across vast landscapes to further human
+          expansion, assisting in the application of science, or even just
+          providing comfort and care to those in need, these beautiful and
+          majestic creatures are deserving of only the best for helping to
+          uplift us into the society we have today! However, they often find
+          their kindness and servitude not going unpunished in life: abuse,
+          neglect, illness, and other woes often befall these gentle giants.
+          Very few people consider the plight of these exquisite equines - even
+          fewer do anything to help alleviate their suffering - though there is
+          one person who has risen to the occasion and crafted her life around
+          supporting and caring for horses: Kim Sweeney, owner and president of
+          Fallen Oak Equine Rescue.
+        </p>
+        <p>
+          While Mrs. Sweeney has what it takes to care for these horses and prolong/rehabilitate them in a comfortable and healthy environment, she needs all the help she can get! If you are concerned for the care of at-risk horses and want to directly contribute to an organization with a proven commitment and track record of supporting and rehabilitating these animals - and get some nice rewards in the process - a monthly donation as low as $1 would be helping to ensure these and other horses get all the help they need.
+        </p>
+        <p>
+          For questions or help, email: <a
+            href="mailto:donors@fallenoak.org"
+            class="hover:underline text-blue-500 font-medium underline-offset-4 duration-300"
+            >donors@fallenoak.org</a
+          >
+        </p>
+      </div>
+    </div>
+    <!-- <hr
+      class="border-neutral-400 border-1 w-full lg:w-2/3 pb-8 lg:pb-16"
+      style="opacity: 0; animation: fadein 0.5s ease 1.6s forwards;"
+    /> -->
+  </div>
+</Layout>
