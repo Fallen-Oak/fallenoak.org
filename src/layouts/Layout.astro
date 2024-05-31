@@ -43,7 +43,7 @@ const { pathname } = Astro.url;
       rel="stylesheet"
     />
   </head>
-  <body class="min-h-svh">
+  <body>
     <div class="wrapper ">
       <Navbar />
       <!-- <div class="threshold" style="top: 10%"></div>
@@ -79,6 +79,10 @@ html.lenis {
 
 html, body {
   @apply bg-yellow-50;
+}
+html {
+  /* overflow-y: auto;
+  scrollbar-gutter: stable; */
 }
 
 @keyframes fadein {
