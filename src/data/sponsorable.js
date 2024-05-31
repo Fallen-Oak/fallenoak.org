@@ -9,7 +9,7 @@ export default [
     age: 11,
     dateOfBirth: 2013,
     cost: 231,
-    description: "Friendly and lovable like a big puppy-dog, Ace used to be a child’s horse until he contracted EPM, which went untreated for too long. That's when he came to us!"
+    description: "Friendly and lovable like a big puppy-dog, Ace used to be a child's horse until he contracted EPM, which went untreated for too long. That's when he came to us!"
   },
   {
     name: "Bert",
@@ -45,7 +45,7 @@ export default [
     age: 24,
     dateOfBirth: 2000,
     cost: 190,
-    description: "He can be a bit pushy at feeding time (and will not leave Starlite alone) but he’s still getting adjusted since coming to the rescue in April, when he was surrendered due to arthritis and his previous owners being unable to adequately care for him."
+    description: "He can be a bit pushy at feeding time (and will not leave Starlite alone) but he's still getting adjusted since coming to the rescue in April, when he was surrendered due to arthritis and his previous owners being unable to adequately care for him."
   },
   {
     name: "Holly",
@@ -57,7 +57,7 @@ export default [
     age: 29,
     dateOfBirth: 1995,
     cost: 320,
-    description: "Once a champion show horse, when she couldn’t be bred anymore, they didn’t want her. She then fell into neglect before being rescued and finding sanctuary with us. Now she’s a very lively and forward horse in spite of her age."
+    description: "Once a champion show horse, when she couldn't be bred anymore, they didn't want her. She then fell into neglect before being rescued and finding sanctuary with us. Now she's a very lively and forward horse in spite of her age."
   },
   {
     name: "Lucy",
@@ -81,7 +81,7 @@ export default [
     age: 24,
     dateOfBirth: 2000,
     cost: 320,
-    description: "First brought to the rescue in a bad state and full of lice, Mercy was one of the worst causes we’ve ever seen. She’s since been adopted and then returned back to Fallen Oak in August, and won’t be getting adopted out again. She can be quite nervous, although she’s good with the farrier (until he gets to one of her back legs), and does great on grass."
+    description: "First brought to the rescue in a bad state and full of lice, Mercy was one of the worst causes we've ever seen. She's since been adopted and then returned back to Fallen Oak in August, and won't be getting adopted out again. She can be quite nervous, although she's good with the farrier (until he gets to one of her back legs), and does great on grass."
   },
   {
     name: "Montana",
@@ -129,7 +129,7 @@ export default [
     age: 6,
     dateOfBirth: 2018,
     cost: 280,
-    description: "Boss mare #2, Montana's second in command, is the offspring of a racehorse and a real spitfire! Before coming to the rescue she was injured on the track and also has navicular, but that doesn’t stop her from being in charge. Sunny loves the occasional Guinness on a hot day to cool off."
+    description: "Boss mare #2, Montana's second in command, is the offspring of a racehorse and a real spitfire! Before coming to the rescue she was injured on the track and also has navicular, but that doesn't stop her from being in charge. Sunny loves the occasional Guinness on a hot day to cool off."
   },
   {
     name: "Charlie",
@@ -165,6 +165,6 @@ export default [
     age: 26,
     dateOfBirth: 1998,
     cost: 420,
-    description: "The picky eater of the bunch, Bow was brought to the rescue when the owner could not care for him any more. He is on 3 supplements and can't eat hay, and has also decided that he doesn’t like beet pulp anymore. He can eat fresh grass, and will eat the leaves off alfalfa, but won't touch the stems."
+    description: "The picky eater of the bunch, Bow was brought to the rescue when the owner could not care for him any more. He is on 3 supplements and can't eat hay, and has also decided that he doesn't like beet pulp anymore. He can eat fresh grass, and will eat the leaves off alfalfa, but won't touch the stems."
   }
 ];

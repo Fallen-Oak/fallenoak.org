@@ -9,7 +9,7 @@ export default [
     age: 11,
     dateOfBirth: 2013,
     cost: 231,
-    description: "Friendly and lovable like a big puppy-dog, Ace used to be a child’s horse until he contracted EPM, which went untreated for too long. That's when he came to us!"
+    description: "Friendly and lovable like a big puppy-dog, Ace used to be a child's horse until he contracted EPM, which went untreated for too long. That's when he came to us!"
   },
   {
     name: "Bert",
