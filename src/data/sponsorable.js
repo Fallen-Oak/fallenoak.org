@@ -131,7 +131,7 @@ export default [
   },
   {
     name: "Sunny",
-    img: "",
+    img: "Sunny_cropped.JPG",
     url: "https://givebutter.com/g1owwb",
     rescueDate: "October 22, 2020",
     breed: "Thoroughbred",
@@ -144,7 +144,7 @@ export default [
   },
   {
     name: "Charlie",
-    img: "",
+    img: "Charlie.jpg",
     url: "https://givebutter.com/EHnquV",
     rescueDate: "May 9, 2024",
     breed: "Quarter Horse",
@@ -157,7 +157,7 @@ export default [
   },
   {
     name: "Jasper",
-    img: "",
+    img: "Jasper.jpg",
     url: "https://givebutter.com/AxwR6r",
     rescueDate: "May 9, 2024",
     breed: "Rocky Mountain",
