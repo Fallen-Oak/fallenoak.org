@@ -28,7 +28,12 @@ import img1 from "../assets/logo.png";
       <nav class="hidden tracking-wide xl:flex" aria-label="Navigation">
         <h2 class="sr-only" id="navigation">Navigation</h2><menu
           class="text-heading flex space-x-10 tracking-wider"
-          >
+          ><li>
+            <a
+              href="/"
+              class={`${pathname === '/' ? "underline" : null} hover:underline underline-offset-[6px] inline-flex whitespace-nowrap text-sm py-4 font-semibold`}
+              >Home</a>
+          </li>
           <li>
             <a
               href="/about"
@@ -95,75 +100,29 @@ import img1 from "../assets/logo.png";
           >
             <div
             style="filter: drop-shadow(0 2px 2px #000)"
-              class="flex items-center text-base float-right min-h-[101vh] w-[80%] bg-yellow-50 px-6 pt-0 shadow-2xl"
+              class="flex items-center text-3xl float-right min-h-[101vh] w-[80%] bg-yellow-50 px-6 pt-0 shadow-2xl"
             >
-              <menu class="mt-8 mb-8 flex flex-col space-y-4 text-heading"
+              <menu class="mt-8 mb-8 flex flex-col gap-y-8 text-heading"
                 ><li>
-                  <a href="/" class="whitespace-nowrap pb-1 font-semibold"
-                    >About us</a
-                  ><menu class="space-y-4 py-4 px-6 font-semibold"
-                    ><li>
-                      <a href="/about#mission" class="whitespace-nowrap pb-1"
-                        >Our mission</a>
+                  <a href="/" class={`${pathname === '/' ? "underline" : null} hover:underline underline-offset-8 whitespace-nowrap pb-1 font-semibold`}
+                    >Home</a
+                  >
+                  </li><li>
+                    <a href="/about" class={`${pathname.includes("/about") ? "underline" : null}  hover:underline underline-offset-8 whitespace-nowrap pb-1 font-semibold`}
+                      >About us</a
+                    >
                     </li><li>
-                      <a
-                        href="/about#history"
-                        class="whitespace-nowrap pb-1">Our history</a>
-                    </li>
-                    <li>
-                      <a
-                        href="/about#mascot"
-                        class="whitespace-nowrap pb-1">Our mascot</a>
-                    </li>
-                    <li>
-                      <a
-                        href=""
-                        onclick="window.lenis.scrollTo('#footer')"
-                        class="whitespace-nowrap pb-1">Contact us</a>
-                    </li></menu>
-                </li><li>
-                  <a href="/" class="whitespace-nowrap pb-1 font-semibold"
+                  <a href="/horses" class={`${pathname.includes("/horses") ? "underline" : null}  hover:underline underline-offset-8 whitespace-nowrap pb-1 font-semibold`}
                     >Our horses</a
-                  ><menu class="space-y-4 py-4 px-6 font-semibold"
-                    ><li>
-                      <a href="/horses#adoptable" class="whitespace-nowrap pb-1"
-                        >Adoptable horses</a>
+                  >
+                  </li><li>
+                    <a href="/sponsors" class={`${pathname.includes("/sponsors") ? "underline" : null}  hover:underline underline-offset-8 whitespace-nowrap pb-1 font-semibold`}
+                      >Sponsors</a
+                    >
                     </li><li>
-                      <a
-                        href="/horses#adopted"
-                        class="whitespace-nowrap pb-1">Adopted horses</a>
-                    </li><li>
-                      <a
-                        href="/horses#permanent-residents"
-                        class="whitespace-nowrap pb-1"
-                        >Permanent residents</a>
-                    </li>
-                    <li>
-                      <a
-                        href="/horses#sponsorships"
-                        class="whitespace-nowrap pb-1"
-                        >Sponsorships</a>
-                    </li></menu>
-                </li><li>
-                  <a href="/" class="whitespace-nowrap pb-1 font-semibold"
-                    >News & Events</a
-                  ><menu class="space-y-4 py-4 px-6 font-semibold"
-                    ><li>
-                      <a href="/news" class="whitespace-nowrap pb-1"
-                        >News</a>
-                    </li><li>
-                      <a
-                        href="/events"
-                        class="whitespace-nowrap pb-1">Events</a>
-                    </li></menu>
-                </li><li>
-                  <a
-                    href="/sponsors"
-                    class="whitespace-nowrap pb-1 font-semibold">Sponsorships</a>
-                </li><li>
                   <a
                     href="/credits"
-                    class="whitespace-nowrap pb-1 font-semibold"
+                    class={`${pathname.includes("/credits") ? "underline" : null} hover:underline underline-offset-8 whitespace-nowrap pb-1 font-semibold`}
                     >Credits</a>
                 </li></menu>
             </div>
