@@ -5,7 +5,7 @@ const { author, title, content, img, date, id } = Astro.props;
 ---
 
 <a
-  class="duration-300 cursor-pointer max-w-xs p-6 rounded-md border-2 border-black bg-white hover:bg-amber-100 hover:text-black"
+  class="duration-300 cursor-pointer max-w-xs lg:max-w-72 p-6 lg:p-4 rounded-md border-2 border-black bg-white hover:bg-amber-100 hover:text-black"
   href={`/news/${id}`}
 >
   <Image
@@ -13,7 +13,7 @@ const { author, title, content, img, date, id } = Astro.props;
     src={img1}
     alt=""
     height="300"
-    class="object-cover object-center w-full rounded-md h-72 bg-gray-500"
+    class="object-cover object-center w-full rounded-md h-72 lg:h-48 bg-gray-500"
   />
   <div class="mt-6 mb-2">
     <span class="block text-xs font-bold tracking-widest uppercase">{date}</span
