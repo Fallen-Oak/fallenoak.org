@@ -144,7 +144,9 @@ const mm = gsap.matchMedia();
 window.mm = mm;
 
 
-const lenis = new Lenis({
+if (!ScrollTrigger.isTouch) {
+
+  const lenis = new Lenis({
   content: document.querySelector(".wrapper"),
   duration: 1.2,
   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -159,6 +161,7 @@ const raf = (t) => {
    requestAnimationFrame(raf);
 };
 requestAnimationFrame(raf);
+}
 
 window.onload = function() {
     window.scrollTo(0, 0);
