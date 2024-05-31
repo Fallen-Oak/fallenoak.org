@@ -13,20 +13,20 @@ import { Icon } from "astro-icon/components";
     class="bg-[#fefce8] min-h-[calc(100vh-10rem)] px-4 lg:px-0 flex flex-col items-center"
   >
     <div
+    style="transform: scale(0); animation: jump 0.6s cubic-bezier(0.77, 0.01, 0.25, 1) 0.2s forwards;"
       class="flex flex-col justify-center items-center w-full lg:w-full pt-24 lg:pt-32 pb-8 mb-12 lg:mb-0 lg:pb-8 gap-y-20 lg:gap-y-20"
     >
       <div
-        style="transform: scale(0); animation: jump 0.6s cubic-bezier(0.77, 0.01, 0.25, 1) 0.2s forwards;"
         class="text-3xl lg:text-7xl whitespace-nowrap uppercase font-semibold tracking-wide"
       >
         Adoptable Horses
       </div>
       <div
-        style="transform: scale(0); animation: jump 0.6s cubic-bezier(0.77, 0.01, 0.25, 1) 0.4s forwards;"
         class="relative flex items-center justify-center max-h-40 w-full"
       >
         <Image
           src={img1}
+          width="400"
           alt=""
           style="filter: drop-shadow(0 5px 5px #000)"
           class="max-h-64 w-auto sm:max-h-auto sm:h-64 lg:max-w-lg mx-auto z-0 rounded-lg -rotate-3 bg-blue-100 border-white border-8"
@@ -34,7 +34,7 @@ import { Icon } from "astro-icon/components";
       </div>
       <div
         class="w-full lg:w-1/2 text-sm lg:text-sm flex flex-col gap-y-2 rounded border border-dashed border-black p-4 bg-amber-100"
-        style="opacity: 0; animation: fadein 0.5s ease 0.8s forwards;"
+        style="opacity: 0; animation: fadein 0.5s ease 0.6s forwards;"
       >
         <p>
           Adopting is not only a chance to give a horse a new lease on life but
