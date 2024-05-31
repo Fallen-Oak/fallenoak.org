@@ -2,10 +2,12 @@
 import img1 from "../assets/Solo Horse Pics/Ace/Ace_1.jpg";
 import img2 from "../assets/foer_hanging_sign.png";
 import { Image } from "astro:assets";
+
+const { name, url, rescueDate, breed, changeName, isMale, age, dateOfBirth, cost, description } = Astro.props;
 ---
 
 <a
-  href="https://givebutter.com/MYIlgD"
+  href={url}
   target="_blank"
   class="hover:scale-[1.05] duration-300 cursor-pointer hover:-rotate-1 flex flex-col gap-y-4 justify-center items-center rounded-md bg-purple-50 p-4"
   style="filter: drop-shadow(0 5px 5px #000)"
@@ -16,7 +18,7 @@ import { Image } from "astro:assets";
   alt=""
   class="right-4 top-[-12rem] lg:top-[-6.92rem] absolute w-28 max-w-lg mx-auto z-0"
 />
-  <div class="text-base">Rescued on May 1, 2023</div>
+  <div class="text-base">Rescued by Fallen Oak on <span class="bg-purple-200 px-1.5 py-0.5 rounded">May 1, 2023</span></div>
   <div class="flex flex-row justify-center items-center">
     <div class="w-64 border-r border-neutral-400 flex flex-col gap-y-2 justify-center items-center">
       <Image
@@ -25,19 +27,17 @@ import { Image } from "astro:assets";
         class="object-cover object-center rounded-full border-2 border-black h-36 w-36"
       />
 
-      <div class="text-4xl font-semibold">Ace</div>
+      <div class="text-4xl font-semibold">{ name }</div>
       <div class="flex flex-col gap-y-0.5 text-sm justify-center items-center">
-        <div><span class="font-semibold">Breed:</span> <span class="bg-purple-200 px-1 py-[0.0625rem] rounded">Rocky Mountain</span></div>
-        <div><span class="font-semibold">Change name:</span> <span class="bg-purple-200 px-1 py-[0.0625rem] rounded">Yes</span></div>
-        <div><span class="font-semibold">Birth date:</span> <span class="bg-purple-200 px-1 py-[0.0625rem] rounded">2013</span></div>
-        <div><span class="font-semibold">Age:</span> <span class="bg-purple-200 px-1 py-[0.0625rem] rounded">11</span></div>
+        <div><span class="font-semibold">Breed:</span> <span class="bg-purple-200 px-1 py-[0.0625rem] rounded">{ breed }</span></div>
+        <div><span class="font-semibold">Change name:</span> <span class="bg-purple-200 px-1 py-[0.0625rem] rounded">{ changeName ? 'Yes ✔️' : 'No ❌' }</span></div>
+        <div><span class="font-semibold">Gender:</span> <span class="bg-purple-200 px-1 py-[0.0625rem] rounded">{ isMale ? 'Male' : 'Female' }</span></div>
+        <div><span class="font-semibold">Age:</span> <span class="bg-purple-200 px-1 py-[0.0625rem] rounded">{ age }</span></div>
       </div>
     </div>
     <div class="w-80 flex flex-col gap-y-4 px-4">
       <div class="text-sm bg-purple-200 rounded p-4 italic relative speech-bubble">
-        Friendly and lovable like a big puppy-dog, Ace used to be a child's
-        horse until he contracted EPM, which went untreated for too long. That's
-        when he came to us!
+        { description }
       </div>
       <div
         class="mt-2 text-center flex flex-col justify-center items-center gap-y-1"
@@ -47,7 +47,7 @@ import { Image } from "astro:assets";
         >
           <span>Donate</span>
         </div>
-        <div class="text-sm font-medium">$231 / mo</div>
+        <div class="text-sm font-medium text-neutral-600">${cost} / mo</div>
       </div>
     </div>
   </div>

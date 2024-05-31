@@ -1,6 +1,7 @@
 ---
 import Horse from "../components/Horse.astro";
 import Layout from "../layouts/Layout.astro";
+import horses from "../data/horses.js";
 ---
 
 <Layout title="Fallen Oaks Equine Rescue | About">
@@ -14,6 +15,8 @@ import Layout from "../layouts/Layout.astro";
     
 </div>
 <div>
-  <Horse />
+  {
+    horses.map(horse => <Horse {...horse} />)
+  }
 </div>
 </Layout>
