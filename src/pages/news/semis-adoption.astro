@@ -25,7 +25,7 @@ const { author, title, content, img, date, id } = article;
       <article class="px-6 mx-auto flex flex-col lg:flex-row gap-x-12">
         <div class="flex justify-center w-full lg:w-1/3">
           <Image 
-          transition:name="1" src={img1} alt="News" width="400" class="object-cover w-auto h-120 border-2 rounded border-black" />
+          transition:name={id} src={img1} alt="News" width="400" class="object-cover w-auto h-120 border-2 rounded border-black" />
         </div>
         <div class="flex flex-col gap-y-8 w-full lg:w-2/3">
           <div class="flex flex-col mx-auto gap-y-2 w-full">
