@@ -5,11 +5,15 @@ import { Icon } from "astro-icon/components";
 import img1 from "../assets/logo.png";
 ---
 
-<header class="z-40 h-20 xl:h-12 w-full -mb-10 sm:mb-0 relative sm:fixed uppercase"  >
+<header
+  class="z-40 h-20 xl:h-12 w-full -mb-10 sm:mb-0 relative sm:fixed uppercase"
+>
   <h2 class="sr-only" id="fast-websites-seo-optimized">
     Fast websites SEO optimized
-  </h2><div 
-  style="filter: drop-shadow(0 1px 1px #000)" class="bg-[#937666] bg-opacity-100 backdrop-blur absolute inset-0">
+  </h2><div
+    style="filter: drop-shadow(0 1px 1px #000)"
+    class="bg-[#937666] bg-opacity-100 backdrop-blur absolute inset-0"
+  >
   </div><div
     class="relative mx-auto flex h-full flex-row items-center justify-between gap-4 px-6 xl:container"
   >
@@ -23,7 +27,12 @@ import img1 from "../assets/logo.png";
         Straffe S!tes
       </a> -->
       <a href="/" class="flex items-center justify-center">
-        <Image src={img1} alt=""  height="200" class="w-auto h-16 py-2 xl:py-0 xl:h-8 px-2 duration-300 hover:opacity-50"/>
+        <Image
+          src={img1}
+          alt=""
+          height="200"
+          class="w-auto h-16 py-2 xl:py-0 xl:h-8 px-2 duration-300 hover:opacity-50"
+        />
       </a>
       <nav class="hidden tracking-wide xl:flex" aria-label="Navigation">
         <h2 class="sr-only" id="navigation">Navigation</h2><menu
@@ -31,39 +40,54 @@ import img1 from "../assets/logo.png";
           ><li>
             <a
               href="/"
-              class={`${pathname === '/' ? "underline" : null} hover:underline underline-offset-[6px] inline-flex whitespace-nowrap text-sm py-4 font-semibold`}
-              >Home</a>
+              class={`${pathname === "/" ? "underline" : null} hover:underline underline-offset-[6px] inline-flex whitespace-nowrap text-sm py-4 font-semibold`}
+              >Home</a
+            >
           </li>
           <li>
             <a
               href="/about"
               class={`${pathname.includes("/about") ? "underline" : null} hover:underline underline-offset-[6px] inline-flex whitespace-nowrap text-sm py-4 font-semibold`}
-              >About Us</a>
+              >About Us</a
+            >
           </li>
           <li>
             <a
               href="/adopt"
               class={`${pathname.includes("/adopt") ? "underline" : null} hover:underline underline-offset-[6px] inline-flex whitespace-nowrap text-sm py-4 font-semibold`}
-              >Adopt</a>
+              >Adopt</a
+            >
           </li>
           <li>
             <a
               href="/sponsor"
               class={`${pathname.includes("/sponsor") ? "underline" : null} hover:underline underline-offset-[6px] inline-flex whitespace-nowrap text-sm py-4 font-semibold`}
-              >Sponsor</a>
+              >Sponsor</a
+            >
+          </li>
+          <li>
+            <a
+              href="/donor"
+              class={`${pathname.includes("/donor") ? "underline" : null} hover:underline underline-offset-[6px] inline-flex whitespace-nowrap text-sm py-4 font-semibold`}
+              >Donor perks</a
+            >
           </li>
           <li>
             <a
               href="/credits"
               class={`${pathname.includes("/credits") ? "underline" : null} hover:underline underline-offset-[6px] inline-flex whitespace-nowrap text-sm py-4 font-semibold`}
-              >Credits</a>
-          </li></menu>
+              >Credits</a
+            >
+          </li></menu
+        >
       </nav>
     </div><div
       class="hidden items-center gap-4 font-semibold text-heading xl:flex"
     >
-      <a href="/donate" class="flex bg-cyan-100 hover:bg-blue-200 duration-300 rounded px-2 py-1 items-center gap-2 hover:text-heading text-sm"
-        >
+      <a
+        href="/donate"
+        class="flex bg-cyan-100 hover:bg-blue-200 duration-300 rounded px-2 py-1 items-center gap-2 hover:text-heading text-sm"
+      >
         <!-- <svg
           class="h-4"
           xmlns="http://www.w3.org/2000/svg"
@@ -81,12 +105,8 @@ import img1 from "../assets/logo.png";
     </div>
     <aside class="flex h-full w-1/2 flex-1 justify-end xl:hidden">
       <h2 class="sr-only" id="mobile-navigation">Mobile navigation</h2>
-      <div
-        class="flex items-center"
-      >
-        <label
-          class="relative cursor-pointer px-3 py-6"
-          for="ss-mobile-menu"
+      <div class="flex items-center">
+        <label class="relative cursor-pointer px-3 py-6" for="ss-mobile-menu"
           ><input class="peer hidden" type="checkbox" id="ss-mobile-menu" />
           <div
             class="bg-heading before:bg-heading after:bg-heading block h-[3px] content-[''] relative w-7 bg-transparent peer-checked:bg-transparent z-[10000] before:peer-checked:transform before:peer-checked:rotate-45 before:peer-checked:top-0 before:peer-checked:w-full after:peer-checked:transform after:peer-checked:-rotate-45 after:peer-checked:bottom-0 after:peer-checked:w-full before:block before:h-full before:w-full before:absolute before:content-[''] before:transition-all before:ease-out before:duration-200 before:top-[-0.35rem] before:z-[10000] after:block after:h-full after:w-full after:right-0 after:absolute after:content-[''] after:transition-all after:ease-out after:duration-200 after:bottom-[-0.35rem]"
@@ -99,34 +119,52 @@ import img1 from "../assets/logo.png";
             class="fixed top-0 right-0 z-[9999] h-full w-full translate-x-full overflow-y-auto overscroll-y-none transition duration-500 peer-checked:translate-x-0 peer-checked:shadow-heading"
           >
             <div
-            style="filter: drop-shadow(0 2px 2px #000)"
+              style="filter: drop-shadow(0 2px 2px #000)"
               class="flex items-center text-3xl float-right min-h-[101vh] w-[80%] bg-yellow-50 px-6 pt-0 shadow-2xl"
             >
               <menu class="mt-8 mb-8 flex flex-col gap-y-8 text-heading"
                 ><li>
-                  <a href="/" class={`${pathname === '/' ? "underline" : null} hover:underline underline-offset-8 whitespace-nowrap pb-1 font-semibold`}
+                  <a
+                    href="/"
+                    class={`${pathname === "/" ? "underline" : null} hover:underline underline-offset-8 whitespace-nowrap pb-1 font-semibold`}
                     >Home</a
                   >
-                  </li><li>
-                    <a href="/about" class={`${pathname.includes("/about") ? "underline" : null}  hover:underline underline-offset-8 whitespace-nowrap pb-1 font-semibold`}
-                      >About us</a
-                    >
-                    </li><li>
-                  <a href="/adopt" class={`${pathname.includes("/adopt") ? "underline" : null}  hover:underline underline-offset-8 whitespace-nowrap pb-1 font-semibold`}
+                </li><li>
+                  <a
+                    href="/about"
+                    class={`${pathname.includes("/about") ? "underline" : null}  hover:underline underline-offset-8 whitespace-nowrap pb-1 font-semibold`}
+                    >About us</a
+                  >
+                </li><li>
+                  <a
+                    href="/adopt"
+                    class={`${pathname.includes("/adopt") ? "underline" : null}  hover:underline underline-offset-8 whitespace-nowrap pb-1 font-semibold`}
                     >Adopt</a
                   >
-                  </li><li>
-                    <a href="/sponsor" class={`${pathname.includes("/sponsor") ? "underline" : null}  hover:underline underline-offset-8 whitespace-nowrap pb-1 font-semibold`}
-                      >Sponsor</a
-                    >
-                    </li><li>
+                </li><li>
+                  <a
+                    href="/sponsor"
+                    class={`${pathname.includes("/sponsor") ? "underline" : null}  hover:underline underline-offset-8 whitespace-nowrap pb-1 font-semibold`}
+                    >Sponsor</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/donor"
+                    class={`${pathname.includes("/donor") ? "underline" : null}  hover:underline underline-offset-8 whitespace-nowrap pb-1 font-semibold`}
+                    >Donor perks</a
+                  >
+                </li><li>
                   <a
                     href="/credits"
                     class={`${pathname.includes("/credits") ? "underline" : null} hover:underline underline-offset-8 whitespace-nowrap pb-1 font-semibold`}
-                    >Credits</a>
-                </li></menu>
+                    >Credits</a
+                  >
+                </li></menu
+              >
             </div>
-          </div></label>
+          </div></label
+        >
       </div>
     </aside>
   </div>
