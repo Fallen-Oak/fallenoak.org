@@ -31,7 +31,7 @@ import img1 from "../assets/logo.png";
           src={img1}
           alt=""
           height="200"
-          class="w-auto h-16 py-2 xl:py-0 xl:h-8 px-2 duration-300 hover:opacity-50"
+          class="w-auto h-16 py-2 xl:py-0 xl:h-8 px-2 hover:opacity-50"
         />
       </a>
       <nav class="hidden tracking-wide xl:flex" aria-label="Navigation">
@@ -71,6 +71,12 @@ import img1 from "../assets/logo.png";
               class={`${pathname.includes("/donor") ? "underline" : null} hover:underline underline-offset-[6px] inline-flex whitespace-nowrap text-sm py-4 font-semibold`}
               >Donors</a
             >
+          </li><li>
+            <a
+              href="/news"
+              class={`${pathname.includes("/news") ? "underline" : null} hover:underline underline-offset-[6px] inline-flex whitespace-nowrap text-sm py-4 font-semibold`}
+              >News</a
+            >
           </li>
           <li>
             <a
@@ -83,25 +89,8 @@ import img1 from "../assets/logo.png";
       </nav>
     </div><div
       class="hidden items-center gap-4 font-semibold text-heading xl:flex"
-    >
-      <a
-        href="/donate"
-        class="flex bg-cyan-100 hover:bg-blue-200 duration-300 rounded px-2 py-1 items-center gap-2 hover:text-heading text-sm"
-      >
-        <!-- <svg
-          class="h-4"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 512 512"
-          ><path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            fill="currentColor"
-            d="M0 288l55.6 23.8L192 370.3V376v64 56l48 16 73.3-89.7 88.9 38.1L448 480l6.6-49.4L504.1 59.5 512 0 459.6 29.4 52.7 258.4 0 288zM408.8 411L268.4 350.8 444.9 140.2 408.8 411zM222.3 331.1L108.3 282.2 401.5 117.2 222.3 331.1z"
-          ></path></svg
-        > -->
-        <Icon name="mdi:donate" />
-        <span>Donate</span></a
-      >
+    ><a href="/adopt.pdf" target="_blank" class="duration-300 hover:bg-blue-200 bg-blue-50 border-2 border-blue-200 hover:border-blue-400 rounded font-semibold text-base px-3 py-1 flex items-center gap-x-2"> 
+      <span>Donate</span> <Icon name="mdi:donate" class="text-2xl text-blue-400" /></a>
     </div>
     <aside class="flex h-full w-1/2 flex-1 justify-end xl:hidden">
       <h2 class="sr-only" id="mobile-navigation">Mobile navigation</h2>
@@ -153,6 +142,12 @@ import img1 from "../assets/logo.png";
                     href="/donor"
                     class={`${pathname.includes("/donor") ? "underline" : null}  hover:underline underline-offset-8 whitespace-nowrap pb-1 font-semibold`}
                     >Donors</a
+                  >
+                </li><li>
+                  <a
+                    href="/news"
+                    class={`${pathname.includes("/news") ? "underline" : null}  hover:underline underline-offset-8 whitespace-nowrap pb-1 font-semibold`}
+                    >News</a
                   >
                 </li><li>
                   <a

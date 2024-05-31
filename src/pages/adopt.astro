@@ -12,9 +12,7 @@ import { Icon } from "astro-icon/components";
   <div
     class="bg-[#fefce8] min-h-[calc(100vh-10rem)] px-4 lg:px-0 flex flex-col items-center"
   >
-    <div
-    style="transform: scale(0); animation: jump 0.6s cubic-bezier(0.77, 0.01, 0.25, 1) 0.2s forwards;"
-      class="flex flex-col justify-center items-center w-full lg:w-full pt-24 lg:pt-32 pb-8 mb-12 lg:mb-0 lg:pb-8 gap-y-20 lg:gap-y-20"
+    <div style="opacity: 0; animation: fadein 0.5s ease 0.2s forwards;" class="flex flex-col justify-center items-center w-full lg:w-full pt-24 lg:pt-32 pb-8 mb-12 lg:mb-0 lg:pb-8 gap-y-20 lg:gap-y-20"
     >
       <div
         class="text-3xl lg:text-7xl whitespace-nowrap uppercase font-semibold tracking-wider"
@@ -65,7 +63,7 @@ import { Icon } from "astro-icon/components";
           new friend to bring home.
         </p>
         <div class="flex justify-center my-2">
-          <a href="/adopt.pdf" target="_blank" class="duration-300 hover:bg-blue-200 bg-blue-50 rounded font-semibold text-xl px-6 py-2 flex items-center gap-x-2"> 
+          <a href="/adopt.pdf" target="_blank" class="duration-300 hover:bg-blue-200 bg-blue-50 border-2 border-blue-200 hover:border-blue-400 rounded font-semibold text-xl px-6 py-2 flex items-center gap-x-2"> 
            <span>Equine Adoption Application</span> <Icon name="ph:file-pdf-light" class="text-4xl text-red-400" /></a>
         </div>
         

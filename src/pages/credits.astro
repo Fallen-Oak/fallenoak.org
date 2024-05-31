@@ -7,14 +7,16 @@ import Footer from "../components/Footer.astro";
 
 <Layout title="Fallen Oaks Equine Rescue | About">
   <div
-    class="bg-[#fefce8] min-h-[calc(100vh-10rem)] px-4 lg:px-0  flex flex-col items-center"
+    class="bg-[#fefce8] min-h-[calc(100vh-10rem)] px-4 lg:px-0 flex flex-col items-center"
   >
     <div
-    style="transform: scale(0); animation: jump 0.6s cubic-bezier(0.77, 0.01, 0.25, 1) 0.2s forwards;"
+      style="opacity: 0; animation: fadein 0.5s ease 0.2s forwards;"
       class="flex flex-col justify-center items-center w-full lg:w-2/5 pt-24 lg:pt-32 pb-8 mb-12 lg:pb-16 gap-y-12 lg:gap-y-24"
     >
-      <div class="text-5xl lg:text-7xl uppercase font-semibold tracking-wider">Credits</div>
-      <div   class="relative flex items-center justify-center max-h-40 w-full">
+      <div class="text-5xl lg:text-7xl uppercase font-semibold tracking-wider">
+        Credits
+      </div>
+      <div class="relative flex items-center justify-center max-h-40 w-full">
         <Image
           src={img1}
           alt=""
@@ -23,73 +25,45 @@ import Footer from "../components/Footer.astro";
         />
       </div>
     </div>
-    <hr class="border-neutral-400 border-1 w-full lg:w-2/3 pb-8 lg:pb-8" 
-    style="opacity: 0; animation: fadein 0.5s ease 0.6s forwards;"/>
-    <div style="opacity: 0; animation: fadein 0.5s ease 0.8s forwards;" class=" px-4 lg:px-0 text-base lg:text-xl w-full lg:w-1/2 grid grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
-      
+    <hr
+      class="border-neutral-400 border-1 w-full lg:w-2/3 pb-8 lg:pb-8"
+      style="opacity: 0; animation: fadein 0.5s ease 0.6s forwards;"
+    />
+    <div
+      style="opacity: 0; animation: fadein 0.5s ease 0.8s forwards;"
+      class="text-center px-4 lg:px-0 text-base lg:text-xl w-full lg:w-1/2 grid grid-cols-2 lg:grid-cols-4 gap-4 mb-4"
+    >
       <div>
-        <div class="font-semibold text-xl sm:text-2xl">
-          Kim Sweeney
-        </div>
-        <div>
-          Lorem ipsum
-        </div>
+        <div class="font-semibold text-xl sm:text-2xl">Kim Sweeney</div>
+        <div class="text-base sm:text-lg">Lorem ipsum</div>
       </div>
       <div>
-        <div class="font-semibold text-xl sm:text-2xl">
-          Lightsolver
-        </div>
-        <div>
-          Lorem ipsum
-        </div>
+        <div class="font-semibold text-xl sm:text-2xl">Lightsolver</div>
+        <div class="text-base sm:text-lg">Lorem ipsum</div>
       </div>
       <div>
-        <div class="font-semibold text-xl sm:text-2xl">
-          Britanon
-        </div>
-        <div>
-          Lorem ipsum
-        </div>
+        <div class="font-semibold text-xl sm:text-2xl">Britanon</div>
+        <div class="text-base sm:text-lg">Lorem ipsum</div>
       </div>
       <div>
-        <div class="font-semibold text-xl sm:text-2xl">
-          SGT. Ardent
-        </div>
-        <div>
-          Lorem ipsum
-        </div>
+        <div class="font-semibold text-xl sm:text-2xl">SGT. Ardent</div>
+        <div class="text-base sm:text-lg">Lorem ipsum</div>
       </div>
       <div>
-        <div class="font-semibold text-xl sm:text-2xl">
-          15
-        </div>
-        <div>
-          Web development
-        </div>
+        <div class="font-semibold text-xl sm:text-2xl">15</div>
+        <div class="text-base sm:text-lg">Web development</div>
       </div>
       <div>
-        <div class="font-semibold text-xl sm:text-2xl">
-          ChaosLlama
-        </div>
-        <div>
-          Art assets
-        </div>
+        <div class="font-semibold text-xl sm:text-2xl">ChaosLlama</div>
+        <div class="text-base sm:text-lg">Art assets</div>
       </div>
       <div>
-        <div class="font-semibold text-xl sm:text-2xl">
-          Sigil
-        </div>
-        <div>
-          Art assets
-        </div>
+        <div class="font-semibold text-xl sm:text-2xl">Sigil</div>
+        <div class="text-base sm:text-lg">Art assets</div>
       </div>
       <div>
-        <div class="font-semibold text-xl sm:text-2xl">
-          Xppp1
-        </div>
-        <div>
-          Art assets
-        </div>
+        <div class="font-semibold text-xl sm:text-2xl">Xppp1</div>
+        <div class="text-base sm:text-lg">Art assets</div>
       </div>
     </div>
   </div>
