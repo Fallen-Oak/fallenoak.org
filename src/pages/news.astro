@@ -2,11 +2,11 @@
 import Layout from "../layouts/Layout.astro";
 import news from "../data/news.js";
 import News from "../components/News/news.astro";
+import { ViewTransitions } from "astro:transitions";
 ---
-
+<ViewTransitions />
 <Layout title="Fallen Oaks Equine Rescue | About">
   <div
-    style="opacity: 0; animation: fadein 0.5s ease 0.2s forwards;"
     class="bg-[#fefce8] min-h-[calc(100vh-10rem)] px-4 lg:px-0 flex flex-col items-center"
   >
     <div
@@ -22,8 +22,7 @@ import News from "../components/News/news.astro";
       class="border-neutral-400 border-1 w-full lg:w-2/3 pb-8 lg:pb-16"
       style="opacity: 0; animation: fadein 0.5s ease 1.6s forwards;"
     /> -->
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-24 mt-8" 
-    style="opacity: 0; animation: fadein 0.5s ease 0.4s forwards;">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-24 mt-8" >
       {news.map((n) => <News {...n} />)}
     </div>
   </div>

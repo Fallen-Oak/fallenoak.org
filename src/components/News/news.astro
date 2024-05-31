@@ -9,6 +9,7 @@ const { author, title, content, img, date, id } = Astro.props;
   href={`/news/${id}`}
 >
   <Image
+  transition:name="1"
     src={img1}
     alt=""
     height="300"
