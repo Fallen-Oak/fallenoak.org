@@ -2,7 +2,7 @@ export default [
   {
     name: "April",
     url: "https://givebutter.com/MYIlgD",
-    img: "April_1.jpg",
+    img: "April_1_new.jpg",
     rescueDate: "2023",
     breed: "Arab Cross",
     rideable: true,
@@ -16,7 +16,7 @@ export default [
   {
     name: "Derby",
     url: "https://givebutter.com/dHrL2i",
-    img: "derby.jpg",
+    img: "derby_new.jpg",
     rescueDate: "March 15, 2023",
     breed: "Appendix",
     rideable: true,
