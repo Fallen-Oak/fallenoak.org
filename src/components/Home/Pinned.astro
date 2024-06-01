@@ -17,9 +17,9 @@ import { Icon } from "astro-icon/components";
   class="w-full mx-auto"
   style="background-image: linear-gradient(to top, #fefce8 0%, #fefce8 100%);"
 >
-  <div class="hidden lg:block w-full lg:w-4/5 mx-auto">
+  <div class="hidden lg:block w-full lg:w-11/12 mx-auto">
     <section class="black flex lg:h-screen items-center justify-around">
-      <div class="relative overflow-hidden w-1/2 lg:h-[80vh]">
+      <div class="relative overflow-hidden w-1/2 h-screen 3xl:h-[80vh]">
         <div
           id="adoptables"
           class="pr-16 panel-text translate-y-full absolute opacity-0 z-10 w-full"
@@ -30,7 +30,7 @@ import { Icon } from "astro-icon/components";
             Next chapters
           </div>
           <div
-            class="text-5xl lg:text-7xl font-semibold text-center lg:text-left uppercase tracking-wide mb-8 lg:mb-8"
+            class="whitespace-nowrap text-5xl 2xl:text-6xl 3xl:text-7xl font-semibold text-center lg:text-left uppercase tracking-wide mb-8 lg:mb-8"
           >
             Adoptables
           </div>
@@ -57,41 +57,6 @@ import { Icon } from "astro-icon/components";
             />
           </div>
         </div>
-        <!-- <div
-          id="permanent-residents"
-          class="pr-16 panel-text translate-y-full absolute opacity-0 z-10 w-full"
-        >
-          <div
-            class="text-lg lg:text-2xl pb-4 lg:pb-4 uppercase tracking-wide font-normal text-center lg:text-left"
-          >
-            Safe landings
-          </div>
-          <div
-            class="text-5xl lg:text-7xl font-semibold text-center lg:text-left uppercase tracking-wide mb-8 lg:mb-8"
-          >
-            Residents
-          </div>
-          <p class="text-lg lg:text-2xl text-left lg:mx-0 mx-4">
-            Meet the cherished permanent residents of our sanctuary. These
-            horses, due to age, health, or special circumstances, will spend the
-            rest of their lives in the loving care of our rescue.
-          </p>
-
-          <div class="mt-8">
-            <Button href="/sponsor" text="Learn more" />
-          </div>
-          <div
-            id="scroll-down-parent-permanent"
-            class="mt-8 hidden opacity-100 lg:flex justify-start"
-          >
-            <Icon
-              id="scroll-down-indicator-permanent"
-              class="w-12 h-12 p-2 text-black cursor-pointer hover:text-yellow-50 hover:bg-[#937666] duration-300 rounded"
-              name="ph:caret-down-bold"
-              onclick="window.lenis.scrollTo('#scroll-down-parent-sponsorships')"
-            />
-          </div>
-        </div> -->
         <div
           id="sponsorships"
           class="pr-16 panel-text translate-y-full absolute opacity-0 z-10 w-full"
@@ -99,18 +64,18 @@ import { Icon } from "astro-icon/components";
           <div
             class="text-lg lg:text-2xl pb-4 lg:pb-4 uppercase tracking-wide font-normal text-center lg:text-left"
           >
-            Lorem ipsum
+            Can't Adopt?
           </div>
           <div
-            class="text-5xl lg:text-7xl font-semibold text-center lg:text-left uppercase tracking-wide mb-8 lg:mb-8"
+            class="whitespace-nowrap text-5xl 2xl:text-6xl 3xl:text-7xl font-semibold text-center lg:text-left uppercase tracking-wide mb-8 lg:mb-8"
           >
             Sponsorables
           </div>
           <p class="text-lg lg:text-2xl text-left lg:mx-0 mx-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            Try sponsoring! Call one of our permanent residents your own and
+            learn how special the bond between you and your horse can be! Horse
+            sponsors donate to care for their horse's needs, receive special
+            updates on their horse, and spend time with their horse.
           </p>
 
           <div class="mt-8">
@@ -124,6 +89,43 @@ import { Icon } from "astro-icon/components";
               id="scroll-down-indicator-sponsorships"
               class="w-12 h-12 p-2 text-black cursor-pointer hover:text-yellow-50 hover:bg-[#937666] duration-300 rounded"
               name="ph:caret-down-bold"
+              onclick="window.lenis.scrollTo('#permanent-residents')"
+            />
+          </div>
+        </div>
+        <div
+          id="permanent-residents"
+          class="pr-16 panel-text translate-y-full absolute opacity-0 z-10 w-full"
+        >
+          <div
+            class="text-lg lg:text-2xl pb-4 lg:pb-4 uppercase tracking-wide font-normal text-center lg:text-left"
+          >
+            Want to make a broader impact?
+          </div>
+          <div
+            class="whitespace-nowrap text-5xl 2xl:text-6xl 3xl:text-7xl font-semibold text-center lg:text-left uppercase tracking-wide mb-8 lg:mb-8"
+          >
+            Monthly Donors
+          </div>
+          <p class="text-lg lg:text-2xl text-left lg:mx-0 mx-4">
+            Consider becoming a monthly donor and receive special rewards as a
+            result. These perks are available to all who make a regular
+            contribution to the rescue, with different tiers for all monthly
+            donors ranging from $1 all the way up to $1000 per month. Even the
+            smallest amount you can give helps tremendously!
+          </p>
+
+          <div class="mt-8">
+            <Button href="/sponsor" text="Learn more" />
+          </div>
+          <div
+            id="scroll-down-parent-permanent"
+            class="mt-8 hidden opacity-100 lg:flex justify-start"
+          >
+            <Icon
+              id="scroll-down-indicator-permanent"
+              class="w-12 h-12 p-2 text-black cursor-pointer hover:text-yellow-50 hover:bg-[#937666] duration-300 rounded"
+              name="ph:caret-down-bold"
               onclick="window.lenis.scrollTo('#sponsored')"
             />
           </div>
@@ -135,18 +137,22 @@ import { Icon } from "astro-icon/components";
           <div
             class="text-lg lg:text-2xl pb-4 lg:pb-4 uppercase tracking-wide font-normal text-center lg:text-left"
           >
-            Lorem ipsum
+            Can't donate?
           </div>
           <div
-            class="text-5xl lg:text-7xl font-semibold text-center lg:text-left uppercase tracking-wide mb-8 lg:mb-8"
+            class="whitespace-nowrap text-5xl 2xl:text-6xl 3xl:text-7xl font-semibold text-center lg:text-left uppercase tracking-wide mb-8 lg:mb-8"
           >
             Volunteers
           </div>
           <p class="text-lg lg:text-2xl text-left lg:mx-0 mx-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            Volunteering is a massive way to help out horses and learn how kind
+            and loving these creatures are. If you're interested in
+            volunteering, reach out to Kim by emailing <a
+              href="mailto:kim@fallenoak.org"
+              target="_blank"
+              class="underline text-blue-400 underline-offset-8 hover:text-blue-500"
+              >kim@fallenoak.org</a
+            > or calling at (513) 582-5783.
           </p>
 
           <div class="mt-8">
@@ -168,7 +174,7 @@ import { Icon } from "astro-icon/components";
 
       <div class="relative overflow-hidden w-1/2 h-[80vh]">
         <div class="panel blue h-screen bg-gray-400"></div>
-        <!-- <div class="panel red bg-gray-400"></div> -->
+        <div class="panel red bg-gray-400"></div>
         <div class="panel orange bg-gray-400"></div>
         <div class="panel purple bg-gray-400"></div>
       </div>
@@ -206,52 +212,22 @@ import { Icon } from "astro-icon/components";
         <Button href="/adopt" text="Learn more" />
       </div>
     </div>
-    <!-- <div class="h-full pb-24">
-      <div
-        class="text-lg lg:text-2xl pb-2 lg:pb-4 uppercase tracking-wide font-normal text-center lg:text-left"
-      >
-        Safe landings
-      </div>
-      <div
-        class="text-5xl lg:text-7xl font-semibold text-center lg:text-left uppercase tracking-wide mb-4 lg:mb-8"
-      >
-        Residents
-      </div>
-      <p class="text-lg lg:text-2xl text-left lg:mx-0 mx-4">
-        Meet the cherished permanent residents of our sanctuary. These
-            horses, due to age, health, or special circumstances, will spend the
-            rest of their lives in the loving care of our rescue.
-      </p>
-
-      <div class="px-8">
-        <Image
-          src={img2}
-          alt=""
-          style="filter: drop-shadow(0 5px 5px #000)"
-          class="lg:ml-24 mt-6 z-0 max-h-80 w-auto mx-auto rounded-lg -rotate-3 bg-neutral-400 border-white border-8"
-        />
-      </div>
-
-      <div class="text-center mt-12">
-        <Button href="/horses" text="Learn more" />
-      </div>
-    </div> -->
     <div class="h-full pb-24">
       <div
         class="text-lg lg:text-2xl pb-2 lg:pb-4 uppercase tracking-wide font-normal text-center lg:text-left"
       >
-      Lorem ipsum
+        Can't Adopt?
       </div>
       <div
         class="text-5xl lg:text-7xl font-semibold text-center lg:text-left uppercase tracking-wide mb-4 lg:mb-8"
       >
-      Sponsorships
+        Sponsorables
       </div>
       <p class="text-lg lg:text-2xl text-left lg:mx-0 mx-4">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+        Try sponsoring! Call one of our permanent residents your own and learn
+        how special the bond between you and your horse can be! Horse sponsors
+        donate to care for their horse's needs, receive special updates on their
+        horse, and spend time with their horse.
       </p>
 
       <div class="px-8">
@@ -271,18 +247,54 @@ import { Icon } from "astro-icon/components";
       <div
         class="text-lg lg:text-2xl pb-2 lg:pb-4 uppercase tracking-wide font-normal text-center lg:text-left"
       >
-      Lorem ipsum
+        Want to make a broader impact?
       </div>
       <div
         class="text-5xl lg:text-7xl font-semibold text-center lg:text-left uppercase tracking-wide mb-4 lg:mb-8"
       >
-      Volunteers
+        Monthly Donors
       </div>
       <p class="text-lg lg:text-2xl text-left lg:mx-0 mx-4">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+        Consider becoming a monthly donor and receive special rewards as a
+        result. These perks are available to all who make a regular contribution
+        to the rescue, with different tiers for all monthly donors ranging from
+        $1 all the way up to $1000 per month. Even the smallest amount you can
+        give helps tremendously!
+      </p>
+
+      <div class="px-8">
+        <Image
+          src={img2}
+          alt=""
+          style="filter: drop-shadow(0 5px 5px #000)"
+          class="lg:ml-24 mt-6 z-0 max-h-80 w-auto mx-auto rounded-lg -rotate-3 bg-neutral-400 border-white border-8"
+        />
+      </div>
+
+      <div class="text-center mt-12">
+        <Button href="/horses" text="Learn more" />
+      </div>
+    </div>
+    <div class="h-full pb-24">
+      <div
+        class="text-lg lg:text-2xl pb-2 lg:pb-4 uppercase tracking-wide font-normal text-center lg:text-left"
+      >
+        Can't donate?
+      </div>
+      <div
+        class="text-5xl lg:text-7xl font-semibold text-center lg:text-left uppercase tracking-wide mb-4 lg:mb-8"
+      >
+        Volunteers
+      </div>
+      <p class="text-lg lg:text-2xl text-left lg:mx-0 mx-4">
+        Volunteering is a massive way to help out horses and learn how kind and
+        loving these creatures are. If you're interested in volunteering, reach
+        out to Kim by emailing <a
+          href="mailto:kim@fallenoak.org"
+          target="_blank"
+          class="underline text-blue-400 underline-offset-8 hover:text-blue-500"
+          >kim@fallenoak.org</a
+        > or calling at (513) 582-5783.
       </p>
 
       <div class="px-8">
@@ -303,7 +315,14 @@ import { Icon } from "astro-icon/components";
   <!-- <section class="h-screen bg-[#00026d]"></section> -->
 </section>
 
-<style define:vars={{ img1Src: `url(${img1Src})`,img2Src: `url(${img2Src})`,img3Src: `url(${img3Src})`,img4Src: `url(${img4Src})` }}>
+<style
+  define:vars={{
+    img1Src: `url(${img1Src})`,
+    img2Src: `url(${img2Src})`,
+    img3Src: `url(${img3Src})`,
+    img4Src: `url(${img4Src})`,
+  }}
+>
   .panel {
     position: absolute;
     left: 0%;
@@ -486,23 +505,17 @@ import { Icon } from "astro-icon/components";
     );
   });
 
-  document.addEventListener('swup:enable', () => {
-    
+  document.addEventListener("swup:enable", () => {
     window.swup.hooks.on("visit:start", () => {
-        // ScrollTrigger.getAll().forEach((t) => t.kill());
-
+      // ScrollTrigger.getAll().forEach((t) => t.kill());
     });
     window.swup.hooks.on("visit:end", () => {
-        ScrollTrigger.refresh();
+      ScrollTrigger.refresh();
     });
 
-    window.swup.hooks.on('page:view', () => {
-    
+    window.swup.hooks.on("page:view", () => {
       // ScrollTrigger.refresh();
-      console.log(ScrollTrigger.getAll())
+      console.log(ScrollTrigger.getAll());
     });
   });
-
-  
-
 </script>
