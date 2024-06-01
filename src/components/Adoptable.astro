@@ -101,7 +101,7 @@ const image_url = img ? `../assets/Solo Horse Pics/${name}/${img}` :  `../assets
           <span>Adopt</span>
         </div>
         <div class="text-base font-medium text-neutral-600">
-          <span class="desc rounded px-1 py-0.5">${cost}</span> / mo
+          <span class="desc rounded px-1 py-0.5">{cost === 'N/A' ? 'N/A' : `$${cost}`}</span> / mo
         </div>
       </div>
     </div>
