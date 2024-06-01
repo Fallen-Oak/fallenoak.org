@@ -1,8 +1,7 @@
 ---
 import Button from "../Button.astro";
-import ScrollDown from "../ScrollDown.astro";
 import { Image } from "astro:assets";
-import img1 from "../../assets/P1010228.jpg";
+import img1 from "../../assets/hero.jpg";
 import { Icon } from "astro-icon/components";
 ---
 
@@ -86,11 +85,12 @@ import { Icon } from "astro-icon/components";
   @media (min-width: 1024px) {
     .desktop-gradients {
       background-image: linear-gradient(to top, #fefce8 5%, transparent 20%),
-        linear-gradient(to right, #fefce8 40%, transparent 70%),
-        url("/P1010228.jpg");
+        linear-gradient(to right, #fefce8 40%, transparent 80%),
+        url("/hero.jpg");
       background-size:
-        100% 100%,
-        cover;
+        contain;
+background-position: right -50px top 0px; /* Adjust this as needed */
+background-repeat: no-repeat;
     }
   }
 
