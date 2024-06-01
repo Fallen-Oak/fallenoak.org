@@ -2,6 +2,7 @@ export default [
   {
     name: "April",
     url: "https://givebutter.com/MYIlgD",
+    img: "April_1.jpg",
     rescueDate: "2023",
     breed: "Arab Cross",
     rideable: true,
@@ -10,11 +11,12 @@ export default [
     dateOfBirth: 2004,
     cost: 500,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "A lovely Arab Cross, April is 20 years old and loves to trail ride. She's been with Patty, her foster Mom, for a year. April's adopter should be a confident child or a woman. April does have a cataract in her left eye but it does not affect her riding ability. April sat for over 4 years and did great the first time she was ridden, she has no vices or bad habits.",
   },
   {
     name: "Derby",
     url: "https://givebutter.com/dHrL2i",
+    img: "derby.jpg",
     rescueDate: "March 15, 2023",
     breed: "Appendix",
     rideable: true,
@@ -23,6 +25,6 @@ export default [
     dateOfBirth: 2006,
     cost: "N/A",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "We are unsure if he is broke to ride or not but will find out in the next couple weeks. Derby's bottom teeth are worn down and sensitive so he struggles with hay and grass but he loves soaked alfalfa cubes and pellets. He's a pocket horse with a wonderful personality.",
   },
 ];
