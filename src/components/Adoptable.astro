@@ -18,7 +18,7 @@ const colors = [
 const {
   name,
   url,
-  img='',
+  img = "",
   rescueDate,
   breed,
   rideable,
@@ -32,9 +32,10 @@ const {
 
 const [bgColor, color] = colors[idx % colors.length];
 
-
 const images = import.meta.glob("../assets/Solo Horse Pics/*/*");
-const image_url = img ? `../assets/Solo Horse Pics/${name}/${img}` :  `../assets/Solo Horse Pics/Ace/Ace_1.jpg`;
+const image_url = img
+  ? `../assets/Solo Horse Pics/${name}/${img}`
+  : `../assets/Solo Horse Pics/Ace/Ace_1.jpg`;
 ---
 
 <a
@@ -51,7 +52,8 @@ const image_url = img ? `../assets/Solo Horse Pics/${name}/${img}` :  `../assets
   />
   <div class="text-sm whitespace-nowrap">
     Rescued by <span class="font-semibold">Fallen Oak</span> on <span
-      class="desc px-1.5 py-0.5 rounded">{rescueDate}</span>
+      class="desc px-1.5 py-0.5 rounded">{rescueDate}</span
+    >
   </div>
   <div class="flex flex-col gap-y-4 lg:flex-row justify-center items-center">
     <div
@@ -75,12 +77,14 @@ const image_url = img ? `../assets/Solo Horse Pics/${name}/${img}` :  `../assets
         <div>
           <span class="font-semibold">Rideable:</span>
           <span class="desc px-1 py-[0.0625rem] rounded"
-            >{rideable ? "Yes ✔️" : "❓"}</span>
+            >{rideable ? "Yes ✔️" : "❓"}</span
+          >
         </div>
         <div>
           <span class="font-semibold">Gender:</span>
           <span class="desc px-1 py-[0.0625rem] rounded"
-            >{isMale ? "Male" : "Female"}</span>
+            >{isMale ? "Male" : "Female"}</span
+          >
         </div>
         <div>
           <span class="font-semibold">Age:</span>
@@ -101,7 +105,9 @@ const image_url = img ? `../assets/Solo Horse Pics/${name}/${img}` :  `../assets
           <span>Adopt</span>
         </div>
         <div class="text-base font-medium text-neutral-600">
-          <span class="desc rounded px-1 py-0.5">{cost === 'N/A' ? 'N/A' : `$${cost}`}</span> / mo
+          <span class="desc rounded px-1 py-0.5"
+            >{cost ? `$${cost}` : "TBD"}</span
+          > / mo
         </div>
       </div>
     </div>

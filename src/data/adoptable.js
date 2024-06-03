@@ -23,7 +23,7 @@ export default [
     isMale: true,
     age: 18,
     dateOfBirth: 2006,
-    cost: "N/A",
+    cost: null,
     description:
       "We are unsure if he is broke to ride or not but will find out in the next couple weeks. Derby's bottom teeth are worn down and sensitive so he struggles with hay and grass but he loves soaked alfalfa cubes and pellets. He's a pocket horse with a wonderful personality.",
   },
