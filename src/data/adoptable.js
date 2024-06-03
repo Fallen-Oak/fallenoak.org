@@ -19,7 +19,7 @@ export default [
     img: "derby_new.jpg",
     rescueDate: "March 15, 2023",
     breed: "Appendix",
-    rideable: true,
+    rideable: false,
     isMale: true,
     age: 18,
     dateOfBirth: 2006,
