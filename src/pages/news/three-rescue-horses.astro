@@ -1,0 +1,57 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+import { Image } from "astro:assets";
+import news from "../../data/news.js";
+import img2 from "../../assets/news/HoneyDustyMajorCollage.jpg";
+import { Icon } from "astro-icon/components";
+import { ViewTransitions } from "astro:transitions";
+
+const article = news[1];
+const { author, title, content, img, date, id } = article;
+---
+
+<ViewTransitions />
+<Layout title=`Fallen Oak Equine Rescue | News | ${title}`>
+  <div
+    class="bg-[#fefce8] min-h-[calc(100vh-10rem)] px-4 lg:px-0 flex flex-col items-center"
+  >
+    <a
+      class="mt-24 duration-300 hover:bg-blue-200 bg-blue-50 border-2 border-blue-200 hover:border-blue-400 rounded font-semibold text-base px-3 py-1 flex items-center gap-x-2"
+      href="/news"
+      ><Icon name="mdi:arrow-back" class="text-2xl text-blue-600" />Back to News</a
+    >
+    <div class="w-full lg:w-1/2 mx-auto py-8">
+      <article class="px-6 mx-auto flex flex-col lg:flex-col gap-x-12 gap-y-8">
+        <div class="flex justify-center w-full lg:w-full">
+          <Image 
+          transition:name={id} src={img2} alt="News" width="400" class="object-cover w-auto h-64 border-2 rounded border-black" />
+        </div>
+        <div class="flex flex-col gap-y-8 w-full lg:w-full">
+          <div class="flex flex-col mx-auto gap-y-2 w-full">
+            <h1 class="text-4xl lg:text-5xl font-semibold leading-none whitespace-wrap">{title}</h1>
+            <p class="text-xs lg:text-sm">
+              by
+              <span class="text-blue-400">
+                <span>{author}</span>
+              </span>on
+              <time datetime="2021-02-12 15:34:18-0200">{date}</time>
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-y-4 lg:text-base text-sm rounded border border-dashed border-black p-4 bg-amber-100">
+            <!-- <p>{content}</p> -->
+            <p>Three new horses have recently arrived at the rescue: Honey, Major and Dusty!</p>
+
+            <p>Honey had first been rescued three and a half years ago, but through a series of unfortunate events, kept bouncing around between owners that were neglecting to take proper care of her. Eventually, she wound up back in our care. Despite bounding from home to home, she’s kept her sweet, lovely demeanor. Honey will be able to be sponsored in the future, once we know the extent of her medical needs.</p>
+            
+            <p>Major and Dusty both come from the same place, ex-reining horses that also took part in horse shows and worked with cattle, whose owners tragically passed away. The people that inherited them sadly could not provide proper care, and asked for us to take them in. Major is a very kind horse that greatly enjoys the company of people. He’s not as energetic as he used to be, but he’s also a little thin. With some tender love and care, he may gain some of his energy back! Dusty is also very kind, a laid back and relaxed horse. Both of them are up for sponsorship at $440 a month, per horse, to make sure their medical costs are covered.</p>
+            
+            <p>Due to the severity of their condition, it will take considerable amounts of time, love, and care to nurse them back to health. Any donations that you can spare will be a huge aid towards their recovery so these horses in need can get the life they deserve with us at the sanctuary, where they will live out their days. 
+            https://donate.fallenoak.org/</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</Layout>
