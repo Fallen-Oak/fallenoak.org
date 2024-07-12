@@ -1,0 +1,56 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+import { Image } from "astro:assets";
+import news from "../../data/news.js";
+import img3 from "../../assets/news/MerchCollagev2.jpg";
+import { Icon } from "astro-icon/components";
+import { ViewTransitions } from "astro:transitions";
+
+const article = news[2];
+const { author, title, content, img, date, id } = article;
+---
+
+<ViewTransitions />
+<Layout title=`Fallen Oak Equine Rescue | News | ${title}`>
+  <div
+    class="bg-[#fefce8] min-h-[calc(100vh-10rem)] px-4 lg:px-0 flex flex-col items-center"
+  >
+    <a
+      class="mt-24 duration-300 hover:bg-blue-200 bg-blue-50 border-2 border-blue-200 hover:border-blue-400 rounded font-semibold text-base px-3 py-1 flex items-center gap-x-2"
+      href="/news"
+      ><Icon name="mdi:arrow-back" class="text-2xl text-blue-600" />Back to News</a
+    >
+    <div class="w-full lg:w-1/2 mx-auto py-8">
+      <article class="px-6 mx-auto flex flex-col lg:flex-col gap-x-12 gap-y-8">
+        <div class="flex justify-center w-full lg:w-full">
+          <Image 
+          transition:name={id} src={img3} alt="News" width="400" class="object-cover w-auto h-64 border-2 rounded border-black" />
+        </div>
+        <div class="flex flex-col gap-y-8 w-full lg:w-full">
+          <div class="flex flex-col mx-auto gap-y-2 w-full">
+            <h1 class="text-4xl lg:text-5xl font-semibold leading-none whitespace-wrap">{title}</h1>
+            <p class="text-xs lg:text-sm">
+              by
+              <span class="text-blue-400">
+                <span>{author}</span>
+              </span>on
+              <time datetime="2021-02-12 15:34:18-0200">{date}</time>
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-y-4 lg:text-base text-sm rounded border border-dashed border-black p-4 bg-amber-100">
+            <!-- <p>{content}</p> -->
+            <p>We are proud to announce that Fallen Oak has opened its own official merch store! Here, you can buy all kinds of items inspired by horses, and our very own mascot, Fallen Oakley! Our current selection of items includes keychains and stickers, with many more exciting items soon to follow! Shipping is available globally!</p>
+
+            <p>All proceeds go directly to supporting each of the lovely horses currently in our custody, and will help us care for many more in the future as well.</p>
+            
+            <p>Come buy your merch today, and support your favorite horses!</p>
+            
+            <p>Store Link: <a href="https://www.etsy.com/shop/FallenOakRescue" style="color:blue;">https://www.etsy.com/shop/FallenOakRescue</a></p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</Layout>

@@ -28,6 +28,20 @@ export default [
     date: "July 8, 2024",
     id: "three-rescue-horses",
   },
+  {
+    author: "Stefan Houtman",
+    title: "We Now Have Our Own Merch Store!",
+    content: `We are proud to announce that Fallen Oak has opened its own official merch store! Here, you can buy all kinds of items inspired by horses, and our very own mascot, Fallen Oakley! Our current selection of items includes keychains and stickers, with many more exciting items soon to follow! Shipping is available globally!
+
+    All proceeds go directly to supporting each of the lovely horses currently in our custody, and will help us care for many more in the future as well. 
+    
+    Come buy your merch today, and support your favorite horses!
+    
+    Store Link: https://www.etsy.com/shop/FallenOakRescue`,
+    img: "MerchCollagev2.jpg",
+    date: "July 12, 2024",
+    id: "merch-store",
+  },
   // {
   //   author: "Kim Sweeney",
   //   title: "Monthly Donor & Sponsor Perks",
