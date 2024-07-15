@@ -27,6 +27,7 @@ const {
   dateOfBirth,
   cost,
   description,
+  sponsored,
   idx,
 } = Astro.props;
 
@@ -98,7 +99,8 @@ const image_url = img ? `../assets/Solo Horse Pics/${name}/${img}` :  `../assets
         <div
           class="px-2 py-1 lg:text-sm lg:px-3 lg:py-1 button button--mimas border-2 border-black"
         >
-          <span>Sponsor</span>
+          <!-- <span>Sponsor</span>-->
+          <span>{sponsored? "Sponsored" : "Sponsor"}</span>
         </div>
         <div class="text-base font-medium text-neutral-600">
           <span class="desc rounded px-1 py-0.5">${cost}</span> / mo
