@@ -3,6 +3,7 @@ import img1 from "../assets/website_announcement.png";
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer.astro";
+import img2 from "../assets/Bousquet, Ben Bio.jpg";
 ---
 
 <Layout title="Fallen Oak Equine Rescue | Credits">
@@ -29,10 +30,10 @@ import Footer from "../components/Footer.astro";
       class="border-neutral-400 border-1 w-full lg:w-2/3 pb-8 lg:pb-8"
       style="opacity: 0; animation: fadein 0.5s ease 0.6s forwards;"
     /> -->
+    <div class="text-4xl">Our Team</div>
     <div
       style="opacity: 0; animation: fadein 0.5s ease 0.8s forwards;"
-      class="rounded-lg border border-dashed border-black p-2 sm:p-4 bg-amber-100 text-center px-4 lg:px-0 text-base lg:text-xl w-full 2xl:px-0 2xl:w-2/3 grid grid-cols-2 lg:grid-cols-3 gap-4 lg:mb-8 mb-4"
-    >
+      class="rounded-lg border border-dashed border-black p-2 sm:p-4 bg-amber-100 text-center px-4 lg:px-0 text-base lg:text-xl w-full 2xl:px-0 2xl:w-2/3 grid grid-cols-2 lg:grid-cols-3 gap-4 lg:mb-8 mb-4">
       <div class="-space-y-0 sm:space-y-0">
         <div class="font-semibold text-base sm:text-2xl">Kim Sweeney</div>
         <div class="text-xs sm:text-base">President</div>
@@ -74,5 +75,101 @@ import Footer from "../components/Footer.astro";
         <div class="text-[0.6rem] sm:text-base">Head of Merchandizing</div>
       </div>
     </div>
+
+    <div class="text-4xl">Monthly Donors and Horse Sponsors</div>
+
+
+    <div
+    style="opacity: 0; animation: fadein 0.5s ease 0.8s forwards;"
+    class="rounded-lg border border-dashed border-black p-2 sm:p-4 bg-amber-100 text-center px-4 lg:px-0 text-base lg:text-xl w-full 2xl:px-0 2xl:w-2/3 gap-4 lg:mb-8 mb-4"
+  >
+    <div
+      style="opacity: 0; animation: fadein 0.5s ease 0.8s forwards;"
+      class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:mb-8 mb-4 "
+    >
+
+    <!--1k-->
+    
+    
+    <!--250-->
+    <div class="">
+        <span class="text-2xl lg:text-4xl">Benjamin Bousquet</span>
+        <Image 
+      transition:name={"test"} src={img2} alt="Ben Bio" width="400" class="object-cover w-auto h-64 border-2 rounded border-black ml-auto mr-auto" />
+    </div>
+
+    <div>
+    </br>
+      Sunny is officially sponsored by MareQuest! Play on Steam today!
+      <a href="https://store.steampowered.com/app/2184130/MareQuest/" style="color:blue;">Mare Quest</a>
+    </br>
+      <a href="https://store.steampowered.com/app/2391870/MareQuest_An_Interactive_Tail/" style="color:blue;">Mare Quest An Interactive Tail</a>
+    </div> 
+
+  
+
+
+
+    </div>
+
+    <!-- <hr class="solid">-->
+
+    <div
+      style="opacity: 0; animation: fadein 0.5s ease 0.8s forwards;"
+      class="grid grid-cols-1 lg:grid-cols-1 gap-4 lg:mb-8 mb-4"
+    >
+    <!--<div class="text-5xl mt-1">Maxwell Wurtz, Daniel Mahoney</div>-->
+  </div>
+
+
+
+    <hr class="solid">
+
+    <div
+      style="opacity: 0; animation: fadein 0.5s ease 0.8s forwards;"
+      class="grid grid-cols-1 lg:grid-cols-1 gap-4 lg:mb-8 mb-4"
+    >
+  
+  
+  
+    <!-- <div class="text-5xl"></div>-->
+
+    <!--<div class="text-4xl"></div>-->
+
+
+    <div class="text-5xl"></div>
+
+
+    <!-- 50 -->
+    <!-- <div class="text-5xl">Maxwell Wurtz, Daniel Mahoney</div> -->
+
+    <!--20 -->
+    <div class="text-3xl">Cameron Fuller, Eric Hammons, Wendy Hartman, Junehee Kim</div>
+
+    <!--10 -->
+    <div class="text-xl">Rhys Adams, Joseph Blanton, Dean Bradshaw, Daniel Kirk, Yi Hua Zhang, Junehee Kim</div>
+
+    <!-- 5 -->
+    <div class="text-base">Kurtis Burkett, Kyle Foster, Joseph Mittler</div>
+
+    <div class="text-xs"></div>
+
+
+  </div><!--Breakpoint -->
+  
+  </div>
+</div>
+
   </div>
 </Layout>
+
+<style>
+  /* Solid border */
+  hr.solid {
+    border-top: 3px solid #000000;
+    width:50%;
+    margin-left:auto;
+    margin-right:auto
+  }
+  
+  </style>
