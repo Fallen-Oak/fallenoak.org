@@ -129,12 +129,25 @@ import img1 from "../assets/logo.png";
               style="filter: drop-shadow(0 2px 2px #000)"
               class="flex items-center text-3xl float-right min-h-[101vh] w-[80%] bg-yellow-50 px-6 pt-0 shadow-2xl"
             >
-              <menu class="mt-8 mb-8 flex flex-col gap-y-8 text-heading"
-                ><li>
+              <menu class="mt-8 mb-8 flex flex-col gap-y-8 text-heading">
+                <li>
                   <a
                     href="/"
                     class={`${pathname === "/" ? "underline" : null} hover:underline underline-offset-8 whitespace-nowrap pb-1 font-semibold`}
                     >Home</a
+                  >
+                </li><li>
+                  <a
+                    href="https://www.zeffy.com/en-US/donation-form/bc6d55cd-76c7-4d42-ace0-52499a32e5ed"
+                    class={`bg-blue-200 pt-2 pb-1.5 px-4 rounded hover:underline underline-offset-8 whitespace-nowrap font-semibold`}
+                    ><span>Donate</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.etsy.com/shop/FallenOakRescue"
+                    class={`bg-orange-400 pt-2 pb-1.5 px-4 rounded hover:underline underline-offset-8 whitespace-nowrap  font-semibold`}
+                    ><span>STORE</span></a
                   >
                 </li><li>
                   <a
@@ -172,20 +185,6 @@ import img1 from "../assets/logo.png";
                     href="/credits"
                     class={`${pathname.includes("/credits") ? "underline" : null} hover:underline underline-offset-8 whitespace-nowrap pb-1 font-semibold`}
                     >Credits</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://www.etsy.com/shop/FallenOakRescue"
-                    class={`hover:underline underline-offset-8 whitespace-nowrap pb-1 font-semibold`}
-                    >Store</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://www.zeffy.com/en-US/donation-form/bc6d55cd-76c7-4d42-ace0-52499a32e5ed"
-                    class={`hover:underline underline-offset-8 whitespace-nowrap pb-1 font-semibold`}
-                    >Donate</a
                   >
                 </li>
               </menu>
