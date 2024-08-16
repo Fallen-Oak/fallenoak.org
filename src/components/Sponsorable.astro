@@ -18,7 +18,7 @@ const colors = [
 const {
   name,
   url,
-  img='',
+  img = "",
   rescueDate,
   breed,
   changeName,
@@ -33,9 +33,10 @@ const {
 
 const [bgColor, color] = colors[idx % colors.length];
 
-
 const images = import.meta.glob("../assets/Solo Horse Pics/*/*");
-const image_url = img ? `../assets/Solo Horse Pics/${name}/${img}` :  `../assets/Solo Horse Pics/Ace/Ace_1.jpg`;
+const image_url = img
+  ? `../assets/Solo Horse Pics/${name}/${img}`
+  : `../assets/Solo Horse Pics/Ace/Ace_1.jpg`;
 ---
 
 <a
@@ -46,13 +47,15 @@ const image_url = img ? `../assets/Solo Horse Pics/${name}/${img}` :  `../assets
 >
   <Image
     width="200"
+    format="avif"
     src={img2}
     alt="Fallen Oak mascot"
     class="right-4 top-[-6.9rem] lg:top-[-6.92rem] absolute w-28 max-w-lg mx-auto z-0"
   />
   <div class="text-sm whitespace-nowrap">
     Rescued by <span class="font-semibold">Fallen Oak</span> on <span
-      class="desc px-1.5 py-0.5 rounded">{rescueDate}</span>
+      class="desc px-1.5 py-0.5 rounded">{rescueDate}</span
+    >
   </div>
   <div class="flex flex-col gap-y-4 lg:flex-row justify-center items-center">
     <div
@@ -60,6 +63,7 @@ const image_url = img ? `../assets/Solo Horse Pics/${name}/${img}` :  `../assets
     >
       <Image
         src={images[image_url]()}
+        format="avif"
         width="200"
         alt="Ace"
         class="object-cover object-center rounded-full border-2 border-black h-36 w-36"
@@ -76,12 +80,14 @@ const image_url = img ? `../assets/Solo Horse Pics/${name}/${img}` :  `../assets
         <div>
           <span class="font-semibold">Change name:</span>
           <span class="desc px-1 py-[0.0625rem] rounded"
-            >{changeName ? "Yes ✔️" : "No ❌"}</span>
+            >{changeName ? "Yes ✔️" : "No ❌"}</span
+          >
         </div>
         <div>
           <span class="font-semibold">Gender:</span>
           <span class="desc px-1 py-[0.0625rem] rounded"
-            >{isMale ? "Male" : "Female"}</span>
+            >{isMale ? "Male" : "Female"}</span
+          >
         </div>
         <div>
           <span class="font-semibold">Age:</span>
@@ -100,7 +106,7 @@ const image_url = img ? `../assets/Solo Horse Pics/${name}/${img}` :  `../assets
           class="px-2 py-1 lg:text-sm lg:px-3 lg:py-1 button button--mimas border-2 border-black"
         >
           <!-- <span>Sponsor</span>-->
-          <span>{sponsored? "Sponsored" : "Sponsor"}</span>
+          <span>{sponsored ? "Sponsored" : "Sponsor"}</span>
         </div>
         <div class="text-base font-medium text-neutral-600">
           <span class="desc rounded px-1 py-0.5">${cost}</span> / mo

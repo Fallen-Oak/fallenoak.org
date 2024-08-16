@@ -22,13 +22,14 @@ import { Icon } from "astro-icon/components";
       <div class="comparisonImage beforeImage">
         <Image
           src={img1}
+          format="avif"
           alt="before"
           style="filter: grayscale(50%);"
           class="rounded-lg"
         />
       </div>
       <div class="comparisonImage afterImage border-r-2 border-white ml-[2px]">
-        <Image src={img2} alt="before" class="rounded-lg" />
+        <Image src={img2} alt="before" format="avif" class="rounded-lg" />
       </div>
       <div class="mt-4">
         <Button href="/donate" text="Learn more" />
@@ -85,7 +86,7 @@ import { Icon } from "astro-icon/components";
 <script>
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
-  
+
   import { animate, inView, stagger } from "motion";
 
   gsap.utils.toArray(".comparisonSection").forEach((section) => {
@@ -134,5 +135,4 @@ import { Icon } from "astro-icon/components";
       { duration: 1.5, repeat: Infinity, easing: ["ease-out", "ease-in"] }
     );
   });
-
 </script>

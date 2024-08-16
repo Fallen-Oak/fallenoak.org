@@ -2,10 +2,7 @@
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 // import { ViewTransitions } from "astro:transitions";
-import { getImage } from "astro:assets";
 const { title } = Astro.props;
-
-const { pathname } = Astro.url;
 ---
 
 <!doctype html>
@@ -13,7 +10,10 @@ const { pathname } = Astro.url;
   <head>
     <link rel="icon" href="/logo.png" />
     <meta charset="UTF-8" />
-    <meta property="og:title" content="Fallen Oak Equine Rescue and Rehabilitation, Inc." />
+    <meta
+      property="og:title"
+      content="Fallen Oak Equine Rescue and Rehabilitation, Inc."
+    />
     <meta
       property="og:description"
       content="Fallen Oak Equine Rescue and Rehabilitation, Inc., is located on seven acres in beautiful Belleview, Florida. We currently operate out of a five-stall barn, a pasture for grazing, and a round pen for training and evaluating rescued horses. We rely on our devoted foster homes to help us transition horses from our facility to their forever homes, and to help us when there's an influx of horses-in-need. We couldn't do what we do without our team of foster parents!"
@@ -26,13 +26,19 @@ const { pathname } = Astro.url;
     <meta property="og:site_name" content="Fallen Oak Equine Rescue" />
     <meta property="og:image:alt" content="Fallen Oak Equine Rescue logo" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Fallen Oak Equine Rescue and Rehabilitation, Inc." />
+    <meta
+      name="twitter:title"
+      content="Fallen Oak Equine Rescue and Rehabilitation, Inc."
+    />
     <meta
       name="twitter:description"
       content="Fallen Oak Equine Rescue and Rehabilitation, Inc., is located on seven acres in beautiful Belleview, Florida. We currently operate out of a five-stall barn, a pasture for grazing, and a round pen for training and evaluating rescued horses. We rely on our devoted foster homes to help us transition horses from our facility to their forever homes, and to help us when there's an influx of horses-in-need. We couldn't do what we do without our team of foster parents!"
     />
     <meta name="twitter:image" content="/fallenoak.png" />
-    <meta name="description" content="Fallen Oak Equine Rescue and Rehabilitation, Inc., is located on seven acres in beautiful Belleview, Florida. We currently operate out of a five-stall barn, a pasture for grazing, and a round pen for training and evaluating rescued horses. We rely on our devoted foster homes to help us transition horses from our facility to their forever homes, and to help us when there's an influx of horses-in-need. We couldn't do what we do without our team of foster parents!" />
+    <meta
+      name="description"
+      content="Fallen Oak Equine Rescue and Rehabilitation, Inc., is located on seven acres in beautiful Belleview, Florida. We currently operate out of a five-stall barn, a pasture for grazing, and a round pen for training and evaluating rescued horses. We rely on our devoted foster homes to help us transition horses from our facility to their forever homes, and to help us when there's an influx of horses-in-need. We couldn't do what we do without our team of foster parents!"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
@@ -48,7 +54,7 @@ const { pathname } = Astro.url;
     />
   </head>
   <body>
-    <div class="wrapper ">
+    <div class="wrapper">
       <Navbar />
       <!-- <div class="threshold" style="top: 10%"></div>
 		<div class="threshold" style="bottom: 50%"></div> -->
@@ -61,35 +67,38 @@ const { pathname } = Astro.url;
 </html>
 
 <style is:global>
-html.lenis {
-  height: auto;
-}
+  html.lenis {
+    height: auto;
+  }
 
-.lenis.lenis-smooth {
-  scroll-behavior: auto !important;
-}
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
 
-.lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
-}
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
 
-.lenis.lenis-stopped {
-  overflow: hidden;
-}
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
 
-.lenis.lenis-scrolling iframe {
-  pointer-events: none;
-}
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
+  }
 
-html, body {
-  @apply bg-yellow-50;
-}
-html {
-  /* overflow-y: auto;
+  html,
+  body {
+    @apply bg-yellow-50;
+
+    scrollbar-width: thin;
+  }
+  html {
+    /* overflow-y: auto;
   scrollbar-gutter: stable; */
-}
+  }
 
-@keyframes fadein {
+  @keyframes fadein {
     from {
       opacity: 0;
       transform: translateY(20px);
@@ -148,43 +157,41 @@ html {
 </style>
 
 <script>
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Lenis from "lenis";
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  import Lenis from "lenis";
 
-gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger);
 
-const mm = gsap.matchMedia();
-window.mm = mm;
+  const mm = gsap.matchMedia();
+  window.mm = mm;
 
+  if (!ScrollTrigger.isTouch) {
+    const lenis = new Lenis({
+      content: document.querySelector(".wrapper"),
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    });
 
-if (!ScrollTrigger.isTouch) {
-  const lenis = new Lenis({
-    content: document.querySelector(".wrapper"),
-    duration: 1.2,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-  });
+    window.lenis = lenis;
 
-  window.lenis = lenis;
-
-  const raf = (t) => {
-    lenis.raf(t);
-    // lenis.resize();
-    // ScrollTrigger.update();
+    const raf = (t) => {
+      lenis.raf(t);
+      // lenis.resize();
+      // ScrollTrigger.update();
+      requestAnimationFrame(raf);
+    };
     requestAnimationFrame(raf);
-  };
-  requestAnimationFrame(raf);
-}
+  }
 
-window.onload = function() {
+  window.onload = function () {
     window.scrollTo(0, 0);
-}
+  };
 
-// console.log('swup not yet enabled', window.swup);
-//   document.addEventListener('swup:enable', () => {
-//     console.log('swup enabled', window.swup);
-//     // ScrollTrigger.getAll().forEach((t) => t.kill());
-//     ScrollTrigger.refresh();
-//   });
-
+  console.log("swup not yet enabled", window.swup);
+  document.addEventListener("swup:enable", () => {
+    console.log("swup enabled", window.swup);
+    // ScrollTrigger.getAll().forEach((t) => t.kill());
+    ScrollTrigger.refresh();
+  });
 </script>

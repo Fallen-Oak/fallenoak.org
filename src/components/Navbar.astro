@@ -19,6 +19,7 @@ import img1 from "../assets/logo.png";
       <a href="/" class="flex items-center justify-center">
         <Image
           src={img1}
+          format="avif"
           alt=""
           height="200"
           class="w-auto h-16 py-2 xl:py-0 xl:h-8 px-2 hover:opacity-50"
@@ -75,25 +76,38 @@ import img1 from "../assets/logo.png";
               >Credits</a
             >
           </li>
-          <li>
+          <!-- <li>
             <a
               href="https://www.etsy.com/shop/FallenOakRescue"
               class={`hover:underline underline-offset-[6px] inline-flex whitespace-nowrap text-sm py-4 font-semibold`}
               >Store</a
             >
-          </li>
-          </menu>
+          </li> -->
+        </menu>
       </nav>
     </div><div
       class="hidden items-center gap-4 font-semibold text-heading xl:flex"
     >
       <a
+        href="https://www.etsy.com/shop/FallenOakRescue"
+        target="_blank"
+        style="filter: drop-shadow(0 1px 1px #000);"
+        class="duration-300 hover:bg-orange-200 bg-orange-50 border-2 border-orange-200 hover:border-orange-400 rounded font-semibold text-sm px-3 py-1 flex items-center gap-x-2"
+      >
+        <span>STORE</span>
+        <Icon
+          name="mdi:local-grocery-store"
+          class="text-xl text-orange-400"
+        /></a
+      >
+      <a
         href="https://www.zeffy.com/en-US/donation-form/bc6d55cd-76c7-4d42-ace0-52499a32e5ed"
         target="_blank"
-        class="duration-300 hover:bg-blue-200 bg-blue-50 border-2 border-blue-200 hover:border-blue-400 rounded font-semibold text-base px-3 py-1 flex items-center gap-x-2"
+        style="filter: drop-shadow(0 1px 1px #000);"
+        class="duration-300 hover:bg-blue-400 bg-blue-200 border-2 border-blue-500 hover:border-blue-800 rounded font-semibold text-sm px-3 py-1 flex items-center gap-x-2"
       >
         <span>Donate</span>
-        <Icon name="mdi:donate" class="text-2xl text-blue-400" /></a
+        <Icon name="mdi:donate" class="text-xl text-blue-800" /></a
       >
     </div>
     <aside class="flex h-full w-1/2 flex-1 justify-end xl:hidden">
@@ -162,16 +176,16 @@ import img1 from "../assets/logo.png";
                 </li>
                 <li>
                   <a
-                    href="https://www.zeffy.com/en-US/donation-form/bc6d55cd-76c7-4d42-ace0-52499a32e5ed"
+                    href="https://www.etsy.com/shop/FallenOakRescue"
                     class={`hover:underline underline-offset-8 whitespace-nowrap pb-1 font-semibold`}
-                    >Donate</a
+                    >Store</a
                   >
                 </li>
                 <li>
                   <a
-                    href="https://www.etsy.com/shop/FallenOakRescue"
+                    href="https://www.zeffy.com/en-US/donation-form/bc6d55cd-76c7-4d42-ace0-52499a32e5ed"
                     class={`hover:underline underline-offset-8 whitespace-nowrap pb-1 font-semibold`}
-                    >Store</a
+                    >Donate</a
                   >
                 </li>
               </menu>

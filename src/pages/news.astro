@@ -1,14 +1,22 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import news from "../data/news.js";
-import News from "../components/News/news.astro";
+import NewsComponent from "../components/News/news.astro";
+
+import img1 from "../assets/news/Semi_atnewhome_1.jpg";
+import img2 from "../assets/news/HoneyDustyMajorCollage.jpg";
+import img3 from "../assets/news/MerchCollagev2.jpg";
+
+const reversed = news.slice().reverse();
+const images = [img3, img2, img1];
 ---
+
 <Layout title="Fallen Oak Equine Rescue | News & Events">
   <div
     class="bg-[#fefce8] min-h-[calc(100vh-10rem)] px-4 lg:px-0 flex flex-col items-center"
   >
     <div
-    style="opacity: 0; animation: fadein 0.5s ease 0.2s forwards;"
+      style="opacity: 0; animation: fadein 0.5s ease 0.2s forwards;"
       class="flex flex-col justify-center items-center w-full lg:w-full pt-24 lg:pt-32 pb-8 mb-12 lg:mb-0 lg:pb-8 gap-y-20 lg:gap-y-20"
     >
       <div
@@ -21,9 +29,11 @@ import News from "../components/News/news.astro";
       class="border-neutral-400 border-1 w-full lg:w-2/3 pb-8 lg:pb-16"
       style="opacity: 0; animation: fadein 0.5s ease 1.6s forwards;"
     /> -->
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12 mt-8" 
-    style="opacity: 0; animation: fadein 0.5s ease 0.4s forwards;">
-      {news.map((n) => <News {...n} />)}
+    <div
+      class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12 mt-8"
+      style="opacity: 0; animation: fadein 0.5s ease 0.4s forwards;"
+    >
+      {reversed.map((n, i) => <NewsComponent {...n} src={images[i]} />)}
     </div>
   </div>
 </Layout>

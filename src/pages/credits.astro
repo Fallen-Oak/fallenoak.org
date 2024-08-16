@@ -3,12 +3,15 @@ import img1 from "../assets/website_announcement.png";
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer.astro";
-import img2 from "../assets/Bousquet, Ben Bio.jpg";
+import img2 from "../assets/marequest.jpg";
+import img3 from "../assets/foer_hanging_sign.png";
+
+const color = "#bfdbfe";
 ---
 
 <Layout title="Fallen Oak Equine Rescue | Credits">
   <div
-    class="bg-[#fefce8] min-h-[calc(100vh-10rem)] px-4 lg:px-0 flex flex-col items-center"
+    class="bg-[#fefce8] min-h-[calc(100vh-10rem)] px-4 flex flex-col items-center"
   >
     <div
       style="opacity: 0; animation: fadein 0.5s ease 0.2s forwards;"
@@ -30,10 +33,16 @@ import img2 from "../assets/Bousquet, Ben Bio.jpg";
       class="border-neutral-400 border-1 w-full lg:w-2/3 pb-8 lg:pb-8"
       style="opacity: 0; animation: fadein 0.5s ease 0.6s forwards;"
     /> -->
-    <div class="text-4xl">Our Team</div>
     <div
       style="opacity: 0; animation: fadein 0.5s ease 0.8s forwards;"
-      class="rounded-lg border border-dashed border-black p-2 sm:p-4 bg-amber-100 text-center px-4 lg:px-0 text-base lg:text-xl w-full 2xl:px-0 2xl:w-2/3 grid grid-cols-2 lg:grid-cols-3 gap-4 lg:mb-8 mb-4">
+      class="text-4xl lg:text-6xl uppercase my-8 font-semibold tracking-wide"
+    >
+      Our Team
+    </div>
+    <div
+      style="opacity: 0; animation: fadein 0.5s ease 0.8s forwards;"
+      class="rounded-lg border-dashed border-blue-600 border-2 p-2 sm:p-4 bg-blue-50 text-center text-base lg:text-xl w-full xl:w-2/3 grid grid-cols-2 lg:grid-cols-3 gap-4 lg:mb-8 mb-4"
+    >
       <div class="-space-y-0 sm:space-y-0">
         <div class="font-semibold text-base sm:text-2xl">Kim Sweeney</div>
         <div class="text-xs sm:text-base">President</div>
@@ -47,7 +56,9 @@ import img2 from "../assets/Bousquet, Ben Bio.jpg";
         <div class="text-xs sm:text-base">Assist. Head of Technology</div>
       </div>
       <div class="-space-y-0 sm:space-y-0">
-        <div class="font-semibold text-sm sm:text-2xl ">Riley Walker (ChaosLlama)</div>
+        <div class="font-semibold text-sm sm:text-2xl">
+          Riley Walker (ChaosLlama)
+        </div>
         <div class="text-xs sm:text-base">Head of Art</div>
       </div>
       <div class="-space-y-0 sm:space-y-0">
@@ -68,110 +79,190 @@ import img2 from "../assets/Bousquet, Ben Bio.jpg";
       </div>
       <div class="-space-y-0 sm:space-y-0">
         <div class="font-semibold text-base sm:text-2xl">Brad Colangelo</div>
-        <div class="text-[0.6rem] sm:text-base">Asst. Head of Donor Relations</div>
+        <div class="text-[0.6rem] sm:text-base">
+          Asst. Head of Donor Relations
+        </div>
       </div>
-	  <div class="-space-y-0 sm:space-y-0">
+      <div class="-space-y-0 sm:space-y-0">
         <div class="font-semibold text-base sm:text-2xl">Aaron Lacy</div>
         <div class="text-[0.6rem] sm:text-base">Head of Merchandizing</div>
       </div>
     </div>
-
-    <div class="text-4xl">Monthly Donors and Horse Sponsors</div>
-
+    <hr
+      class="border-neutral-400 border-1 w-full lg:w-2/3 pt-0 pb-0"
+      style="opacity: 0; animation: fadein 0.5s ease 1.2s forwards;"
+    />
+    <div
+      style="opacity: 0; animation: fadein 0.5s ease 1.2s forwards;"
+      class="text-4xl lg:text-6xl uppercase font-semibold my-8 tracking-wide"
+    >
+      Our sponsors
+    </div>
 
     <div
+      style="opacity: 0; animation: fadein 0.5s ease 1.2s forwards;"
+      class="rounded-lg flex flex-col items-center p-2 sm:p-4 text-center text-base lg:text-xl w-full xl:w-2/3 lg:mb-8 mb-4"
+    >
+      <!-- <div
+        class="flex flex-col items-center gap-y-2 rounded border-2 border-black w-auto p-4"
+      >
+        <div class="text-2xl lg:text-4xl uppercase font-bold">MareQuest</div>
+        <Image
+          src={img2}
+          alt="Ben Bio"
+          width="400"
+          format="avif"
+          class="object-cover border-2 rounded border-black"
+        />
+        <div class="text-sm">
+          Sunny is officially sponsored by <span class="font-semibold"
+            >MareQuest</span
+          >! Play on Steam today!
+        </div>
+      </div> -->
+      <div
+        class="mt-24 bg-white relative duration-300 flex flex-col gap-y-4 justify-center items-center rounded-md p-4"
+        style={`filter: drop-shadow(0 2px 2px #000)`}
+      >
+        <Image
+          width="200"
+          format="avif"
+          src={img3}
+          alt="Fallen Oak mascot"
+          class="right-4 top-[-6.9rem] lg:top-[-6.92rem] absolute w-28 max-w-lg mx-auto z-0"
+        />
+        <div
+          class="flex flex-col gap-y-4 lg:flex-row justify-center items-center"
+        >
+          <div
+            class="w-64 min-h-64 lg:border-r border-neutral-400 flex flex-col gap-y-2 justify-center items-center"
+          >
+            <Image
+              src={img2}
+              format="avif"
+              width="200"
+              alt="Ace"
+              class="object-cover object-center rounded-full border-2 border-black h-36 w-36"
+            />
+
+            <div class="text-4xl lg:text-4xl font-bold uppercase tracking-wide">
+              MareQuest
+            </div>
+          </div>
+          <div class="w-80 flex flex-col gap-y-4 px-4">
+            <div class="text-sm rounded p-4 italic relative speech-bubble desc">
+              "Sunny is officially sponsored by <span class="font-bold"
+                >MareQuest</span
+              >! Play on Steam today!"
+            </div>
+            <div
+              class="mt-2 text-base text-left flex flex-col justify-center gap-y-1 px-2"
+            >
+              <a
+                href="https://store.steampowered.com/app/2184130/MareQuest/"
+                target="_blank"
+                class="text-blue-500 hover:text-blue-700 duration-300 underline font-semibold underline-offset-4"
+                >MareQuest</a
+              >
+              <a
+                href="https://store.steampowered.com/app/2391870/MareQuest_An_Interactive_Tail/"
+                target="_blank"
+                class="text-blue-500 hover:text-blue-700 duration-300 underline font-semibold underline-offset-4"
+                >MareQuest: An Interactive Tail</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr
+      class="border-neutral-400 border-1 w-full lg:w-2/3 pt-0 pb-0"
+      style="opacity: 0; animation: fadein 0.5s ease 1.6s forwards;"
+    />
+    <div
+      style="opacity: 0; animation: fadein 0.5s ease 1.6s forwards;"
+      class="text-4xl lg:text-6xl uppercase font-semibold my-8 tracking-wide"
+    >
+      Our donors
+    </div>
+
+    <div
+      style="opacity: 0; animation: fadein 0.5s ease 1.6s forwards;"
+      class="rounded-lg flex flex-col items-center p-2 sm:p-4 text-center text-base lg:text-xl w-full xl:w-2/3 lg:mb-4 mb-4"
+    >
+      <div class="mt-0 flex flex-col gap-y-8">
+        <div class="flex flex-col gap-y-4">
+          <div
+            class="text-4xl lg:text-6xl font-bold underline underline-offset-[12px] decoration-2"
+          >
+            $50
+            <span class="text-xl tracking-wide">/month</span>
+          </div>
+          <div class="text-xl">...</div>
+        </div>
+        <div class="flex flex-col gap-y-4">
+          <div
+            class="text-3xl lg:text-5xl font-bold underline underline-offset-[12px] decoration-2"
+          >
+            $20
+            <span class="text-lg tracking-wide">/month</span>
+          </div>
+          <div class="text-lg">...</div>
+        </div>
+        <div class="flex flex-col gap-y-2">
+          <div
+            class="text-2xl lg:text-4xl font-bold underline underline-offset-8 decoration-2"
+          >
+            $10
+            <span class="text-base tracking-wide">/month</span>
+          </div>
+          <div class="text-base">Kyle Foster</div>
+        </div>
+        <div class="flex flex-col gap-y-2">
+          <div
+            class="text-xl lg:text-3xl font-bold underline underline-offset-[6px] decoration-2"
+          >
+            $5
+            <span class="text-sm tracking-wide">/month</span>
+          </div>
+          <div class="text-sm">Kurtis Burkett</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <hr class="solid">-->
+
+  <div
     style="opacity: 0; animation: fadein 0.5s ease 0.8s forwards;"
-    class="rounded-lg border border-dashed border-black p-2 sm:p-4 bg-amber-100 text-center px-4 lg:px-0 text-base lg:text-xl w-full 2xl:px-0 2xl:w-2/3 gap-4 lg:mb-8 mb-4"
+    class="grid grid-cols-1 lg:grid-cols-1 gap-4 lg:mb-8 mb-4"
   >
-    <div
-      style="opacity: 0; animation: fadein 0.5s ease 0.8s forwards;"
-      class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:mb-8 mb-4 "
-    >
-
-    <!--1k-->
-    
-    
-    <!--250-->
-    <div class="">
-        <span class="text-2xl lg:text-4xl">MareQuest</span>
-        <Image 
-      transition:name={"test"} src={img2} alt="Ben Bio" width="400" class="object-cover w-auto h-64 border-2 rounded border-black ml-auto mr-auto" />
-    </div>
-
-    <div>
-    </br>
-      Sunny is officially sponsored by MareQuest! Play on Steam today!
-      <a href="https://store.steampowered.com/app/2184130/MareQuest/" style="color:blue;">MareQuest</a>
-    </br>
-      <a href="https://store.steampowered.com/app/2391870/MareQuest_An_Interactive_Tail/" style="color:blue;">MareQuest An Interactive Tail</a>
-    </div> 
-
-  
-
-
-
-    </div>
-
-    <!-- <hr class="solid">-->
-
-    <div
-      style="opacity: 0; animation: fadein 0.5s ease 0.8s forwards;"
-      class="grid grid-cols-1 lg:grid-cols-1 gap-4 lg:mb-8 mb-4"
-    >
     <!--<div class="text-5xl mt-1">Maxwell Wurtz, Daniel Mahoney</div>-->
   </div>
 
+  <!-- <div class="text-center mr-auto ml-auto"><strong class="">Website design by 15</strong></div> -->
 
+  <style define:vars={{ color }}>
+    .desc {
+      background-color: var(--color);
+    }
+    .speech-bubble {
+      position: relative;
+    }
 
-    <hr class="solid">
-
-    <div
-      style="opacity: 0; animation: fadein 0.5s ease 0.8s forwards;"
-      class="grid grid-cols-1 lg:grid-cols-1 gap-4 lg:mb-8 mb-4"
-    >
-  
-  
-  
-    <!-- <div class="text-5xl"></div>-->
-
-    <!--<div class="text-4xl"></div>-->
-
-
-    <div class="text-5xl"></div>
-
-
-    <!-- 50 -->
-    <!-- <div class="text-5xl">Maxwell Wurtz, Daniel Mahoney</div> -->
-
-    <!--20 -->
-    <div class="text-3xl"><!--Cameron Fuller, Eric Hammons, Wendy Hartman, Junehee Kim--></div>
-
-    <!--10 -->
-    <div class="text-xl"><!--Rhys Adams, Joseph Blanton, Dean Bradshaw, Daniel Kirk, Yi Hua Zhang--></div>
-
-    <!-- 5 -->
-    <div class="text-base">Kurtis Burkett, Kyle Foster<!--Joseph Mittler--></div>
-
-    <div class="text-xs"></div>
-
-
-  </div><!--Breakpoint -->
-  
-  </div>
-</div>
-
-  </div>
-
-  <div class="text-center mr-auto ml-auto"><strong class="">Website design by 15</strong></div>
-</Layout>
-
-<style>
-  /* Solid border */
-  hr.solid {
-    border-top: 3px solid #000000;
-    width:50%;
-    margin-left:auto;
-    margin-right:auto
-  }
-  
+    .speech-bubble:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 14%;
+      width: 0;
+      height: 0;
+      border: 28px solid transparent;
+      border-bottom-color: var(--color);
+      border-top: 0;
+      border-right: 0;
+      margin-left: -14px;
+      margin-top: -28px;
+    }
   </style>
+</Layout>

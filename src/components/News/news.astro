@@ -1,7 +1,7 @@
 ---
 import img1 from "../../assets/news/Semi_atnewhome_1.jpg";
 import { Image } from "astro:assets";
-const { author, title, content, img, date, id } = Astro.props;
+const { author, title, content, img, date, id, src } = Astro.props;
 ---
 
 <a
@@ -10,10 +10,10 @@ const { author, title, content, img, date, id } = Astro.props;
 >
   <Image
     transition:name={id}
-    src={img1}
-    alt=""
+    src={src}
+    format="avif"
+    alt="News preview image"
     height="300"
-    width="150"
     class="object-cover object-center w-full rounded-md h-72 lg:h-48 bg-gray-500"
   />
   <div class="mt-6 mb-2">
