@@ -74,7 +74,7 @@ export default [
       "Once a champion show horse, when she couldn't be bred anymore, they didn't want her. She then fell into neglect before being rescued and finding sanctuary with us. Now she's a very lively and forward horse in spite of her age.",
     sponsored: false,
   },
-  {
+  /*{
     name: "Lucy",
     img: "Lucy_1.jpg",
     url: "https://givebutter.com/ry0Ncf",
@@ -88,7 +88,7 @@ export default [
     description:
       "A sweet old mare who loved giving kids rides and is mother to our Derby. She and Derby were both rescued from being unnecessarily euthanised. In her old age she developed cushings (a hormonal disorder) that she takes a medication called “prascend” for, it might be costly, but she is worth it.",
     sponsored: false,
-  },
+  },*/
   {
     name: "Mercy",
     img: "Mercy.jpg",
