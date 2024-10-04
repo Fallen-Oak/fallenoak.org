@@ -16,7 +16,7 @@ export default [
   },
   {
     name: "Bert",
-    url: "https://givebutter.com/dHrL2i",
+    url: "",/*"https://givebutter.com/dHrL2i"*/
     img: "Bert_2.jpg",
     rescueDate: "October 23, 2023",
     breed: "Quarter Horse",
@@ -27,7 +27,7 @@ export default [
     cost: 230,
     description:
       "Real laid back and sweet guy, just wants to hang out. Bert came from an Elderly owner who could no longer take care of him but wanted to ensure he could also live out his retirement in a kind of safe place.",
-    sponsored: false,
+    sponsored: true,
     },
   {
     name: "Cowboy",
@@ -47,7 +47,7 @@ export default [
   {
     name: "Dakota",
     img: "P1020952.JPG",
-    url: "https://givebutter.com/xp8wnE",
+    url: "",/*"https://givebutter.com/xp8wnE"*/
     rescueDate: "April 5, 2024",
     breed: "Rocky Mountain",
     changeName: false,
@@ -57,7 +57,7 @@ export default [
     cost: 190,
     description:
       "He can be a bit pushy at feeding time (and will not leave Starlite alone) but he's still getting adjusted since coming to the rescue in April, when he was surrendered due to arthritis and his previous owners being unable to adequately care for him.",
-    sponsored: false,
+    sponsored: true,
   },
   {
     name: "Holly",
