@@ -1,7 +1,7 @@
 export default [
   {
     name: "Ace",
-    url: "https://givebutter.com/MYIlgD",
+    url: "",/*"https://givebutter.com/MYIlgD"*/
     img: "Ace_1.jpg",
     rescueDate: "May 1, 2023",
     breed: "Rocky Mountain",
@@ -12,7 +12,7 @@ export default [
     cost: 231,
     description:
       "Friendly and lovable like a big puppy-dog, Ace used to be a child's horse until he contracted EPM, which went untreated for too long. That's when he came to us!",
-    sponsored: false,
+    sponsored: true,
   },
   {
     name: "Bert",
