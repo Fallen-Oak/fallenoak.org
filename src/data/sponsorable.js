@@ -104,7 +104,7 @@ export default [
       "First brought to the rescue in a bad state and full of lice, Mercy was one of the worst causes we've ever seen. She's since been adopted and then returned back to Fallen Oak in August, and won't be getting adopted out again. She can be quite nervous, although she's good with the farrier (until he gets to one of her back legs), and does great on grass.",
     sponsored: false,
   },
-  {
+  /*{
     name: "Montana",
     img: "Montana3_FB.jpg",
     url: "https://givebutter.com/QqEf6B",
@@ -118,7 +118,7 @@ export default [
     description:
       "This mare is the oldest here at Fallen Oak, with 2 very famous foals! She was taken in when the owners decided they were done with her after she could no longer bear kin. Despite this she is in great health and, as the oldest, has found her place as “Boss mare”. She is a very quick and forward mare who spares no time getting to know you!",
     sponsored: false,
-  },
+  },*/
   {
     name: "Sailor",
     img: "Sailor_1.jpg",
