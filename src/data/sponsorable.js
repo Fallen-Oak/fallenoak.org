@@ -16,7 +16,7 @@ export default [
   },
   {
     name: "Bert",
-    url: "",/*"https://givebutter.com/dHrL2i"*/
+    url: "https://givebutter.com/dHrL2i",
     img: "Bert_2.jpg",
     rescueDate: "October 23, 2023",
     breed: "Quarter Horse",
@@ -27,7 +27,7 @@ export default [
     cost: 230,
     description:
       "Real laid back and sweet guy, just wants to hang out. Bert came from an Elderly owner who could no longer take care of him but wanted to ensure he could also live out his retirement in a kind of safe place.",
-    sponsored: true,
+    sponsored: false,
     },
   {
     name: "Cowboy",
