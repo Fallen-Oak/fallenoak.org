@@ -1,5 +1,5 @@
 export default [
-  {
+  /*{
     name: "April",
     url: "https://givebutter.com/MYIlgD",
     img: "April_1_new.jpg",
@@ -26,5 +26,5 @@ export default [
     cost: null,
     description:
       "We are unsure if he is broke to ride or not but will find out in the next couple weeks. Derby's bottom teeth are worn down and sensitive so he struggles with hay and grass but he loves soaked alfalfa cubes and pellets. He's a pocket horse with a wonderful personality.",
-  },
+  },*/
 ];
