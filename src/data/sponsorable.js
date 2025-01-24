@@ -137,7 +137,7 @@ export default [
   {
     name: "Starlit Skies",
     img: "Starlit_Skies_1.jpg",
-    url: "",/*"https://givebutter.com/gD3NSC",*/
+    url: "https://givebutter.com/gD3NSC",
     rescueDate: "November 7, 2023",
     breed: "Quarter Horse",
     changeName: true,
@@ -147,7 +147,7 @@ export default [
     cost: 230,
     description:
       "Starlit Skies was brought in when her owner could no longer care for her. She unfortunately  suffers from a Grade 3 Heart Murmur. Initially losing weight from ulcers, she now maintains a healthy weight while on UlcerGard. Despite everything she is as lively as ever and pushing through to a good recovery!",
-    sponsored: true,
+    sponsored: false,
   },
   {
     name: "Sunny",
