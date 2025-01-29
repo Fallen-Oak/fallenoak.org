@@ -44,10 +44,10 @@ export default [
       "He was seized due to neglect, lost an eye to cancer, and is missing teeth. Despite all of that he pushed on, and now he receives all sorts of love & attention and is always with his new best friend, Lucy.",
     sponsored: false,
   },
-  {
+  /*{
     name: "Dakota",
     img: "P1020952.JPG",
-    url: "",/*"https://givebutter.com/xp8wnE"*/
+    url: "",//"https://givebutter.com/xp8wnE"
     rescueDate: "April 5, 2024",
     breed: "Rocky Mountain",
     changeName: false,
@@ -58,7 +58,7 @@ export default [
     description:
       "He can be a bit pushy at feeding time (and will not leave Starlite alone) but he's still getting adjusted since coming to the rescue in April, when he was surrendered due to arthritis and his previous owners being unable to adequately care for him.",
     sponsored: true,
-  },
+  },*/
   {
     name: "Holly",
     img: "Holly_2.jpg",
