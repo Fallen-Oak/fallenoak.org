@@ -7,5 +7,6 @@ export function isPonySubdomain() {
     return parts[0] === "pony";
     console.log("Pony Checked")
   }
+  console.log("Pony Not Checked")
   return false;
 }
