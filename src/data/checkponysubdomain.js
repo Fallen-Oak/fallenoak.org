@@ -1,12 +1,18 @@
 export function isPonySubdomain() {
   if (typeof window !== "undefined") {
     const hostname = window.location.hostname;
-    const parts = hostname.split(".");
-    
-    // Check if the first part of the hostname is "pony"
-    return parts[0] === "pony";
-    console.log("Pony Checked")
+    const subdomain = hostname.split(".")[0];
+
+    console.debug(`[Subdomain Check] Hostname: ${hostname}`);
+    console.debug(`[Subdomain Check] Extracted Subdomain: ${subdomain}`);
+
+    const isTest = subdomain === "test";
+
+    console.debug(`[Subdomain Check] isTestSubdomain: ${isTest ? "Yes" : "No"}`);
+
+    return isTest;
   }
-  console.log("Pony Not Checked")
+
+  console.warn("[Subdomain Check] Cannot determine subdomain (window is undefined).");
   return false;
 }
