@@ -7,11 +7,6 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  vite: {
-    define: {
-      'import.meta.env.PONY': JSON.stringify(process.env.PONY || 'false'),
-    }
-  },
   redirects: {
     '/mareday': {
       status: 302,
@@ -24,4 +19,9 @@ export default defineConfig({
     icon(),
     // swup({ theme: "slide", globalInstance: true }),
   ],
+  vite: {
+    define: {
+      "import.meta.env.PONY": JSON.stringify(process.env.PONY || "false"),
+    },
+  },
 });
