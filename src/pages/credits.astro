@@ -3,6 +3,7 @@ import img1 from "../assets/website_announcement.png";
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer.astro";
+import DisplayPony from "../components/DisplayPony.astro";
 import img2 from "../assets/marequest.jpg";
 import img3 from "../assets/foer_hanging_sign.png";
 import img4 from "../assets/sergeant_reckless_colorized.jpg";
@@ -21,13 +22,16 @@ const color = "#bfdbfe";
       <div class="text-5xl lg:text-7xl uppercase font-semibold tracking-wider">
         Credits
       </div>
-      <div class="relative flex items-center justify-center max-h-40 w-full">
+      
+        <div class="relative flex items-center justify-center max-h-40 w-full">
+        <DisplayPony>
         <Image
           src={img1}
           alt=""
           style="filter: drop-shadow(0 5px 5px #000)"
           class="max-h-56 w-auto sm:max-h-auto sm:h-56 lg:max-w-lg mx-auto z-0 rounded-lg -rotate-3 bg-neutral-400 border-white border-8"
         />
+        </DisplayPony>
       </div>
     </div>
     <!-- <hr
@@ -115,6 +119,7 @@ const color = "#bfdbfe";
         class="mt-24 bg-white relative duration-300 flex flex-col gap-y-4 justify-center items-center rounded-md p-4"
         style={`filter: drop-shadow(0 2px 2px #000)`}
       >
+      <DisplayPony>
         <Image
           width="200"
           format="avif"
@@ -122,6 +127,7 @@ const color = "#bfdbfe";
           alt="Fallen Oak mascot"
           class="right-4 top-[-6.9rem] lg:top-[-6.92rem] absolute w-28 max-w-lg mx-auto z-0"
         />
+      </DisplayPony>
         <div
           class="flex flex-col gap-y-4 lg:flex-row justify-center items-center"
         >
@@ -170,6 +176,7 @@ const color = "#bfdbfe";
       class="mt-24 bg-white relative duration-300 flex flex-col gap-y-4 justify-center items-center rounded-md p-4"
       style={`filter: drop-shadow(0 2px 2px #000)`}
     >
+    <DisplayPony>
       <Image
         width="200"
         format="avif"
@@ -177,6 +184,7 @@ const color = "#bfdbfe";
         alt="Fallen Oak mascot"
         class="right-4 top-[-6.9rem] lg:top-[-6.92rem] absolute w-28 max-w-lg mx-auto z-0"
       />
+    </DisplayPony>
       <div
         class="flex flex-col gap-y-4 lg:flex-row justify-center items-center"
       >
