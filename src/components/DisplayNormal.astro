@@ -1,7 +1,7 @@
 ---
-const shouldDisplayNormal = Boolean(import.meta.env.PONY);
+const shouldDisplayNormal = Boolean(!import.meta.env.PONY);
 ---
-{shouldDisplayNormal !== true ? (
+{shouldDisplayNormal ? (
  
   <slot />
 
