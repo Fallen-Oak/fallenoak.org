@@ -3,8 +3,9 @@ import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 // import swup from "@swup/astro";
 import icon from "astro-icon";
+import { loadEnv } from "vite";
 
-console.log("Base Pony:", process.env.PONY);
+const { PONY } = loadEnv(process.env.PONY, process.cwd(), "");
 
 // https://astro.build/config
 export default defineConfig({
@@ -20,11 +21,4 @@ export default defineConfig({
     icon(),
     // swup({ theme: "slide", globalInstance: true }),
   ],
-  vite: {
-    define: {
-      "import.meta.env.PONY": JSON.stringify(process.env.PONY || "false"),
-    },
-  },
 });
-
-console.log("Vite Pony:", import.meta.env.PONY);

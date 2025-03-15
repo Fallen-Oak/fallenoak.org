@@ -1,13 +1,8 @@
 ---
-const shouldDisplayPony = import.meta.env.PONY === "true";
+const shouldDisplayPony = Boolean(import.meta.env.PONY);
 ---
-
-if (typeof window !== "undefined") {
-console.log(" Display Pony =", shouldDisplayPony)
-}
-
 {shouldDisplayPony ? (
-  <div>
+ 
   <slot />
-</div>
+
 ) : null}
