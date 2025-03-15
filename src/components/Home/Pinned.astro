@@ -9,11 +9,11 @@ import img5 from "../../assets/Lyric.jpg";
 import img6 from "../../assets/Fence.jpg";
 import { Icon } from "astro-icon/components";
 
-const shouldDisplayPony = Boolean(process.env.PONY);
+const shouldDisplayPony = Boolean(import.meta.env.PONY);
 const img1Src = img1.src;
 const img2Src = img2.src;
-var img3Src;
-var img4Src;
+var img3Src = img5.src;
+var img4Src = img6.src;
 if(shouldDisplayPony)
 {
   img3Src = img3.src;
