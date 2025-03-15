@@ -4,6 +4,8 @@ import img2 from "../../assets/FOshelterannouncementimage.png";
 import { Image } from "astro:assets";
 import Button from "../Button.astro";
 import { Icon } from "astro-icon/components";
+import DisplayPony from "../DisplayPony.astro";
+import DisplayNormal from "../DisplayNormal.astro";
 ---
 
 <div class="h-auto">
@@ -29,7 +31,8 @@ import { Icon } from "astro-icon/components";
         />
       </div>
       <div class="comparisonImage afterImage border-r-2 border-white ml-[2px]">
-        <Image src={img2} alt="before" format="avif" class="rounded-lg" />
+        <DisplayPony><Image src={img2} alt="after" format="avif" class="rounded-lg" /></DisplayPony>
+        <DisplayNormal><Image src={img1} alt="after" format="avif" class="rounded-lg" /></DisplayNormal>
       </div>
       <div class="mt-4">
         <Button href="/donate" text="Learn more" />

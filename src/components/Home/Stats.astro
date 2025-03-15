@@ -3,6 +3,7 @@ import img1 from "../../assets/foer_hanging_sign.png";
 import { Image } from "astro:assets";
 import Button from "../Button.astro";
 import { Icon } from "astro-icon/components";
+import DisplayPony from "../DisplayPony.astro";
 ---
 
 <section
@@ -41,6 +42,7 @@ import { Icon } from "astro-icon/components";
       <p class="text-sm sm:text-2xl whitespace-nowrap">Average Visitor Rating</p>
     </div>
 
+    <DisplayPony>
     <Image
       src={img1}
       width="400"
@@ -48,5 +50,6 @@ import { Icon } from "astro-icon/components";
       style="filter: drop-shadow(0 5px 5px #000);"
       class="left-24 top-[-12rem] lg:top-[-12.3rem] absolute w-48 max-w-lg mx-auto z-0"
     />
+  </DisplayPony>
   </div>
 </section>
