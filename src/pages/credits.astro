@@ -4,6 +4,7 @@ import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer.astro";
 import DisplayPony from "../components/DisplayPony.astro";
+import DisplayNormal from "../components/DisplayNormal.astro";
 import img2 from "../assets/marequest.jpg";
 import img3 from "../assets/foer_hanging_sign.png";
 import img4 from "../assets/sergeant_reckless_colorized.jpg";
@@ -316,4 +317,25 @@ const color = "#bfdbfe";
     }
   </style>
   </DisplayPony>
+  <DisplayNormal>
+    <style define:vars={{ color }}>
+      .desc {
+        background-color: var(--color);
+      }
+      .speech-bubble {
+        position: relative;
+      }
+  
+      .speech-bubble:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 14%;
+        width: 0;
+        height: 0;
+        margin-left: -14px;
+        margin-top: -28px;
+      }
+    </style>
+    </DisplayNormal>
 </Layout>
