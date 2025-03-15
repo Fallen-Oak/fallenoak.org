@@ -2,13 +2,14 @@
 import img1 from "../assets/website_announcement.png";
 import img2 from "../assets/P1010228.jpg";
 import img3 from "../assets/foer_hanging_sign.png";
+import img4 from "../assets/horse_hanging_sign.png";
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer.astro";
 import DisplayPony from "../components/DisplayPony.astro";
 import DisplayNormal from "../components/DisplayNormal.astro";
-import img4 from "../assets/marequest.jpg";
-import img5 from "../assets/sergeant_reckless_colorized.jpg";
+import img5 from "../assets/marequest.jpg";
+import img6 from "../assets/sergeant_reckless_colorized.jpg";
 
 const color = "#bfdbfe";
 ---
@@ -139,6 +140,15 @@ const color = "#bfdbfe";
           class="right-4 top-[-6.9rem] lg:top-[-6.92rem] absolute w-28 max-w-lg mx-auto z-0"
         />
       </DisplayPony>
+      <DisplayNormal>
+        <Image
+          width="200"
+          format="avif"
+          src={img4}
+          alt="Horse head"
+          class="right-4 top-[-6.9rem] lg:top-[-6.92rem] absolute w-28 max-w-lg mx-auto z-0"
+        />
+      </DisplayNormal>
         <div
           class="flex flex-col gap-y-4 lg:flex-row justify-center items-center"
         >
@@ -146,7 +156,7 @@ const color = "#bfdbfe";
             class="w-64 min-h-64 lg:border-r border-neutral-400 flex flex-col gap-y-2 justify-center items-center"
           >
             <Image
-              src={img4}
+              src={img5}
               format="avif"
               width="200"
               alt="MareQuest"
@@ -196,6 +206,15 @@ const color = "#bfdbfe";
         class="right-4 top-[-6.9rem] lg:top-[-6.92rem] absolute w-28 max-w-lg mx-auto z-0"
       />
     </DisplayPony>
+    <DisplayNormal>
+      <Image
+        width="200"
+        format="avif"
+        src={img4}
+        alt="Horse head"
+        class="right-4 top-[-6.9rem] lg:top-[-6.92rem] absolute w-28 max-w-lg mx-auto z-0"
+      />
+    </DisplayNormal>
       <div
         class="flex flex-col gap-y-4 lg:flex-row justify-center items-center"
       >
@@ -203,7 +222,7 @@ const color = "#bfdbfe";
           class="w-64 min-h-64 lg:border-r border-neutral-400 flex flex-col gap-y-2 justify-center items-center"
         >
           <Image
-            src={img5}
+            src={img6}
             format="avif"
             width="200"
             alt="SargeantReckles"
