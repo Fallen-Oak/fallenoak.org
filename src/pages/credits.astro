@@ -1,13 +1,13 @@
 ---
 import img1 from "../assets/website_announcement.png";
 import img2 from "../assets/P1010228.jpg";
+import img3 from "../assets/foer_hanging_sign.png";
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer.astro";
 import DisplayPony from "../components/DisplayPony.astro";
 import DisplayNormal from "../components/DisplayNormal.astro";
-import img3 from "../assets/marequest.jpg";
-import img4 from "../assets/foer_hanging_sign.png";
+import img4 from "../assets/marequest.jpg";
 import img5 from "../assets/sergeant_reckless_colorized.jpg";
 
 const color = "#bfdbfe";
@@ -126,15 +126,24 @@ const color = "#bfdbfe";
           >! Play on Steam today!
         </div>
       </div> -->
-      <div
+      <DisplayPony>
+        <div
         class="mt-24 bg-white relative duration-300 flex flex-col gap-y-4 justify-center items-center rounded-md p-4"
         style={`filter: drop-shadow(0 2px 2px #000)`}
       >
+    </DisplayPony>
+    <DisplayNormal>
+      <div
+      class="bg-white relative duration-300 flex flex-col gap-y-4 justify-center items-center rounded-md p-4"
+      style={`filter: drop-shadow(0 2px 2px #000)`}
+    >
+    <DisplayNormal>
+  </DisplayPony>
       <DisplayPony>
         <Image
           width="200"
           format="avif"
-          src={img4}
+          src={img3}
           alt="Fallen Oak mascot"
           class="right-4 top-[-6.9rem] lg:top-[-6.92rem] absolute w-28 max-w-lg mx-auto z-0"
         />
@@ -146,7 +155,7 @@ const color = "#bfdbfe";
             class="w-64 min-h-64 lg:border-r border-neutral-400 flex flex-col gap-y-2 justify-center items-center"
           >
             <Image
-              src={img3}
+              src={img4}
               format="avif"
               width="200"
               alt="MareQuest"
@@ -158,19 +167,11 @@ const color = "#bfdbfe";
             </div>
           </div>
           <div class="w-80 flex flex-col gap-y-4 px-4">
-            <DisplayPony>
               <div class="text-sm rounded p-4 italic relative speech-bubble desc">
               "Sunny is officially sponsored by <span class="font-bold"
                 >MareQuest</span
               >! Play on Steam today!"
             </div>
-            </DisplayPony>
-            <DisplayNormal>
-              <div class="text-sm rounded p-4 italic relative desc">
-              "Sunny is officially sponsored by <span class="font-bold"
-                >MareQuest</span
-              >! Play on Steam today!"
-            </div></DisplayNormal>
             <div
               class="mt-2 text-base text-left flex flex-col justify-center gap-y-1 px-2"
             >
@@ -199,7 +200,7 @@ const color = "#bfdbfe";
       <Image
         width="200"
         format="avif"
-        src={img4}
+        src={img3}
         alt="Fallen Oak mascot"
         class="right-4 top-[-6.9rem] lg:top-[-6.92rem] absolute w-28 max-w-lg mx-auto z-0"
       />
@@ -223,16 +224,9 @@ const color = "#bfdbfe";
           </div>
         </div>
         <div class="w-80 flex flex-col gap-y-4 px-4">
-          <DisplayPony>
             <div class="text-sm rounded p-4 italic relative speech-bubble desc">
             "Be kind. Be happy. Be good."
           </div>
-        </DisplayPony>
-        <DisplayNormal>
-          <div class="text-sm rounded p-4 italic relative desc">
-            "Be kind. Be happy. Be good."
-          </div>
-        </DisplayNormal>
         </div>
       </div>
     </div>
