@@ -6,8 +6,12 @@ import img3 from "../assets/P1010419.jpg";
 import img4 from "../assets/fallen_oak_auction_Sigil.png";
 import img5 from "../assets/FallenOaksOC.png";
 import img6 from "../assets/fallenoak.png";
+import img7 from "../assets/horse12.jpg";
+import img8 from "../assets/horse15.jpg";
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
+import DisplayPony from "../components/DisplayPony.astro";
+import DisplayNormal from "../components/DisplayNormal.astro";
 ---
 
 <Layout title="Fallen Oak Equine Rescue | About">
@@ -74,6 +78,7 @@ import Layout from "../layouts/Layout.astro";
         <div class="text-3xl lg:text-4xl text-center uppercase font-semibold tracking-wide">
           Our mission
         </div>
+        <DisplayPony>
         <Image
           src={img4}
           alt=""
@@ -81,6 +86,17 @@ import Layout from "../layouts/Layout.astro";
           class="h-48 w-auto rounded-lg -rotate-3 bg-white border-white border-8"
           style="filter: drop-shadow(0 5px 5px #000)"
         />
+      </DisplayPony>
+      <DisplayNormal>
+        <Image
+          src={img7}
+          alt=""
+          format="avif"
+          width="400"
+          class="h-48 w-auto rounded-lg -rotate-3 bg-white border-white border-8"
+          style="filter: drop-shadow(0 5px 5px #000)"
+        />
+      </DisplayNormal>
         <div class="text-base lg:text-sm">
           <p>
             Our goal is to rescue, rehabilitate and rehome abused and neglected
@@ -96,6 +112,7 @@ import Layout from "../layouts/Layout.astro";
         <div class="text-3xl lg:text-4xl text-center uppercase font-semibold tracking-wide">
           Our history
         </div>
+        <DisplayPony>
         <Image
           src={img5}
           alt=""
@@ -103,6 +120,17 @@ import Layout from "../layouts/Layout.astro";
           class="h-48 w-auto rounded-lg rotate-3 bg-blue-200 border-white border-8"
           style="filter: drop-shadow(0 5px 5px #000)"
         />
+      </DisplayPony>
+      <DisplayNormal>
+        <Image
+          src={img8}
+          alt=""
+          format="avif"
+          width="400"
+          class="h-48 w-auto rounded-lg -rotate-3 bg-white border-white border-8"
+          style="filter: drop-shadow(0 5px 5px #000)"
+        />
+      </DisplayNormal>
         <div class="text-base lg:text-sm">
           <p>
             Fallen Oak was established in December of 2012 in Central Florida. As of February 1st, 2020, <span class="font-semibold">Kim
@@ -111,6 +139,7 @@ import Layout from "../layouts/Layout.astro";
           </p>
         </div>
       </div>
+    <DisplayPony>
       <div
         class="gap-y-8 w-full lg:w-1/3 lg:ml-4 lg:pr-2 flex flex-col items-center justify-between"
         id="mascot"
@@ -129,11 +158,12 @@ import Layout from "../layouts/Layout.astro";
           <p>
             Our mascot, <span class="font-semibold">Fallen Oakley</span>, was
             designed around Early Bird, our first rescue horse! Fallen Oakley's blue spots were inspired by Early Bird's. Her
-            flank mark is an oak tree sheltering a pair of horses, representing the
-            care and hospitality she provides to the horses under her care.
+            cutie mark is an oak tree sheltering a pair of horses, representing the
+            care and hospitality she provides to the horses under her care!
           </p>
         </div>
       </div>
+    </DisplayPony>
     </div>
   </div>
 </Layout>
