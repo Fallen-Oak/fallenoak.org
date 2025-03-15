@@ -105,14 +105,14 @@ import DisplayNormal from "../components/DisplayNormal.astro";
           </p>
         </div>
       </div>
-      <DisplayPony>
       <div
-        class="lg:border-r-2 lg:border-neutral-400 gap-y-8 w-full lg:w-1/3 lg:ml-4 lg:pr-2 flex flex-col items-center justify-between"
+        class="gap-y-8 w-full lg:w-1/3 lg:ml-4 lg:pr-2 flex flex-col items-center justify-between"
         id="history"
       >
         <div class="text-3xl lg:text-4xl text-center uppercase font-semibold tracking-wide">
           Our history
         </div>
+        <DisplayPony>
         <Image
           src={img5}
           alt=""
@@ -120,31 +120,17 @@ import DisplayNormal from "../components/DisplayNormal.astro";
           class="h-48 w-auto rounded-lg rotate-3 bg-blue-200 border-white border-8"
           style="filter: drop-shadow(0 5px 5px #000)"
         />
-        <div class="text-base lg:text-sm">
-          <p>
-            Fallen Oak was established in December of 2012 in Central Florida. As of February 1st, 2020, <span class="font-semibold">Kim
-            Sweeney</span> is the third president of Fallen Oak &ndash; since May of 2024, she
-            has cared for and rehabilitated over 160 horses!
-          </p>
-        </div>
-      </div>
-    </DisplayPony>
-    <DisplayNormal>
-      <div
-        class="gap-y-8 w-full lg:w-1/3 lg:ml-4 lg:pr-2 flex flex-col items-center justify-between"
-        id="history"
-      >
-        <div class="text-3xl lg:text-4xl text-center uppercase font-semibold tracking-wide">
-          Our history
-        </div>
+      </DisplayPony>
+      <DisplayNormal>
         <Image
-          src={img8}
+          src={img7}
           alt=""
           format="avif"
           width="400"
-          class="h-48 w-auto rounded-lg rotate-3 bg-blue-200 border-white border-8"
+          class="h-48 w-auto rounded-lg -rotate-3 bg-white border-white border-8"
           style="filter: drop-shadow(0 5px 5px #000)"
         />
+      </DisplayNormal>
         <div class="text-base lg:text-sm">
           <p>
             Fallen Oak was established in December of 2012 in Central Florida. As of February 1st, 2020, <span class="font-semibold">Kim
@@ -153,10 +139,9 @@ import DisplayNormal from "../components/DisplayNormal.astro";
           </p>
         </div>
       </div>
-    </DisplayNormal>
     <DisplayPony>
       <div
-        class="gap-y-8 w-full lg:w-1/3 lg:ml-4 lg:pr-2 flex flex-col items-center justify-between"
+        class="lg:border-l-2 lg:border-neutral-400 gap-y-8 w-full lg:w-1/3 lg:ml-4 lg:pr-2 flex flex-col items-center justify-between"
         id="mascot"
       >
         <div class="text-3xl lg:text-4xl text-center uppercase font-semibold tracking-wide">
