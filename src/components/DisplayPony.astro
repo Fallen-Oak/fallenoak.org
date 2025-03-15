@@ -1,6 +1,7 @@
 ---
 const shouldDisplayPony = import.meta.env.PONY === "true";
 ---
+console.log(" Display Pony =", shouldDisplayPony);
 
 {shouldDisplayPony ? (
   <slot />
