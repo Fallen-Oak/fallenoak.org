@@ -10,7 +10,7 @@ export default defineConfig({
   vite: {
     define: {
       'import.meta.env.PONY': JSON.stringify(process.env.PONY || 'false')
-    },
+    }
   },
   redirects: {
     '/mareday': {
