@@ -4,7 +4,7 @@ import sitemap from "@astrojs/sitemap";
 // import swup from "@swup/astro";
 import icon from "astro-icon";
 
-console.log("PONY:", process.env.PONY);
+console.log("Base Pony:", process.env.PONY);
 
 // https://astro.build/config
 export default defineConfig({
@@ -22,7 +22,9 @@ export default defineConfig({
   ],
   vite: {
     define: {
-      "import.meta.env.PONY": JSON.stringify(process.env.PONY),
+      "import.meta.env.PONY": JSON.stringify(process.env.PONY || "false"),
     },
   },
 });
+
+console.log("Vite Pony:", import.meta.env.PONY);
