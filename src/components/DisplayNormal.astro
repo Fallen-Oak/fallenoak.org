@@ -1,0 +1,8 @@
+---
+const shouldDisplayNormal = Boolean(import.meta.env.PONY);
+---
+{shouldDisplayNormal !== true ? (
+ 
+  <slot />
+
+) : null}

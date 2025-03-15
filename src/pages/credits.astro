@@ -23,16 +23,18 @@ const color = "#bfdbfe";
         Credits
       </div>
       
+      <DisplayPony>
         <div class="relative flex items-center justify-center max-h-40 w-full">
-        <DisplayPony>
+        
         <Image
           src={img1}
           alt=""
           style="filter: drop-shadow(0 5px 5px #000)"
           class="max-h-56 w-auto sm:max-h-auto sm:h-56 lg:max-w-lg mx-auto z-0 rounded-lg -rotate-3 bg-neutral-400 border-white border-8"
         />
-        </DisplayPony>
+        
       </div>
+      </DisplayPony>
     </div>
     <!-- <hr
       class="border-neutral-400 border-1 w-full lg:w-2/3 pb-8 lg:pb-8"
@@ -115,10 +117,12 @@ const color = "#bfdbfe";
           >! Play on Steam today!
         </div>
       </div> -->
+      <DisplayPony>
       <div
         class="mt-24 bg-white relative duration-300 flex flex-col gap-y-4 justify-center items-center rounded-md p-4"
         style={`filter: drop-shadow(0 2px 2px #000)`}
       >
+      </DisplayPony>
       <DisplayPony>
         <Image
           width="200"
@@ -287,7 +291,7 @@ const color = "#bfdbfe";
   </div>
 
   <!-- <div class="text-center mr-auto ml-auto"><strong class="">Website design by 15</strong></div> -->
-
+  <DisplayPony>
   <style define:vars={{ color }}>
     .desc {
       background-color: var(--color);
@@ -311,4 +315,5 @@ const color = "#bfdbfe";
       margin-top: -28px;
     }
   </style>
+  </DisplayPony>
 </Layout>
