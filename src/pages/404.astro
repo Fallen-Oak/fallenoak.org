@@ -3,15 +3,13 @@ import img1 from "../assets/fallenoak.png";
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer.astro";
-import DisplayPony from "../components/DisplayPony.astro";
 ---
 
 <Layout title="Fallen Oak Equine Rescue | 404">
   <div
     class="bg-[#fefce8] min-h-[calc(100vh-10rem)] px-4 lg:px-0 flex flex-col items-center justify-center"
-  ><DisplayPony>
+  >
     <Image src={img1} alt="404" width="400" format="avif" />
-  </DisplayPony>
     <div class="text-8xl font-semibold text-black mt-8">404</div>
   </div>
 </Layout>
