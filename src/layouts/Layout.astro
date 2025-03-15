@@ -1,6 +1,8 @@
 ---
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import DisplayPony from "../components/DisplayPony.astro";
+import DisplayNormal from "../components/DisplayNormal.astro";
 // import { ViewTransitions } from "astro:transitions";
 const { title } = Astro.props;
 ---
@@ -19,7 +21,12 @@ const { title } = Astro.props;
       property="og:description"
       content="Fallen Oak Equine Rescue and Rehabilitation, Inc., is located on seven acres in beautiful Belleview, Florida. We currently operate out of a five-stall barn, a pasture for grazing, and a round pen for training and evaluating rescued horses. We rely on our devoted foster homes to help us transition horses from our facility to their forever homes, and to help us when there's an influx of horses-in-need. We couldn't do what we do without our team of foster parents!"
     />
+  <DisplayPony>
     <meta property="og:image" content="/fallenoak.png" />
+  </DisplayPony>
+  <DisplayNormal>
+    <meta property="og:image" content="/logo.png" />
+  </DisplayNormal>
     <meta property="og:image:width" content="3572" />
     <meta property="og:image:height" content="2836" />
     <meta property="og:url" content="https://fallenoak.org" />
