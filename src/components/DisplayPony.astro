@@ -1,0 +1,8 @@
+---
+const displayPony = import.meta.env.PONY === "true"; // Convert string to boolean
+---
+
+{displayPony ? (
+  <slot />
+) : (
+)}

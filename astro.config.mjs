@@ -7,10 +7,15 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
+  vite: {
+    define: {
+      'import.meta.env.PONY': JSON.stringify(process.env.PONY)
+    }
+  }
   redirects: {
     '/mareday': {
       status: 302,
-      destination: 'https://www.zeffy.com/en-US/ticketing/792a5cb0-0063-4119-9da1-579c129a9871'
+      destination: 'https://www.zeffy.com/ticketing/mare-day--2025'
     }
   },
   integrations: [
