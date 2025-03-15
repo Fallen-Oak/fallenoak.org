@@ -3,6 +3,8 @@ import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 // import swup from "@swup/astro";
 
+console.log("PONY:", process.env.PONY);
+
 import icon from "astro-icon";
 
 // https://astro.build/config
@@ -21,7 +23,7 @@ export default defineConfig({
   ],
   vite: {
     define: {
-      "import.meta.env.PONY": JSON.stringify(process.env.PONY || "false"),
+      "import.meta.env.PONY": JSON.stringify(process.env.PONY),
     },
   },
 });
