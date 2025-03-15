@@ -1,8 +1,7 @@
 ---
-const displayPony = import.meta.env.PONY === "true"; // Convert string to boolean
+const shouldDisplayPony = import.meta.env.SHOW_CONTENT === "true";
 ---
 
-{displayPony ? (
+{shouldDisplayPony ? (
   <slot />
-) : (
-)}
+) : null}
