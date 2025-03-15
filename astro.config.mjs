@@ -11,7 +11,7 @@ export default defineConfig({
     define: {
       'import.meta.env.PONY': JSON.stringify(process.env.PONY)
     }
-  }
+  },
   redirects: {
     '/mareday': {
       status: 302,
