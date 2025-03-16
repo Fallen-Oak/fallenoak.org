@@ -146,13 +146,16 @@ import DisplayPony from "../components/DisplayPony.astro";
                     ><span>Donate</span></a
                   >
                 </li>
-                <li>
+                <DisplayPony>
+                  <li>
                   <a
                     href="https://www.etsy.com/shop/FallenOakRescue"
                     class={`bg-orange-400 pt-2 pb-1.5 px-4 rounded hover:underline underline-offset-8 whitespace-nowrap  font-semibold`}
                     ><span>STORE</span></a
                   >
-                </li><li>
+                </li>
+              </DisplayPony>
+              <li>
                   <a
                     href="/about"
                     class={`${pathname.includes("/about") ? "underline" : null}  hover:underline underline-offset-8 whitespace-nowrap pb-1 font-semibold`}
