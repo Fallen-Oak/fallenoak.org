@@ -12,6 +12,7 @@ export default [
     img: "Semi_atnewhome_1.jpg",
     date: "May 31, 2024",
     id: "semis-adoption",
+    pony: false,
   },
   {
     author: "Stefan Houtman",
@@ -27,6 +28,7 @@ export default [
     img: "HoneyDustyMajorCollage.jpg",
     date: "July 8, 2024",
     id: "three-rescue-horses",
+    pony: false,
   },
   {
     author: "Stefan Houtman",
@@ -41,6 +43,7 @@ export default [
     img: "MerchCollagev2.jpg",
     date: "July 12, 2024",
     id: "merch-store",
+    pony: false,
   },
   // {
   //   author: "Kim Sweeney",
@@ -73,5 +76,6 @@ export default [
     img: "MareDay.jpg",
     date: "February 8, 2025",
     id: "mare-day-2025",
+    pony: true,
   },
 ];

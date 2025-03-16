@@ -3,8 +3,11 @@ import Sponsorable from "../components/Sponsorable.astro";
 
 import { Image } from "astro:assets";
 import img1 from "../assets/fallen_oak_auction_Sigil.png";
+import img2 from "../assets/horse7.jpg";
 import Layout from "../layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
+import DisplayPony from "../components/DisplayPony.astro";
+import DisplayNormal from "../components/DisplayNormal.astro";
 // import horses from "../data/adoptable.js";
 ---
 
@@ -22,13 +25,24 @@ import { Icon } from "astro-icon/components";
         Donor Rewards
       </div>
       <div class="relative flex items-center justify-center max-h-40 w-full">
-        <Image
+        <DisplayPony>
+          <Image
           src={img1}
           width="600"
           alt=""
           style="filter: drop-shadow(0 5px 5px #000)"
           class="max-h-64 w-auto sm:max-h-auto sm:h-64 lg:max-w-lg mx-auto z-0 rounded-lg -rotate-3 bg-blue-100 border-white border-8"
         />
+      </DisplayPony>
+      <DisplayNormal>
+        <Image
+        src={img2}
+        width="600"
+        alt=""
+        style="filter: drop-shadow(0 5px 5px #000)"
+        class="max-h-64 w-auto sm:max-h-auto sm:h-64 lg:max-w-lg mx-auto z-0 rounded-lg -rotate-3 bg-blue-100 border-white border-8"
+      />
+      </DisplayNormal>
       </div>
       <div
         class="w-full lg:w-1/2 text-sm lg:text-sm flex flex-col gap-y-2 rounded border border-dashed border-black p-4 bg-amber-100"

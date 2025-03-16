@@ -2,15 +2,17 @@ import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 // import swup from "@swup/astro";
-
 import icon from "astro-icon";
+import { loadEnv } from "vite";
+
+const { PONY } = loadEnv(process.env.PONY, process.cwd(), "");
 
 // https://astro.build/config
 export default defineConfig({
   redirects: {
     '/mareday': {
       status: 302,
-      destination: 'https://www.zeffy.com/en-US/ticketing/792a5cb0-0063-4119-9da1-579c129a9871'
+      destination: 'https://www.zeffy.com/ticketing/mare-day--2025'
     }
   },
   integrations: [
