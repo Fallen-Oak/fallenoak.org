@@ -50,6 +50,7 @@ import DisplayNormal from "../components/DisplayNormal.astro";
         class="w-full lg:w-1/2 text-sm lg:text-sm flex flex-col gap-y-2 rounded border border-dashed border-black p-4 bg-amber-100"
         style="opacity: 0; animation: fadein 0.5s ease 0.6s forwards;"
       >
+      {horses.length > 0 ?
         <p>
           Adopting is not only a chance to give a horse a new lease on life, but
           also a chance to befriend someone with a rich history and deep
@@ -82,11 +83,10 @@ import DisplayNormal from "../components/DisplayNormal.astro";
           <a href="/adopt.pdf" target="_blank" class="duration-300 hover:bg-blue-200 bg-blue-50 border-2 border-blue-200 hover:border-blue-400 rounded font-semibold text-base lg:text-xl px-6 py-2 flex items-center gap-x-2"> 
            <span>Equine Adoption Application</span> <Icon name="ph:file-pdf-light" class="text-4xl text-red-400" /></a>
         </div>
-        
-        <p>
-          If you're interested in adopting, consider one of our fantastic horses
-          below:
-        </p>
+            <p>If you're interested in adopting, consider one of our fantastic horses below:</p>
+           :
+            <p>We currently have no adoptable horses, but make sure to check back later when we do!</p>
+          }
 
       </div>
     </div>
@@ -94,7 +94,6 @@ import DisplayNormal from "../components/DisplayNormal.astro";
       class="border-neutral-400 border-1 w-full lg:w-2/3 pb-8 lg:pb-16"
       style="opacity: 0; animation: fadein 0.5s ease 1.6s forwards;"
     /> -->
-
     <div
       class="grid grid-cols-1 lg:grid-cols-2 gap-y-32 lg:gap-x-16 lg:gap-y-32 mt-8 lg:mt-24 mb-16"
       style="opacity: 0; animation: fadein 0.5s ease 1.0s forwards;"
