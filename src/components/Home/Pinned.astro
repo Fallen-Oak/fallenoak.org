@@ -8,6 +8,8 @@ import img4 from "../../assets/Oakleycleaningpoopy.png";
 import img5 from "../../assets/Lyric.jpg";
 import img6 from "../../assets/Fence.jpg";
 import { Icon } from "astro-icon/components";
+import DisplayPony from "../DisplayPony.astro";
+import DisplayNormal from "../DisplayNormal.astro";
 
 const shouldDisplayPony = Boolean(import.meta.env.PONY);
 const img1Src = img1.src;
@@ -277,12 +279,23 @@ const img5Src = img5.src;
       </p>
 
       <div class="px-8">
+        <DisplayPony>
         <Image
           src={img3}
           alt=""
           style="filter: drop-shadow(0 5px 5px #000)"
           class="lg:ml-24 mt-6 z-0 max-h-80 w-auto mx-auto rounded-lg -rotate-3 bg-neutral-400 border-white border-8"
         />
+      </DisplayPony>
+      <DisplayNormal>
+        <Image
+          src={img5}
+          alt=""
+          format="avif"
+          style="filter: drop-shadow(0 5px 5px #000)"
+          class="lg:ml-24 mt-6 z-0 max-h-80 w-auto mx-auto rounded-lg -rotate-3 bg-neutral-400 border-white border-8"
+        />
+      </DisplayNormal>
       </div>
 
       <div class="text-center mt-12">
@@ -312,12 +325,23 @@ const img5Src = img5.src;
       </p>
 
       <div class="px-8">
+        <DisplayPony>
         <Image
           src={img4}
           alt=""
           style="filter: drop-shadow(0 5px 5px #000)"
           class="lg:ml-24 mt-6 z-0 max-h-80 w-auto mx-auto rounded-lg -rotate-3 bg-neutral-400 border-white border-8"
         />
+      </DisplayPony>
+      <DisplayNormal>
+        <Image
+          src={img6}
+          alt=""
+          format="avif"
+          style="filter: drop-shadow(0 5px 5px #000)"
+          class="lg:ml-24 mt-6 z-0 max-h-80 w-auto mx-auto rounded-lg -rotate-3 bg-neutral-400 border-white border-8"
+        />
+      </DisplayNormal>
       </div>
 
       <div class="text-center mt-12">

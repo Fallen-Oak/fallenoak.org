@@ -53,7 +53,10 @@ import DisplayNormal from "../DisplayNormal.astro";
   <section
     class="bg-yellow-50 w-full pb-24 px-2 lg:px-0 lg:h-auto h-auto lg:hidden flex flex-col items-center justify-center"
   >
-    <div><Image src={img2} alt="before" class="rounded-lg" /></div>
+    <div>
+      <DisplayPony><Image src={img2} alt="before" class="rounded-lg" /></DisplayPony>
+      <DisplayNormal><Image src={img1} alt="before" class="rounded-lg" /></DisplayNormal>
+    </div>
     <div class="mt-4">
       <Button href="/donate" text="Learn more" />
     </div>
