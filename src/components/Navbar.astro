@@ -3,6 +3,7 @@ const { pathname } = Astro.url;
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 import img1 from "../assets/logo.png";
+import DisplayPony from "../components/DisplayPony.astro";
 ---
 
 <header
@@ -88,6 +89,7 @@ import img1 from "../assets/logo.png";
     </div><div
       class="hidden items-center gap-4 font-semibold text-heading xl:flex"
     >
+    <DisplayPony>
       <a
         href="https://www.etsy.com/shop/FallenOakRescue"
         target="_blank"
@@ -100,6 +102,7 @@ import img1 from "../assets/logo.png";
           class="text-xl text-orange-400"
         /></a
       >
+    </DisplayPony>
       <a
         href="https://www.zeffy.com/en-US/donation-form/bc6d55cd-76c7-4d42-ace0-52499a32e5ed"
         target="_blank"

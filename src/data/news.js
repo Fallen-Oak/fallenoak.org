@@ -43,7 +43,7 @@ export default [
     img: "MerchCollagev2.jpg",
     date: "July 12, 2024",
     id: "merch-store",
-    pony: false,
+    pony: true,
   },
   // {
   //   author: "Kim Sweeney",
