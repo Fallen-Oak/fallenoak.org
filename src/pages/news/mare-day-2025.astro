@@ -6,6 +6,8 @@ import news from "../../data/news.js";
 import img3 from "../../assets/news/MareDay.jpg";
 import { Icon } from "astro-icon/components";
 import { ViewTransitions } from "astro:transitions";
+import DisplayPony from "../../components/DisplayPony.astro";
+import DisplayNormal from "../../components/DisplayNormal.astro";
 
 const article = news[3];
 const { author, title, content, img, date, id } = article;
@@ -39,6 +41,7 @@ const { author, title, content, img, date, id } = article;
             </p>
           </div>
 
+          <DisplayPony>
           <div class="flex flex-col gap-y-4 lg:text-base text-sm rounded border border-dashed border-black p-4 bg-amber-100">
             <!-- <p>{content}</p> -->
             <p>We appreciate all the love and support that we've gotten from the community. We’d like to say thank you! So, we’re pleased to announce that Mare Day will be happening again this year. It’s our way of giving back!</p>
@@ -49,6 +52,13 @@ const { author, title, content, img, date, id } = article;
             
             <p><a target="_blank" href="https://www.zeffy.com/ticketing/mare-day--2025" style="color:blue;">https://www.zeffy.com/ticketing/mare-day--2025</a></p>
           </div>
+        </DisplayPony>
+        <DisplayNormal>
+          <div class="flex flex-col gap-y-4 lg:text-base text-sm rounded border border-dashed border-black p-4 bg-amber-100">
+            <!-- <p>{content}</p> -->
+            <p>Sorry, you have to be 20% cooler to know about this event!</p>
+          </div>
+        </DisplayNormal>
         </div>
       </article>
     </div>
