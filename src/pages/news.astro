@@ -4,11 +4,18 @@ import news from "../data/news/news-2025.js";
 import NewsComponent from "../components/News/newspage.astro";
 import NewsNav from "../components/News/newsnav.astro";
 
-import img1 from "../assets/news/2025/mare-day.jpg";
-import img2 from "../assets/news/2025/dinner-with-horses.jpg";
+//News images
+import imgGoodbyeDakota from "../assets/news/2025/goodbye-dakota.jpg";
+import imgJoyousAdoptions from "../assets/news/2025/joyous-adoptions.jpg";
+import imgFlashsAdoption from "../assets/news/2025/flashs-adoption.jpg";
+import imgGoodbyeMajor from "../assets/news/2025/goodbye-major.jpg";
+import imgMareDay from "../assets/news/2025/mare-day.jpg";
+import imgWelcomeAlena from "../assets/news/2025/welcome-alena.jpg";
+import imgDinnerWithHorses from "../assets/news/2025/dinner-with-horses.jpg";
+import imgLookWhosBack from "../assets/news/2025/look-whos-back.jpg";
 
 const reversed = news.slice().reverse();
-const images = [img2, img1];
+const images = [imgLookWhosBack, imgDinnerWithHorses, imgWelcomeAlena, imgMareDay, imgGoodbyeMajor, imgFlashsAdoption, imgJoyousAdoptions, imgGoodbyeDakota];
 ---
 
 <Layout title="News & Events - Fallen Oak">

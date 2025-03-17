@@ -2,12 +2,12 @@
 import Layout from "../../../layouts/Layout.astro";
 
 import { Image } from "astro:assets";
-import news from "../../../data/news/news-2024.js";
-import imgFeatured from "../../../assets/news/2024/semis-adoption.jpg";
+import news from "../../../data/news/news-2025.js";
+import imgFeatured from "../../../assets/news/2025/joyous-adoptions.jpg";
 import { Icon } from "astro-icon/components";
 import { ViewTransitions } from "astro:transitions";
 
-const article = news[0];
+const article = news[1];
 const { author, title, content, img, date, id } = article;
 ---
 
@@ -29,7 +29,7 @@ const { author, title, content, img, date, id } = article;
         </div>
         <div class="flex flex-col gap-y-8 w-full lg:w-full">
           <div class="flex flex-col mx-auto gap-y-2 w-full">
-            <h1 class="text-4xl lg:text-5xl font-semibold leading-none whitespace-nowrap">{title}</h1>
+            <h1 class="text-4xl lg:text-5xl font-semibold leading-none whitespace-wrap">{title}</h1>
             <p class="text-xs lg:text-sm">
               by
               <span class="text-blue-400">
@@ -38,31 +38,13 @@ const { author, title, content, img, date, id } = article;
               <time datetime="2021-02-12 15:34:18-0200">{date}</time>
             </p>
           </div>
-
           <div class="flex flex-col gap-y-4 lg:text-base text-sm rounded border border-dashed border-black p-4 bg-amber-100">
             <!-- <p>{content}</p> -->
-            <p>Semi has been adopted!</p>
-            <p>
-              Semi came to us last summer and was first adopted out in September
-              but, sadly, he was having some riding issues and didn't work out
-              with his adopter. At some point in Semi's life he had some trauma
-              that causes him to become terrified and shake while being ridden
-              in certain situations. As a result, he came back to the rescue on
-              March 7th. Despite his issues with riding, he is a lovely horse
-              with excellent ground manners. So we decided that it was time for
-              Semi to just be a horse and hang out with friends as a companion
-              horse. Months later, the wonderful people at Rainbows Edge Equine
-              Transition Center reached out to us about a lady who was looking
-              for a companion horse. Kim swiftly reached out and invited her and
-              her husband to come visit the rescue and as soon as the couple met
-              Semi they were enthralled with him! Semi now lives in Gainesville
-              Florida on a beautiful farm with his new best friend, Phoenix.
-            </p>
-            <p>
-              We are so thankful for Gloria and her husband for providing Semi
-              with a loving home!
-            </p>
-          </div>
+            <p>Here is my joy from last week. Does everyone remember Honey?</p>
+            <p>She was adopted twice and both times returned emaciated. Also Dusty, he came in in the spring he was an ex-reining horse. Well guess what? They were both adopted by a wonderful person. I was contacted by Sue a couple weeks ago, looking for two older companion, sanctuary horses. It is not very often that I get requests for this. Everybody wants the younger, kid safe trail horses. I put a lot of thought into who I thought would be a perfect fit.</p>
+            <p>I had said previously that Honey would never leave, and I was adamant in that decision until I met Sue. I have absolutely no doubt that Honey and Dusty will live out the rest of their lives at Sue’s farm. Sue is a wonderful person and has a beautiful set-up. Honey and Dusty deserve one-on-one attention and to have their person. So, last week amongst the sorrow of having to let a couple horses go, I got to experience the joy of knowing I was able to rehabilitate both of these horses and help them find their person. Congrats, Sue on your adoption of these wonderful horses.</p>
+            <p>On days like this, I love what I do.</p>
+        </div>
         </div>
       </article>
     </div>

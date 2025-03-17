@@ -3,7 +3,7 @@ import Layout from "../../../layouts/Layout.astro";
 
 import { Image } from "astro:assets";
 import news from "../../../data/news/news-2024.js";
-import featuredImg from "../../../assets/news/2024/three-rescue-horses.jpg";
+import imgFeatured from "../../../assets/news/2024/three-rescue-horses.jpg";
 import { Icon } from "astro-icon/components";
 import { ViewTransitions } from "astro:transitions";
 
@@ -25,7 +25,7 @@ const { author, title, content, img, date, id } = article;
       <article class="px-6 mx-auto flex flex-col lg:flex-col gap-x-12 gap-y-8">
         <div class="flex justify-center w-full lg:w-full">
           <Image 
-          transition:name={id} src={featuredImg} alt="News" width="400" class="object-cover w-auto h-64 border-2 rounded border-black" />
+          transition:name={id} src={imgFeatured} alt="News" width="400" class="object-cover w-auto h-64 border-2 rounded border-black" />
         </div>
         <div class="flex flex-col gap-y-8 w-full lg:w-full">
           <div class="flex flex-col mx-auto gap-y-2 w-full">
