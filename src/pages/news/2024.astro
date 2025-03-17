@@ -1,14 +1,15 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import news from "../data/news/news-2025.js";
-import NewsComponent from "../components/News/newspage.astro";
-import NewsNav from "../components/News/newsnav.astro";
+import Layout from "../../layouts/Layout.astro";
+import news from "../../data/news/news-2024.js";
+import NewsComponent from "../../components/News/newspage.astro";
+import NewsNav from "../../components/News/newsnav.astro";
 
-import img1 from "../assets/news/2025/mare-day.jpg";
-import img2 from "../assets/news/2025/dinner-with-horses.jpg";
+import img1 from "../../assets/news/2024/semis-adoption.jpg";
+import img2 from "../../assets/news/2024/three-rescue-horses.jpg";
+import img3 from "../../assets/news/2024/merch-store.jpg";
 
 const reversed = news.slice().reverse();
-const images = [img2, img1];
+const images = [img3, img2, img1];
 ---
 
 <Layout title="News & Events - Fallen Oak">

@@ -1,15 +1,15 @@
 ---
-import Layout from "../../layouts/Layout.astro";
+import Layout from "../../../layouts/Layout.astro";
 
 import { Image } from "astro:assets";
-import news from "../../data/news.js";
-import img3 from "../../assets/news/Dinner-2024.jpg";
+import news from "../../../data/news/news-2025.js";
+import featuredImg from "../../../assets/news/2025/mare-day.jpg";
 import { Icon } from "astro-icon/components";
 import { ViewTransitions } from "astro:transitions";
-import DisplayPony from "../../components/DisplayPony.astro";
-import DisplayNormal from "../../components/DisplayNormal.astro";
+import DisplayPony from "../../../components/DisplayPony.astro";
+import DisplayNormal from "../../../components/DisplayNormal.astro";
 
-const article = news[4];
+const article = news[0];
 const { author, title, content, img, date, id } = article;
 ---
 
@@ -20,14 +20,14 @@ const { author, title, content, img, date, id } = article;
   >
     <a
       class="mt-24 duration-300 hover:bg-blue-200 bg-blue-50 border-2 border-blue-200 hover:border-blue-400 rounded font-semibold text-base px-3 py-1 flex items-center gap-x-2"
-      href="/news"
+      href="./"
       ><Icon name="mdi:arrow-back" class="text-2xl text-blue-600" />Back to News</a
     >
     <div class="w-full lg:w-1/2 mx-auto py-8">
       <article class="px-6 mx-auto flex flex-col lg:flex-col gap-x-12 gap-y-8">
         <div class="flex justify-center w-full lg:w-full">
           <Image 
-          transition:name={id} src={img3} alt="News" width="400" class="object-cover w-auto h-64 border-2 rounded border-black" />
+          transition:name={id} src={featuredImg} alt="News" width="400" class="object-cover w-auto h-64 border-2 rounded border-black" />
         </div>
         <div class="flex flex-col gap-y-8 w-full lg:w-full">
           <div class="flex flex-col mx-auto gap-y-2 w-full">
@@ -44,37 +44,11 @@ const { author, title, content, img, date, id } = article;
           <DisplayPony>
           <div class="flex flex-col gap-y-4 lg:text-base text-sm rounded border border-dashed border-black p-4 bg-amber-100">
             <!-- <p>{content}</p> -->
-            <p>Signups for this year's Dinner with Horses are now available! After Mare Day's activities are over, join us for a delightful homemade dinner by Kim!</p>
+            <p>We appreciate all the love and support that we've gotten from the community. We’d like to say thank you! So, we’re pleased to announce that Mare Day will be happening again this year. It’s our way of giving back!</p>
+
+            <p>The event be held at the rescue on September 9. It is a day full of fun activities like horseback rides, grooming horses, spending time with yearlings, farm chores, and more!</p>
             
-            <p>Here's the menu we're planning:</p>
-            <p>Entrées:</p>
-            <ul>
-                <li>Chicken wings</li>
-                <li>Burgers</li>
-                <li>Pulled pork</li>
-                <li>Pasta primavera</li>
-            </ul>
-            <p>Sides:</p>
-            <ul>
-                <li>Mac and cheese</li>
-                <li>Corn on the cob</li>
-                <li>Potato salad</li>
-                <li>Caesar Salad</li>
-            </ul>
-            <p>Dessert:</p>
-            <ul>
-                <li>2 sheet cakes (one chocolate and one vanilla inside)</li>
-            </ul>
-            <p>Drinks:</p>
-            <ul>
-                <li>Lemonade</li>
-                <li>Gatorade</li>
-                <li>Water</li>
-                <li>Ice tea</li>
-                <li>Coke</li>
-                <li>Sprite</li>
-            </ul>
-            <p>Tickets are $50 and are limited to 50 people. We hope to see you there! Sign up with the link below:</p>
+            <p>You can find the registration form below. Tickets are only $20!</p>
             
             <p><a target="_blank" href="https://www.zeffy.com/ticketing/mare-day--2025" style="color:blue;">https://www.zeffy.com/ticketing/mare-day--2025</a></p>
           </div>

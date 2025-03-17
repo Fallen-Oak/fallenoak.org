@@ -1,9 +1,9 @@
 ---
-import Layout from "../../layouts/Layout.astro";
+import Layout from "../../../layouts/Layout.astro";
 
 import { Image } from "astro:assets";
-import news from "../../data/news.js";
-import img1 from "../../assets/news/Semi_atnewhome_1.jpg";
+import news from "../../../data/news/news-2024.js";
+import featuredImg from "../../../assets/news/2024/semis-adoption.jpg";
 import { Icon } from "astro-icon/components";
 import { ViewTransitions } from "astro:transitions";
 
@@ -18,14 +18,14 @@ const { author, title, content, img, date, id } = article;
   >
     <a
       class="mt-24 duration-300 hover:bg-blue-200 bg-blue-50 border-2 border-blue-200 hover:border-blue-400 rounded font-semibold text-base px-3 py-1 flex items-center gap-x-2"
-      href="/news"
+      href="./"
       ><Icon name="mdi:arrow-back" class="text-2xl text-blue-600" />Back to News</a
     >
     <div class="w-full lg:w-1/2 mx-auto py-8">
       <article class="px-6 mx-auto flex flex-col lg:flex-col gap-x-12 gap-y-8">
         <div class="flex justify-center w-full lg:w-full">
           <Image 
-          transition:name={id} src={img1} alt="News" width="400" class="object-cover w-auto h-64 border-2 rounded border-black" />
+          transition:name={id} src={featuredImg} alt="News" width="400" class="object-cover w-auto h-64 border-2 rounded border-black" />
         </div>
         <div class="flex flex-col gap-y-8 w-full lg:w-full">
           <div class="flex flex-col mx-auto gap-y-2 w-full">

@@ -3,6 +3,7 @@ import { boolean } from "astro/zod";
 import img1 from "../../assets/news/Semi_atnewhome_1.jpg";
 import { Image } from "astro:assets";
 const { author, title, content, img, date, id, src, pony } = Astro.props;
+const year = new Date(date).getFullYear();
 var shouldDisplay = true;
 
 if (import.meta.env.PONY == true || pony == false) {
@@ -14,7 +15,7 @@ if (import.meta.env.PONY == true || pony == false) {
 {shouldDisplay && (
 <a
   class="duration-300 cursor-pointer max-w-xs lg:max-w-72 p-6 lg:p-4 rounded-md border-2 border-black bg-white hover:bg-amber-100 hover:text-black"
-  href={`/news/${id}`}
+  href={`/news/${year}/${id}`}
 >
   <Image
     transition:name={id}
