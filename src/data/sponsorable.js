@@ -16,9 +16,9 @@ export default [
     sponsored: true,
   },
   {
-    name: "Bert",
+    name: "Angel",
     url: "https://givebutter.com/dHrL2i",
-    img: "Bert_2.jpg",
+    img: "Angel_2.jpg",
     rescueDate: "October 23, 2023",
     breed: "Quarter Horse",
     changeName: true,
@@ -27,7 +27,7 @@ export default [
     dateOfBirth: 1993,
     cost: 230,
     description:
-      "Real laid back and sweet guy, just wants to hang out. Bert came from an Elderly owner who could no longer take care of him but wanted to ensure he could also live out his retirement in a kind of safe place.",
+      "Real laid back and sweet guy, just wants to hang out. Angel came from an Elderly owner who could no longer take care of him but wanted to ensure he could also live out his retirement in a kind of safe place.",
     sponsored: true,
   },
   {
@@ -85,10 +85,10 @@ export default [
     isMale: false,
     age: currentYear-1995,
     dateOfBirth: 1995,
-    cost: 320,
+    cost: 190,
     description:
       "Once a champion show horse, when she couldn't be bred anymore, they didn't want her. She then fell into neglect before being rescued and finding sanctuary with us. Now she's a very lively and forward horse in spite of her age.",
-    sponsored: false,
+    sponsored: true,
   },
   {
     name: "Jasper",
