@@ -43,7 +43,7 @@ export default [
     img: "merch-store.jpg",
     date: "July 12, 2024",
     id: "merch-store",
-    pony: false,
+    pony: true,
   },
   {
     author: "Kim Sweeney",
@@ -208,7 +208,7 @@ export default [
     img: "mare-fair-and-mare-day.jpg",
     date: "October 2, 2024",
     id: "mare-fair-and-mare-day",
-    pony: false,
+    pony: true,
   },
   {
     author: "Kim Sweeney",
