@@ -5,17 +5,17 @@ import NewsComponent from "../components/News/newspage.astro";
 import NewsNav from "../components/News/newsnav.astro";
 
 //News images
-import imgGoodbyeDakota from "../assets/news/2025/goodbye-dakota.jpg";
-import imgJoyousAdoptions from "../assets/news/2025/joyous-adoptions.jpg";
-import imgFlashsAdoption from "../assets/news/2025/flashs-adoption.jpg";
-import imgGoodbyeMajor from "../assets/news/2025/goodbye-major.jpg";
-import imgMareDay from "../assets/news/2025/mare-day.jpg";
-import imgWelcomeAlena from "../assets/news/2025/welcome-alena.jpg";
-import imgDinnerWithHorses from "../assets/news/2025/dinner-with-horses.jpg";
-import imgLookWhosBack from "../assets/news/2025/look-whos-back.jpg";
+import img_GoodbyeDakota from "../assets/news/2025/goodbye-dakota.jpg";
+import img_JoyousAdoptions from "../assets/news/2025/joyous-adoptions.jpg";
+import img_FlashsAdoption from "../assets/news/2025/flashs-adoption.jpg";
+import img_GoodbyeMajor from "../assets/news/2025/goodbye-major.jpg";
+import img_MareDay from "../assets/news/2025/mare-day.jpg";
+import img_WelcomeAlena from "../assets/news/2025/welcome-alena.jpg";
+import img_DinnerWithHorses from "../assets/news/2025/dinner-with-horses.jpg";
+import img_LookWhosBack from "../assets/news/2025/look-whos-back.jpg";
 
 const reversed = news.slice().reverse();
-const images = [imgLookWhosBack, imgDinnerWithHorses, imgWelcomeAlena, imgMareDay, imgGoodbyeMajor, imgFlashsAdoption, imgJoyousAdoptions, imgGoodbyeDakota];
+const images = [img_LookWhosBack, img_DinnerWithHorses, img_WelcomeAlena, img_MareDay, img_GoodbyeMajor, img_FlashsAdoption, img_JoyousAdoptions, img_GoodbyeDakota];
 ---
 
 <Layout title="News & Events - Fallen Oak">
@@ -24,7 +24,7 @@ const images = [imgLookWhosBack, imgDinnerWithHorses, imgWelcomeAlena, imgMareDa
   >
     <div
       style="opacity: 0; animation: fadein 0.5s ease 0.2s forwards;"
-      class="flex flex-col justify-center items-center w-full lg:w-full pt-24 lg:pt-32 mb-12 lg:mb-0 gap-y-5 lg:gap-y-5"
+      class="flex flex-col justify-center items-center w-full lg:w-full pt-24 lg:pt-32 lg:mb-0 gap-y-5 lg:gap-y-5"
     >
       <div
         class="text-3xl lg:text-7xl whitespace-nowrap uppercase font-semibold tracking-wider"
@@ -38,7 +38,7 @@ const images = [imgLookWhosBack, imgDinnerWithHorses, imgWelcomeAlena, imgMareDa
       style="opacity: 0; animation: fadein 0.5s ease 1.6s forwards;"
     /> -->
     <div
-      class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12 mt-8"
+      class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12 lg:mt-8 mt-12"
       style="opacity: 0; animation: fadein 0.5s ease 0.4s forwards;"
     >
       {reversed.map((n, i) => <NewsComponent {...n} src={images[i]} />)}
