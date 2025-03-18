@@ -1,16 +1,21 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import news from "../data/news.js";
-import NewsComponent from "../components/News/news.astro";
+import news from "../data/news/news-2025.js";
+import NewsComponent from "../components/News/newspage.astro";
+import NewsNav from "../components/News/newsnav.astro";
 
-import img1 from "../assets/news/Semi_atnewhome_1.jpg";
-import img2 from "../assets/news/HoneyDustyMajorCollage.jpg";
-import img3 from "../assets/news/MerchCollagev2.jpg";
-import img4 from "../assets/news/MareDay.jpg";
-import img5 from "../assets/news/Dinner-2024.jpg";
+//News images
+import img_GoodbyeDakota from "../assets/news/2025/goodbye-dakota.jpg";
+import img_JoyousAdoptions from "../assets/news/2025/joyous-adoptions.jpg";
+import img_FlashsAdoption from "../assets/news/2025/flashs-adoption.jpg";
+import img_GoodbyeMajor from "../assets/news/2025/goodbye-major.jpg";
+import img_MareDay from "../assets/news/2025/mare-day.jpg";
+import img_WelcomeAlena from "../assets/news/2025/welcome-alena.jpg";
+import img_DinnerWithHorses from "../assets/news/2025/dinner-with-horses.jpg";
+import img_LookWhosBack from "../assets/news/2025/look-whos-back.jpg";
 
 const reversed = news.slice().reverse();
-const images = [img5, img4, img3, img2, img1];
+const images = [img_LookWhosBack, img_DinnerWithHorses, img_WelcomeAlena, img_MareDay, img_GoodbyeMajor, img_FlashsAdoption, img_JoyousAdoptions, img_GoodbyeDakota];
 ---
 
 <Layout title="News & Events - Fallen Oak">
@@ -19,7 +24,7 @@ const images = [img5, img4, img3, img2, img1];
   >
     <div
       style="opacity: 0; animation: fadein 0.5s ease 0.2s forwards;"
-      class="flex flex-col justify-center items-center w-full lg:w-full pt-24 lg:pt-32 pb-8 mb-12 lg:mb-0 lg:pb-8 gap-y-20 lg:gap-y-20"
+      class="flex flex-col justify-center items-center w-full lg:w-full pt-24 lg:pt-32 lg:mb-0 gap-y-5 lg:gap-y-5"
     >
       <div
         class="text-3xl lg:text-7xl whitespace-nowrap uppercase font-semibold tracking-wider"
@@ -27,12 +32,13 @@ const images = [img5, img4, img3, img2, img1];
         News & Events
       </div>
     </div>
+    <div style="opacity: 0; animation: fadein 0.7s ease 0.2s forwards;"><NewsNav></NewsNav></div>
     <!-- <hr
       class="border-neutral-400 border-1 w-full lg:w-2/3 pb-8 lg:pb-16"
       style="opacity: 0; animation: fadein 0.5s ease 1.6s forwards;"
     /> -->
     <div
-      class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12 mt-8"
+      class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12 lg:mt-8 mt-12"
       style="opacity: 0; animation: fadein 0.5s ease 0.4s forwards;"
     >
       {reversed.map((n, i) => <NewsComponent {...n} src={images[i]} />)}
