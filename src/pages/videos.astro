@@ -1,0 +1,42 @@
+---
+import Layout from "../layouts/Layout.astro";
+import videos from "../data/videos.js";
+import VideosComponent from "../components/Videos.astro";
+import DisplayPony from "../components/DisplayPony.astro";
+
+//Video thumbnails
+import img_HorseRescue from "../assets/videos/2023/horse-rescue.jpg";
+
+const reversed = videos.slice().reverse();
+const images = [img_HorseRescue];
+---
+
+<Layout title="Videos - Fallen Oak">
+  <div
+    class="bg-[#fefce8] min-h-[calc(100vh-10rem)] px-4 lg:px-0 flex flex-col items-center"
+  >
+    <div
+      style="opacity: 0; animation: fadein 0.5s ease 0.2s forwards;"
+      class="flex flex-col justify-center items-center w-full lg:w-full pt-24 lg:pt-32 lg:mb-0 gap-y-5 lg:gap-y-5"
+    >
+      <div
+        class="text-3xl lg:text-7xl whitespace-nowrap uppercase font-semibold tracking-wider"
+      >
+        Videos
+      </div>
+    </div>
+    <div style="opacity: 0; animation: fadein 0.7s ease 0.2s forwards;"></div>
+    <!-- <hr
+      class="border-neutral-400 border-1 w-full lg:w-2/3 pb-8 lg:pb-16"
+      style="opacity: 0; animation: fadein 0.5s ease 1.6s forwards;"
+    /> -->
+  <DisplayPony>
+    <div
+      class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12 lg:mt-8 mt-12"
+      style="opacity: 0; animation: fadein 0.5s ease 0.4s forwards;"
+    >
+      {reversed.map((n, i) => <VideosComponent {...n} src={images[i]} />)}
+    </div>
+  </DisplayPony>
+  </div>
+</Layout>

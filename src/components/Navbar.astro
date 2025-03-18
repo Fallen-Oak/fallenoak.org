@@ -70,6 +70,15 @@ import DisplayPony from "../components/DisplayPony.astro";
               >News & Events</a
             >
           </li>
+          <DisplayPony>
+          <li>
+            <a
+              href="/videos"
+              class={`${pathname.includes("/videos") ? "underline" : null} hover:underline underline-offset-[6px] inline-flex whitespace-nowrap text-sm py-4 font-semibold`}
+              >Videos</a
+            >
+          </li>
+        </DisplayPony>
           <li>
             <a
               href="/credits"
@@ -186,7 +195,17 @@ import DisplayPony from "../components/DisplayPony.astro";
                     class={`${pathname.includes("/news") ? "underline" : null}  hover:underline underline-offset-8 whitespace-nowrap pb-1 font-semibold`}
                     >News & Events</a
                   >
-                </li><li>
+                </li>
+                <DisplayPony>
+                  <li>
+                  <a
+                    href="/videos"
+                    class={`${pathname.includes("/videos") ? "underline" : null}  hover:underline underline-offset-8 whitespace-nowrap pb-1 font-semibold`}
+                    >Videos</a
+                  >
+                </li>
+              </DisplayPony>
+                <li>
                   <a
                     href="/credits"
                     class={`${pathname.includes("/credits") ? "underline" : null} hover:underline underline-offset-8 whitespace-nowrap pb-1 font-semibold`}
