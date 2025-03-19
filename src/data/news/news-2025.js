@@ -149,8 +149,7 @@ export default [
     
     Would you also like to see Fallen Oak’s herd of horses? Or would you like to see what was happening on Mare Day? Well, take a gander at the photo page:
     
-    https://pony.fallenoak.org/photos
-`,
+    https://pony.fallenoak.org/photos`,
     img: "video-and-photo-pages",
     date: "March 19, 2025",
     id: "video-and-photo-pages",
