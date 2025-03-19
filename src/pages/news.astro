@@ -13,9 +13,10 @@ import img_MareDay from "../assets/news/2025/mare-day.jpg";
 import img_WelcomeAlena from "../assets/news/2025/welcome-alena.jpg";
 import img_DinnerWithHorses from "../assets/news/2025/dinner-with-horses.jpg";
 import img_LookWhosBack from "../assets/news/2025/look-whos-back.jpg";
+import img_VideoAndPhotoPages from "../assets/news/2025/video-and-photo-pages.jpg";
 
 const reversed = news.slice().reverse();
-const images = [img_LookWhosBack, img_DinnerWithHorses, img_WelcomeAlena, img_MareDay, img_GoodbyeMajor, img_FlashsAdoption, img_JoyousAdoptions, img_GoodbyeDakota];
+const images = [img_VideoAndPhotoPages, img_LookWhosBack, img_DinnerWithHorses, img_WelcomeAlena, img_MareDay, img_GoodbyeMajor, img_FlashsAdoption, img_JoyousAdoptions, img_GoodbyeDakota];
 ---
 
 <Layout title="News & Events - Fallen Oak">
@@ -38,7 +39,7 @@ const images = [img_LookWhosBack, img_DinnerWithHorses, img_WelcomeAlena, img_Ma
       style="opacity: 0; animation: fadein 0.5s ease 1.6s forwards;"
     /> -->
     <div
-      class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12 lg:mt-8 mt-12"
+      class="grid grid-cols-1 2xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-8 mb-12 lg:mt-8 mt-12"
       style="opacity: 0; animation: fadein 0.5s ease 0.4s forwards;"
     >
       {reversed.map((n, i) => <NewsComponent {...n} src={images[i]} />)}
