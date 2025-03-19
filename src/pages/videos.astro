@@ -6,9 +6,17 @@ import DisplayPony from "../components/DisplayPony.astro";
 
 //Video thumbnails
 import img_HorseRescue from "../assets/videos/2023/horse-rescue.jpg";
+import img_MareFair2023CharityAuction from "../assets/videos/2023/mare-fair-2023-charity-auction.jpg";
+import img_FallenOakHorseyUpdate from "../assets/videos/2024/fallen-oak-horsey-update.jpg";
+import img_FarmTourAndQA from "../assets/videos/2024/farm-tour-and-qa.jpg";
+import img_PaintingWithLyric from "../assets/videos/2024/painting-with-lyric.jpg";
+import img_FallenOakEquineRescue from "../assets/videos/2024/fallen-oak-equine-rescue.jpg";
+import img_LookWhatYouDid from "../assets/videos/2024/look-what-you-did.jpg";
+import img_MareFair2024CharityAuction from "../assets/videos/2024/mare-fair-2024-charity-auction.jpg";
+import img_FallenOakLivestream from "../assets/videos/2025/fallen-oak-livestream.jpg";
 
 const reversed = videos.slice().reverse();
-const images = [img_HorseRescue];
+const images = [img_FallenOakLivestream, img_MareFair2024CharityAuction, img_LookWhatYouDid, img_FallenOakEquineRescue, img_PaintingWithLyric, img_FarmTourAndQA, img_FallenOakHorseyUpdate, img_MareFair2023CharityAuction, img_HorseRescue];
 ---
 
 <Layout title="Videos - Fallen Oak">
@@ -32,7 +40,7 @@ const images = [img_HorseRescue];
     /> -->
   <DisplayPony>
     <div
-      class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12 lg:mt-8 mt-12"
+      class="grid grid-cols-1 2xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-8 mb-12 lg:mt-8 mt-12"
       style="opacity: 0; animation: fadein 0.5s ease 0.4s forwards;"
     >
       {reversed.map((n, i) => <VideosComponent {...n} src={images[i]} />)}
