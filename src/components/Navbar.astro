@@ -80,6 +80,12 @@ import DisplayPony from "../components/DisplayPony.astro";
           </li>
         </DisplayPony>
           <li>
+          <a
+            href="/photos"
+            class={`${pathname.includes("/photos") ? "underline" : null} hover:underline underline-offset-[6px] inline-flex whitespace-nowrap text-sm py-4 font-semibold`}
+            >Photos</a
+          >
+          </li><li>
             <a
               href="/credits"
               class={`${pathname.includes("/credits") ? "underline" : null} hover:underline underline-offset-[6px] inline-flex whitespace-nowrap text-sm py-4 font-semibold`}
@@ -205,7 +211,13 @@ import DisplayPony from "../components/DisplayPony.astro";
                   >
                 </li>
               </DisplayPony>
-                <li>
+              <li>
+                <a
+                  href="/photos"
+                  class={`${pathname.includes("/photos") ? "underline" : null} hover:underline underline-offset-8 whitespace-nowrap pb-1 font-semibold`}
+                  >Photos</a
+                >
+                </li><li>
                   <a
                     href="/credits"
                     class={`${pathname.includes("/credits") ? "underline" : null} hover:underline underline-offset-8 whitespace-nowrap pb-1 font-semibold`}
