@@ -1,6 +1,8 @@
 ---
-import img1 from "../../assets/FOrescueartnopony.png";
-import img2 from "../../assets/FOshelterannouncementimage.png";
+import img_PonyBefore from "../../assets/FOrescueartnopony.png";
+import img_PonyAfter from "../../assets/FOshelterannouncementimage.png";
+import img_NormalBefore from "../../assets/home/normal_before.jpg";
+import img_NormalAfter from "../../assets/home/normal_after.jpg";
 import { Image } from "astro:assets";
 import Button from "../Button.astro";
 import { Icon } from "astro-icon/components";
@@ -22,17 +24,22 @@ import DisplayNormal from "../DisplayNormal.astro";
       class="comparisonSection w-full h-64 lg:h-160 lg:w-288 mx-auto text-center"
     >
       <div class="comparisonImage beforeImage">
-        <Image
-          src={img1}
+        <DisplayPony>
+          <Image
+          src={img_PonyBefore}
           format="avif"
           alt="before"
           style="filter: grayscale(50%);"
           class="rounded-lg"
         />
+      </DisplayPony>
+      <DisplayNormal>
+        <Image src={img_NormalBefore} alt="after" format="avif" class="rounded-lg" />
+      </DisplayNormal>
       </div>
       <div class="comparisonImage afterImage border-r-2 border-white ml-[2px]">
-        <DisplayPony><Image src={img2} alt="after" format="avif" class="rounded-lg" /></DisplayPony>
-        <DisplayNormal><Image src={img1} alt="after" format="avif" class="rounded-lg" /></DisplayNormal>
+        <DisplayPony><Image src={img_PonyAfter} alt="after" format="avif" class="rounded-lg" /></DisplayPony>
+        <DisplayNormal><Image src={img_NormalAfter} alt="after" format="avif" class="rounded-lg" /></DisplayNormal>
       </div>
       <div class="mt-4">
         <Button href="https://www.zeffy.com/en-US/donation-form/bc6d55cd-76c7-4d42-ace0-52499a32e5ed" target="_blank" text="Donate today!" />
@@ -54,8 +61,8 @@ import DisplayNormal from "../DisplayNormal.astro";
     class="bg-yellow-50 w-full pb-24 px-2 lg:px-0 lg:h-auto h-auto lg:hidden flex flex-col items-center justify-center"
   >
     <div>
-      <DisplayPony><Image src={img2} alt="before" class="rounded-lg" /></DisplayPony>
-      <DisplayNormal><Image src={img1} alt="before" class="rounded-lg" /></DisplayNormal>
+      <DisplayPony><Image src={img_PonyAfter} alt="before" class="rounded-lg" /></DisplayPony>
+      <DisplayNormal><Image src={img_NormalAfter} alt="before" class="rounded-lg" /></DisplayNormal>
     </div>
     <div class="mt-4">
       <Button href="https://www.zeffy.com/en-US/donation-form/bc6d55cd-76c7-4d42-ace0-52499a32e5ed" text="Donate today!" />
