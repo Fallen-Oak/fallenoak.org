@@ -155,4 +155,17 @@ export default [
     id: "video-and-photo-pages",
     pony: true,
   },
+  {
+    author: "Kim Sweeney",
+    title: "A Beautiful Horse",
+    content: `We have a new addition the to rescue!
+
+    Welcome Phantom Girl AKA Beauty, a 15 year old OTTB. Beauty’s prior owner had to sell her farm and surrender Beauty due to her husband's health issues. Our fabulous Ferrier Camp saw her a week ago and she went to our trainer Kym’s farm on Saturday for a refresher. Beauty is a wonderful mover and is going to make someone a great horse. She will be available within a month. Reach out to me if you are interested in this lovely girl. Stay tuned for updates and riding videos.
+
+    Welcome, Beauty!`,
+    img: "a-beautiful-horse.jpg",
+    date: "March 31, 2025",
+    id: "a-beautiful-horse",
+    pony: false,
+  },
 ];
