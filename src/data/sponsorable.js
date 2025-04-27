@@ -88,7 +88,7 @@ export default [
     cost: 190,
     description:
       "Once a champion show horse, when she couldn't be bred anymore, they didn't want her. She then fell into neglect before being rescued and finding sanctuary with us. Now she's a very lively and forward horse in spite of her age.",
-    sponsored: true,
+    sponsored: false,
   },
   {
     name: "Jasper",
