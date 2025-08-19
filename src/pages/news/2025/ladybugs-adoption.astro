@@ -1,0 +1,50 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import { Image } from "astro:assets";
+import news from "../../../data/news/news-2025.js";
+import img_Featured from "../../../assets/news/2025/ladybugs-adoption.jpg";
+import { Icon } from "astro-icon/components";
+import { ViewTransitions } from "astro:transitions";
+
+const article = news[10];
+const { author, title, content, img, date, id } = article;
+---
+
+<ViewTransitions />
+<Layout title=`${title} - Fallen Oak`>
+  <div
+    class="bg-[#fefce8] min-h-[calc(100vh-10rem)] px-4 lg:px-0 flex flex-col items-center"
+  >
+    <a
+      class="mt-24 duration-300 hover:bg-blue-200 bg-blue-50 border-2 border-blue-200 hover:border-blue-400 rounded font-semibold text-base px-3 py-1 flex items-center gap-x-2"
+      href="../"
+      ><Icon name="mdi:arrow-back" class="text-2xl text-blue-600" />Back to News</a
+    >
+    <div class="w-full lg:w-1/2 mx-auto py-8">
+      <article class="px-6 mx-auto flex flex-col lg:flex-col gap-x-12 gap-y-8">
+        <div class="flex justify-center w-full lg:w-full">
+          <Image 
+          transition:name={id} src={img_Featured} alt="News" width="400" class="object-cover w-auto h-64 border-2 rounded border-black" />
+        </div>
+        <div class="flex flex-col gap-y-8 w-full lg:w-full">
+          <div class="flex flex-col mx-auto gap-y-2 w-full">
+            <h1 class="text-4xl lg:text-5xl font-semibold leading-none whitespace-wrap">{title}</h1>
+            <p class="text-xs lg:text-sm">
+              by
+              <span class="text-blue-400">
+                <span>{author}</span>
+              </span>on
+              <time datetime="2021-02-12 15:34:18-0200">{date}</time>
+            </p>
+          </div>
+          <div class="flex flex-col gap-y-4 lg:text-base text-sm rounded border border-dashed border-black p-4 bg-amber-100">
+            <!-- <p>{content}</p> -->
+            <p>Are you looking for a 36 inch mini? We have a beautiful girl Ladybug, who is 18. This pony is so sweet and so pretty! She comes with 3 bags of her grain, she eats either Teff or Timothy hay, and needs to be on a dry lot or pasture with minimal grass, as she foundered 2 years ago. She is current on everything, is sound and ready to be a companion for anyone at her new home! Please conctact us if interested. Adoption fee is $500.</p>
+            <p>UPDATE: Ladybug has found her forever home! She will be staying at our 2nd location in Ocala at the 40 acre farm. The owner of the farm has a 29 year old mini that needs a friend, and she asks that Ladybug stay to be her buddy. This lady is wonderful and allows the rescue to rent her property. I of course said yes, this is a win/win for everyone. Thanks to everyone who applied for this sweet little girl. I’m so excited that I will get to see her every day for the rest of her days. Congrats Ladybug on your forever home!</p>
+        </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</Layout>
