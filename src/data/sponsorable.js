@@ -60,6 +60,21 @@ export default [
       "He came to the rescue, along with Jasper, when a charitable lady found that she would no longer be able to care for them in her old age. Charlie has been lifelong best friends with Jasper and they will stay together until the end.",
     sponsored: false,
   },
+   {
+    name: "Cloud",
+    img: "Cloud.jpg",
+    url: "https://givebutter.com/zZbse1",
+    rescueDate: "August 4, 2025",
+    breed: "Mini Donkey",
+    changeName: false,
+    isMale: false,
+    age: currentYear-1983,
+    dateOfBirth: 1983,
+    cost: 200,
+    description:
+      "Cloud has severe scarring from sunburn under her eyes and nose cloud. She was surrendered by an elderly woman who could no longer care for her. She is the oldest equine in the rescue! She requires soaked feed and extra TLC.",
+    sponsored: false,
+  },
   {
     name: "Cowboy",
     img: "Cowboy_1.jpg",
@@ -73,22 +88,7 @@ export default [
     cost: 529,
     description:
       "He was seized due to neglect, lost an eye to cancer, and is missing teeth. Despite all of that he pushed on, and now he receives all sorts of love & attention and is always with his new best friend, Lucy.",
-    sponsored: false,
-  },
-  {
-    name: "Holly",
-    img: "Holly_2.jpg",
-    url: "https://givebutter.com/YFmR3j",
-    rescueDate: "August 20, 2022",
-    breed: "Rocky Mountain",
-    changeName: false,
-    isMale: false,
-    age: currentYear-1995,
-    dateOfBirth: 1995,
-    cost: 190,
-    description:
-      "Once a champion show horse, when she couldn't be bred anymore, they didn't want her. She then fell into neglect before being rescued and finding sanctuary with us. Now she's a very lively and forward horse in spite of her age.",
-    sponsored: false,
+    sponsored: true,
   },
   {
     name: "Jasper",
@@ -148,7 +148,7 @@ export default [
     cost: 230,
     description:
       "Starlit Skies was brought in when her owner could no longer care for her. She unfortunately  suffers from a Grade 3 Heart Murmur. Initially losing weight from ulcers, she now maintains a healthy weight while on UlcerGard. Despite everything she is as lively as ever and pushing through to a good recovery!",
-    sponsored: true,
+    sponsored: false,
   },
   {
     name: "Sunny",
