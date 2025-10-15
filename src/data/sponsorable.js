@@ -31,21 +31,6 @@ export default [
     sponsored: true,
   },
   {
-    name: "Bow",
-    img: "Bow_3.jpg",
-    url: "https://givebutter.com/bt54Tl",
-    rescueDate: "March 2, 2024",
-    breed: "Appaloosa",
-    changeName: true,
-    isMale: true,
-    age: currentYear-1998,
-    dateOfBirth: 1998,
-    cost: 420,
-    description:
-      "The picky eater of the bunch, Bow was brought to the rescue when the owner could not care for him any more. He is on 3 supplements and can't eat hay, and has also decided that he doesn't like beet pulp anymore. He can eat fresh grass, and will eat the leaves off alfalfa, but won't touch the stems.",
-    sponsored: false,
-  },
-  {
     name: "Charlie",
     img: "Charlie.jpg",
     url: "https://givebutter.com/EHnquV",
