@@ -58,7 +58,7 @@ export default [
     cost: 200,
     description:
       "Cloud has severe scarring from sunburn under her eyes and nose cloud. She was surrendered by an elderly woman who could no longer care for her. She is the oldest equine in the rescue! She requires soaked feed and extra TLC.",
-    sponsored: false,
+    sponsored: true,
   },
   {
     name: "Cowboy",
