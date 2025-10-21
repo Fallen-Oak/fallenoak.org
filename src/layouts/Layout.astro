@@ -169,6 +169,7 @@ const { title } = Astro.props;
 
 <script>
   import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
   import Lenis from "lenis";
 
   gsap.registerPlugin(ScrollTrigger);
@@ -177,12 +178,6 @@ const { title } = Astro.props;
   window.mm = mm;
 
   if (!ScrollTrigger.isTouch) {
-    const lenis = new Lenis({
-      content: document.querySelector(".wrapper"),
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    });
-
     window.lenis = lenis;
 
     const raf = (t) => {
