@@ -4,6 +4,14 @@ import { Image } from "astro:assets";
 import Button from "../Button.astro";
 import { Icon } from "astro-icon/components";
 import DisplayPony from "../DisplayPony.astro";
+
+import stats from "../../data/statsData.json";
+
+const incorporationDate = new Date(stats.incorporationDate)
+const currentDate = new Date();
+
+const deltaTime = Math.floor((currentDate.getTime() - incorporationDate.getTime()) / (1000 * 60 * 60 * 24 * 365.25));
+// Todo: Get Facebook API to automatically update the follower count.
 ---
 
 <section
@@ -15,30 +23,30 @@ import DisplayPony from "../DisplayPony.astro";
     class="relative rounded-xl shadow-2xl border-4 lg:border-8 border-black p-4 lg:p-8 bg-blue-50 mx-auto grid justify-center grid-cols-2 text-center lg:grid-cols-3 gap-16"
   >
     <div class="flex flex-col justify-start">
-      <p class="text-5xl font-bold leading-none lg:text-8xl">12+</p>
+      <p class="text-5xl font-bold leading-none lg:text-8xl">{deltaTime}+</p>
       <p class="text-sm sm:text-2xl whitespace-nowrap">Years of Rescue</p>
     </div>
     <div class="flex flex-col justify-start">
-      <p class="text-5xl font-bold leading-none lg:text-8xl">162</p>
+      <p class="text-5xl font-bold leading-none lg:text-8xl">{stats.nRescuedHorses}</p>
       <p class="text-sm sm:text-2xl whitespace-nowrap">Rescued Horses</p>
     </div>
     <div class="flex flex-col justify-start">
-      <p class="text-5xl font-bold leading-none lg:text-8xl">2</p>
+      <p class="text-5xl font-bold leading-none lg:text-8xl">{stats.nVolunteers}</p>
       <p class="text-sm sm:text-2xl whitespace-nowrap">Volunteers</p>
     </div>
     <div class="flex flex-col justify-start">
-      <p class="text-5xl font-bold leading-none lg:text-8xl">12K+</p>
+      <p class="text-5xl font-bold leading-none lg:text-8xl">{Math.floor(stats.nFollowers / 1000)}K+</p>
       <p class="text-sm sm:text-2xl whitespace-nowrap">Followers on <a href="https://www.facebook.com/FallenOakEquineRescue/" target="_blank" class="underline underline-offset-4 lg:underline-offset-8 hover:text-[#4267b2] duration-100">Facebook</a></p>
     </div>
     <div class="flex flex-col justify-start">
-      <p class="text-5xl font-bold leading-none lg:text-8xl">16</p>
+      <p class="text-5xl font-bold leading-none lg:text-8xl">{stats.nPermanentResidents}</p>
       <p class="text-sm sm:text-2xl whitespace-nowrap">Permanent Residents</p>
     </div>
     <div class="flex flex-col justify-start">
       <p class="text-5xl font-bold leading-none lg:text-8xl flex lg:flex-row flex-col items-center gap-x-0"><Icon
               name="mdi:star"
               class="text-yellow-200 duration-300 text-5xl lg:text-8xl hidden lg:block"
-            /><span>4.7<span class="text-xl lg:text-4xl"> / 5.0</span></span></p>
+            /><span>{stats.visitorRating}<span class="text-xl lg:text-4xl"> / 5.0</span></span></p>
       <p class="text-sm sm:text-2xl whitespace-nowrap">Average Visitor Rating</p>
     </div>
 
