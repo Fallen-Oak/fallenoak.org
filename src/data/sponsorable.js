@@ -100,7 +100,7 @@ export default [
     isMale: false,
     age: currentYear-2000,
     dateOfBirth: 2000,
-    cost: 320,
+    cost: 125,
     description:
       "First brought to the rescue in a bad state and full of lice, Mercy was one of the worst causes we've ever seen. She's since been adopted and then returned back to Fallen Oak in August, and won't be getting adopted out again. She can be quite nervous, although she's good with the farrier (until he gets to one of her back legs), and does great on grass.",
     sponsored: false,
