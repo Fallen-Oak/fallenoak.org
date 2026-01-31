@@ -255,4 +255,33 @@ export default [
     id: "beauty-up-for-adoption",
     pony: false,
   },
+    {
+    author: "Kim Sweeney",
+    title: "Angel and Seabreeze",
+    content: `I received a call from another rescue asking if I could help these two horses in dire need, as they are full and had already committed to picking up three others yesterday. It is important that rescues help each other, so I agreed. As these two souls came off the trailer, I wept. This is one of the worst cases I have ever had. Their owner is under hospice care and her relatives were clearly not caring for the horses. Angel is a 23-year-old quarter horse and Seabreeze is a 24-year-old appendix, I believe. If you follow my rescue, you will see.
+    I have not asked for donations since December during giving Tuesday, the Rescue has been in a very good place both financially with the number of horses that we were helping and with the use of a incredible 40 acre farm. This case and these two babies will cost thousands to rehab. There will be several Ferrier visits, equine dentist visits, and vet visits in their future, starting with complete exams, x-rays, and bloodwork on Tuesday.
+    My Rescue is known for taking the horses that nobody else will and I’m proud of that. But I cannot do it alone. I’m asking if you feel led to please donate for these two horses’ rehab. I have already been contacted by someone who would be interested in adopting them after they are completely rehabbed, so they can stay together. But right now, their future is unknown until we get some answers. I love what I do and I know it is something that I am truly called to do, but today is hard, very hard to see what someone has allowed to happen to these two innocent horses.
+    If you’re unable to donate financially, please just send them prayers and keep them in your thoughts. I will be updating their progress every week and will let everyone know what the Vet finds on Tuesday. Here is the link to donate: https://donate.fallenoak.org.
+    Thanks and be blessed!`,
+    img: "angel-and-seabreeze.jpg",
+    date: "August 24, 2025",
+    id: "angel-and-seabreeze",
+    pony: false,
+  },
+      {
+    author: "Kim Sweeney",
+    title: "Giving Tuesday",
+    content: `Everyone, please forgive me for being so far behind on everything. As I’m sure everyone knows today is giving Tuesday, as I’m sure some of you’ve noticed I rarely do fundraisers online anymore. The past three years, the rescue has been blessed abundantly by my Pony friends. This year things have been a little bit different.
+Due to my mother‘s passing and me taking care of her while on hospice, I had someone feeding the rescue horses for me quite a bit in the month of November, which has put me behind financially with my budget. We have also had some very severe neglect cases that have cost thousands to rehab. The budget for the month of December is $11,000, as hay and grain are currently costing about $2200 a week, along with rent at the other property, supplements, and Ferrier care for the month .
+I have never been one to ask for donations every time a new horse comes in or a horse needs surgery or has a special need. I have relied on our monthly sponsors and donors. This year, I may be having to do more fundraisers. I’m asking today if you feel it in your heart to donate to the horses of Fallen Oak, please do so, as our budget is a lot tighter this year than it has been the past two years. I will continue to do everything in my power to raise funds for the Rescue and make sure that the horses get the best care possible.
+This is a journey and a task that I cannot do alone. I am so thankful for my volunteers, donors, and sponsors. So today if you feel led, please donate. I’m only able to do this incredible calling on my life because of all of you. May you be blessed tenfold during this holiday season.
+You can donate 3 ways:
+https://donate.fallenoak.org 
+Zelle 513-582-5783 
+Mail a check to: Fallen Oak Equine Rescue and Rehabilitation 12418 SE 47th Ave Belleview, FL 34420`,
+    img: "giving-tuesday.jpg",
+    date: "December 2, 2025",
+    id: "giving-tuesday",
+    pony: false,
+  },
 ];
