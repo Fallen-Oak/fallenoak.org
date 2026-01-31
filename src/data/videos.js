@@ -91,4 +91,30 @@ export default [
     id: "fallen-oak-livestream",
     embed: '<iframe width="560" height="315" src="https://www.youtube.com/embed/t9qeb73AW4M?si=2fuJCShu9zrgpJPF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
   },
+    {
+    title: "The Future of Fallen Oak",
+    description: `Exploring the rescue’s future over the next 3, 5, and 10 years!`,
+    img: "the-future-of-fallen-oak.jpg",
+    date: "September 7, 2025",
+    id: "the-future-of-fallen-oak",
+    embed: '<iframe title="Mare Fair 2025 - The Future of Fallen Oak" width="560" height="315" src="https://pony.tube/videos/embed/91SVqnXQyELUUFu8xnAFjR" style="border: 0px;" allow="fullscreen" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>'
+  },
+    {
+    title: "Mare Fair 2025 - Charity Auction",
+    description: `Mare Fair's 2025 charity auction for Fallen Oak Equine Rescue and other rescues!`,
+    img: "mare-fair-2025-charity-auction.jpg",
+    date: "September 7, 2025",
+    id: "mare-fair-2025-charity-auction",
+    embed: '<iframe title="Mare Fair 2025 - Charity Auction" width="560" height="315" src="https://pony.tube/videos/embed/mZxx6rLcBkc2oV8bJ6opfW" style="border: 0px;" allow="fullscreen" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>'
+  },
+    {
+    title: "Hug a Horse on Fox 35",
+    description: `Fallen Oak promotes the "Hug a Horse" event on Fox 35!
+    For more information, check our event page:
+    https://fallenoak.org/news/2026/hug-a-horse-event/`,
+    img: "hug-a-horse-on-fox-35.jpg",
+    date: "January 31, 2026",
+    id: "hug-a-horse-on-fox-35",
+    embed: '<iframe title="Fallen Oak on FOX 35" width="560" height="315" src="https://pony.tube/videos/embed/uQywdj5vJa2weW2B5NGUpK" style="border: 0px;" allow="fullscreen" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>'
+  },
 ];
