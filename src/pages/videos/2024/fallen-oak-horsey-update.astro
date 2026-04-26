@@ -3,14 +3,14 @@ import Layout from "../../../layouts/Layout.astro";
 
 import videos from "../../../data/videos.js";
 import { Icon } from "astro-icon/components";
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 import DisplayPony from "../../../components/DisplayPony.astro";
 
 const article = videos[2];
 const { title, description, img, date, id, embed } = article;
 ---
 
-<ViewTransitions />
+<ClientRouter />
 <Layout title=`${title} - Fallen Oak`>
   <div
     class="bg-[#fefce8] min-h-[calc(100vh-10rem)] px-4 lg:px-0 flex flex-col items-center"
