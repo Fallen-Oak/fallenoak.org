@@ -5,13 +5,13 @@ import { Image } from "astro:assets";
 import news from "../../../data/news/news-2025.js";
 import img_Featured from "../../../assets/news/2025/big-reds-passing.jpg";
 import { Icon } from "astro-icon/components";
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 
 const article = news[15];
 const { author, title, content, img, date, id } = article;
 ---
 
-<ViewTransitions />
+<ClientRouter />
 <Layout title=`${title} - Fallen Oak`>
   <div
     class="bg-[#fefce8] min-h-[calc(100vh-10rem)] px-4 lg:px-0 flex flex-col items-center"
