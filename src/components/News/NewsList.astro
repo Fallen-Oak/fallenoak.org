@@ -1,7 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import NewsComponent from "./newspage.astro";
-import NewsNav from "./newsnav.astro";
+import YearNav from "../YearNav.astro";
 
 const { articles, years, activeYear } = Astro.props;
 ---
@@ -21,7 +21,12 @@ const { articles, years, activeYear } = Astro.props;
       </div>
     </div>
     <div style="opacity: 0; animation: fadein 0.7s ease 0.2s forwards;">
-      <NewsNav years={years} activeYear={activeYear} />
+      <YearNav
+        years={years}
+        activeYear={activeYear}
+        basePath="/news"
+        label="News Navigation"
+      />
     </div>
     <div
       class="grid grid-cols-1 2xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-8 mb-12 lg:mt-8 mt-12"
