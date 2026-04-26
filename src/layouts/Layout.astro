@@ -171,35 +171,7 @@ const { title } = Astro.props;
 </style>
 
 <script>
-  import { gsap } from "gsap";
-  import { ScrollTrigger } from "gsap/ScrollTrigger";
-  import Lenis from "lenis";
+  import { setupAnimationRuntime } from "../scripts/animations.js";
 
-  gsap.registerPlugin(ScrollTrigger);
-
-  const mm = gsap.matchMedia();
-  window.mm = mm;
-
-  if (!ScrollTrigger.isTouch) {
-    window.lenis = lenis;
-
-    const raf = (t) => {
-      lenis.raf(t);
-      // lenis.resize();
-      // ScrollTrigger.update();
-      requestAnimationFrame(raf);
-    };
-    requestAnimationFrame(raf);
-  }
-
-  window.onload = function () {
-    window.scrollTo(0, 0);
-  };
-
-  console.log("swup not yet enabled", window.swup);
-  document.addEventListener("swup:enable", () => {
-    console.log("swup enabled", window.swup);
-    // ScrollTrigger.getAll().forEach((t) => t.kill());
-    ScrollTrigger.refresh();
-  });
+  setupAnimationRuntime();
 </script>
