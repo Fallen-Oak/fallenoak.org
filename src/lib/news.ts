@@ -1,4 +1,7 @@
 import { getCollection } from "astro:content";
+import { isPonyMode } from "./site";
+
+export { isPonyMode } from "./site";
 
 export function getNewsId(entry: { id: string }) {
   return entry.id.split("/").at(-1)?.replace(/\.mdx?$/, "") ?? entry.id;
@@ -6,10 +9,6 @@ export function getNewsId(entry: { id: string }) {
 
 export function getNewsUrl(entry: { id: string; data: { year: number } }) {
   return `/news/${entry.data.year}/${getNewsId(entry)}`;
-}
-
-export function isPonyMode() {
-  return import.meta.env.PONY === true || import.meta.env.PONY === "true";
 }
 
 export function shouldShowNewsArticle(entry: { data: { pony: boolean } }) {
