@@ -1,0 +1,38 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import NewsComponent from "./newspage.astro";
+import YearNav from "../YearNav.astro";
+
+const { articles, years, activeYear } = Astro.props;
+---
+
+<Layout title="News & Events - Fallen Oak">
+  <div
+    class="bg-[#fefce8] min-h-[calc(100vh-10rem)] px-4 lg:px-0 flex flex-col items-center"
+  >
+    <div
+      style="opacity: 0; animation: fadein 0.5s ease 0.2s forwards;"
+      class="flex flex-col justify-center items-center w-full lg:w-full pt-24 lg:pt-32 lg:mb-0 gap-y-5 lg:gap-y-5"
+    >
+      <div
+        class="text-3xl lg:text-7xl whitespace-nowrap uppercase font-semibold tracking-wider"
+      >
+        News & Events
+      </div>
+    </div>
+    <div style="opacity: 0; animation: fadein 0.7s ease 0.2s forwards;">
+      <YearNav
+        years={years}
+        activeYear={activeYear}
+        basePath="/news"
+        label="News Navigation"
+      />
+    </div>
+    <div
+      class="grid grid-cols-1 2xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-8 mb-12 lg:mt-8 mt-12"
+      style="opacity: 0; animation: fadein 0.5s ease 0.4s forwards;"
+    >
+      {articles.map((article) => <NewsComponent article={article} />)}
+    </div>
+  </div>
+</Layout>

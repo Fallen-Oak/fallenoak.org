@@ -1,0 +1,40 @@
+---
+const { pathname } = Astro.url;
+const { years = [], activeYear, basePath, label = "Year Navigation" } =
+  Astro.props;
+const normalizedBasePath = basePath.endsWith("/")
+  ? basePath.slice(0, -1)
+  : basePath;
+const isBasePath =
+  pathname === normalizedBasePath || pathname === `${normalizedBasePath}/`;
+---
+
+<header class="z-40 h-20 xl:h-12 w-full -mb-10 sm:mb-0 relative uppercase">
+  <div
+    class="relative mx-auto flex h-full flex-row items-center justify-between gap-4 px-6 xl:container"
+  >
+    <div class="flex h-full flex-nowrap items-center gap-20 2xl:gap-32">
+      <nav class="tracking-wide xl:flex" aria-label={label}>
+        <h2 class="sr-only" id="year-navigation">{label}</h2>
+        <menu class="text-heading flex space-x-10">
+          {
+            years.map((year) => (
+              <li>
+                <a
+                  href={`${normalizedBasePath}/${year}`}
+                  class={`${Number(activeYear) === year || pathname.includes(String(year)) || (isBasePath && years[0] === year) ? "underline" : ""} hover:underline underline-offset-[6px] inline-flex whitespace-nowrap text-3xl py-4 font-semibold`}
+                >
+                  {year}
+                </a>
+              </li>
+            ))
+          }
+        </menu>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<style>
+  @reference "../styles/global.css";
+</style>

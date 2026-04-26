@@ -1,0 +1,24 @@
+---
+import VideoList from "../../components/VideoList.astro";
+import {
+  getAllVideos,
+  getVideoYearsFrom,
+  shouldShowVideo,
+} from "../../lib/videos";
+
+export async function getStaticPaths() {
+  const videos = (await getAllVideos()).filter(shouldShowVideo);
+  const years = getVideoYearsFrom(videos);
+
+  return years.map((year) => ({
+    params: { year: String(year) },
+  }));
+}
+
+const activeYear = Number(Astro.params.year);
+const visibleVideos = (await getAllVideos()).filter(shouldShowVideo);
+const years = getVideoYearsFrom(visibleVideos);
+const videos = visibleVideos.filter((video) => video.data.year === activeYear);
+---
+
+<VideoList videos={videos} years={years} activeYear={activeYear} />
