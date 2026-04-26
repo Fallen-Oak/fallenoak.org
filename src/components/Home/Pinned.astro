@@ -10,8 +10,9 @@ import img6 from "../../assets/Fence.jpg";
 import { Icon } from "astro-icon/components";
 import DisplayPony from "../DisplayPony.astro";
 import DisplayNormal from "../DisplayNormal.astro";
+import { isPonyMode } from "../../lib/site";
 
-const shouldDisplayPony = Boolean(import.meta.env.PONY);
+const shouldDisplayPony = isPonyMode();
 const img1Src = img1.src;
 const img2Src = img2.src;
 var img3Src = img5.src;
