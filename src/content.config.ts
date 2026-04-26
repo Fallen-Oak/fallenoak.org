@@ -16,4 +16,18 @@ const news = defineCollection({
     }),
 });
 
-export const collections = { news };
+const videos = defineCollection({
+  loader: glob({ pattern: "**/*.mdx", base: "./src/content/videos" }),
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      date: z.string(),
+      year: z.number(),
+      image: image(),
+      pony: z.boolean().default(true),
+      summary: z.string(),
+      embed: z.string(),
+    }),
+});
+
+export const collections = { news, videos };
