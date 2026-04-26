@@ -1,7 +1,7 @@
 import { getCollection } from "astro:content";
 
 export function getNewsId(entry: { id: string }) {
-  return entry.id.split("/").at(-1)?.replace(/\.md$/, "") ?? entry.id;
+  return entry.id.split("/").at(-1)?.replace(/\.mdx?$/, "") ?? entry.id;
 }
 
 export function getNewsUrl(entry: { id: string; data: { year: number } }) {
