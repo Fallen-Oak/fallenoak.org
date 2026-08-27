@@ -13,7 +13,7 @@ export default [
     cost: 231,
     description:
       "Friendly and lovable like a big puppy-dog, Ace used to be a child's horse until he contracted EPM, which went untreated for too long. That's when he came to us!",
-    sponsored: true,
+    sponsored: false,
   },
   {
     name: "Angel",
@@ -40,7 +40,7 @@ export default [
     isMale: true,
     age: currentYear-1999,
     dateOfBirth: 1999,
-    cost: 337,
+    cost: 250,
     description:
       "He came to the rescue, along with Jasper, when a charitable lady found that she would no longer be able to care for them in her old age. Charlie has been lifelong best friends with Jasper and they will stay together until the end.",
     sponsored: false,
@@ -89,21 +89,6 @@ export default [
     description:
       "Once a champion show horse, when she couldn't be bred anymore, they didn't want her. She then fell into neglect before being rescued and finding sanctuary with us. Now she's a very lively and forward horse in spite of her age.",
     sponsored: true,
-  },
-  {
-    name: "Jasper",
-    img: "Jasper.jpg",
-    url: "https://givebutter.com/AxwR6r",
-    rescueDate: "May 9, 2024",
-    breed: "Rocky Mountain",
-    changeName: false,
-    isMale: true,
-    age: currentYear-1997,
-    dateOfBirth: 1997,
-    cost: 337,
-    description:
-      "Moved to the rescue along with Charlie when their owner could not continue to take care of them in her old age. Jasper and Charlie are best buds and an inseparable pair, and will stay together for the remainder of their time here at Fallen Oak.",
-    sponsored: false,
   },
   {
     name: "Mercy",
