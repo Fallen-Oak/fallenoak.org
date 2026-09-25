@@ -1,5 +1,7 @@
 ---
-const shouldDisplayPony = Boolean(import.meta.env.PONY);
+import { isPonyMode } from "../lib/site";
+
+const shouldDisplayPony = isPonyMode();
 ---
 {shouldDisplayPony ? (
  

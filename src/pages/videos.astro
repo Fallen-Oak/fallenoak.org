@@ -1,53 +1,11 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import videos from "../data/videos.js";
-import VideosComponent from "../components/Videos.astro";
-import DisplayPony from "../components/DisplayPony.astro";
+import VideoList from "../components/VideoList.astro";
+import { getAllVideos, getVideoYearsFrom, shouldShowVideo } from "../lib/videos";
 
-//Video thumbnails
-import img_HorseRescue from "../assets/videos/2023/horse-rescue.jpg";
-import img_MareFair2023CharityAuction from "../assets/videos/2023/mare-fair-2023-charity-auction.jpg";
-import img_FallenOakHorseyUpdate from "../assets/videos/2024/fallen-oak-horsey-update.jpg";
-import img_FarmTourAndQA from "../assets/videos/2024/farm-tour-and-qa.jpg";
-import img_PaintingWithLyric from "../assets/videos/2024/painting-with-lyric.jpg";
-import img_FallenOakEquineRescue from "../assets/videos/2024/fallen-oak-equine-rescue.jpg";
-import img_LookWhatYouDid from "../assets/videos/2024/look-what-you-did.jpg";
-import img_MareFair2024CharityAuction from "../assets/videos/2024/mare-fair-2024-charity-auction.jpg";
-import img_FallenOakLivestream from "../assets/videos/2025/fallen-oak-livestream.jpg";
-import img_TheFutureOfFallenOak from "../assets/videos/2025/the-future-of-fallen-oak.jpg";
-import img_MareFair2025CharityAuction from "../assets/videos/2025/mare-fair-2025-charity-auction.jpg";
-import img_HugAHorseOnFox35 from "../assets/videos/2026/hug-a-horse-on-fox-35.jpg";
-
-const reversed = videos.slice().reverse();
-const images = [img_HugAHorseOnFox35, img_MareFair2025CharityAuction, img_TheFutureOfFallenOak, img_FallenOakLivestream, img_MareFair2024CharityAuction, img_LookWhatYouDid, img_FallenOakEquineRescue, img_PaintingWithLyric, img_FarmTourAndQA, img_FallenOakHorseyUpdate, img_MareFair2023CharityAuction, img_HorseRescue];
+const visibleVideos = (await getAllVideos()).filter(shouldShowVideo);
+const years = getVideoYearsFrom(visibleVideos);
+const activeYear = years[0];
+const videos = visibleVideos.filter((video) => video.data.year === activeYear);
 ---
 
-<Layout title="Videos - Fallen Oak">
-  <div
-    class="bg-[#fefce8] min-h-[calc(100vh-10rem)] px-4 lg:px-0 flex flex-col items-center"
-  >
-    <div
-      style="opacity: 0; animation: fadein 0.5s ease 0.2s forwards;"
-      class="flex flex-col justify-center items-center w-full lg:w-full pt-24 lg:pt-32 lg:mb-0 gap-y-5 lg:gap-y-5"
-    >
-      <div
-        class="text-3xl lg:text-7xl whitespace-nowrap uppercase font-semibold tracking-wider"
-      >
-        Videos
-      </div>
-    </div>
-    <div style="opacity: 0; animation: fadein 0.7s ease 0.2s forwards;"></div>
-    <!-- <hr
-      class="border-neutral-400 border-1 w-full lg:w-2/3 pb-8 lg:pb-16"
-      style="opacity: 0; animation: fadein 0.5s ease 1.6s forwards;"
-    /> -->
-  <DisplayPony>
-    <div
-      class="grid grid-cols-1 2xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-8 mb-12 lg:mt-8 mt-12"
-      style="opacity: 0; animation: fadein 0.5s ease 0.4s forwards;"
-    >
-      {reversed.map((n, i) => <VideosComponent {...n} src={images[i]} />)}
-    </div>
-  </DisplayPony>
-  </div>
-</Layout>
+<VideoList videos={videos} years={years} activeYear={activeYear} />
