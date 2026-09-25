@@ -1,0 +1,92 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import { Image } from "astro:assets";
+import news from "../../../data/news/news-2025.js";
+import img_Featured from "../../../assets/news/2025/dinner-with-horses.jpg";
+import { Icon } from "astro-icon/components";
+import { ViewTransitions } from "astro:transitions";
+import DisplayPony from "../../../components/DisplayPony.astro";
+import DisplayNormal from "../../../components/DisplayNormal.astro";
+
+const article = news[6];
+const { author, title, content, img, date, id } = article;
+---
+
+<ViewTransitions />
+<Layout title=`${title} - Fallen Oak`>
+  <div
+    class="bg-[#fefce8] min-h-[calc(100vh-10rem)] px-4 lg:px-0 flex flex-col items-center"
+  >
+    <a
+      class="mt-24 duration-300 hover:bg-blue-200 bg-blue-50 border-2 border-blue-200 hover:border-blue-400 rounded font-semibold text-base px-3 py-1 flex items-center gap-x-2"
+      href="../"
+      ><Icon name="mdi:arrow-back" class="text-2xl text-blue-600" />Back to News</a
+    >
+    <div class="w-full lg:w-1/2 mx-auto py-8">
+      <article class="px-6 mx-auto flex flex-col lg:flex-col gap-x-12 gap-y-8">
+        <div class="flex justify-center w-full lg:w-full">
+          <Image 
+          transition:name={id} src={img_Featured} alt="News" width="400" class="object-cover w-auto h-64 border-2 rounded border-black" />
+        </div>
+        <div class="flex flex-col gap-y-8 w-full lg:w-full">
+          <div class="flex flex-col mx-auto gap-y-2 w-full">
+            <h1 class="text-4xl lg:text-5xl font-semibold leading-none whitespace-wrap">{title}</h1>
+            <p class="text-xs lg:text-sm">
+              by
+              <span class="text-blue-400">
+                <span>{author}</span>
+              </span>on
+              <time datetime="2021-02-12 15:34:18-0200">{date}</time>
+            </p>
+          </div>
+
+          <DisplayPony>
+          <div class="flex flex-col gap-y-4 lg:text-base text-sm rounded border border-dashed border-black p-4 bg-amber-100">
+            <!-- <p>{content}</p> -->
+            <p>Signups for this year's Dinner with Horses are now available! After Mare Day's activities are over, join us for a delightful homemade dinner by Kim!</p>
+            
+            <p>Here's the menu we're planning:</p>
+            <p>Entrées:</p>
+            <ul>
+                <li>Chicken wings</li>
+                <li>Burgers</li>
+                <li>Pulled pork</li>
+                <li>Pasta primavera</li>
+            </ul>
+            <p>Sides:</p>
+            <ul>
+                <li>Mac and cheese</li>
+                <li>Corn on the cob</li>
+                <li>Potato salad</li>
+                <li>Caesar Salad</li>
+            </ul>
+            <p>Dessert:</p>
+            <ul>
+                <li>2 sheet cakes (one chocolate and one vanilla inside)</li>
+            </ul>
+            <p>Drinks:</p>
+            <ul>
+                <li>Lemonade</li>
+                <li>Gatorade</li>
+                <li>Water</li>
+                <li>Ice tea</li>
+                <li>Coke</li>
+                <li>Sprite</li>
+            </ul>
+            <p>Tickets are $50 and are limited to 50 people. We hope to see you there! Sign up with the link below:</p>
+            
+            <p><a target="_blank" href="https://www.zeffy.com/ticketing/mare-day--2025" style="color:blue;">https://www.zeffy.com/ticketing/mare-day--2025</a></p>
+          </div>
+        </DisplayPony>
+        <DisplayNormal>
+          <div class="flex flex-col gap-y-4 lg:text-base text-sm rounded border border-dashed border-black p-4 bg-amber-100">
+            <!-- <p>{content}</p> -->
+            <p>Sorry, you have to be 20% cooler to know about this event!</p>
+          </div>
+        </DisplayNormal>
+        </div>
+      </article>
+    </div>
+  </div>
+</Layout>

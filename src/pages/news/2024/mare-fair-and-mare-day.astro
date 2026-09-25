@@ -1,0 +1,60 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import { Image } from "astro:assets";
+import news from "../../../data/news/news-2024.js";
+import img_Featured from "../../../assets/news/2024/mare-fair-and-mare-day.jpg";
+import { Icon } from "astro-icon/components";
+import { ViewTransitions } from "astro:transitions";
+import DisplayPony from "../../../components/DisplayPony.astro";
+import DisplayNormal from "../../../components/DisplayNormal.astro";
+
+const article = news[14];
+const { author, title, content, img, date, id } = article;
+---
+
+<ViewTransitions />
+<Layout title=`${title} - Fallen Oak`>
+  <div
+    class="bg-[#fefce8] min-h-[calc(100vh-10rem)] px-4 lg:px-0 flex flex-col items-center"
+  >
+    <a
+      class="mt-24 duration-300 hover:bg-blue-200 bg-blue-50 border-2 border-blue-200 hover:border-blue-400 rounded font-semibold text-base px-3 py-1 flex items-center gap-x-2"
+      href="../"
+      ><Icon name="mdi:arrow-back" class="text-2xl text-blue-600" />Back to News</a
+    >
+    <div class="w-full lg:w-1/2 mx-auto py-8">
+      <article class="px-6 mx-auto flex flex-col lg:flex-col gap-x-12 gap-y-8">
+        <div class="flex justify-center w-full lg:w-full">
+          <Image 
+          transition:name={id} src={img_Featured} alt="News" width="400" class="object-cover w-auto h-64 border-2 rounded border-black" />
+        </div>
+        <div class="flex flex-col gap-y-8 w-full lg:w-full">
+          <div class="flex flex-col mx-auto gap-y-2 w-full">
+            <h1 class="text-4xl lg:text-5xl font-semibold leading-none whitespace-nowrap">{title}</h1>
+            <p class="text-xs lg:text-sm">
+              by
+              <span class="text-blue-400">
+                <span>{author}</span>
+              </span>on
+              <time datetime="2021-02-12 15:34:18-0200">{date}</time>
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-y-4 lg:text-base text-sm rounded border border-dashed border-black p-4 bg-amber-100">
+            <!-- <p>{content}</p> -->
+            <DisplayPony>
+            <p>Fallen Oak was once again honored as the chosen charity for this year’s Mare Fair, taking place from September 27 to September 29.</p>
+            <p>Mare Fair is an My Little Pony convention open to all adult fans. Fallen Oak was also the con’s charity at its inaugural event last year. Kim and Trinity attended and had a few panels about the rescue. The generous attendees raised over $100k for Fallen Oak!</p>
+            <p>To say thank you to the community, an event called Mare Day was held at the rescue the Tuesday after the con wrapped up. Activities included learning to draw horses, farm chores, an overview on horse care, horse rides, and special supper called Dinner with Horses.</p>
+            <p>If any of this sounds enticing, we hope to see you at the next Mare Day!</p>
+            </DisplayPony>
+            <DisplayNormal>
+            <p>We're doing a Mare Fair!</p>
+            </DisplayNormal>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</Layout>

@@ -10,9 +10,8 @@ import img6 from "../../assets/Fence.jpg";
 import { Icon } from "astro-icon/components";
 import DisplayPony from "../DisplayPony.astro";
 import DisplayNormal from "../DisplayNormal.astro";
-import { isPonyMode } from "../../lib/site";
 
-const shouldDisplayPony = isPonyMode();
+const shouldDisplayPony = Boolean(import.meta.env.PONY);
 const img1Src = img1.src;
 const img2Src = img2.src;
 var img3Src = img5.src;
@@ -399,14 +398,11 @@ const img5Src = img5.src;
 </style>
 
 <script>
-  import { animate, inView } from "motion";
-  import {
-    getMatchMedia,
-    gsap,
-    ScrollTrigger,
-  } from "../../scripts/animations.js";
-
-  getMatchMedia().add("(min-width: 800px)", () => {
+  import { animate, inView, stagger } from "motion";
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  // console.log(window.mm);
+  window.mm.add("(min-width: 800px)", () => {
     gsap.set(".panel", {
       zIndex: (i, target, targets) => targets.length - i,
     });
@@ -528,12 +524,12 @@ const img5Src = img5.src;
   );
   inView("#scroll-down-parent-sponsored", (info) => {
     animate(
-      scrollIndicatorParent4,
+      scrollIndicatorParent3,
       { opacity: [0, 1] },
       { duration: 1, delay: 0.5 }
     );
     animate(
-      scrollIndicator4,
+      scrollIndicator3,
       { y: [0, 10, 0] },
       { duration: 1.5, repeat: Infinity, easing: ["ease-out", "ease-in"] }
     );

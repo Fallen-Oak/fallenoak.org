@@ -1,12 +1,14 @@
 import { defineConfig } from "astro/config";
-import mdx from "@astrojs/mdx";
+import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
+// import swup from "@swup/astro";
 import icon from "astro-icon";
-import tailwindcss from "@tailwindcss/vite";
+import { loadEnv } from "vite";
+
+const { PONY } = loadEnv(process.env.PONY, process.cwd(), "");
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://fallenoak.org",
   redirects: {
     '/mareday': {
       status: 302,
@@ -14,11 +16,9 @@ export default defineConfig({
     }
   },
   integrations: [
-    mdx(),
+    tailwind(),
     sitemap(),
     icon(),
+    // swup({ theme: "slide", globalInstance: true }),
   ],
-  vite: {
-    plugins: [tailwindcss()],
-  },
 });

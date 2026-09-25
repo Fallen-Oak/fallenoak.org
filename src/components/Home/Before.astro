@@ -97,8 +97,10 @@ import DisplayNormal from "../DisplayNormal.astro";
 </style>
 
 <script>
-  import { gsap } from "../../scripts/animations.js";
-  import { animate, inView } from "motion";
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  import { animate, inView, stagger } from "motion";
 
   gsap.utils.toArray(".comparisonSection").forEach((section) => {
     const tl = gsap.timeline({
