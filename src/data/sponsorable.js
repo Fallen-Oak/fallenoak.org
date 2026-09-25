@@ -136,21 +136,6 @@ export default [
     sponsored: true,
   },
   {
-    name: "Starlit Skies",
-    img: "Starlit_Skies_1.jpg",
-    url: "https://givebutter.com/gD3NSC",
-    rescueDate: "November 7, 2023",
-    breed: "Quarter Horse",
-    changeName: true,
-    isMale: false,
-    age: currentYear-2002,
-    dateOfBirth: 2002,
-    cost: 230,
-    description:
-      "Starlit Skies was brought in when her owner could no longer care for her. She unfortunately  suffers from a Grade 3 Heart Murmur. Initially losing weight from ulcers, she now maintains a healthy weight while on UlcerGard. Despite everything she is as lively as ever and pushing through to a good recovery!",
-    sponsored: false,
-  },
-  {
     name: "Sunny",
     img: "Sunny_cropped.JPG",
     url: "https://givebutter.com/g1owwb",
