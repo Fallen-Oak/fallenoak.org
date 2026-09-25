@@ -1,24 +1,20 @@
 ---
-import { boolean } from "astro/zod";
 import { Image } from "astro:assets";
-const { author, title, content, img, date, id, src, pony } = Astro.props;
-const year = new Date(date).getFullYear();
-var shouldDisplay = true;
+import { getNewsId, getNewsUrl, shouldShowNewsArticle } from "../../lib/news";
 
-if (import.meta.env.PONY == true || pony == false) {
-  shouldDisplay = true;
-  } else {
-  shouldDisplay = false;
-  }
+const { article } = Astro.props;
+const { title, summary, date, image } = article.data;
+const id = getNewsId(article);
+const shouldDisplay = shouldShowNewsArticle(article);
 ---
 {shouldDisplay && (
 <a
   class="duration-300 cursor-pointer max-w-xs lg:max-w-72 p-6 lg:p-4 rounded-md border-2 border-black bg-white hover:bg-amber-100 hover:text-black"
-  href={`/news/${year}/${id}`}
+  href={getNewsUrl(article)}
 >
   <Image
     transition:name={id}
-    src={src}
+    src={image}
     format="avif"
     alt="News preview image"
     height="300"
@@ -30,7 +26,7 @@ if (import.meta.env.PONY == true || pony == false) {
     <h2 class="text-xl font-semibold tracking-wide">{title}</h2>
   </div>
   <p class="text-sm line-clamp-4">
-    {content}
+    {summary}
   </p>
 
   <div class="flex justify-center mt-4">
@@ -44,6 +40,8 @@ if (import.meta.env.PONY == true || pony == false) {
 )}
 
 <style>
+  @reference "../../styles/global.css";
+
   .button {
     pointer-events: auto;
     cursor: pointer;

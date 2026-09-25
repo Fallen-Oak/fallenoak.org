@@ -1,0 +1,24 @@
+---
+import NewsList from "../../components/News/NewsList.astro";
+import {
+  getAllNewsArticles,
+  getNewsYears,
+  shouldShowNewsArticle,
+} from "../../lib/news";
+
+export async function getStaticPaths() {
+  const years = await getNewsYears();
+
+  return years.map((year) => ({
+    params: { year: String(year) },
+  }));
+}
+
+const activeYear = Number(Astro.params.year);
+const years = await getNewsYears();
+const articles = (await getAllNewsArticles()).filter(
+  (article) => article.data.year === activeYear && shouldShowNewsArticle(article)
+);
+---
+
+<NewsList articles={articles} years={years} activeYear={activeYear} />

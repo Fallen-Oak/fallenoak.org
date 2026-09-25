@@ -1,5 +1,7 @@
 ---
-const shouldDisplayNormal = Boolean(!import.meta.env.PONY);
+import { isPonyMode } from "../lib/site";
+
+const shouldDisplayNormal = !isPonyMode();
 ---
 {shouldDisplayNormal ? (
  
